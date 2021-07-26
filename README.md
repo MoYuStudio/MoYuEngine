@@ -7,25 +7,25 @@ MoYu Engine 文件检索
     |
         assets 资源目录（所有的 = 非Pyhton文件 = *贴图文件&字体文件&音乐文件 等 的目录） >
         |
-            font >
-            graphics >
+            font 字体资源目录 >
+            graphics 图像资源目录 >
             |
                 i
-            sound >
+            sound 声音资源目录 >
             
         cinfug 配置目录（所有的 = 游戏运行文件 = *代码文件&存档文件&运行产生文件 等 的目录） >
         |
-            components >
-            data >
-            states >
-            tech >
-            window >
+            components 目录 >
+            data 存档目录 >
+            states 目录 >
+            tech 目录 >
+            window 目录 >
             
-            constants.py
-            font.py
-            graphics.py
-            setup.py
-            sound.py
+            constants.py （）
+            font.py （）
+            graphics.py （）
+            setup.py （）
+            sound.py （）
 
 更新日志
 -------
