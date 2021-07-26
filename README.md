@@ -6,7 +6,7 @@ SUGT06 TinyLand 弹丸之地
 
 MoYu Engine 文件检索
 -------------------
-    * moyu_engine 摸鱼引擎目录（所有的游戏文件的目录） >
+    >moyu_engine 摸鱼引擎目录（所有的游戏文件的目录） >
     |
         * assets 资源目录（所有的 = 非Pyhton文件 = *贴图文件&字体文件&音乐文件 等 的目录） >
         |
