@@ -11,7 +11,6 @@ def tilemap_builder():
 
     C.tilemap = [[[random.randint(0,600),random.randint(0,100),0,random.randint(0,100),0,0,0,0,0] for i in range(0,C.boarder,1)] for j in range(0,C.boarder,1)]
 
-    return C.tilemap
 
 def tilemap_loarder():
 
@@ -132,4 +131,3 @@ def tilemap_loarder():
 
             # === tile_dvcode ===
 
-    return C.tilemap
