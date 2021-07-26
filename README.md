@@ -15,17 +15,17 @@ MoYu Engine 文件检索
             
         cinfug 配置目录（所有的 = 游戏运行文件 = *代码文件&存档文件&运行产生文件 等 的目录） >
         |
-            components 目录 >
+            components 模块目录 >
             data 存档目录 >
-            states 目录 >
-            tech 目录 >
-            window 目录 >
+            states 状态机目录 >
+            tech 测试目录 >
+            window 窗口目录 >
             
-            constants.py （）
-            font.py （）
-            graphics.py （）
-            setup.py （）
-            sound.py （）
+            constants.py （变量Pyhton文件）
+            font.py （字体Pyhton文件）
+            graphics.py （图形Pyhton文件）
+            setup.py （运行Pyhton文件）
+            sound.py （声音Pyhton文件）
 
 更新日志
 -------
