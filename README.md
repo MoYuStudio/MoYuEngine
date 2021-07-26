@@ -7,8 +7,9 @@ SUGT06 TinyLand 弹丸之地 <br/><br/>
 ![](https://github.com/MoYuStudio/SUGT06/raw/main/moyu_engine/assets/graphics/tileland/tl16.png)
 ![](https://github.com/MoYuStudio/SUGT06/raw/main/moyu_engine/assets/graphics/tileland/tl21.png)<br/>
 
-w
-<br/>
+本游戏由 MoYuStudio 摸魚社® 100%原创开发<br/><br/>
+MoYuStudio 摸魚社® & C-Prismera Tech Corp 淩创科技® reserves the right of final explanation <br/><br/>
+
 MoYu Engine 文件检索
 -------------------
 >`moyu_engine` 摸鱼引擎目录（所有的游戏文件的目录)<br/>
