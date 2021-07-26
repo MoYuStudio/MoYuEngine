@@ -20,7 +20,7 @@ def init():
 
     C.mainwindow = pygame.display.set_mode((1200,600))
     C.window_title = pygame.display.set_caption('TinyLand 弹丸之地')
-    #pygame.display.set_icon(.icon)
+    pygame.display.set_icon(G.tl6)
     C.clock = pygame.time.Clock()
     pygame.display.flip()
 
@@ -96,11 +96,15 @@ def gameloop():
                 if event.key == K_q:
                     C.tile_level += 1
 
+                    components.tilebutton.tilebutton_clicker(C.mouse_pos_x,C.mouse_pos_y)
+
                 if event.key == K_e:
                     if C.tile_level == 1:
                         C.tile_level = 1
                     else:
                         C.tile_level -= 1
+
+                    components.tilebutton.tilebutton_clicker(C.mouse_pos_x,C.mouse_pos_y)
 
                 if event.key == K_z:
                     C.tile_level = 1
