@@ -21,8 +21,8 @@ def init():
 
     pygame.init()
 
-    C.mainwindow = pygame.display.set_mode((1200,600))
-    C.window_title = pygame.display.set_caption('TinyLand 弹丸之地')
+    C.screen = pygame.display.set_mode((1200,600))
+    C.screen_title = pygame.display.set_caption('TinyLand 弹丸之地')
     pygame.display.set_icon(G.tl6)
     C.clock = pygame.time.Clock()
     pygame.display.flip()

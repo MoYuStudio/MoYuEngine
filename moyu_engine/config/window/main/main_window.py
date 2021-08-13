@@ -12,11 +12,13 @@ import components.tilebutton
 import components.window_move
 
 def display():
-    graphics()
+    #graphics()
     font()
     update()
 
 def graphics():
+
+    '''
 
     G.tl1Fin = pygame.transform.scale(G.tl1, (64 * C.tile_level,64 * C.tile_level))
 
@@ -36,13 +38,17 @@ def graphics():
 
     G.pretile_redFin = pygame.transform.scale(G.pretile_red, (64 * C.tile_level,32 * C.tile_level))
 
+    '''
+
 def font():
 
     F.font1 = pygame.font.Font('moyu_engine/assets/font/方正像素16.TTF', 10 * C.tile_level)
 
 def update():
 
-    C.mainwindow.fill((0,0,0))
+    C.screen.blit(C.tilemap_surfaceFin, (0, 0))
+
+    C.tilemap_surfaceFin.fill((0,0,0))
 
     components.tilemap_manager.tilemap_loarder()
 

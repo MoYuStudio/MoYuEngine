@@ -2,8 +2,8 @@
 import pygame
 
 boarder = 16
-tile_level = 1
-tile_size = 64*tile_level
+#tile_level = 1
+tile_size = 64 #*tile_level
 move_x,move_y = 19*30,3*30
 move_speed = 5
 
@@ -20,11 +20,17 @@ move_right = False
 
 buildable_preview = False
 
-mainwindow = pygame.display.set_mode((1200,600))
-window_title = pygame.display.set_caption('TinyLand 弹丸之地')
+window_size = [1280,720]
+screen = pygame.display.set_mode(window_size)
+screen_title = pygame.display.set_caption('TinyLand 弹丸之地')
 
 clock = pygame.time.Clock()
 
 tilemap = []
 
 tile_choose_info = [0,0,0,0,0,0,0,0,0]
+
+# Surface
+
+tilemap_surface = pygame.Surface((320,180))
+tilemap_surfaceFin = pygame.transform.scale(tilemap_surface, window_size)
