@@ -36,8 +36,6 @@ def gameloop():
     while True:
 
         window.main.main_window.display()
-        
-        C.tile_size = 64*C.tile_level
 
         window.main.main_window.event()
 

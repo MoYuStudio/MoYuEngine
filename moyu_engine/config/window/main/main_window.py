@@ -46,9 +46,9 @@ def font():
 
 def update():
 
-    C.screen.blit(C.tilemap_surfaceFin, (0, 0))
-
     C.tilemap_surfaceFin.fill((0,0,0))
+
+    C.screen.blit(C.tilemap_surfaceFin, (0, 0))
 
     components.tilemap_manager.tilemap_loarder()
 
