@@ -12,7 +12,7 @@ def tilebutton_clicker(mouse_pos_x,mouse_pos_y):
 
             tile_info = C.tilemap[tilemap_x][tilemap_y]
 
-            if tile_info[4]+8*C.tile_level <= mouse_pos_x <= tile_info[4]+8*C.tile_level + C.tile_size and tile_info[5]+8*C.tile_level <= mouse_pos_y <= tile_info[5]+8*C.tile_level + C.tile_size:
+            if tile_info[4]+8 <= mouse_pos_x <= tile_info[4]+8 + C.tile_size and tile_info[5]+8 <= mouse_pos_y <= tile_info[5]+8 + C.tile_size:
                 C.mouse_x,C.mouse_y = (tile_info[4]-C.move_x),(tile_info[5]-C.move_y)
 
                 C.tile_choose_info = tile_info
@@ -28,11 +28,11 @@ def tile_preview(tile_choose_info):
         C.buildable_preview = True
 
     if C.buildable_preview == False:
-        C.mainwindow.blit(G.pretile_redFin,(C.mouse_x+C.move_x,C.mouse_y+C.move_y)) 
+        C.tilemap_surface.blit(G.pretile_red,(C.mouse_x+C.move_x,C.mouse_y+C.move_y)) 
 
     if C.buildable_preview == True:
-        C.mainwindow.blit(G.pretile_greenFin,(C.mouse_x+C.move_x,C.mouse_y+C.move_y))
+        C.tilemap_surface.blit(G.pretile_green,(C.mouse_x+C.move_x,C.mouse_y+C.move_y))
 
-    C.mainwindow.blit(G.pretile_chooseFin,(C.mouse_x+C.move_x,C.mouse_y+C.move_y))
+    C.tilemap_surface.blit(G.pretile_choose,(C.mouse_x+C.move_x,C.mouse_y+C.move_y))
 
     return C.buildable_preview
