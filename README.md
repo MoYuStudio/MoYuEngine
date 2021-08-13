@@ -7,6 +7,9 @@ SUGT06 TinyLand 弹丸之地 <br/><br/>
 ![](https://github.com/MoYuStudio/SUGT06/raw/main/moyu_engine/assets/graphics/tileland/tl16.png)
 ![](https://github.com/MoYuStudio/SUGT06/raw/main/moyu_engine/assets/graphics/tileland/tl21.png)<br/><br/><br/>
 
+TinyLand 弹丸之地 是一款建筑类沙盒游戏，讲述了一片漂浮在宇宙之中的破碎之地。
+玩家需要在有限的空间内发展属于自己的帝国。
+
 * 本游戏由 MoYuStudio 摸魚社® 100%原创开发<br/><br/>
 * MoYuStudio 摸魚社® & C-Prismera Tech Corp 淩创科技® reserves the right of final explanation <br/><br/>
 
@@ -45,7 +48,13 @@ MoYu Engine 文件检索
 
 ##### 08/13/2021 更新日志
         SUGT06a12 updata to SUGT06a13
-        使用 display层[] 替代 原先的 window层[]
+        使用 display层[pygame.Surface] 替代 原先的 window层[mainwindow.blit]
         测试 线性放大 功能性
 
+
+
+![](https://github.com/MoYuStudio/SUGT06/raw/main/moyu_engine/assets/graphics/tileland/tl1.png)
+![](https://github.com/MoYuStudio/SUGT06/raw/main/moyu_engine/assets/graphics/tileland/tl6.png)
+![](https://github.com/MoYuStudio/SUGT06/raw/main/moyu_engine/assets/graphics/tileland/tl11.png)
+![](https://github.com/MoYuStudio/SUGT06/raw/main/moyu_engine/assets/graphics/tileland/tl16.png)
 ![](https://github.com/MoYuStudio/SUGT06/raw/main/moyu_engine/assets/graphics/tileland/tl21.png)<br/><br/><br/>
