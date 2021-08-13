@@ -27,7 +27,7 @@ def init():
     C.clock = pygame.time.Clock()
     pygame.display.flip()
 
-    return C.mainwindow,C.window_title,C.clock
+    return C.screen,C.screen_title,C.clock
 
 def gameloop():
 
