@@ -45,6 +45,10 @@ MoYu Engine 文件检索
         使用 display层[pygame.Surface] 替代 原先的 window层[mainwindow.blit]
         测试 线性放大 功能性
 
+##### 08/11/2021 更新日志
+        API 更换回 Pygame
+        SUGT07 降级回 SUGT06
+
 ##### 08/09/2021 更新日志
         更换API 由 Pygame 更换为 Pyglet
         SUGT06 升级 SUGT07
