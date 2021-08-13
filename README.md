@@ -41,7 +41,7 @@ MoYu Engine 文件检索
 更新日志
 -------
 ##### 08/13/2021 更新日志
-        SUGT06a12 updata to SUGT06a13
+        SUGT06a12 update to SUGT06a13
         使用 display层[pygame.Surface] 替代 原先的 window层[mainwindow.blit]
         测试 线性放大 功能性
 
