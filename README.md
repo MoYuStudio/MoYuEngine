@@ -14,8 +14,8 @@ TinyLand 弹丸之地 <br/><br/>
             或发展科技和军事来捕捉其他碎片扩大领土[无尽模式/沙盒模式]
             或在有限的空间解决发展需求的难题[剧情模式/挑战模式]
 
-###### 本游戏由 MoYuStudio 摸魚社® 100%原创开发
-###### MoYuStudio 摸魚社® & C-Prismera Tech Corp 淩创科技® reserves the right of final explanation <br/><br/>
+###### `本游戏由 MoYuStudio 摸魚社® 100%原创开发`
+###### `MoYuStudio 摸魚社® & C-Prismera Tech Corp 淩创科技® reserves the right of final explanation` <br/><br/>
 
 MoYu Engine 文件检索
 -------------------
