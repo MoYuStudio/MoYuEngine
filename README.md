@@ -33,8 +33,19 @@ MoYu Engine 文件检索
 
 更新日志
 -------
-##### 7/26/2021 更新日志
+##### 07/26/2021 更新日志
         新增 MoYu Engine 文件检索
 
-##### 7/25/2021 更新日志
+##### 07/25/2021 更新日志
         上传 SUGT06a12 至 GitHub
+
+##### 08/09/2021 更新日志
+        更换API 由 Pygame 更换为 Pyglet
+        SUGT06 升级 SUGT07
+
+##### 08/13/2021 更新日志
+        SUGT06a12 updata to SUGT06a13
+        使用 display层[] 替代 原先的 window层[]
+        测试 线性放大 功能性
+
+![](https://github.com/MoYuStudio/SUGT06/raw/main/moyu_engine/assets/graphics/tileland/tl21.png)<br/><br/><br/>
