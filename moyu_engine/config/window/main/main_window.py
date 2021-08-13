@@ -46,9 +46,11 @@ def font():
 
 def update():
 
-    C.tilemap_surfaceFin.fill((0,0,0))
-
-    C.screen.blit(C.tilemap_surfaceFin, (0, 0))
+    tilemap_surfaceFin = pygame.transform.scale(C.tilemap_surface, C.window_size)
+    
+    C.screen.fill((0,0,0))
+    
+    C.screen.blit(tilemap_surfaceFin, (0, 0))
 
     components.tilemap_manager.tilemap_loarder()
 

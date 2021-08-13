@@ -4,7 +4,7 @@ import pygame
 boarder = 16
 #tile_level = 1
 tile_size = 64 #*tile_level
-move_x,move_y = 19*30,3*30
+move_x,move_y = 0,0
 move_speed = 5
 
 tile_choose_info = [0,0,0,0,0,0]
@@ -33,4 +33,4 @@ tile_choose_info = [0,0,0,0,0,0,0,0,0]
 # Surface
 
 tilemap_surface = pygame.Surface((320,180))
-tilemap_surfaceFin = pygame.transform.scale(tilemap_surface, window_size)
+
