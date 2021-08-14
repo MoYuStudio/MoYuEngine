@@ -4,13 +4,10 @@ import pygame
 import constants as C
 
 tl1 = pygame.image.load('moyu_engine/assets/graphics/tileland/TL1.png').convert_alpha()
-#tl1Fin = pygame.transform.scale(tl1, (64 * C.tile_level,64 * C.tile_level))
 
 tl6 = pygame.image.load('moyu_engine/assets/graphics/tileland/TL6.png').convert_alpha()
-#tl6Fin = pygame.transform.scale(tl6, (64 * C.tile_level,64 * C.tile_level))
 
 tl11 = pygame.image.load('moyu_engine/assets/graphics/tileland/TL11.png').convert_alpha()
-#tl11Fin = pygame.transform.scale(tl11, (64 * C.tile_level,64 * C.tile_level))
 
 tl16 = pygame.image.load('moyu_engine/assets/graphics/tileland/TL16.png').convert_alpha()
 #tl16Fin = pygame.transform.scale(tl16, (64 * C.tile_level,64 * C.tile_level))

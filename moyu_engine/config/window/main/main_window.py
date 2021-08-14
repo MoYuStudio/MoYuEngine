@@ -91,7 +91,7 @@ def event():
                 C.move_right = True
 
             if event.key == K_q:
-                C.tile_level += 1
+                #C.tile_level += 1
                 C.move_speed += 2
 
             if event.key == K_e:
