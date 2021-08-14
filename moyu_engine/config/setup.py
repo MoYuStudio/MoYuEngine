@@ -21,7 +21,7 @@ def init():
 
     pygame.init()
 
-    C.screen = pygame.display.set_mode((1200,600))
+    C.screen = pygame.display.set_mode(C.window_size)
     C.screen_title = pygame.display.set_caption('TinyLand 弹丸之地')
     pygame.display.set_icon(G.tl6)
     C.clock = pygame.time.Clock()
