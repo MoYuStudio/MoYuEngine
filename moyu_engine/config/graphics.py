@@ -20,3 +20,5 @@ pretile_choose = pygame.image.load('moyu_engine/assets/graphics/pretile/Pretilec
 pretile_green = pygame.image.load('moyu_engine/assets/graphics/pretile/PretileGreen.png').convert_alpha()
 
 pretile_red = pygame.image.load('moyu_engine/assets/graphics/pretile/PretileRed.png').convert_alpha()
+
+background = pygame.image.load('moyu_engine/assets/graphics/background/background.png').convert_alpha()
