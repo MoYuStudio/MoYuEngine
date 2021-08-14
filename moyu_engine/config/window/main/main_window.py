@@ -50,14 +50,11 @@ def font():
 
 def update():
 
-    C.screen.blit(G.background, (0, 0))
-
     surface.tilemap_surface.graphics()
 
     tilemap_surfaceFin = pygame.transform.scale(C.tilemap_surface, C.window_size)
     
     C.screen.blit(tilemap_surfaceFin, (0, 0))
-
 
     components.window_move.move_Fn()
 

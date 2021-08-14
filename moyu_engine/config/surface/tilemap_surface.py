@@ -12,5 +12,6 @@ import components.tilebutton
 import components.window_move
 
 def graphics():
-    C.tilemap_surface.fill((0,0,0))
+    C.tilemap_surface.blit(G.backgroundFin, ((-(C.move_x/3))-1280,(-(C.move_y/3))-720))
+    #C.tilemap_surface.fill((0,0,0))
     components.tilemap_manager.tilemap_loarder()
