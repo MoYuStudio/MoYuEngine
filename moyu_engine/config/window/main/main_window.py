@@ -7,6 +7,8 @@ import constants as C
 import graphics as G
 import font as F
 
+import surface.tilemap_surface
+
 import components.tilemap_manager
 import components.tilebutton
 import components.window_move
@@ -40,19 +42,20 @@ def graphics():
 
     '''
 
+    pass
+
 def font():
 
     F.font1 = pygame.font.Font('moyu_engine/assets/font/方正像素16.TTF', 10)
 
 def update():
 
+    surface.tilemap_surface.graphics()
+
     tilemap_surfaceFin = pygame.transform.scale(C.tilemap_surface, C.window_size)
-    
-    C.screen.fill((0,0,0))
     
     C.screen.blit(tilemap_surfaceFin, (0, 0))
 
-    components.tilemap_manager.tilemap_loarder()
 
     components.window_move.move_Fn()
 
