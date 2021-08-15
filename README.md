@@ -43,29 +43,29 @@ MoYu Engine 文件检索
 -------
 ##### 08/15/2021 更新日志
             新增 scrollbar 模块
-        尝试 scrollbar 应用性
-        测试 display层[pygame.Surface] 功能性
+            尝试 scrollbar 应用性
+            测试 display层[pygame.Surface] 功能性
 
 ##### 08/13/2021 更新日志
-        SUGT06a12 Dv20210813 发布
-        SUGT06a12 update to SUGT06a13
-        开始使用 display层[pygame.Surface] 逐渐替代 原先的 window层[mainwindow.blit]
-        测试 线性放大 功能性
+            SUGT06a12 Dv20210813 发布
+            SUGT06a12 update to SUGT06a13
+            开始使用 display层[pygame.Surface] 逐渐替代 原先的 window层[mainwindow.blit]
+            测试 线性放大 功能性
 
 ##### 08/11/2021 更新日志
-        API 更换回 Pygame
-        SUGT07 降级回 SUGT06
+            API 更换回 Pygame
+            SUGT07 降级回 SUGT06
 
 ##### 08/09/2021 更新日志
-        更换API 由 Pygame 更换为 Pyglet
-        SUGT06 升级 SUGT07
+            更换API 由 Pygame 更换为 Pyglet
+            SUGT06 升级 SUGT07
 
 ##### 07/26/2021 更新日志
-        新增 MoYu Engine 文件检索
+            新增 MoYu Engine 文件检索
 
 ##### 07/25/2021 更新日志
-        SUGT06a12 Dv20210725 发布
-        上传 SUGT06a12 至 GitHub
+            SUGT06a12 Dv20210725 发布
+            上传 SUGT06a12 至 GitHub
 
 <br/>
 
