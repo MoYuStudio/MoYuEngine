@@ -41,6 +41,10 @@ MoYu Engine 文件检索
 
 更新日志
 -------
+##### 08/15/2021 更新日志
+        测试 display层[pygame.Surface] 功能性
+        尝试 scrollbar 应用性
+
 ##### 08/13/2021 更新日志
         SUGT06a12 Dv20210813 发布
         SUGT06a12 update to SUGT06a13
