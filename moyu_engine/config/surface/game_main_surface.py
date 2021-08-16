@@ -31,4 +31,7 @@ def graphics():
     components.tilemap_manager.tilemap_loarder()
 
     components.scrollbar.scrollbar_h_display(C.game_main_surface,(255,0,0),(10,10),(3,30),(0,255,0),(10,10),(5,3),line_width=0,button_width=0)
-    
+
+def font():
+
+    F.font1 = pygame.font.Font('moyu_engine/assets/font/方正像素16.TTF', 10)

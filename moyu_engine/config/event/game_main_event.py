@@ -18,6 +18,8 @@ def event():
             pygame.quit()
             sys.exit()
 
+        components.scrollbar.scrollbar_h_input((10,10),(5,3))
+
         if event.type == pygame.MOUSEMOTION:
 
             C.mouse_pos_x,C.mouse_pos_y = event.pos
