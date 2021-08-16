@@ -37,3 +37,8 @@ tilemap_surface_level = 20
 tilemap_surface_size = [16*tilemap_surface_level,9*tilemap_surface_level]
 tilemap_surface = pygame.Surface(tilemap_surface_size)
 
+gui_surface_level = 20
+# 320 180 n = 20        16*n  9*n
+gui_surface_size = [16*gui_surface_level,9*gui_surface_level]
+gui_surface = pygame.Surface(gui_surface_size)
+

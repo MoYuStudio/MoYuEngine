@@ -8,8 +8,6 @@ import graphics as G
 import font as F
 
 import components.tilemap_manager
-import components.tilebutton
-import components.window_move
 
 def graphics():
     C.tilemap_surface.blit(G.backgroundFin, ((-(C.move_x/3))-1280,(-(C.move_y/3))-720))

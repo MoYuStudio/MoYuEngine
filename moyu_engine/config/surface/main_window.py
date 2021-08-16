@@ -8,6 +8,7 @@ import graphics as G
 import font as F
 
 import surface.tilemap_surface
+import surface.gui_surface
 
 import components.tilemap_manager
 import components.tilebutton
@@ -49,6 +50,12 @@ def font():
     F.font1 = pygame.font.Font('moyu_engine/assets/font/方正像素16.TTF', 10)
 
 def update():
+
+    surface.gui_surface.graphics()
+
+    gui_surfaceFin = pygame.transform.scale(C.gui_surface, C.window_size)
+    
+    C.screen.blit(gui_surfaceFin, (0, 0))
 
     surface.tilemap_surface.graphics()
 

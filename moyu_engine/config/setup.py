@@ -11,7 +11,7 @@ import components.tilemap_manager
 import components.tilebutton
 import components.window_move
 
-import window.main.main_window
+import surface.main_window
 
 def run():
     init()
@@ -35,9 +35,9 @@ def gameloop():
 
     while True:
 
-        window.main.main_window.display()
+        surface.main_window.display()
 
-        window.main.main_window.event()
+        surface.main_window.event()
 
         C.clock.tick(60)
 
