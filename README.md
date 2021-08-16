@@ -26,13 +26,12 @@ MoYu Engine 文件检索
 >>>`graphics` 图像资源目录<br/>
 >>>`sound` 声音资源目录<br/>
 >>
->>`cinfug` 配置目录（所有的 = 游戏运行文件 = *代码文件&存档文件&运行产生文件 等 的目录）<br/>
+>>`config` 配置目录（所有的 = 游戏运行文件 = *代码文件&存档文件&运行产生文件 等 的目录）<br/>
 >>>`components` 模块目录<br/>
 >>>`data` 存档目录<br/>
+>>>`event` 事件目录<br/>
 >>>`states` 状态机目录<br/>
->>>`surface` 图层目录<br/>
->>>`tech` 测试目录<br/>
->>>`window` 窗口目录<br/>
+>>>`surface` 窗口目录<br/>
 >>>`constants.py` （变量Pyhton文件）<br/>
 >>>`font.py` （字体Pyhton文件）<br/>
 >>>`graphics.py` （图形Pyhton文件）<br/>
@@ -41,6 +40,10 @@ MoYu Engine 文件检索
 
 更新日志
 -------
+##### 08/16/2021 更新日志
+            移除 window 窗口目录 由 surface 目录 继承 原 window 窗口目录 的 显示(输出)部分
+            新增 event 事件目录 继承 原 window 窗口目录 的 事件(输入)部分          
+
 ##### 08/15/2021 更新日志
             新增 scrollbar 模块
             尝试 scrollbar 应用性
