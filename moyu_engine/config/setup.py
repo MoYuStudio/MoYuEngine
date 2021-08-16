@@ -13,6 +13,8 @@ import components.window_move
 
 import surface.game_main_surface
 
+import event.game_main_event
+
 def run():
     init()
     gameloop()
@@ -35,8 +37,9 @@ def gameloop():
 
     while True: # 需要一个检测游戏是否运行的布尔值 使用for来优化
 
-        surface.game_main_surface.init()
+        surface.game_main_surface.update()
 
+        event.game_main_event.event()
 
         C.clock.tick(60)
 

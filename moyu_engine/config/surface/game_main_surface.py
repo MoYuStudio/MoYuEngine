@@ -7,15 +7,12 @@ import constants as C
 import graphics as G
 import font as F
 
-import surface.tilemap_surface
-import surface.gui_surface
-
 import components.tilemap_manager
 import components.tilebutton
 import components.window_move
 import components.scrollbar
 
-def init():
+def update():
     graphics()
 
     game_main_surfaceFin = pygame.transform.scale(C.game_main_surface, C.window_size)
