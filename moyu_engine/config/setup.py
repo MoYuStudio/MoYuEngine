@@ -11,7 +11,7 @@ import components.tilemap_manager
 import components.tilebutton
 import components.window_move
 
-import surface.main_window
+import surface.game_main_surface
 
 def run():
     init()
@@ -33,11 +33,10 @@ def gameloop():
 
     components.tilemap_manager.tilemap_builder()
 
-    while True:
+    while True: # 需要一个检测游戏是否运行的布尔值 使用for来优化
 
-        surface.main_window.display()
+        surface.game_main_surface.init()
 
-        surface.main_window.event()
 
         C.clock.tick(60)
 
