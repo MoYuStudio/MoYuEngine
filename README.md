@@ -1,5 +1,5 @@
 ###### MoYuStudio SUGT06 Dv
-TinyLand 弹丸之地 <br/><br/>
+Tiny Land 弹丸之地 <br/><br/>
 =======================
 
 ![](https://github.com/MoYuStudio/SUGT06/raw/main/moyu_engine/assets/graphics/tileland/tl1.png)
@@ -8,7 +8,24 @@ TinyLand 弹丸之地 <br/><br/>
 ![](https://github.com/MoYuStudio/SUGT06/raw/main/moyu_engine/assets/graphics/tileland/tl16.png)
 ![](https://github.com/MoYuStudio/SUGT06/raw/main/moyu_engine/assets/graphics/tileland/tl21.png)<br/><br/>
 
-### TinyLand 弹丸之地
+### News 新闻
+
+###### 游戏测试新闻
+
+            游戏功能性开发已经进入尾声！准备进入内容堆料！
+            
+            预计 10月底 至 11月初 进行初版功能性测试 版本0.0.1
+            
+            2月初 开始 游戏性测试（数值调教）
+
+###### 游戏开发新闻
+
+            现阶段主要需要开发的模块有（大家可以按需选取研究）：
+            
+            1.动画机（目前由@[开发] 永恒 负责，预计9月底需要解决方案或代码）
+            2.Steam热更新（希望@[策划&开发组长] 辰冰 负责，预计12月底需要解决方案或代码）
+
+### Tiny Land 弹丸之地
             是一款建筑类沙盒游戏，讲述了一片漂浮在宇宙之中的破碎之地。
             玩家在游戏中扮演一名领导者，带领人民在有限的空间内发展属于自己的帝国
             或发展科技和军事来捕捉其他碎片扩大领土[无尽模式/沙盒模式]
