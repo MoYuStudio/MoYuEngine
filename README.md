@@ -1,5 +1,5 @@
 ###### MoYuStudio SUGT06 Dv
-Tiny Land 弹丸之地 <br/><br/>
+Not Enough Space ! 空间不足！ <br/><br/>
 =======================
 
 ![](https://github.com/MoYuStudio/SUGT06/raw/main/moyu_engine/assets/graphics/tileland/tl1.png)
@@ -8,7 +8,7 @@ Tiny Land 弹丸之地 <br/><br/>
 ![](https://github.com/MoYuStudio/SUGT06/raw/main/moyu_engine/assets/graphics/tileland/tl16.png)
 ![](https://github.com/MoYuStudio/SUGT06/raw/main/moyu_engine/assets/graphics/tileland/tl21.png)<br/><br/>
 
-# News 新闻
+# Game News 游戏新闻
 
 ### Game Testers News 游戏测试新闻
 
@@ -25,8 +25,8 @@ Tiny Land 弹丸之地 <br/><br/>
             1.动画机（目前由@[开发] 永恒 负责，预计9月底需要解决方案或代码）
             2.Steam热更新（希望@[策划&开发组长] 辰冰 负责，预计12月底需要解决方案或代码）
 
-# Tiny Land 弹丸之地
-            是一款建筑类沙盒游戏，讲述了一片漂浮在宇宙之中的破碎之地。
+# Game Introduction 游戏简介
+            Not Enough Space ! 空间不足！ 是一款建筑类沙盒游戏，讲述了一片漂浮在宇宙之中的破碎之地。
             玩家在游戏中扮演一名领导者，带领人民在有限的空间内发展属于自己的帝国
             或发展科技和军事来捕捉其他碎片扩大领土[无尽模式/沙盒模式]
             或在有限的空间解决发展需求的难题[剧情模式/挑战模式]
