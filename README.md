@@ -40,6 +40,11 @@ MoYu Engine 文件检索
 
 更新日志
 -------
+##### 08/17/2021 更新日志
+            修复 scrollbar 输入错误 的 BUG
+            新增 scrollbar 移动限制
+            优化 scrollbar 模块 函数
+
 ##### 08/16/2021 更新日志
             移除 window 窗口目录 由 surface 目录 继承 原 window 窗口目录 的 显示(输出)部分
             新增 event 事件目录 继承 原 window 窗口目录 的 事件(输入)部分          
