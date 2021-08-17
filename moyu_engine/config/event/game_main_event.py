@@ -33,7 +33,7 @@ def event():
             
             components.tilebutton.tilebutton_clicker(C.mouse_down_pos_x,C.mouse_down_pos_y)
 
-            components.scrollbar.scrollbar_h_MOUSEBUTTONDOWN((10*C.game_main_surface_level,10*C.game_main_surface_level),(5*C.game_main_surface_level,3*C.game_main_surface_level))
+            components.scrollbar.scrollbar_h_MOUSEBUTTONDOWN([10*4,10*4],[5*4,3*4])
 
         if event.type == pygame.KEYDOWN:
 
