@@ -8,27 +8,22 @@ import constants as C
 # scrollbar_w button_pos >>> button_x+move,button_y
 
 def scrollbar_h_display(surface,line_color,line_pos,line_size,button_color,button_pos,button_size,line_width=0,button_width=0):
-    pygame.draw.rect(surface, (line_color),(line_pos,line_size), width=line_width)
-    pygame.draw.rect(surface, (button_color),(button_pos,button_size), width=button_width)
+    pygame.draw.rect(surface, line_color,(line_pos,line_size), width=line_width)
+    pygame.draw.rect(surface, button_color,(button_pos,button_size), width=button_width)
 
-def scrollbar_h_input(button_pos,button_size):
-    for event in pygame.event.get():
-        if event.type == pygame.MOUSEMOTION:
-            mouse_pos_x,mouse_pos_y = event.pos
+def scrollbar_h_input():
+    if C.scrollbar_moveable == True:
+        C.scrollbar_move = C.mouse_pos_y - C.mouse_down_pos_y
 
-        if moveable == True:
-            move = mouse_pos_y - mouse_y
+def scrollbar_h_MOUSEBUTTONDOWN(button_pos,button_size):
 
-        if event.type == pygame.MOUSEBUTTONDOWN:
-            mouse_x, mouse_y = event.pos
+    if button_pos[0] <= C.mouse_down_pos_x <= button_pos[0] + button_size[0] and button_pos[1]+C.scrollbar_move <= C.mouse_down_pos_y <= button_pos[1]+C.scrollbar_move + button_size[1]:
+        print('scrollbar_button be clicked')
+        C.scrollbar_moveable = True
+    else:
+        C.scrollbar_moveable = False
 
-            if button_pos[0] <= mouse_x <= button_pos[0] + button_size[0] and button_pos[1]+move <= mouse_y <= button_pos[1]+move + button_size[1]:
-                print('scrollbar_button be clicked')
-                moveable = True
-            else:
-                moveable = False
+def scrollbar_h_MOUSEBUTTONUP():
 
-        if event.type == pygame.MOUSEBUTTONUP:
-
-            moveable = False
+    C.scrollbar_moveable = False
 

@@ -12,6 +12,7 @@ tile_choose_info = [0,0,0,0,0,0]
 mouse_x,mouse_y = (boarder/2*(tile_size/2)-boarder/2*(tile_size/2)),(boarder/2*(tile_size/4)+boarder/2*(tile_size/4))
 
 mouse_pos_x,mouse_pos_y = 0,0
+mouse_down_pos_x,mouse_down_pos_y = 0,0
 
 move_up = False
 move_down = False
@@ -37,4 +38,5 @@ game_main_surface_level = 20
 game_main_surface_size = [16*game_main_surface_level,9*game_main_surface_level]
 game_main_surface = pygame.Surface(game_main_surface_size)
 
-
+scrollbar_move = 0
+scrollbar_moveable = False

@@ -13,12 +13,13 @@ import components.window_move
 import components.scrollbar
 
 def event():
+
     for event in pygame.event.get():
         if event.type == QUIT:
             pygame.quit()
             sys.exit()
 
-        components.scrollbar.scrollbar_h_input((10,10),(5,3))
+        components.scrollbar.scrollbar_h_input()
 
         if event.type == pygame.MOUSEMOTION:
 
@@ -26,9 +27,13 @@ def event():
 
         if event.type == pygame.MOUSEBUTTONDOWN:
 
-            C.mouse_pos_x,C.mouse_pos_y = event.pos
+            C.mouse_down_pos_x,C.mouse_down_pos_y = event.pos
+
+            print(C.mouse_down_pos_x,C.mouse_down_pos_y )
             
-            components.tilebutton.tilebutton_clicker(C.mouse_pos_x,C.mouse_pos_y)
+            components.tilebutton.tilebutton_clicker(C.mouse_down_pos_x,C.mouse_down_pos_y)
+
+            components.scrollbar.scrollbar_h_MOUSEBUTTONDOWN((10*C.game_main_surface_level,10*C.game_main_surface_level),(5*C.game_main_surface_level,3*C.game_main_surface_level))
 
         if event.type == pygame.KEYDOWN:
 
@@ -64,6 +69,8 @@ def event():
                 components.tilemap_manager.tilemap_builder()
 
         if event.type == pygame.KEYUP:
+
+            components.scrollbar.scrollbar_h_MOUSEBUTTONUP()
 
             if event.key == K_UP or event.key == K_w:
                 C.move_up = False
