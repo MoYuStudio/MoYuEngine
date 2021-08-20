@@ -29,7 +29,10 @@ def graphics():
 
     C.game_main_surface.fill((0,0,0))
     C.game_main_surface.blit(G.backgroundFin, ((-(C.move_x/3))-1280,(-(C.move_y/3))-720))
+
     components.tilemap_manager.tilemap_loarder()
+
+    components.scrollbar.scrollbar_h_surface(C.game_main_surface,C.scrollbar_line_color,C.scrollbar_line_pos,C.scrollbar_line_size,C.scrollbar_button_color,C.scrollbar_button_pos,C.scrollbar_button_size,C.scrollbar_move)
 
 def font():
 

@@ -31,9 +31,22 @@ tilemap = []
 
 tile_choose_info = [0,0,0,0,0,0,0,0,0]
 
-# Surface
+# ================================================= Surface =================================================
 
 game_main_surface_level = 20
 # 320 180 n = 20        16*n  9*n
 game_main_surface_size = [16*game_main_surface_level,9*game_main_surface_level]
 game_main_surface = pygame.Surface(game_main_surface_size)
+
+# ================================================= Scrollbar =================================================
+
+scrollbar_line_color = [255, 255, 255]
+scrollbar_line_pos = [180/4, 100/4]
+scrollbar_line_size = [10/4, 350/4]
+
+scrollbar_button_color = [161, 136, 127]
+scrollbar_button_pos = [172/4, 100/4]
+scrollbar_button_size = [25/4, 50/4]
+
+scrollbar_moveable = False
+scrollbar_move = 0

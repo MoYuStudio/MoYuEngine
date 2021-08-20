@@ -31,6 +31,14 @@ def event():
             
             components.tilebutton.tilebutton_clicker(C.mouse_down_pos_x,C.mouse_down_pos_y)
 
+            components.scrollbar.scrollbar_h_event_MOUSEBUTTONDOWN(C.scrollbar_button_pos,C.scrollbar_button_size,C.scrollbar_move,C.scrollbar_moveable)
+
+        if event.type == pygame.MOUSEBUTTONUP:
+            pass
+
+        if event.type == MOUSEWHEEL:
+            pass
+
         if event.type == pygame.KEYDOWN:
 
             if event.key == K_UP or event.key == K_w:

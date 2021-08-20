@@ -7,23 +7,42 @@ import constants as C
 # scrollbar_h button_pos >>> button_x,button_y+move
 # scrollbar_w button_pos >>> button_x+move,button_y
 
-def scrollbar_h_display(surface,line_color,line_pos,line_size,button_color,button_pos,button_size,line_width=0,button_width=0):
-    pygame.draw.rect(surface, line_color,(line_pos,line_size), width=line_width)
-    pygame.draw.rect(surface, button_color,(button_pos,button_size), width=button_width)
+def scrollbar_h_surface(surface,scrollbar_line_color,scrollbar_line_pos,scrollbar_line_size,scrollbar_button_color,scrollbar_button_pos,scrollbar_button_size,scrollbar_move):
 
-def scrollbar_h_input():
-    if C.scrollbar_moveable == True:
-        C.scrollbar_move = C.mouse_pos_y - C.mouse_down_pos_y
+    if scrollbar_move <= 0:
+        scrollbar_move = 0
+    if scrollbar_move >= scrollbar_line_size[1]-scrollbar_button_size[1]:
+        scrollbar_move = scrollbar_line_size[1]-scrollbar_button_size[1]
 
-def scrollbar_h_MOUSEBUTTONDOWN(button_pos,button_size):
+    pygame.draw.rect(surface, scrollbar_line_color,(scrollbar_line_pos,scrollbar_line_size), width=0)
+    pygame.draw.rect(surface, scrollbar_button_color,(scrollbar_button_pos[0],scrollbar_button_pos[1]+scrollbar_move,scrollbar_button_size[0],scrollbar_button_size[1]), width=0)
 
-    if button_pos[0] <= C.mouse_down_pos_x <= button_pos[0] + button_size[0] and button_pos[1]+C.scrollbar_move <= C.mouse_down_pos_y <= button_pos[1]+C.scrollbar_move + button_size[1]:
-        print('scrollbar_button be clicked')
-        C.scrollbar_moveable = True
+    return scrollbar_move,scrollbar_line_size,scrollbar_button_size
+
+def scrollbar_h_event_MOUSEMOTION(scrollbar_move,scrollbar_moveable):
+
+    if scrollbar_moveable == True:
+        scrollbar_move = C.mouse_pos_y - C.mouse_down_pos_y
+
+    return scrollbar_move
+
+def scrollbar_h_event_MOUSEBUTTONDOWN(scrollbar_button_pos,scrollbar_button_size,scrollbar_move,scrollbar_moveable):
+
+    if scrollbar_button_pos[0] <= C.mouse_down_pos_x <= scrollbar_button_pos[0] + scrollbar_button_size[0] and scrollbar_button_pos[1]+scrollbar_move <= C.mouse_down_pos_y <= scrollbar_button_pos[1]+scrollbar_move + scrollbar_button_size[1]:
+        scrollbar_moveable = True
+        print('233333')
     else:
-        C.scrollbar_moveable = False
+        scrollbar_moveable = False
 
-def scrollbar_h_MOUSEBUTTONUP():
+    return scrollbar_moveable
 
-    C.scrollbar_moveable = False
+def scrollbar_h_event_MOUSEBUTTONUP():
+
+    scrollbar_moveable = False
+
+def scrollbar_h_event_MOUSEWHEEL():
+
+    mousewheel = event.y
+
+    scrollbar_move += mousewheel
 
