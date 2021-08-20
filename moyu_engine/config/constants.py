@@ -37,6 +37,3 @@ game_main_surface_level = 20
 # 320 180 n = 20        16*n  9*n
 game_main_surface_size = [16*game_main_surface_level,9*game_main_surface_level]
 game_main_surface = pygame.Surface(game_main_surface_size)
-
-scrollbar_move = 0
-scrollbar_moveable = False

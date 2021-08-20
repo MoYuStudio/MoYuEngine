@@ -26,11 +26,10 @@ def update():
     pygame.display.update()
 
 def graphics():
-    C.game_main_surface.blit(G.backgroundFin, ((-(C.move_x/3))-1280,(-(C.move_y/3))-720))
-    #C.tilemap_surface.fill((0,0,0))
-    components.tilemap_manager.tilemap_loarder()
 
-    components.scrollbar.scrollbar_h_display(C.game_main_surface,(255,0,0),(10,10),(3,30),(0,255,0),(10,10+C.scrollbar_move/4),(5,3),line_width=0,button_width=0)
+    C.game_main_surface.fill((0,0,0))
+    C.game_main_surface.blit(G.backgroundFin, ((-(C.move_x/3))-1280,(-(C.move_y/3))-720))
+    components.tilemap_manager.tilemap_loarder()
 
 def font():
 
