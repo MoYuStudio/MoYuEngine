@@ -57,6 +57,12 @@ MoYu Engine 文件检索
 
 更新日志
 -------
+##### 08/20/2021 更新日志
+            对 scrollbar 模块进行了重制
+            修复 scrollbar 模块 移动限制 的 BUG
+            新增 scrollbar 滑轮移动 功能
+            优化 scrollbar 模块 函数
+
 ##### 08/17/2021 更新日志
             修复 scrollbar 输入错误 的 BUG
             新增 scrollbar 移动限制
