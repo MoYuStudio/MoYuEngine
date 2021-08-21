@@ -29,20 +29,23 @@ def scrollbar_h_event_MOUSEMOTION(scrollbar_move,scrollbar_moveable):
 def scrollbar_h_event_MOUSEBUTTONDOWN(scrollbar_button_pos,scrollbar_button_size,scrollbar_move,scrollbar_moveable):
 
     if scrollbar_button_pos[0] <= C.mouse_down_pos_x <= scrollbar_button_pos[0] + scrollbar_button_size[0] and scrollbar_button_pos[1]+scrollbar_move <= C.mouse_down_pos_y <= scrollbar_button_pos[1]+scrollbar_move + scrollbar_button_size[1]:
-        scrollbar_moveable = True
-        print('233333')
+        C.scrollbar_moveable = True
     else:
-        scrollbar_moveable = False
+        C.scrollbar_moveable = False
 
-    return scrollbar_moveable
+    return C.scrollbar_moveable
 
 def scrollbar_h_event_MOUSEBUTTONUP():
 
-    scrollbar_moveable = False
+    C.scrollbar_moveable = False
 
-def scrollbar_h_event_MOUSEWHEEL():
+    return C.scrollbar_moveable
+
+def scrollbar_h_event_MOUSEWHEEL(event):
 
     mousewheel = event.y
 
-    scrollbar_move += mousewheel
+    C.scrollbar_move += mousewheel
+
+    return C.scrollbar_move
 
