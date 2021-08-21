@@ -21,6 +21,8 @@ def update():
     
     C.screen.blit(game_main_surfaceFin, (0, 0))
 
+    components.scrollbar.scrollbar_h_surface(C.screen)
+
     components.window_move.move_Fn()
     components.window_zoom.zoom_Fn()
 
@@ -37,8 +39,6 @@ def graphics():
     C.game_main_surface.blit(G.backgroundFin, ((-(C.move_x/3))-1280,(-(C.move_y/3))-720))
 
     components.tilemap_manager.tilemap_loarder()
-
-    components.scrollbar.scrollbar_h_surface(C.game_main_surface)
 
 def font():
 

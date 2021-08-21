@@ -4,7 +4,7 @@ import pygame
 boarder = 16
 #tile_level = 1
 tile_size = 64 #*tile_level
-move_x,move_y = 0,0
+move_x,move_y = 450,5
 move_speed = 5
 
 tile_choose_info = [0,0,0,0,0,0]
@@ -44,14 +44,12 @@ game_main_surface = pygame.Surface(game_main_surface_size)
 # ================================================= Scrollbar =================================================
 
 scrollbar_line_color = [255, 255, 255]
-scrollbar_line_pos = [180/4, 100/4]
-scrollbar_line_size = [10/4, 350/4]
+scrollbar_line_pos = [50, 50]
+scrollbar_line_size = [3, 250]
 
 scrollbar_button_color = [161, 136, 127]
-scrollbar_button_pos = [172/4, 100/4]
-scrollbar_button_event_pos = [172, 100]
-scrollbar_button_size = [25/4, 50/4]
-scrollbar_button_event_size = [25, 50]
+scrollbar_button_pos = [44, 50]
+scrollbar_button_size = [15, 20]
 
 scrollbar_moveable = False
 scrollbar_move = 0

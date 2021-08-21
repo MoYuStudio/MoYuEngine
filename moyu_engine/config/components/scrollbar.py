@@ -20,11 +20,11 @@ def scrollbar_h_surface(surface):
 def scrollbar_h_event_MOUSEMOTION():
 
     if C.scrollbar_moveable == True:
-        C.scrollbar_move = (C.mouse_pos_y - C.mouse_down_pos_y)/4
+        C.scrollbar_move = (C.mouse_pos_y - C.mouse_down_pos_y)
 
 def scrollbar_h_event_MOUSEBUTTONDOWN():
 
-    if C.scrollbar_button_event_pos[0] <= C.mouse_down_pos_x <= C.scrollbar_button_event_pos[0] + C.scrollbar_button_event_size[0] and C.scrollbar_button_event_pos[1]+C.scrollbar_move <= C.mouse_down_pos_y <= C.scrollbar_button_event_pos[1]+C.scrollbar_move + C.scrollbar_button_event_size[1]:
+    if C.scrollbar_button_pos[0] <= C.mouse_down_pos_x <= C.scrollbar_button_pos[0] + C.scrollbar_button_size[0] and C.scrollbar_button_pos[1]+C.scrollbar_move <= C.mouse_down_pos_y <= C.scrollbar_button_pos[1]+C.scrollbar_move + C.scrollbar_button_size[1]:
         C.scrollbar_moveable = True
     else:
         C.scrollbar_moveable = False
