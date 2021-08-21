@@ -19,6 +19,9 @@ move_down = False
 move_left = False
 move_right = False
 
+zoom_in = False
+zoom_out = False
+
 buildable_preview = False
 
 window_size = [1280,720]
@@ -33,7 +36,7 @@ tile_choose_info = [0,0,0,0,0,0,0,0,0]
 
 # ================================================= Surface =================================================
 
-game_main_surface_level = 20
+game_main_surface_level = 60
 # 320 180 n = 20        16*n  9*n
 game_main_surface_size = [16*game_main_surface_level,9*game_main_surface_level]
 game_main_surface = pygame.Surface(game_main_surface_size)

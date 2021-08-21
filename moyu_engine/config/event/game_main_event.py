@@ -9,10 +9,24 @@ import font as F
 
 import components.tilemap_manager
 import components.tilebutton
-import components.window_move
 import components.scrollbar
 
+def zoom_Fn():
+    if C.zoom_in == True:
+        if C.game_main_surface_level == 10:
+            C.game_main_surface_level = 10
+        else:
+            C.game_main_surface_level -= 1
+    if C.zoom_out == True:
+        if C.game_main_surface_level == 60:
+            C.game_main_surface_level = 60
+        else:
+            C.game_main_surface_level += 1
+    return C.game_main_surface_level
+
 def event():
+
+    zoom_Fn()
 
     for event in pygame.event.get():
         if event.type == QUIT:
@@ -58,18 +72,13 @@ def event():
                 C.move_right = True
 
             if event.key == K_q:
-                #C.tile_level += 1
-                C.move_speed += 2
+                C.zoom_in == True
 
             if event.key == K_e:
-                if C.tile_level == 1:
-                    C.tile_level = 1
-                else:
-                    C.tile_level -= 1
-                    C.move_speed -= 2
+                C.zoom_out == True
 
             if event.key == K_z:
-                C.tile_level = 1
+                C.game_main_surface_level = 10
                 C.move_speed = 5
                 C.move_x,C.move_y = 19*30,3*30
 

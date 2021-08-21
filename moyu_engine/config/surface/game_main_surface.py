@@ -10,9 +10,11 @@ import font as F
 import components.tilemap_manager
 import components.tilebutton
 import components.window_move
+import components.window_zoom
 import components.scrollbar
 
 def update():
+
     graphics()
 
     game_main_surfaceFin = pygame.transform.scale(C.game_main_surface, C.window_size)
@@ -20,12 +22,16 @@ def update():
     C.screen.blit(game_main_surfaceFin, (0, 0))
 
     components.window_move.move_Fn()
+    components.window_zoom.zoom_Fn()
 
     components.tilebutton.tile_preview(C.tile_choose_info) 
 
     pygame.display.update()
 
 def graphics():
+
+    C.game_main_surface_size = [16*C.game_main_surface_level,9*C.game_main_surface_level]
+    C.game_main_surface = pygame.Surface(C.game_main_surface_size)
 
     C.game_main_surface.fill((0,0,0))
     C.game_main_surface.blit(G.backgroundFin, ((-(C.move_x/3))-1280,(-(C.move_y/3))-720))

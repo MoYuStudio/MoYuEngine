@@ -20,7 +20,7 @@ def scrollbar_h_surface(surface):
 def scrollbar_h_event_MOUSEMOTION():
 
     if C.scrollbar_moveable == True:
-        C.scrollbar_move = C.mouse_pos_y - C.mouse_down_pos_y
+        C.scrollbar_move = (C.mouse_pos_y - C.mouse_down_pos_y)/4
 
 def scrollbar_h_event_MOUSEBUTTONDOWN():
 
