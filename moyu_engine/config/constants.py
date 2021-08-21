@@ -46,7 +46,9 @@ scrollbar_line_size = [10/4, 350/4]
 
 scrollbar_button_color = [161, 136, 127]
 scrollbar_button_pos = [172/4, 100/4]
+scrollbar_button_event_pos = [172, 100]
 scrollbar_button_size = [25/4, 50/4]
+scrollbar_button_event_size = [25, 50]
 
 scrollbar_moveable = False
 scrollbar_move = 0
