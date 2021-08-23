@@ -57,6 +57,11 @@ MoYu Engine 文件检索
 
 更新日志
 -------
+##### 08/23/2021 更新日志
+            新模块 tilemap_button 诞生
+            新模块 tilemap_button 对 tilebutton 进行重制
+            修复了 tilebutton 失效 等 问题
+
 ##### 08/21/2021 更新日志
             SUGT06a12 Dv20210821 发布
             项目 底层架构 全面升级
