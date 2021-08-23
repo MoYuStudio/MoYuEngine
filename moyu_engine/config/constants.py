@@ -38,7 +38,7 @@ tile_choose_info = [0,0,0]
 # ================================================= Surface =================================================
 
 game_main_surface_level = 60
-# 320 180 n = 20        16*n  9*n
+# 320 180 n = 20        16*n  9*n    1280 720 n = 80
 game_main_surface_size = [16*game_main_surface_level,9*game_main_surface_level]
 game_main_surface = pygame.Surface(game_main_surface_size)
 

@@ -57,11 +57,11 @@ def tilemap_loarder():
 
             # === 5 tile_pos_x ===
 
-                tile_info[5] = (tilemap_y*(C.tile_size/2)-tilemap_x*(C.tile_size/2))+C.move_x
+                tile_info[5] = (tilemap_y*(C.tile_size*(1280/C.game_main_surface_size[0])/2)-tilemap_x*(C.tile_size*(1280/C.game_main_surface_size[0])/2))+C.move_x
 
             # === 6 tile_pos_y ===
 
-                tile_info[6] = (tilemap_y*(C.tile_size/4)+tilemap_x*(C.tile_size/4))+C.move_y
+                tile_info[6] = (tilemap_y*(C.tile_size*(1280/C.game_main_surface_size[0])/4)+tilemap_x*(C.tile_size*(1280/C.game_main_surface_size[0])/4))+C.move_y
 
             # === 7 tile_dvcode ===
 
@@ -75,29 +75,18 @@ def tilemap_loarder():
 
                 if tile_info[0] == 1:
                     C.game_main_surface.blit(G.tl1,((tilemap_y*(C.tile_size/2)-tilemap_x*(C.tile_size/2))+C.move_x,(tilemap_y*(C.tile_size/4)+tilemap_x*(C.tile_size/4))+C.move_y))
-                    text1 = F.font1.render(str(tile_info[3]), True, (255, 255, 255))
-                    C.game_main_surface.blit(text1,((tilemap_y*(C.tile_size/2)-tilemap_x*(C.tile_size/2))+C.tile_size/2-0.05*C.tile_size+C.move_x,(tilemap_y*(C.tile_size/4)+tilemap_x*(C.tile_size/4))+C.tile_size/4+C.move_y))
-
 
                 if tile_info[0] == 6:
                     C.game_main_surface.blit(G.tl6,((tilemap_y*(C.tile_size/2)-tilemap_x*(C.tile_size/2))+C.move_x,(tilemap_y*(C.tile_size/4)+tilemap_x*(C.tile_size/4))+C.move_y))
-                    text1 = F.font1.render(str(tile_info[3]), True, (255, 255, 255))
-                    C.game_main_surface.blit(text1,((tilemap_y*(C.tile_size/2)-tilemap_x*(C.tile_size/2))+C.tile_size/2-0.05*C.tile_size+C.move_x,(tilemap_y*(C.tile_size/4)+tilemap_x*(C.tile_size/4))+C.tile_size/4+C.move_y))
 
                 if tile_info[0] == 11:
                     C.game_main_surface.blit(G.tl11,((tilemap_y*(C.tile_size/2)-tilemap_x*(C.tile_size/2))+C.move_x,(tilemap_y*(C.tile_size/4)+tilemap_x*(C.tile_size/4))+C.move_y))
-                    text1 = F.font1.render(str(tile_info[3]), True, (255, 255, 255))
-                    C.game_main_surface.blit(text1,((tilemap_y*(C.tile_size/2)-tilemap_x*(C.tile_size/2))+C.tile_size/2-0.05*C.tile_size+C.move_x,(tilemap_y*(C.tile_size/4)+tilemap_x*(C.tile_size/4))+C.tile_size/4+C.move_y))
 
                 if tile_info[0] == 16:
                     C.game_main_surface.blit(G.tl16,((tilemap_y*(C.tile_size/2)-tilemap_x*(C.tile_size/2))+C.move_x,(tilemap_y*(C.tile_size/4)+tilemap_x*(C.tile_size/4))+C.move_y))
-                    text1 = F.font1.render(str(tile_info[3]), True, (255, 255, 255))
-                    C.game_main_surface.blit(text1,((tilemap_y*(C.tile_size/2)-tilemap_x*(C.tile_size/2))+C.tile_size/2-0.05*C.tile_size+C.move_x,(tilemap_y*(C.tile_size/4)+tilemap_x*(C.tile_size/4))+C.tile_size/4+C.move_y))
 
                 if tile_info[0] == 21:
                     C.game_main_surface.blit(G.tl21,((tilemap_y*(C.tile_size/2)-tilemap_x*(C.tile_size/2))+C.move_x,(tilemap_y*(C.tile_size/4)+tilemap_x*(C.tile_size/4))+C.move_y))
-                    text1 = F.font1.render(str(tile_info[3]), True, (255, 255, 255))
-                    C.game_main_surface.blit(text1,((tilemap_y*(C.tile_size/2)-tilemap_x*(C.tile_size/2))+C.tile_size/2-0.05*C.tile_size+C.move_x,(tilemap_y*(C.tile_size/4)+tilemap_x*(C.tile_size/4))+C.tile_size/4+C.move_y))
 
             # === 1 tile_building ===
 
