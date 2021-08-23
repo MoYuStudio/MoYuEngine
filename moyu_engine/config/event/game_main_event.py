@@ -8,6 +8,7 @@ import graphics as G
 import font as F
 
 import components.tilemap_manager
+import components.tilemap_button
 import components.tilebutton
 import components.scrollbar
 
@@ -28,7 +29,7 @@ def event():
 
             C.mouse_down_pos_x,C.mouse_down_pos_y = event.pos
             
-            components.tilebutton.tilebutton_clicker(C.mouse_down_pos_x,C.mouse_down_pos_y)
+            components.tilemap_button.tilebutton_clicker_event()
 
             components.scrollbar.scrollbar_h_event_MOUSEBUTTONDOWN()
 

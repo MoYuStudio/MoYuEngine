@@ -8,6 +8,7 @@ import graphics as G
 import font as F
 
 import components.tilemap_manager
+import components.tilemap_button
 import components.tilebutton
 import components.window_move
 import components.window_zoom
@@ -23,11 +24,9 @@ def update():
 
     components.scrollbar.scrollbar_h_surface(C.screen)
 
-    components.tilebutton.tile_preview(C.tile_choose_info) 
-
     components.window_move.move_Fn()
     components.window_zoom.zoom_Fn()
-    
+
     pygame.display.update()
 
 def graphics():
@@ -39,6 +38,8 @@ def graphics():
     C.game_main_surface.blit(G.backgroundFin, ((-(C.move_x/3))-1280,(-(C.move_y/3))-720))
 
     components.tilemap_manager.tilemap_loarder()
+
+    components.tilemap_button.tilebutton_clicker_surface()
 
 def font():
 

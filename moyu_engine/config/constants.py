@@ -32,7 +32,8 @@ clock = pygame.time.Clock()
 
 tilemap = []
 
-tile_choose_info = [0,0,0,0,0,0,0,0,0]
+tile_choose = False
+tile_choose_info = [0,0,0]
 
 # ================================================= Surface =================================================
 
