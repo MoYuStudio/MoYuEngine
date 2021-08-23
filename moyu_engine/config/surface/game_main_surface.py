@@ -23,11 +23,11 @@ def update():
 
     components.scrollbar.scrollbar_h_surface(C.screen)
 
-    components.window_move.move_Fn()
-    components.window_zoom.zoom_Fn()
-
     components.tilebutton.tile_preview(C.tile_choose_info) 
 
+    components.window_move.move_Fn()
+    components.window_zoom.zoom_Fn()
+    
     pygame.display.update()
 
 def graphics():

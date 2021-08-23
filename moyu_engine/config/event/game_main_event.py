@@ -27,8 +27,6 @@ def event():
         if event.type == pygame.MOUSEBUTTONDOWN:
 
             C.mouse_down_pos_x,C.mouse_down_pos_y = event.pos
-
-            print(C.mouse_down_pos_x,C.mouse_down_pos_y )
             
             components.tilebutton.tilebutton_clicker(C.mouse_down_pos_x,C.mouse_down_pos_y)
 

@@ -22,4 +22,4 @@ pretile_green = pygame.image.load('moyu_engine/assets/graphics/pretile/PretileGr
 pretile_red = pygame.image.load('moyu_engine/assets/graphics/pretile/PretileRed.png').convert_alpha()
 
 background = pygame.image.load('moyu_engine/assets/graphics/background/background.png').convert_alpha()
-backgroundFin = pygame.transform.scale(background, (1280*5,720*5))
+backgroundFin = pygame.transform.scale(background, (1280*3,720*3))
