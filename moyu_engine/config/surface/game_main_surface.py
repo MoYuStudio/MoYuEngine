@@ -8,8 +8,6 @@ import graphics as G
 import font as F
 
 import components.tilemap_manager
-import components.tilemap_button
-import components.tilebutton
 import components.window_move
 import components.window_zoom
 import components.scrollbar
@@ -38,8 +36,6 @@ def graphics():
     C.game_main_surface.blit(G.backgroundFin, ((-(C.move_x/3))-1280,(-(C.move_y/3))-720))
 
     components.tilemap_manager.tilemap_loarder()
-
-    components.tilemap_button.tilebutton_clicker_surface()
 
 def font():
 

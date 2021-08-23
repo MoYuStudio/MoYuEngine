@@ -8,8 +8,6 @@ import graphics as G
 import font as F
 
 import components.tilemap_manager
-import components.tilebutton
-import components.window_move
 
 import surface.game_main_surface
 

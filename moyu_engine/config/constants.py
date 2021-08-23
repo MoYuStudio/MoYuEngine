@@ -9,10 +9,10 @@ move_speed = 5
 
 tile_choose_info = [0,0,0,0,0,0]
 
-mouse_x,mouse_y = (boarder/2*(tile_size/2)-boarder/2*(tile_size/2)),(boarder/2*(tile_size/4)+boarder/2*(tile_size/4))
+#mouse_x,mouse_y = (boarder/2*(tile_size/2)-boarder/2*(tile_size/2)),(boarder/2*(tile_size/4)+boarder/2*(tile_size/4))
 
 mouse_pos_x,mouse_pos_y = 0,0
-mouse_down_pos_x,mouse_down_pos_y = 0,0
+mouse_down_pos_x,mouse_down_pos_y = 0,0 
 
 move_up = False
 move_down = False
@@ -21,8 +21,6 @@ move_right = False
 
 zoom_in = False
 zoom_out = False
-
-buildable_preview = False
 
 window_size = [1280,720]
 screen = pygame.display.set_mode(window_size)

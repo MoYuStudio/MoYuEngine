@@ -9,7 +9,6 @@ import font as F
 
 import components.tilemap_manager
 import components.tilemap_button
-import components.tilebutton
 import components.scrollbar
 
 def event():

@@ -1,24 +1,6 @@
 
-import pygame
-
 import constants as C
 import graphics as G
-
-def tilebutton_clicker_surface():
-
-    if C.tile_choose_info[2] == 0:
-        C.buildable_preview = False
-
-    if C.tile_choose_info[2] == 1:
-        C.buildable_preview = True
-
-    if C.buildable_preview == False:
-        C.game_main_surface.blit(G.pretile_red,(C.mouse_x+C.move_x,C.mouse_y+C.move_y)) 
-
-    if C.buildable_preview == True:
-        C.game_main_surface.blit(G.pretile_green,(C.mouse_x+C.move_x,C.mouse_y+C.move_y))
-
-    C.game_main_surface.blit(G.pretile_choose,(C.mouse_x+C.move_x,C.mouse_y+C.move_y))
 
 def tilebutton_clicker_event():
 
