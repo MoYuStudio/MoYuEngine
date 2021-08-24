@@ -62,7 +62,7 @@ def tilemap_loarder():
             # === 6 tile_pos_y ===
 
                 tile_info[6] = (tilemap_y*(C.tile_size/4)+tilemap_x*(C.tile_size/4))+C.move_y
-                
+
             # === 7 tile_dvcode ===
 
                 tile_info[7] = 1
@@ -115,11 +115,13 @@ def tilemap_loarder():
 
             # === 5 tile_pos_x ===
 
-                tile_info[5] = (tilemap_y*(C.tile_size/2)-tilemap_x*(C.tile_size/2))+C.move_x
+                # 16*C.game_main_surface_level,9*C.game_main_surface_level
+
+                tile_info[5] = ((tilemap_y*(C.tile_size/2)-tilemap_x*(C.tile_size/2))+C.move_x)*(1280/(16*C.game_main_surface_level))
 
             # === 6 tile_pos_y ===
 
-                tile_info[6] = (tilemap_y*(C.tile_size/4)+tilemap_x*(C.tile_size/4))+C.move_y
+                tile_info[6] = ((tilemap_y*(C.tile_size/4)+tilemap_x*(C.tile_size/4))+C.move_y)*(1280/(16*C.game_main_surface_level))
 
             # === 7 tile_dvcode ===
 

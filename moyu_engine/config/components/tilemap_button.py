@@ -11,8 +11,8 @@ def tilebutton_clicker_event():
         for tilemap_y in range(tilemap_m):
 
             tile_info = C.tilemap[tilemap_x][tilemap_y]
-
-            if tile_info[5] <= C.mouse_down_pos_x <= tile_info[5] + C.tile_size and tile_info[6] <= C.mouse_down_pos_y <= tile_info[6] + C.tile_size:
+ 
+            if tile_info[5] <= C.mouse_down_pos_x <= tile_info[5] + C.tile_size*(1280/(16*C.game_main_surface_level)) and tile_info[6] <= C.mouse_down_pos_y <= tile_info[6] + C.tile_size*(1280/(16*C.game_main_surface_level)):
 
                 if C.tile_choose == True:
 
@@ -23,23 +23,3 @@ def tilebutton_clicker_event():
                 C.tile_choose_info = [tilemap_x,tilemap_y,((C.tilemap[tilemap_x][tilemap_y])[4])]
 
                 C.tile_choose = True
-
-                #print('='*30)
-
-                #print(C.tile_choose_info)
-
-                #print(C.game_main_surface_level)
-                #print(tile_info[5],tile_info[6])
-                #print(C.game_main_surface_size)
-                #print(C.tile_size*(1280/C.game_main_surface_size[0]))
-                #print(1+(1-(1280/C.game_main_surface_size[0])))
-
-                '''
-
-                C.mouse_x,C.mouse_y = (tile_info[4]-C.move_x),(tile_info[5]-C.move_y)
-
-                C.tile_choose_info = tile_info
-
-                print(C.tile_choose_info)
-
-                '''
