@@ -40,6 +40,8 @@ game_main_surface_level = 60
 game_main_surface_size = [16*game_main_surface_level,9*game_main_surface_level]
 game_main_surface = pygame.Surface(game_main_surface_size)
 
+surface_level = (1280/(16*game_main_surface_level))
+
 # ================================================= Scrollbar =================================================
 
 scrollbar_line_color = [255, 255, 255]
