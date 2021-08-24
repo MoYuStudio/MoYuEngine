@@ -64,3 +64,8 @@ scrollbar_moveable = False
 scrollbar_move = 0
 
 money = 100
+
+# graphics
+
+tileland_graphics_path = locals()
+tileland_graphics = []
