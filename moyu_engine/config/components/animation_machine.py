@@ -1,6 +1,25 @@
 import pygame
 import time
  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"""
 pygame.init()
 
 window = pygame.display.set_mode([400, 400])
@@ -18,4 +37,4 @@ while True:
         time.sleep(0.5)
         pygame.display.update() 
         print(i)
- 
+ """
