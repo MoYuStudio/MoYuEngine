@@ -61,9 +61,9 @@ def event():
                 C.zoom_out = True
 
             if event.key == K_z:
-                C.game_main_surface_level = 10
+                C.game_main_surface_level = 60
                 C.move_speed = 5
-                C.move_x,C.move_y = 19*30,3*30
+                C.move_x,C.move_y = 450,5
 
             if event.key == K_x:
                 components.tilemap_manager.tilemap_builder()

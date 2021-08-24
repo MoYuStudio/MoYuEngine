@@ -23,3 +23,6 @@ pretile_red = pygame.image.load('moyu_engine/assets/graphics/pretile/PretileRed.
 
 background = pygame.image.load('moyu_engine/assets/graphics/background/background.png').convert_alpha()
 backgroundFin = pygame.transform.scale(background, (1280*3,720*3))
+
+home_button = pygame.image.load('moyu_engine/assets/graphics/gui/home_button.png').convert_alpha()
+home_buttonFin = pygame.transform.scale(home_button, (64,64))
