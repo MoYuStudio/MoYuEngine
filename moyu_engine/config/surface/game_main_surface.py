@@ -27,6 +27,8 @@ def update():
 
     pygame.display.update()
 
+    C.surface_level = (1280/(16*C.game_main_surface_level))
+
 def graphics():
 
     C.game_main_surface_size = [16*C.game_main_surface_level,9*C.game_main_surface_level]
