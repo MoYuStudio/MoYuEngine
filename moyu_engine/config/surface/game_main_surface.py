@@ -22,7 +22,7 @@ def update():
 
     components.scrollbar.scrollbar_h_surface(C.screen)
 
-    C.screen.blit(G.home_buttonFin, (C.window_size[0]-64, 0))
+    C.screen.blit(G.home_buttonFin, (C.window_size[0]-64 - 10, 10))
     
     components.window_move.move_Fn()
     components.window_zoom.zoom_Fn()

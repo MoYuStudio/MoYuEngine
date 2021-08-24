@@ -19,6 +19,7 @@ def run():
 def init():
 
     pygame.init()
+    pygame.mixer.init()
 
     C.screen = pygame.display.set_mode(C.window_size)
     C.screen_title = pygame.display.set_caption('Not Enough Space ! 空间不足！ ')

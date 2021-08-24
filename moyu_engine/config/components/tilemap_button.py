@@ -2,7 +2,7 @@
 import constants as C
 import graphics as G
 
-def tilebutton_clicker_event():
+def tilebutton_clicker_event_MOUSEBUTTONDOWN():
 
     tilemap_n = len(C.tilemap)
     tilemap_m = len(C.tilemap[0])
