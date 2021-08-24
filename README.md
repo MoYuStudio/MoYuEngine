@@ -57,6 +57,11 @@ MoYu Engine 文件检索
 
 更新日志
 -------
+##### 08/24/2021 更新日志
+            SUGT06a12 update to SUGT06a13
+            项目 底层架构 Debug
+            修复 tilemap_button 的 数项 Bug
+
 ##### 08/23/2021 更新日志
             新模块 tilemap_button 诞生
             新模块 tilemap_button 对 tilebutton 进行重制
@@ -91,7 +96,6 @@ MoYu Engine 文件检索
 
 ##### 08/13/2021 更新日志
             SUGT06a12 Dv20210813 发布
-            SUGT06a12 update to SUGT06a13
             开始使用 display层[pygame.Surface] 逐渐替代 原先的 window层[mainwindow.blit]
             测试 线性放大 功能性
 
