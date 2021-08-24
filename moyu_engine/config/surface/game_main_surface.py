@@ -16,7 +16,8 @@ def update():
 
     graphics()
 
-    game_main_surfaceFin = pygame.transform.scale(C.game_main_surface, C.window_size)
+    game_main_surfaceFin = pygame.transform.scale(C.game_main_surface, C.game_main_surface_size)
+    #C.window_size)
     
     C.screen.blit(game_main_surfaceFin, (0, 0))
 
