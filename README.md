@@ -60,6 +60,8 @@ MoYu Engine 文件检索
 ##### 08/24/2021 更新日志
             项目 底层架构 Debug
             修复 tilemap_button 的 数项 Bug
+            新增 button 模块
+            开始 使用 sound 模块
 
 ##### 08/23/2021 更新日志
             新模块 tilemap_button 诞生
