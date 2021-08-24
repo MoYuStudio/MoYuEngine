@@ -21,8 +21,11 @@ pretile_green = pygame.image.load('moyu_engine/assets/graphics/pretile/PretileGr
 
 pretile_red = pygame.image.load('moyu_engine/assets/graphics/pretile/PretileRed.png').convert_alpha()
 
-background = pygame.image.load('moyu_engine/assets/graphics/background/background.png').convert_alpha()
-backgroundFin = pygame.transform.scale(background, (1280*3,720*3))
-
 home_button = pygame.image.load('moyu_engine/assets/graphics/gui/home_button.png').convert_alpha()
 home_buttonFin = pygame.transform.scale(home_button, (64,64))
+
+money_icon = pygame.image.load('moyu_engine/assets/graphics/gui/money_icon.png').convert_alpha()
+money_iconFin = pygame.transform.scale(money_icon, (32,32))
+
+background = pygame.image.load('moyu_engine/assets/graphics/background/background.png').convert_alpha()
+backgroundFin = pygame.transform.scale(background, (1280*3,720*3))

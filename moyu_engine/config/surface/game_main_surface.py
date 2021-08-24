@@ -23,6 +23,10 @@ def update():
     components.scrollbar.scrollbar_h_surface(C.screen)
 
     C.screen.blit(G.home_buttonFin, (C.window_size[0]-64 - 10, 10))
+    C.screen.blit(G.money_iconFin, (C.window_size[0]-64*2 - 20 - 100, 10+16))
+
+    money_text = F.font1.render(str(C.money), True, (255, 255, 255))
+    C.screen.blit(money_text,(C.window_size[0]-64*2 - 20 - 50, 10+16))
     
     components.window_move.move_Fn()
     components.window_zoom.zoom_Fn()
@@ -41,6 +45,13 @@ def graphics():
 
     components.tilemap_manager.tilemap_loarder()
 
-def font():
+def gui():
 
-    F.font1 = pygame.font.Font('moyu_engine/assets/font/方正像素16.TTF', 10)
+    C.game_main_gui_surface_size = [16*C.game_main_gui_surface_level,9*C.game_main_gui_surface_level]
+    C.game_main_gui_surface = pygame.Surface(C.game_main_gui_surface_size)
+
+    C.game_main_gui_surface.blit(G.home_buttonFin, (C.window_size[0]-64 - 10, 10))
+    C.game_main_gui_surface.blit(G.money_iconFin, (C.window_size[0]-64*2 - 20 - 100, 10+16))
+
+    money_text = F.font1.render(str(C.money), True, (255, 255, 255))
+    C.game_main_gui_surface.blit(money_text,(C.window_size[0]-64*2 - 20 - 50, 10+16))
