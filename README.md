@@ -60,10 +60,12 @@ MoYu Engine 文件检索
 ##### 08/24/2021 更新日志
             项目 底层架构 Debug
             修复 tilemap_button 的 数项 Bug
+            新增 button 模块
+            开始 使用 sound 模块
 
 ##### 08/23/2021 更新日志
-            新模块 tilemap_button 诞生
-            新模块 tilemap_button 对 tilebutton 进行重制
+            新增 模块 tilemap_button
+            新增 模块 tilemap_button 对 tilebutton 进行重制
             修复了 tilebutton 失效 等 问题
 
 ##### 08/21/2021 更新日志
@@ -103,7 +105,7 @@ MoYu Engine 文件检索
             SUGT07 降级回 SUGT06
 
 ##### 08/09/2021 更新日志
-            更换API 由 Pygame 更换为 Pyglet
+            更换 API 由 Pygame 更换为 Pyglet
             SUGT06 升级 SUGT07
 
 ##### 07/26/2021 更新日志
