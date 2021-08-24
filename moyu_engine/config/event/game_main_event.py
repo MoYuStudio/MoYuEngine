@@ -34,7 +34,7 @@ def event():
             components.scrollbar.scrollbar_h_event_MOUSEBUTTONDOWN()
 
             components.button.button_event_MOUSEBUTTONDOWN(64,64,C.window_size[0]-64 - 10,10,C.mouse_down_pos_x,C.mouse_down_pos_y,\
-            button_name = 'button',button_type = 'button',button_type_data_1 = 1)
+            button_name = 'home_page_button',button_type = 'button',button_type_data_1 = 1)
 
         if event.type == pygame.MOUSEBUTTONUP:
             
