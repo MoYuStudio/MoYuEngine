@@ -55,6 +55,21 @@ def tilemap_loarder():
 
             # === 4 tile_buildable ===
 
+                if tile_info[0] == 1:
+                    tile_info[4] = 1
+
+                if tile_info[0] == 6:
+                    tile_info[4] = 1
+
+                if tile_info[0] == 11:
+                    tile_info[4] = 1
+
+                if tile_info[0] == 16:
+                    tile_info[4] = 1
+
+                if tile_info[0] == 21:
+                    tile_info[4] = 0
+
             # === 5 tile_pos_x ===
 
                 tile_info[5] = (tilemap_y*(C.tile_size/2)-tilemap_x*(C.tile_size/2))+C.move_x

@@ -19,7 +19,13 @@ def tilebutton_clicker_event():
 
                     (C.tilemap[C.tile_choose_info[0]][C.tile_choose_info[1]])[2] = 0
 
-                (C.tilemap[tilemap_x][tilemap_y])[2] = 1
+                if tile_info[4] == 1:
+
+                    (C.tilemap[tilemap_x][tilemap_y])[2] = 1
+
+                if tile_info[4] == 0:
+
+                    (C.tilemap[tilemap_x][tilemap_y])[2] = 2
 
                 C.tile_choose_info = [tilemap_x,tilemap_y,((C.tilemap[tilemap_x][tilemap_y])[4])]
 
