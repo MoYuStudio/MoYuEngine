@@ -23,6 +23,7 @@ def update():
     components.scrollbar.scrollbar_h_surface(C.screen)
 
     C.screen.blit(G.home_buttonFin, (C.window_size[0]-64 - 10, 10))
+
     C.screen.blit(G.money_iconFin, (C.window_size[0]-64*2 - 20 - 100, 10+16))
 
     money_text = F.font1.render(str(C.money), True, (255, 255, 255))
@@ -52,6 +53,7 @@ def graphics():
     C.game_main_surface.blit(G.money_iconFin, (C.window_size[0]-64*2 - 20 - 100, 10+16))
 
     money_text = F.font1.render(str(C.money), True, (255, 255, 255))
+
     C.game_main_surface.blit(money_text,(C.window_size[0]-64*2 - 20 - 50, 10+16))
 
 
