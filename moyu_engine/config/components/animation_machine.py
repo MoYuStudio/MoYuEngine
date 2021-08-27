@@ -2,7 +2,7 @@ import pygame
 import time
  
 def animation():
-    
+    pass
 
 
 
