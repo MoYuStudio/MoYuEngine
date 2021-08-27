@@ -19,7 +19,6 @@ def button_event_MOUSEBUTTONDOWN(button_width,button_height,button_x_pos,button_
         if button_type == 'button':
             # data 1 = home_page
             if button_type_data_1 == 1:
-                print(233)
                 S.button_sound.play()
 
     return button_type_data_1,button_type_data_2

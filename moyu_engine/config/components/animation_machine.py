@@ -7,19 +7,6 @@ def animation():
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 """
 pygame.init()
 

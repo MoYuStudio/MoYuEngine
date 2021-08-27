@@ -50,9 +50,9 @@ def gui_graphics():
 
     # === GUI ===
 
-    C.game_main_gui_surface.blit(G.home_buttonFin, (10,10))
+    C.game_main_gui_surface.blit(G.home_buttonFin, (C.window_size[0]-64 - 10,10))
 
-    #C.game_main_gui_surface.blit(G.money_iconFin, (C.window_size[0]-64*2 - 20 - 100, 10+16))          (C.window_size[0]-64 - 10, 10))
+    C.game_main_gui_surface.blit(G.money_iconFin, (C.window_size[0]-64*2 - 20 - 100, 10+16))
 
-    #money_text = F.font1.render(str(C.money), True, (255, 255, 255))
-    #C.game_main_gui_surface.blit(money_text,(C.window_size[0]-64*2 - 20 - 50, 10+16))
+    money_text = F.font1.render(str(C.money), True, (255, 255, 255))
+    C.game_main_gui_surface.blit(money_text,(C.window_size[0]-64*2 - 20 - 50, 10+16))
