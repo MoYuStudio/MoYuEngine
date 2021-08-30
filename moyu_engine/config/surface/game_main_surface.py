@@ -50,6 +50,19 @@ def gui_graphics():
 
     # === GUI ===
 
+    C.game_main_gui_surface.blit(G.button001Fin, (10,10*1 + 64*0))
+    C.game_main_gui_surface.blit(G.button001Fin, (10,10*2 + 64*1))
+    C.game_main_gui_surface.blit(G.button001Fin, (10,10*3 + 64*2))
+    C.game_main_gui_surface.blit(G.button001Fin, (10,10*4 + 64*3))
+    C.game_main_gui_surface.blit(G.button001Fin, (10,10*5 + 64*4))
+
+    C.game_main_gui_surface.blit(G.button001miniFin, (100,10*1 + 48*0))
+    C.game_main_gui_surface.blit(G.button001miniFin, (100,10*2 + 48*1))
+    C.game_main_gui_surface.blit(G.button001miniFin, (100,10*3 + 48*2))
+    C.game_main_gui_surface.blit(G.button001miniFin, (100,10*4 + 48*3))
+    C.game_main_gui_surface.blit(G.button001miniFin, (100,10*5 + 48*4))
+    C.game_main_gui_surface.blit(G.button001miniFin, (100,10*6 + 48*5))
+
     C.game_main_gui_surface.blit(G.home_buttonFin, (C.window_size[0]-64 - 10,10))
 
     C.game_main_gui_surface.blit(G.money_iconFin, (C.window_size[0]-64*2 - 20 - 100, 10+16))

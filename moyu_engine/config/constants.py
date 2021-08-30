@@ -53,19 +53,19 @@ game_main_gui_surface = pygame.Surface(game_main_gui_surface_size)
 # ================================================= Scrollbar =================================================
 
 scrollbar_line_color = [255, 255, 255]
-scrollbar_line_pos = [50, 50]
-scrollbar_line_size = [3, 250]
+scrollbar_line_pos = [85, 10]
+scrollbar_line_size = [3, 360]
 
 scrollbar_button_color = [161, 136, 127]
-scrollbar_button_pos = [44, 50]
-scrollbar_button_size = [15, 20]
+scrollbar_button_pos = [80, 10]
+scrollbar_button_size = [13, 20]
 
 scrollbar_moveable = False
 scrollbar_move = 0
 
 money = 100
 
-# graphics
+# ================================================= Graphics =================================================
 
 tileland_graphics_path = locals()
 tileland_graphics = []

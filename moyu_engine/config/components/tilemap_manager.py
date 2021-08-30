@@ -7,9 +7,9 @@ import font as F
 
 def tilemap_builder():
 
-    # 0 tile land   1 tile   2 tile preview   3 time   4 buildable   5 tile button x   6 tile button y   7 Dv Code
+    # 0 tile land   1 tile preview   2 tile   3 time   4 buildable   5 tile button x   6 tile button y   7 Dv Code
 
-    C.tilemap = [[[random.randint(0,600),random.randint(0,100),0,0,0,0,0,0,0] for i in range(0,C.boarder,1)] for j in range(0,C.boarder,1)]
+    C.tilemap = [[[random.randint(0,600),0,random.randint(0,100),0,0,0,0,0,0] for i in range(0,C.boarder,1)] for j in range(0,C.boarder,1)]
 
 
 def tilemap_loarder():
@@ -41,15 +41,15 @@ def tilemap_loarder():
                 if 531<=tile_info[0]<=600:
                     tile_info[0] = 21
 
-            # === 1 tile_building ===
+            # === 1 tile_preview ===
 
-                if 0<=tile_info[1]<=70:
-                    tile_info[1] = 0
+            # === 2 tile_building ===
 
-                if 71<=tile_info[1]<=100 and tile_info[0] == 6:
-                    tile_info[1] = 105
+                if 0<=tile_info[2]<=70:
+                    tile_info[2] = 0
 
-            # === 2 tile_preview ===
+                if 71<=tile_info[2]<=100 and tile_info[0] == 6:
+                    tile_info[2] = 105
 
             # === 3 tile_time ===
 
@@ -103,26 +103,28 @@ def tilemap_loarder():
                 if tile_info[0] == 21:
                     C.game_main_surface.blit(G.tl21,((tilemap_y*(C.tile_size/2)-tilemap_x*(C.tile_size/2))+C.move_x,(tilemap_y*(C.tile_size/4)+tilemap_x*(C.tile_size/4))+C.move_y))
 
-            # === 1 tile_building ===
+            # === 1 tile_preview ===
 
                 if tile_info[1] == 0:
                     pass
 
-                if tile_info[1] == 105:
-                    C.game_main_surface.blit(G.t105,((tilemap_y*(C.tile_size/2)-tilemap_x*(C.tile_size/2))+C.move_x,(tilemap_y*(C.tile_size/4)+tilemap_x*(C.tile_size/4))-16+C.move_y))
+                if tile_info[1] == 1:
+                    C.game_main_surface.blit(G.pretile_choose,((tilemap_y*(C.tile_size/2)-tilemap_x*(C.tile_size/2))+C.move_x,(tilemap_y*(C.tile_size/4)+tilemap_x*(C.tile_size/4))+C.move_y - 1))
+                    C.game_main_surface.blit(G.pretile_green,((tilemap_y*(C.tile_size/2)-tilemap_x*(C.tile_size/2))+C.move_x,(tilemap_y*(C.tile_size/4)+tilemap_x*(C.tile_size/4))+C.move_y - 1))
 
-            # === 2 tile_preview ===
+                if tile_info[1] == 2:
+                    C.game_main_surface.blit(G.pretile_choose,((tilemap_y*(C.tile_size/2)-tilemap_x*(C.tile_size/2))+C.move_x,(tilemap_y*(C.tile_size/4)+tilemap_x*(C.tile_size/4))+C.move_y - 1))
+                    C.game_main_surface.blit(G.pretile_red,((tilemap_y*(C.tile_size/2)-tilemap_x*(C.tile_size/2))+C.move_x,(tilemap_y*(C.tile_size/4)+tilemap_x*(C.tile_size/4))+C.move_y - 1))
+
+
+            # === 2 tile_building ===
 
                 if tile_info[2] == 0:
                     pass
 
-                if tile_info[2] == 1:
-                    C.game_main_surface.blit(G.pretile_choose,((tilemap_y*(C.tile_size/2)-tilemap_x*(C.tile_size/2))+C.move_x,(tilemap_y*(C.tile_size/4)+tilemap_x*(C.tile_size/4))+C.move_y - 1))
-                    C.game_main_surface.blit(G.pretile_green,((tilemap_y*(C.tile_size/2)-tilemap_x*(C.tile_size/2))+C.move_x,(tilemap_y*(C.tile_size/4)+tilemap_x*(C.tile_size/4))+C.move_y - 1))
+                if tile_info[2] == 105:
+                    C.game_main_surface.blit(G.t105,((tilemap_y*(C.tile_size/2)-tilemap_x*(C.tile_size/2))+C.move_x,(tilemap_y*(C.tile_size/4)+tilemap_x*(C.tile_size/4))-16+C.move_y))
 
-                if tile_info[2] == 2:
-                    C.game_main_surface.blit(G.pretile_choose,((tilemap_y*(C.tile_size/2)-tilemap_x*(C.tile_size/2))+C.move_x,(tilemap_y*(C.tile_size/4)+tilemap_x*(C.tile_size/4))+C.move_y - 1))
-                    C.game_main_surface.blit(G.pretile_red,((tilemap_y*(C.tile_size/2)-tilemap_x*(C.tile_size/2))+C.move_x,(tilemap_y*(C.tile_size/4)+tilemap_x*(C.tile_size/4))+C.move_y - 1))
 
             # === 3 tile_time ===
 
