@@ -25,6 +25,11 @@ def event():
 
             components.scrollbar.scrollbar_h_event_MOUSEMOTION()
 
+            test_rect = pygame.Rect((0,0,100,100),width=0)
+
+            if pygame.Rect.collidepoint(test_rect,event.pos):
+                print('233333')
+
         if event.type == pygame.MOUSEBUTTONDOWN:
 
             C.mouse_down_pos_x,C.mouse_down_pos_y = event.pos
@@ -41,6 +46,8 @@ def event():
             components.scrollbar.scrollbar_h_event_MOUSEBUTTONUP()
 
         if event.type == MOUSEWHEEL:
+
+            mousewheel = event.y
             
             components.scrollbar.scrollbar_h_event_MOUSEWHEEL(event)
 
