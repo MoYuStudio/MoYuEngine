@@ -144,12 +144,11 @@ def tilemap_loarder():
             # === 4 tile_buildable ===
 
                 if C.tile_type == 1:
-                    if tile_info[0] == 1:
-                        tile_info[4] = 1
+                    if tile_info[0] == 1 or \
+                       tile_info[0] == 6:
 
-                    if tile_info[0] == 6:
                         tile_info[4] = 1
-
+                        
                     else:
                         tile_info[4] = 0
 

@@ -5,6 +5,7 @@ from pygame.locals import *
 import constants as C
 import graphics as G
 import font as F
+import sound as S
 
 import components.tilemap_manager
 
@@ -32,6 +33,9 @@ def init():
 def gameloop():
 
     components.tilemap_manager.tilemap_builder()
+
+    pygame.mixer.music.load('moyu_engine/assets/music/Grace Behind the Curtain - Silent Partner.mp3')
+    pygame.mixer.music.play(-1)
 
     while True: # 需要一个检测游戏是否运行的布尔值 使用for来优化
 

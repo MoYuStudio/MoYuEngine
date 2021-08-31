@@ -6,6 +6,7 @@ from pygame.locals import *
 import constants as C
 import graphics as G
 import font as F
+import sound as S
 
 import components.tilemap_manager
 import components.tilemap_button
@@ -34,22 +35,27 @@ def event():
             components.scrollbar.scrollbar_h_event_MOUSEBUTTONDOWN()
 
             if pygame.Rect.collidepoint(C.bar_button01_rect,event.pos):
+                S.button_sound.play()
                 C.pretile_type = 1
                 C.tile_type = 1
 
             if pygame.Rect.collidepoint(C.bar_button02_rect,event.pos):
+                S.button_sound.play()
                 C.pretile_type = 2
                 C.tile_type = 2
 
             if pygame.Rect.collidepoint(C.bar_button03_rect,event.pos):
+                S.button_sound.play()
                 C.pretile_type = 3
                 C.tile_type = 3
 
             if pygame.Rect.collidepoint(C.bar_button04_rect,event.pos):
+                S.button_sound.play()
                 C.pretile_type = 4
                 C.tile_type = 4
 
             if pygame.Rect.collidepoint(C.bar_button05_rect,event.pos):
+                S.button_sound.play()
                 C.pretile_type = 5
                 C.tile_type = 5
 
@@ -115,3 +121,6 @@ def event():
 
             if event.key == K_e:
                 C.zoom_out = False
+
+            if event.key == K_b:
+                C.build = False
