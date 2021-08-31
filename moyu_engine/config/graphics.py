@@ -37,11 +37,13 @@ t105_icon = pygame.transform.scale(t105, (48,36))
 
 # === Pretile ===
 
-pretile_choose = pygame.image.load('moyu_engine/assets/graphics/pretile/Pretilechoose.png').convert_alpha()
+pretile_choose = pygame.image.load('moyu_engine/assets/graphics/pretile/PretileChoose.png').convert_alpha()
 
 pretile_green = pygame.image.load('moyu_engine/assets/graphics/pretile/PretileGreen.png').convert_alpha()
 
 pretile_red = pygame.image.load('moyu_engine/assets/graphics/pretile/PretileRed.png').convert_alpha()
+
+pretile_reward = pygame.image.load('moyu_engine/assets/graphics/pretile/PretileReward.png').convert_alpha()
 
 # === GUI ===
 

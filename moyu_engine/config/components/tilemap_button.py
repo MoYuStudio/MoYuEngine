@@ -37,6 +37,9 @@ def tilebutton_clicker_event_MOUSEBUTTONDOWN():
 
                         (C.tilemap[tilemap_x][tilemap_y])[1] = 2
 
+                    if tile_info[3] >= 12000:
+                        (C.tilemap[tilemap_x][tilemap_y])[1] = 3
+
                     C.tile_choose_info = [tilemap_x,tilemap_y,((C.tilemap[tilemap_x][tilemap_y])[4])]
 
                     C.tile_choose = True

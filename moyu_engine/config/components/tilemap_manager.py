@@ -104,6 +104,14 @@ def tilemap_loarder():
                     C.game_main_surface.blit(G.pretile_choose,((tilemap_y*(C.tile_size/2)-tilemap_x*(C.tile_size/2))+C.move_x,(tilemap_y*(C.tile_size/4)+tilemap_x*(C.tile_size/4))+C.move_y - 1))
                     C.game_main_surface.blit(G.pretile_red,((tilemap_y*(C.tile_size/2)-tilemap_x*(C.tile_size/2))+C.move_x,(tilemap_y*(C.tile_size/4)+tilemap_x*(C.tile_size/4))+C.move_y - 1))
 
+                if tile_info[1] == 3:
+                    C.game_main_surface.blit(G.pretile_choose,((tilemap_y*(C.tile_size/2)-tilemap_x*(C.tile_size/2))+C.move_x,(tilemap_y*(C.tile_size/4)+tilemap_x*(C.tile_size/4))+C.move_y - 1))
+                    
+                def tile_preview_top():
+
+                    if tile_info[1] == 3:
+                        C.game_main_surface.blit(G.pretile_reward,((tilemap_y*(C.tile_size/2)-tilemap_x*(C.tile_size/2))+C.move_x,(tilemap_y*(C.tile_size/4)+tilemap_x*(C.tile_size/4))+C.move_y - 6))
+                   
             # === 2 tile_building ===
 
                 if tile_info[2] == 0:
@@ -115,29 +123,31 @@ def tilemap_loarder():
                 if tile_info[2] == 2:
                     C.game_main_surface.blit(G.t2,((tilemap_y*(C.tile_size/2)-tilemap_x*(C.tile_size/2))+C.move_x,(tilemap_y*(C.tile_size/4)+tilemap_x*(C.tile_size/4))+C.move_y))
                     tile_info[3] += C.time_speed
-                    if tile_info[3] >= 2000:
+                    if tile_info[3] >= 4000:
                         tile_info[2] = 3
 
                 if tile_info[2] == 3:
                     C.game_main_surface.blit(G.t3,((tilemap_y*(C.tile_size/2)-tilemap_x*(C.tile_size/2))+C.move_x,(tilemap_y*(C.tile_size/4)+tilemap_x*(C.tile_size/4))+C.move_y))
                     tile_info[3] += C.time_speed
-                    if tile_info[3] >= 4000:
+                    if tile_info[3] >= 8000:
                         tile_info[2] = 4
 
                 if tile_info[2] == 4:
                     C.game_main_surface.blit(G.t4,((tilemap_y*(C.tile_size/2)-tilemap_x*(C.tile_size/2))+C.move_x,(tilemap_y*(C.tile_size/4)+tilemap_x*(C.tile_size/4))+C.move_y))
                     tile_info[3] += C.time_speed
-                    if tile_info[3] >= 6000:
+                    if tile_info[3] >= 12000:
                         tile_info[2] = 5
 
                 if tile_info[2] == 5:
                     C.game_main_surface.blit(G.t5,((tilemap_y*(C.tile_size/2)-tilemap_x*(C.tile_size/2))+C.move_x,(tilemap_y*(C.tile_size/4)+tilemap_x*(C.tile_size/4))+C.move_y))
                     tile_info[3] += C.time_speed
-                    if tile_info[3] >= 8000:
-                        tile_info[2] = 5
 
                 if tile_info[2] == 105:
                     C.game_main_surface.blit(G.t105,((tilemap_y*(C.tile_size/2)-tilemap_x*(C.tile_size/2))+C.move_x,(tilemap_y*(C.tile_size/4)+tilemap_x*(C.tile_size/4))-16+C.move_y))
+
+            # === 1 tile_preview top ===
+
+                tile_preview_top()
 
             # === 3 tile_time ===
 
@@ -148,7 +158,7 @@ def tilemap_loarder():
                        tile_info[0] == 6:
 
                         tile_info[4] = 1
-                        
+
                     else:
                         tile_info[4] = 0
 
