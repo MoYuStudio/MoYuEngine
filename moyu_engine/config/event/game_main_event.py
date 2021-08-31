@@ -25,11 +25,6 @@ def event():
 
             components.scrollbar.scrollbar_h_event_MOUSEMOTION()
 
-            test_rect = pygame.Rect((0,0,100,100),width=0)
-
-            if pygame.Rect.collidepoint(test_rect,event.pos):
-                print('233333')
-
         if event.type == pygame.MOUSEBUTTONDOWN:
 
             C.mouse_down_pos_x,C.mouse_down_pos_y = event.pos
@@ -40,6 +35,26 @@ def event():
 
             components.button.button_event_MOUSEBUTTONDOWN(64,64,C.window_size[0]-64 - 10,10,C.mouse_down_pos_x,C.mouse_down_pos_y,\
             button_name = 'home_page_button',button_type = 'button',button_type_data_1 = 1)
+
+            if pygame.Rect.collidepoint(C.bar_button01_rect,event.pos):
+                print('bar_button01_rect be clicked')
+                C.tile_type = 1
+
+            if pygame.Rect.collidepoint(C.bar_button02_rect,event.pos):
+                print('bar_button02_rect be clicked')
+                C.tile_type = 2
+
+            if pygame.Rect.collidepoint(C.bar_button03_rect,event.pos):
+                print('bar_button03_rect be clicked')
+                C.tile_type = 3
+
+            if pygame.Rect.collidepoint(C.bar_button04_rect,event.pos):
+                print('bar_button04_rect be clicked')
+                C.tile_type = 4
+
+            if pygame.Rect.collidepoint(C.bar_button05_rect,event.pos):
+                print('bar_button05_rect be clicked')
+                C.tile_type = 5
 
         if event.type == pygame.MOUSEBUTTONUP:
             
@@ -70,6 +85,9 @@ def event():
 
             if event.key == K_e:
                 C.zoom_out = True
+
+            if event.key == K_b:
+                C.build = True
 
             if event.key == K_z:
                 C.game_main_surface_level = 60

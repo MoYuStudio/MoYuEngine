@@ -20,7 +20,7 @@ def update():
     
     C.screen.blit(game_main_gui_surfaceFin, (0, 0))
 
-    components.scrollbar.scrollbar_h_surface(C.screen)
+    #components.scrollbar.scrollbar_h_surface(C.screen)
 
     components.window_move.move_Fn()
     components.window_zoom.zoom_Fn()
@@ -51,17 +51,39 @@ def gui_graphics():
     # === GUI ===
 
     C.game_main_gui_surface.blit(G.button001Fin, (10,10*1 + 64*0))
-    C.game_main_gui_surface.blit(G.button001Fin, (10,10*2 + 64*1))
-    C.game_main_gui_surface.blit(G.button001Fin, (10,10*3 + 64*2))
-    C.game_main_gui_surface.blit(G.button001Fin, (10,10*4 + 64*3))
-    C.game_main_gui_surface.blit(G.button001Fin, (10,10*5 + 64*4))
+    if C.tile_type == 1:
+        C.game_main_gui_surface.blit(G.t1_icon, (10*1 + 64*0 + 8,(10*1 + 64*0) + 24))
+    if C.tile_type == 2:
+        C.game_main_gui_surface.blit(G.t2_icon, (10*1 + 64*0 + 8,(10*1 + 64*0) + 24))
+    if C.tile_type == 3:
+        C.game_main_gui_surface.blit(G.t3_icon, (10*1 + 64*0 + 8,(10*1 + 64*0) + 24))
+    if C.tile_type == 4:
+        C.game_main_gui_surface.blit(G.t4_icon, (10*1 + 64*0 + 8,(10*1 + 64*0) + 24))
+    if C.tile_type == 5:
+        C.game_main_gui_surface.blit(G.t5_icon, (10*1 + 64*0 + 8,(10*1 + 64*0) + 24))
+    if C.tile_type == 105:
+        C.game_main_gui_surface.blit(G.t105_icon, (10*1 + 64*0 + 8,(10*1 + 64*0) + 18))
 
-    C.game_main_gui_surface.blit(G.button001miniFin, (100,10*1 + 48*0))
-    C.game_main_gui_surface.blit(G.button001miniFin, (100,10*2 + 48*1))
-    C.game_main_gui_surface.blit(G.button001miniFin, (100,10*3 + 48*2))
-    C.game_main_gui_surface.blit(G.button001miniFin, (100,10*4 + 48*3))
-    C.game_main_gui_surface.blit(G.button001miniFin, (100,10*5 + 48*4))
-    C.game_main_gui_surface.blit(G.button001miniFin, (100,10*6 + 48*5))
+    # === Bar button ===
+    # = 1 =
+    C.game_main_gui_surface.blit(G.button001Fin, (10*1 + 64*0,C.window_size[1] - (10*1 + 64*1)))
+    C.game_main_gui_surface.blit(G.t1_icon, (10*1 + 64*0 + 8,C.window_size[1] - (10*1 + 64*1) + 24))
+    # = 2 =
+    C.game_main_gui_surface.blit(G.button001Fin, (10*2 + 64*1,C.window_size[1] - (10*1 + 64*1)))
+    C.game_main_gui_surface.blit(G.t2_icon, (10*2 + 64*1 + 8,C.window_size[1] - (10*1 + 64*1) + 24))
+    # = 3 =
+    C.game_main_gui_surface.blit(G.button001Fin, (10*3 + 64*2,C.window_size[1] - (10*1 + 64*1)))
+    C.game_main_gui_surface.blit(G.t3_icon, (10*3 + 64*2 + 8,C.window_size[1] - (10*1 + 64*1) + 24))
+    # = 4 =
+    C.game_main_gui_surface.blit(G.button001Fin, (10*4 + 64*3,C.window_size[1] - (10*1 + 64*1)))
+    C.game_main_gui_surface.blit(G.t4_icon, (10*4 + 64*3 + 8,C.window_size[1] - (10*1 + 64*1) + 24))
+    # = 5 =
+    C.game_main_gui_surface.blit(G.button001Fin, (10*5 + 64*4,C.window_size[1] - (10*1 + 64*1)))
+    C.game_main_gui_surface.blit(G.t5_icon, (10*5 + 64*4 + 8,C.window_size[1] - (10*1 + 64*1) + 24))
+
+    #C.game_main_gui_surface.blit(G.button001Fin, (10,10*1 + 64*0))
+
+    #C.game_main_gui_surface.blit(G.button001miniFin, (100,10*1 + 48*0))
 
     C.game_main_gui_surface.blit(G.home_buttonFin, (C.window_size[0]-64 - 10,10))
 

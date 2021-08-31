@@ -69,3 +69,16 @@ money = 100
 
 tileland_graphics_path = locals()
 tileland_graphics = []
+
+# === Rect ===
+
+bar_button01_rect = pygame.Rect((10*1 + 64*0,window_size[1] - (10*1 + 64*1),64,64),width=0)
+bar_button02_rect = pygame.Rect((10*2 + 64*1,window_size[1] - (10*1 + 64*1),64,64),width=0)
+bar_button03_rect = pygame.Rect((10*3 + 64*2,window_size[1] - (10*1 + 64*1),64,64),width=0)
+bar_button04_rect = pygame.Rect((10*4 + 64*3,window_size[1] - (10*1 + 64*1),64,64),width=0)
+bar_button05_rect = pygame.Rect((10*5 + 64*4,window_size[1] - (10*1 + 64*1),64,64),width=0)
+
+tile_type = 0
+build = False
+
+time_speed = 100

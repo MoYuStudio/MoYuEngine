@@ -3,6 +3,8 @@ import pygame
 
 import constants as C
 
+# === Tileland ===
+
 tl1 = pygame.image.load('moyu_engine/assets/graphics/tileland/TL1.png').convert_alpha()
 
 tl6 = pygame.image.load('moyu_engine/assets/graphics/tileland/TL6.png').convert_alpha()
@@ -13,7 +15,27 @@ tl16 = pygame.image.load('moyu_engine/assets/graphics/tileland/TL16.png').conver
 
 tl21 = pygame.image.load('moyu_engine/assets/graphics/tileland/TL21.png').convert_alpha()
 
+# === Tile ===
+
+t1 = pygame.image.load('moyu_engine/assets/graphics/tile/T1.png').convert_alpha()
+t1_icon = pygame.transform.scale(t1, (48,24))
+
+t2 = pygame.image.load('moyu_engine/assets/graphics/tile/T2.png').convert_alpha()
+t2_icon = pygame.transform.scale(t2, (48,24))
+
+t3 = pygame.image.load('moyu_engine/assets/graphics/tile/T3.png').convert_alpha()
+t3_icon = pygame.transform.scale(t3, (48,24))
+
+t4 = pygame.image.load('moyu_engine/assets/graphics/tile/T4.png').convert_alpha()
+t4_icon = pygame.transform.scale(t4, (48,24))
+
+t5 = pygame.image.load('moyu_engine/assets/graphics/tile/T5.png').convert_alpha()
+t5_icon = pygame.transform.scale(t5, (48,24))
+
 t105 = pygame.image.load('moyu_engine/assets/graphics/tile/T105.png').convert_alpha()
+t105_icon = pygame.transform.scale(t105, (48,36))
+
+# === Pretile ===
 
 pretile_choose = pygame.image.load('moyu_engine/assets/graphics/pretile/Pretilechoose.png').convert_alpha()
 
