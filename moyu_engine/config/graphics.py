@@ -46,7 +46,7 @@ pretile_red = pygame.image.load('moyu_engine/assets/graphics/pretile/PretileRed.
 # === GUI ===
 
 home_button = pygame.image.load('moyu_engine/assets/graphics/gui/home_button.png').convert_alpha()
-home_buttonFin = pygame.transform.scale(home_button, (32,32))
+home_buttonFin = pygame.transform.scale(home_button, (64,64))
 
 button001 = pygame.image.load('moyu_engine/assets/graphics/gui/button001.png').convert_alpha()
 button001Fin = pygame.transform.scale(button001, (64,64))
