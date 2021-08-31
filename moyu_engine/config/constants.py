@@ -81,5 +81,6 @@ bar_button05_rect = pygame.Rect((10*5 + 64*4,window_size[1] - (10*1 + 64*1),64,6
 pretile_type = 0
 tile_type = 0
 build = False
+reward = False
 
 time_speed = 100

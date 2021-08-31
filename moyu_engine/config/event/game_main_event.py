@@ -92,7 +92,12 @@ def event():
             if event.key == K_b:
                 C.build = True
                 if C.tile_type == 1:
-                    C.money -= 10
+                    C.money -= 30
+                if C.tile_type == 2:
+                    C.money -= 5
+
+            if event.key == K_r:
+                C.reward = True
 
             if event.key == K_z:
                 C.game_main_surface_level = 60
@@ -124,3 +129,6 @@ def event():
 
             if event.key == K_b:
                 C.build = False
+
+            if event.key == K_r:
+                C.reward = False

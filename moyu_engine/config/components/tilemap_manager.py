@@ -106,7 +106,14 @@ def tilemap_loarder():
 
                 if tile_info[1] == 3:
                     C.game_main_surface.blit(G.pretile_choose,((tilemap_y*(C.tile_size/2)-tilemap_x*(C.tile_size/2))+C.move_x,(tilemap_y*(C.tile_size/4)+tilemap_x*(C.tile_size/4))+C.move_y - 1))
-                    
+                    if C.reward == True:
+                        if tile_info[2] == 5:
+                            tile_info[1] = 0
+                            tile_info[2] = 1
+                            tile_info[3] = 0
+                            C.money += 80
+                        C.reward = False
+
                 def tile_preview_top():
 
                     if tile_info[1] == 3:
