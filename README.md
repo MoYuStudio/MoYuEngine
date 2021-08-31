@@ -34,7 +34,7 @@ Not Enough Space ! 空间不足！ <br/><br/>
 ###### `本游戏由 MoYuStudio 摸魚社® 100%原创开发`
 ###### `MoYuStudio 摸魚社® & C-Prismera Tech Corp 淩创科技® reserves the right of final explanation` <br/><br/>
 
-# Game Doc 游戏Doc
+### Game Doc 游戏文档
             移动视角：W A S D & 方向键 上下左右
             缩放视角：Q E
             还原视角：Z
