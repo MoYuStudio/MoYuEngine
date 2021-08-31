@@ -78,6 +78,7 @@ bar_button03_rect = pygame.Rect((10*3 + 64*2,window_size[1] - (10*1 + 64*1),64,6
 bar_button04_rect = pygame.Rect((10*4 + 64*3,window_size[1] - (10*1 + 64*1),64,64),width=0)
 bar_button05_rect = pygame.Rect((10*5 + 64*4,window_size[1] - (10*1 + 64*1),64,64),width=0)
 
+pretile_type = 0
 tile_type = 0
 build = False
 

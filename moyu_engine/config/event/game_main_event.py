@@ -38,22 +38,27 @@ def event():
 
             if pygame.Rect.collidepoint(C.bar_button01_rect,event.pos):
                 print('bar_button01_rect be clicked')
+                C.pretile_type = 1
                 C.tile_type = 1
 
             if pygame.Rect.collidepoint(C.bar_button02_rect,event.pos):
                 print('bar_button02_rect be clicked')
+                C.pretile_type = 2
                 C.tile_type = 2
 
             if pygame.Rect.collidepoint(C.bar_button03_rect,event.pos):
                 print('bar_button03_rect be clicked')
+                C.pretile_type = 3
                 C.tile_type = 3
 
             if pygame.Rect.collidepoint(C.bar_button04_rect,event.pos):
                 print('bar_button04_rect be clicked')
+                C.pretile_type = 4
                 C.tile_type = 4
 
             if pygame.Rect.collidepoint(C.bar_button05_rect,event.pos):
                 print('bar_button05_rect be clicked')
+                C.pretile_type = 5
                 C.tile_type = 5
 
         if event.type == pygame.MOUSEBUTTONUP:

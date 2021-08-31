@@ -51,17 +51,17 @@ def gui_graphics():
     # === GUI ===
 
     C.game_main_gui_surface.blit(G.button001Fin, (10,10*1 + 64*0))
-    if C.tile_type == 1:
+    if C.pretile_type == 1:
         C.game_main_gui_surface.blit(G.t1_icon, (10*1 + 64*0 + 8,(10*1 + 64*0) + 24))
-    if C.tile_type == 2:
+    if C.pretile_type == 2:
         C.game_main_gui_surface.blit(G.t2_icon, (10*1 + 64*0 + 8,(10*1 + 64*0) + 24))
-    if C.tile_type == 3:
+    if C.pretile_type == 3:
         C.game_main_gui_surface.blit(G.t3_icon, (10*1 + 64*0 + 8,(10*1 + 64*0) + 24))
-    if C.tile_type == 4:
+    if C.pretile_type == 4:
         C.game_main_gui_surface.blit(G.t4_icon, (10*1 + 64*0 + 8,(10*1 + 64*0) + 24))
-    if C.tile_type == 5:
+    if C.pretile_type == 5:
         C.game_main_gui_surface.blit(G.t5_icon, (10*1 + 64*0 + 8,(10*1 + 64*0) + 24))
-    if C.tile_type == 105:
+    if C.pretile_type == 105:
         C.game_main_gui_surface.blit(G.t105_icon, (10*1 + 64*0 + 8,(10*1 + 64*0) + 18))
 
     # === Bar button ===

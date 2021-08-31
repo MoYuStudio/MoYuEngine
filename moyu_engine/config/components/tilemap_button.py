@@ -23,7 +23,7 @@ def tilebutton_clicker_event_MOUSEBUTTONDOWN():
                    pygame.Rect.collidepoint(C.bar_button04_rect,(C.mouse_down_pos_x,C.mouse_down_pos_y))or\
                    pygame.Rect.collidepoint(C.bar_button05_rect,(C.mouse_down_pos_x,C.mouse_down_pos_y)):
                     pass
-                
+
                 else:
                     if C.tile_choose == True:
 
@@ -41,4 +41,7 @@ def tilebutton_clicker_event_MOUSEBUTTONDOWN():
 
                     C.tile_choose = True
 
-                    C.tile_type = tile_info[2]
+                    if tile_info[2] == 0:
+                        pass
+                    else:
+                        C.pretile_type = tile_info[2]
