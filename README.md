@@ -34,6 +34,13 @@ Not Enough Space ! 空间不足！ <br/><br/>
 ###### `本游戏由 MoYuStudio 摸魚社® 100%原创开发`
 ###### `MoYuStudio 摸魚社® & C-Prismera Tech Corp 淩创科技® reserves the right of final explanation` <br/><br/>
 
+### Game Doc 游戏文档
+            移动视角：W A S D & 方向键 上下左右
+            缩放视角：Q E
+            还原视角：Z
+            随机重制地图(测试使用)：X
+            建造：B
+
 MoYu Engine 文件检索
 -------------------
 >`moyu_engine` 摸鱼引擎目录（所有的游戏文件的目录)<br/>
@@ -59,8 +66,14 @@ MoYu Engine 文件检索
 -------
 ##### 08/31/2021 更新日志
             新增 部分GUI组件
-            新增 土地可种植
-            新增 时间
+            新增 部分GUI音效
+            新增 BGM背景音乐
+            新增 金融系统
+            新增 建造系统
+            新增 土地可种植系统
+            新增 时间维度
+            新增 预选层判断
+            新增 游戏文档
 
 ##### 08/30/2021 更新日志
             新增 部分GUI组件
