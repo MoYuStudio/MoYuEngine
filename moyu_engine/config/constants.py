@@ -78,6 +78,8 @@ tileland_graphics = []
 
 # === Rect ===
 
+homebutton_rect = pygame.Rect((window_size[0]-64 - 10,10,64,64),width=0)
+
 bar_button01_rect = pygame.Rect((10*1 + 64*0,window_size[1] - (10*1 + 64*1),64,64),width=0)
 bar_button02_rect = pygame.Rect((10*2 + 64*1,window_size[1] - (10*1 + 64*1),64,64),width=0)
 bar_button03_rect = pygame.Rect((10*3 + 64*2,window_size[1] - (10*1 + 64*1),64,64),width=0)

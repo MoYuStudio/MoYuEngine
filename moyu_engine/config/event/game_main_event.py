@@ -34,6 +34,12 @@ def event():
 
             moyu_engine.config.components.scrollbar.scrollbar_h_event_MOUSEBUTTONDOWN()
 
+            if pygame.Rect.collidepoint(C.homebutton_rect,event.pos):
+                S.button_sound.play()
+                
+                C.game_main = False
+                C.menu_main = True
+
             if pygame.Rect.collidepoint(C.bar_button01_rect,event.pos):
                 S.button_sound.play()
                 C.pretile_type = 1
