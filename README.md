@@ -1,5 +1,5 @@
 ###### MoYuStudio SUGT06 Dv
-Not Enough Space ! 空间不足！ <br/><br/>
+Tinyland 弹丸之地 <br/><br/>
 =======================
 
 ![](https://github.com/MoYuStudio/SUGT06/raw/main/moyu_engine/assets/graphics/tileland/tl1.png)
@@ -26,7 +26,7 @@ Not Enough Space ! 空间不足！ <br/><br/>
             2.Steam热更新（由@[策划&开发组长] 辰冰 负责，预计12月底需要解决方案或代码）
 
 # Game Introduction 游戏简介
-            《 Not Enough Space ! 空间不足！》是一款建筑类沙盒游戏，讲述了一片漂浮在宇宙之中的破碎之地。
+            《 Tinyland 弹丸之地 》是一款建筑类沙盒游戏，讲述了一片漂浮在宇宙之中的破碎之地。
             玩家在游戏中扮演一名领导者，带领人民在有限的空间内发展属于自己的帝国
             或发展科技和军事来捕捉其他碎片扩大领土[无尽模式/沙盒模式]
             或在有限的空间解决发展需求的难题[剧情模式/挑战模式]
