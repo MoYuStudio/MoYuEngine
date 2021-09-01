@@ -3,15 +3,15 @@ import sys
 import pygame
 from pygame.locals import *
 
-import constants as C
-import graphics as G
-import font as F
-import sound as S
+import moyu_engine.config.constants as C
+import moyu_engine.config.graphics as G
+import moyu_engine.config.font as F
+import moyu_engine.config.sound as S
 
-import components.tilemap_manager
-import components.tilemap_button
-import components.button
-import components.scrollbar
+import moyu_engine.config.components.tilemap_manager
+import moyu_engine.config.components.tilemap_button
+import moyu_engine.config.components.button
+import moyu_engine.config.components.scrollbar
 
 def event():
 
@@ -24,15 +24,15 @@ def event():
 
             C.mouse_pos_x,C.mouse_pos_y = event.pos
 
-            components.scrollbar.scrollbar_h_event_MOUSEMOTION()
+            moyu_engine.config.components.scrollbar.scrollbar_h_event_MOUSEMOTION()
 
         if event.type == pygame.MOUSEBUTTONDOWN:
 
             C.mouse_down_pos_x,C.mouse_down_pos_y = event.pos
             
-            components.tilemap_button.tilebutton_clicker_event_MOUSEBUTTONDOWN()
+            moyu_engine.config.components.tilemap_button.tilebutton_clicker_event_MOUSEBUTTONDOWN()
 
-            components.scrollbar.scrollbar_h_event_MOUSEBUTTONDOWN()
+            moyu_engine.config.components.scrollbar.scrollbar_h_event_MOUSEBUTTONDOWN()
 
             if pygame.Rect.collidepoint(C.bar_button01_rect,event.pos):
                 S.button_sound.play()
@@ -61,13 +61,13 @@ def event():
 
         if event.type == pygame.MOUSEBUTTONUP:
             
-            components.scrollbar.scrollbar_h_event_MOUSEBUTTONUP()
+            moyu_engine.config.components.scrollbar.scrollbar_h_event_MOUSEBUTTONUP()
 
         if event.type == MOUSEWHEEL:
 
             mousewheel = event.y
             
-            components.scrollbar.scrollbar_h_event_MOUSEWHEEL(event)
+            moyu_engine.config.components.scrollbar.scrollbar_h_event_MOUSEWHEEL(event)
 
         if event.type == pygame.KEYDOWN:
 

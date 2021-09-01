@@ -2,16 +2,16 @@
 import pygame
 from pygame.locals import *
 
-import constants as C
-import graphics as G
-import font as F
-import sound as S
+import moyu_engine.config.constants as C
+import moyu_engine.config.graphics as G
+import moyu_engine.config.font as F
+import moyu_engine.config.sound as S
 
-import components.tilemap_manager
+import moyu_engine.config.components.tilemap_manager
 
-import surface.game_main_surface
+import moyu_engine.config.surface.game_main_surface
 
-import event.game_main_event
+import moyu_engine.config.event.game_main_event
 
 def run():
     init()
@@ -32,16 +32,16 @@ def init():
 
 def gameloop():
 
-    components.tilemap_manager.tilemap_builder()
+    moyu_engine.config.components.tilemap_manager.tilemap_builder()
 
     pygame.mixer.music.load('moyu_engine/assets/music/Grace Behind the Curtain - Silent Partner.mp3')
     pygame.mixer.music.play(-1)
 
     while True: # 需要一个检测游戏是否运行的布尔值 使用for来优化
 
-        surface.game_main_surface.update()
+        moyu_engine.config.surface.game_main_surface.update()
 
-        event.game_main_event.event()
+        moyu_engine.config.event.game_main_event.event()
 
         C.clock.tick(60)
 

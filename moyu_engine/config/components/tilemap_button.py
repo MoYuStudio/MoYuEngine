@@ -1,8 +1,8 @@
 
 import pygame
 
-import constants as C
-import graphics as G
+import moyu_engine.config.constants as C
+import moyu_engine.config.graphics as G
 
 def tilebutton_clicker_event_MOUSEBUTTONDOWN():
 

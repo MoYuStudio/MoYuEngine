@@ -1,7 +1,7 @@
 
-import constants as C
-import graphics as G
-import sound as S
+import moyu_engine.config.constants as C
+import moyu_engine.config.graphics as G
+import moyu_engine.config.sound as S
 
 def button_event_MOUSEBUTTONDOWN(button_width,button_height,button_x_pos,button_y_pos,mouse_x_pos,mouse_y_pos,button_name = 'button',button_type = 'button',button_type_data_1 = '0',button_type_data_2 = '0'):
 

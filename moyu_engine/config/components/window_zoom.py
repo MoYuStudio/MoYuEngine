@@ -1,5 +1,5 @@
 
-import constants as C
+import moyu_engine.config.constants as C
 
 def zoom_Fn():
     if C.zoom_in == True:

@@ -1,9 +1,9 @@
 
 import random
 
-import constants as C
-import graphics as G
-import font as F
+import moyu_engine.config.constants as C
+import moyu_engine.config.graphics as G
+import moyu_engine.config.font as F
 
 def tilemap_builder():
 

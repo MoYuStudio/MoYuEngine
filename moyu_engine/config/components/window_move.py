@@ -1,5 +1,5 @@
 
-import constants as C
+import moyu_engine.config.constants as C
 
 def move_Fn():
     if C.move_up == True:

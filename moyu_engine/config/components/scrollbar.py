@@ -2,7 +2,7 @@
 import pygame
 from pygame.locals import *
 
-import constants as C
+import moyu_engine.config.constants as C
 
 # scrollbar_h button_pos >>> button_x,button_y+move
 # scrollbar_w button_pos >>> button_x+move,button_y

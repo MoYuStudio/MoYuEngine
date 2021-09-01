@@ -3,14 +3,14 @@ import sys
 import pygame
 from pygame.locals import *
 
-import constants as C
-import graphics as G
-import font as F
+import moyu_engine.config.constants as C
+import moyu_engine.config.graphics as G
+import moyu_engine.config.font as F
 
-import components.tilemap_manager
-import components.window_move
-import components.window_zoom
-import components.scrollbar
+import moyu_engine.config.components.tilemap_manager
+import moyu_engine.config.components.window_move
+import moyu_engine.config.components.window_zoom
+import moyu_engine.config.components.scrollbar
 
 def update():
 
@@ -22,8 +22,8 @@ def update():
 
     #components.scrollbar.scrollbar_h_surface(C.screen)
 
-    components.window_move.move_Fn()
-    components.window_zoom.zoom_Fn()
+    moyu_engine.config.components.window_move.move_Fn()
+    moyu_engine.config.components.window_zoom.zoom_Fn()
 
     pygame.display.update()
 
@@ -35,7 +35,7 @@ def tilemap_graphics():
     C.game_main_surface.fill((0,0,0))
     C.game_main_surface.blit(G.backgroundFin, ((-(C.move_x/3))-1280,(-(C.move_y/3))-720))
 
-    components.tilemap_manager.tilemap_loarder()
+    moyu_engine.config.components.tilemap_manager.tilemap_loarder()
 
 def gui_graphics():
 

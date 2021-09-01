@@ -1,7 +1,7 @@
 
 import pygame
 
-import constants as C
+import moyu_engine.config.constants as C
 
 # === Tileland ===
 
