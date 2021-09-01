@@ -24,7 +24,7 @@ zoom_out = False
 
 window_size = [1280,720]
 screen = pygame.display.set_mode(window_size)
-screen_title = pygame.display.set_caption('Not Enough Space ! 空间不足！')
+screen_title = pygame.display.set_caption('Tinyland 弹丸之地')
 
 clock = pygame.time.Clock()
 

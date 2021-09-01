@@ -25,7 +25,7 @@ def init():
     pygame.mixer.init()
 
     C.screen = pygame.display.set_mode(C.window_size)
-    C.screen_title = pygame.display.set_caption('Not Enough Space ! 空间不足！')
+    C.screen_title = pygame.display.set_caption('Tinyland 弹丸之地')
     pygame.display.set_icon(G.tl16)
     C.clock = pygame.time.Clock()
     pygame.display.flip()
