@@ -2,8 +2,8 @@
 import os
 import pygame
 
-import constants as C
-import graphics as G
+import moyu_engine.config.constants as C
+import moyu_engine.config.graphics as G
 
 def tileland_graphics_loader(path):
     tileland_graphics_file_name = os.listdir(path)
