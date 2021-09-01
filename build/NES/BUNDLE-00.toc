@@ -1,0 +1,3 @@
+([('NES',
+   '/Users/wilsonvinson/Documents/GitHub/SUGT06/dist/NES',
+   'EXECUTABLE')],)
