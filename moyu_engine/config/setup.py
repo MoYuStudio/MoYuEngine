@@ -9,8 +9,10 @@ import moyu_engine.config.sound as S
 
 import moyu_engine.config.components.tilemap_manager
 
-import moyu_engine.config.surface.game_main_surface
+import moyu_engine.config.surface.menu_main_surface
+import moyu_engine.config.event.menu_main_event
 
+import moyu_engine.config.surface.game_main_surface
 import moyu_engine.config.event.game_main_event
 
 def run():
@@ -39,9 +41,17 @@ def gameloop():
 
     while True: # 需要一个检测游戏是否运行的布尔值 使用for来优化
 
-        moyu_engine.config.surface.game_main_surface.update()
+        if C.menu_main == True:
 
-        moyu_engine.config.event.game_main_event.event()
+            moyu_engine.config.surface.menu_main_surface.update()
+
+            moyu_engine.config.event.menu_main_event.event()
+
+        if C.game_main == True:
+
+            moyu_engine.config.surface.game_main_surface.update()
+
+            moyu_engine.config.event.game_main_event.event()
 
         C.clock.tick(60)
 

@@ -50,6 +50,12 @@ game_main_gui_surface = pygame.Surface(game_main_gui_surface_size)
 
 #surface_level = (1280/(16*game_main_gui_surface_level))
 
+menu_main_surface_level = 80
+# 320 180 n = 20        16*n  9*n    1280 720 n = 80
+menu_main_surface_size = [16*menu_main_surface_level,9*menu_main_surface_level]
+menu_main_surface = pygame.Surface(menu_main_surface_size)
+
+
 # ================================================= Scrollbar =================================================
 
 scrollbar_line_color = [255, 255, 255]
@@ -84,3 +90,8 @@ build = False
 reward = False
 
 time_speed = 100
+
+# === Page ===
+
+menu_main = True
+game_main = False
