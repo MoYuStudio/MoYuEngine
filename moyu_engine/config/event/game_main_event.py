@@ -105,7 +105,7 @@ def event():
                 C.move_x,C.move_y = 450,5
 
             if event.key == K_x:
-                components.tilemap_manager.tilemap_builder()
+                moyu_engine.config.components.tilemap_manager.tilemap_builder()
 
         if event.type == pygame.KEYUP:
 
