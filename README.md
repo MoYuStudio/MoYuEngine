@@ -75,14 +75,14 @@ MoYu Engine 文件检索
             新增 menu_stop event 模块
             新增 menu_setting surface 模块
             新增 menu_setting event 模块
-            优化 架构
+            优化 MoYu自研引擎 架构
 
 ##### 09/01/2021 更新日志
             MacOS 打包测试
             新增 init 牵引文件 模块
             新增 menu_main surface 模块
             新增 menu_main event 模块
-            优化 架构
+            优化 MoYu自研引擎 架构
 
 ##### 08/31/2021 更新日志
             SUGT06a12 Dv20210831 发布
@@ -96,6 +96,7 @@ MoYu Engine 文件检索
             新增 时间维度
             新增 预选层判断
             新增 游戏文档
+            优化 MoYu自研引擎 架构
 
 ##### 08/30/2021 更新日志
             新增 部分GUI组件
