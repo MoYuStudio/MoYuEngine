@@ -70,6 +70,8 @@ MoYu Engine 文件检索
 -------
 ##### 09/02/2021 更新日志
             WindowsOS 打包测试
+            引入 perlin noise 柏林噪声 算法
+            测试 柏林噪声 随机地图生成 模块
             新增 menu_main 启动界面
             新增 menu_stop surface 模块
             新增 menu_stop event 模块
