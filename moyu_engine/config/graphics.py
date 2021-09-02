@@ -61,3 +61,6 @@ money_iconFin = pygame.transform.scale(money_icon, (32,32))
 
 background = pygame.image.load('moyu_engine/assets/graphics/background/background.png').convert_alpha()
 backgroundFin = pygame.transform.scale(background, (1280*3,720*3))
+
+menu_background = pygame.image.load('moyu_engine/assets/graphics/background/menu_background.png').convert_alpha()
+menu_backgroundFin = pygame.transform.scale(menu_background, (1280,720))

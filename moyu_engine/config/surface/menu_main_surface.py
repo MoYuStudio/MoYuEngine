@@ -21,4 +21,6 @@ def menu_graphics():
 
     C.menu_main_surface.fill((255,255,255))
 
+    C.menu_main_surface.blit(G.menu_backgroundFin, (0,0))
+
     C.menu_main_surface.blit(G.button001Fin, (10*1 + 64*0,C.window_size[1] - (10*1 + 64*1)))
