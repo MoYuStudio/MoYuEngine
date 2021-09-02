@@ -68,11 +68,20 @@ MoYu Engine 文件检索
 
 更新日志
 -------
+##### 09/02/2021 更新日志
+            WindowsOS 打包测试
+            新增 menu_main 启动界面
+            新增 menu_stop surface 模块
+            新增 menu_stop event 模块
+            新增 menu_setting surface 模块
+            新增 menu_setting event 模块
+            优化 架构
+
 ##### 09/01/2021 更新日志
             MacOS 打包测试
             新增 init 牵引文件 模块
-            新增 menu surface 模块
-            新增 menu event 模块
+            新增 menu_main surface 模块
+            新增 menu_main event 模块
             优化 架构
 
 ##### 08/31/2021 更新日志
