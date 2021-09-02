@@ -96,4 +96,6 @@ time_speed = 100
 # === Page ===
 
 menu_main = True
+menu_stop = False
+menu_setting = False
 game_main = False
