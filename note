@@ -1,0 +1,4 @@
+
+pyinstaller -i tl16.png -n Tinyland -w -F init.py
+
+pyinstaller -i tl16.png -n Tinyland -F init.py
