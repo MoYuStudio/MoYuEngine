@@ -5,7 +5,7 @@ block_cipher = None
 
 
 a = Analysis(['init.py'],
-             pathex=['C:\\Users\\Server01\\Documents\\GitHub\\SUGT06'],
+             pathex=['/Users/wilsonvinson/Documents/GitHub/SUGT06'],
              binaries=[],
              datas=[],
              hiddenimports=[],
@@ -37,4 +37,8 @@ exe = EXE(pyz,
           disable_windowed_traceback=False,
           target_arch=None,
           codesign_identity=None,
-          entitlements_file=None , icon='tl16win.ico')
+          entitlements_file=None , icon='tl16.png')
+app = BUNDLE(exe,
+             name='Tinyland.app',
+             icon='tl16.png',
+             bundle_identifier=None)
