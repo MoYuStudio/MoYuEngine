@@ -19,8 +19,26 @@ def event():
 
             C.mouse_down_pos_x,C.mouse_down_pos_y = event.pos
 
-            if pygame.Rect.collidepoint(C.bar_button01_rect,event.pos):
+            if pygame.Rect.collidepoint(C.menu_main_button01_rect,event.pos):
                 S.button_sound.play()
                 
                 C.menu_main = False
                 C.game_main = True
+
+            if pygame.Rect.collidepoint(C.menu_main_button02_rect,event.pos):
+                S.button_sound.play()
+
+                C.menu_main = False
+                C.game_main = True
+
+            if pygame.Rect.collidepoint(C.menu_main_button03_rect,event.pos):
+                S.button_sound.play()
+
+            if pygame.Rect.collidepoint(C.menu_main_button04_rect,event.pos):
+                S.button_sound.play()
+
+                pygame.quit()
+                sys.exit()
+
+            if pygame.Rect.collidepoint(C.menu_main_button05_rect,event.pos):
+                S.button_sound.play()

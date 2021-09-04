@@ -55,7 +55,6 @@ menu_main_surface_level = 80
 menu_main_surface_size = [16*menu_main_surface_level,9*menu_main_surface_level]
 menu_main_surface = pygame.Surface(menu_main_surface_size)
 
-
 # ================================================= Scrollbar =================================================
 
 scrollbar_line_color = [255, 255, 255]
@@ -85,6 +84,12 @@ bar_button02_rect = pygame.Rect((10*2 + 64*1,window_size[1] - (10*1 + 64*1),64,6
 bar_button03_rect = pygame.Rect((10*3 + 64*2,window_size[1] - (10*1 + 64*1),64,64),width=0)
 bar_button04_rect = pygame.Rect((10*4 + 64*3,window_size[1] - (10*1 + 64*1),64,64),width=0)
 bar_button05_rect = pygame.Rect((10*5 + 64*4,window_size[1] - (10*1 + 64*1),64,64),width=0)
+
+menu_main_button01_rect = pygame.Rect((window_size[0]-64*3*1 - 20, window_size[1]-16*3*5 - 10*5,64*3,16*3),width=0)
+menu_main_button02_rect = pygame.Rect((window_size[0]-64*3*1 - 20, window_size[1]-16*3*4 - 10*4,64*3,16*3),width=0)
+menu_main_button03_rect = pygame.Rect((window_size[0]-64*3*1 - 20, window_size[1]-16*3*3 - 10*3,64*3,16*3),width=0)
+menu_main_button04_rect = pygame.Rect((window_size[0]-64*3*1 - 20, window_size[1]-16*3*2 - 10*2,64*3,16*3),width=0)
+menu_main_button05_rect = pygame.Rect((window_size[0]-64*3*1 - 20, window_size[1]-16*3*1 - 10*1,64*3,16*3),width=0)
 
 pretile_type = 0
 tile_type = 0

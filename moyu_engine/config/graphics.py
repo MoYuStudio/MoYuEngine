@@ -50,6 +50,9 @@ pretile_reward = pygame.image.load('moyu_engine/assets/graphics/pretile/PretileR
 home_button = pygame.image.load('moyu_engine/assets/graphics/gui/home_button.png').convert_alpha()
 home_buttonFin = pygame.transform.scale(home_button, (64,64))
 
+button = pygame.image.load('moyu_engine/assets/graphics/gui/button.png').convert_alpha()
+buttonFin = pygame.transform.scale(button, (64*3,16*3))
+
 button001 = pygame.image.load('moyu_engine/assets/graphics/gui/button001.png').convert_alpha()
 button001Fin = pygame.transform.scale(button001, (64,64))
 button001mini = pygame.image.load('moyu_engine/assets/graphics/gui/button001.png').convert_alpha()
