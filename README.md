@@ -68,6 +68,16 @@ MoYu Engine 文件检索
 
 更新日志
 -------
+##### 09/04/2021 更新日志
+            新增 menu_about surface 模块
+            新增 menu_about event 模块
+            优化 menu_main 启动界面
+            优化 MoYu自研引擎 架构
+
+##### 09/03/2021 更新日志
+            Tinyland Preview20210903 MacOS 发布
+            Tinyland Preview20210903 WinOS 发布
+
 ##### 09/02/2021 更新日志
             WindowsOS 打包测试
             引入 perlin noise 柏林噪声 算法
