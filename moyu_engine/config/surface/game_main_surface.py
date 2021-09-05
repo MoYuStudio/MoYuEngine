@@ -62,7 +62,7 @@ def gui_graphics():
     if C.pretile_type == 5:
         C.game_main_gui_surface.blit(G.t5_icon, (10*1 + 64*0 + 8,(10*1 + 64*0) + 24))
     if C.pretile_type == 105:
-        C.game_main_gui_surface.blit(G.t105_icon, (10*1 + 64*0 + 8,(10*1 + 64*0) + 18))
+        C.game_main_gui_surface.blit(G.t105_icon, (10*1 + 64*0 + 8,(10*1 + 64*0)))
 
     # === Bar button ===
     # = 1 =

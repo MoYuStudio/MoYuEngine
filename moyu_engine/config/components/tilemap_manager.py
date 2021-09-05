@@ -150,7 +150,7 @@ def tilemap_loarder():
                     tile_info[3] += C.time_speed
 
                 if tile_info[2] == 105:
-                    C.game_main_surface.blit(G.t105,((tilemap_y*(C.tile_size/2)-tilemap_x*(C.tile_size/2))+C.move_x,(tilemap_y*(C.tile_size/4)+tilemap_x*(C.tile_size/4))-16+C.move_y))
+                    C.game_main_surface.blit(G.t105,((tilemap_y*(C.tile_size/2)-tilemap_x*(C.tile_size/2))+C.move_x,(tilemap_y*(C.tile_size/4)+tilemap_x*(C.tile_size/4))-32+C.move_y))
 
             # === 1 tile_preview top ===
 
