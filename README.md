@@ -68,6 +68,9 @@ MoYu Engine 文件检索
 
 更新日志
 -------
+##### 09/06/2021 更新日志
+            新增 perlin_noise 模块
+
 ##### 09/04/2021 更新日志
             新增 menu_about surface 模块
             新增 menu_about event 模块
