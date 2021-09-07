@@ -12,6 +12,8 @@ import moyu_engine.config.components.tilemap_manager
 import moyu_engine.config.components.tilemap_button
 import moyu_engine.config.components.button
 import moyu_engine.config.components.scrollbar
+import moyu_engine.config.components.save_data
+import moyu_engine.config.components.read_data
 
 def event():
 
@@ -112,6 +114,12 @@ def event():
 
             if event.key == K_x:
                 moyu_engine.config.components.tilemap_manager.tilemap_builder()
+
+            if event.key == K_m:
+                moyu_engine.config.components.save_data.save_tilemap()
+            
+            if event.key == K_n:
+                moyu_engine.config.components.read_data.read_test()
 
         if event.type == pygame.KEYUP:
 

@@ -8,6 +8,8 @@ import moyu_engine.config.graphics as G
 import moyu_engine.config.font as F
 import moyu_engine.config.sound as S
 
+import moyu_engine.config.components.read_data
+
 def event():
 
     for event in pygame.event.get():
@@ -27,6 +29,8 @@ def event():
 
             if pygame.Rect.collidepoint(C.menu_main_button02_rect,event.pos):
                 S.button_sound.play()
+
+                moyu_engine.config.components.read_data.read_tilemap()
 
                 C.menu_main = False
                 C.game_main = True

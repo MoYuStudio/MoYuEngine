@@ -14,7 +14,7 @@ def tilemap_builder():
 
     # 0 tile land   1 tile preview   2 tile   3 time   4 buildable   5 tile button x   6 tile button y   7 Dv Code
 
-    C.tilemap = [[[int(noise.pnoise2((x/C.freq)+C.seed,(y/C.freq)+C.seed,C.octaves)*100+50),0,random.randint(0,200),0,0,0,0,0,0] for x in range(0,C.boarder,1)] for y in range(0,C.boarder,1)]
+    C.tilemap = [[[int(noise.pnoise2((x/C.freq)+C.seed,(y/C.freq)+C.seed,C.octaves)*100+50),0,random.randint(0,200),0,0,0,0,0] for x in range(0,C.boarder,1)] for y in range(0,C.boarder,1)]
 
 def tilemap_loarder():
 
