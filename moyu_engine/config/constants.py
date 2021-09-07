@@ -1,7 +1,7 @@
 
 import pygame
 
-boarder = 128
+boarder = 64
 #tile_level = 1
 tile_size = 64 #*tile_level
 move_x,move_y = 450,5
