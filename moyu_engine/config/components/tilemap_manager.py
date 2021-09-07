@@ -38,13 +38,13 @@ def tilemap_loarder():
                 if 38 <=tile_info[0]<= 40:
                     tile_info[0] = 11
                     
-                if 41 <=tile_info[0]<= 70:
+                if 41 <=tile_info[0]<= 65:
                     tile_info[0] = 6
                     
-                if 71 <=tile_info[0]<= 72:
+                if 66 <=tile_info[0]<= 70:
                     tile_info[0] = 1 
                     
-                if 73 <=tile_info[0]<= 110:
+                if 70 <=tile_info[0]<= 110:
                     tile_info[0] = 16
 
             # === 1 tile_preview ===
