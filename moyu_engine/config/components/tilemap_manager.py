@@ -1,5 +1,6 @@
 
 import random
+import noise
 
 import moyu_engine.config.constants as C
 import moyu_engine.config.graphics as G
@@ -7,9 +8,14 @@ import moyu_engine.config.font as F
 
 def tilemap_builder():
 
+    random.seed(random.randint(100000, 999999))
+
+    octaves = 2
+    freq = random.randint(12, 16)
     # 0 tile land   1 tile preview   2 tile   3 time   4 buildable   5 tile button x   6 tile button y   7 Dv Code
 
-    C.tilemap = [[[random.randint(0,600),0,random.randint(0,100),0,0,0,0,0,0] for i in range(0,C.boarder,1)] for j in range(0,C.boarder,1)]
+    C.tilemap = [[[(noise.pnoise2(x/freq,y/freq,octaves)*3),0,random.randint(0,100),0,0,0,0,0,0] for x in range(0,C.boarder,1)] for y in range(0,C.boarder,1)]
+    #print(C.tilemap)
 
 
 def tilemap_loarder():
@@ -25,21 +31,21 @@ def tilemap_loarder():
             if tile_info[7] == 0:
 
             # === 0 tile_land ===
-                
-                if 0<=tile_info[0]<=50:
-                    tile_info[0] = 1
-            
-                if 51<=tile_info[0]<=500:
-                    tile_info[0] = 6
-                            
-                if 501<=tile_info[0]<=520:
-                    tile_info[0] = 11
-                    
-                if 521<=tile_info[0]<=530:
-                    tile_info[0] = 16
-                    
-                if 531<=tile_info[0]<=600:
+
+                if tile_info[0]<= -0.30:
                     tile_info[0] = 21
+            
+                if -0.30<=tile_info[0]<= -0.20:
+                    tile_info[0] = 11
+                            
+                if -0.20<=tile_info[0]<=0.60:
+                    tile_info[0] = 6
+                    
+                if 0.60<=tile_info[0]<=1.10:
+                    tile_info[0] = 1
+                    
+                if 1.10<=tile_info[0]<=2.00:
+                    tile_info[0] = 16
 
             # === 1 tile_preview ===
 

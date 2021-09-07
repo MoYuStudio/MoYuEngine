@@ -1,11 +1,11 @@
 
 import pygame
 
-boarder = 16
+boarder = 128
 #tile_level = 1
 tile_size = 64 #*tile_level
 move_x,move_y = 450,5
-move_speed = 5
+move_speed = 10
 
 tile_choose_info = [0,0,0,0,0,0]
 
