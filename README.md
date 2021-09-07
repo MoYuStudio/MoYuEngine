@@ -70,6 +70,8 @@ MoYu Engine 文件检索
 -------
 ##### 09/07/2021 更新日志
             柏林噪声 随机地图生成 上线
+            新增 menu_createmap_surface 模块
+            新增 menu_createmap_event 模块
 
 ##### 09/06/2021 更新日志
             新增 perlin_noise 模块
