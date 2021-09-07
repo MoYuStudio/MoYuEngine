@@ -12,9 +12,14 @@ def tilemap_builder():
 
     octaves = 2
     freq = 12
+
+    seed = random.randint(100000, 999999)
+    #seed = 111111
+
+    print(seed)
     # 0 tile land   1 tile preview   2 tile   3 time   4 buildable   5 tile button x   6 tile button y   7 Dv Code
 
-    C.tilemap = [[[(noise.pnoise2(x/freq,y/freq,octaves)*3),0,random.randint(0,100),0,0,0,0,0,0] for x in range(0,C.boarder,1)] for y in range(0,C.boarder,1)]
+    C.tilemap = [[[(noise.pnoise2((x/freq)+seed,(y/freq)+seed,octaves)*3),0,random.randint(0,100),0,0,0,0,0,0] for x in range(0,C.boarder,1)] for y in range(0,C.boarder,1)]
     #print(C.tilemap)
 
 
@@ -35,10 +40,10 @@ def tilemap_loarder():
                 if tile_info[0]<= -0.30:
                     tile_info[0] = 21
             
-                if -0.30<=tile_info[0]<= -0.20:
+                if -0.30<=tile_info[0]<= -0.25:
                     tile_info[0] = 11
-                            
-                if -0.20<=tile_info[0]<=0.60:
+                    
+                if -0.25<=tile_info[0]<=0.60:
                     tile_info[0] = 6
                     
                 if 0.60<=tile_info[0]<=1.05:
