@@ -41,6 +41,7 @@ Tinyland 弹丸之地 <br/><br/>
             随机重制地图(测试使用)：X
             建造：B
             收获：R
+            保存：M
 
 MoYu Engine 文件检索
 -------------------
@@ -70,6 +71,8 @@ MoYu Engine 文件检索
 -------
 ##### 09/07/2021 更新日志
             柏林噪声 随机地图生成 上线
+            新增 save_data 模块
+            新增 read_data 模块
             新增 menu_createmap_surface 模块
             新增 menu_createmap_event 模块
 
