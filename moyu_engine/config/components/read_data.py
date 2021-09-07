@@ -5,14 +5,13 @@ import moyu_engine.config.constants as C
 
 def read_tilemap():
 
-    f1 = open('moyu_engine/config/data/tilemap', 'rb')
+    f=open('moyu_engine/config/data/game_save', 'rb')
 
-    data1 = pickle.load(f1)
+    data = pickle.load(f)
 
-    C.tilemap = data1['map']
+    C.tilemap = data['map']
 
-    print(data1)
-
+    f.close()
 
 
 """

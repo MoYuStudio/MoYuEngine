@@ -5,7 +5,7 @@ import moyu_engine.config.constants as C
 
 def save_tilemap():
 
-    f=open('moyu_engine/config/data/tilemap','wb')
+    f=open('moyu_engine/config/data/game_save','wb')
 
     save_data = {'map':C.tilemap}
 
