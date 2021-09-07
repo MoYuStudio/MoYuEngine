@@ -35,8 +35,11 @@ t5_icon = pygame.transform.scale(t5, (48,24))
 t105 = pygame.image.load('moyu_engine/assets/graphics/tile/T105.png').convert_alpha()
 t105_icon = pygame.transform.scale(t105, (48,48))
 
+t155 = pygame.image.load('moyu_engine/assets/graphics/tile/T155.png').convert_alpha()
+t155_icon = pygame.transform.scale(t155, (48,48))
+
 t205 = pygame.image.load('moyu_engine/assets/graphics/tile/T205.png').convert_alpha()
-t205_icon = pygame.transform.scale(t105, (48,48))
+t205_icon = pygame.transform.scale(t205, (48,48))
 
 # === Pretile ===
 

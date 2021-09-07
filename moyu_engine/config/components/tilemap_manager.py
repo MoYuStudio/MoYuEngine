@@ -8,18 +8,13 @@ import moyu_engine.config.font as F
 
 def tilemap_builder():
 
-    random.seed(random.randint(100000, 999999))
+    #random.seed(random.randint(100000000, 999999999))
 
-    octaves = 2
-    freq = 12
+    C.seed = random.randint(100000, 999999)
 
-    seed = random.randint(100000, 999999)
-
-    print(seed)
-    
     # 0 tile land   1 tile preview   2 tile   3 time   4 buildable   5 tile button x   6 tile button y   7 Dv Code
 
-    C.tilemap = [[[(noise.pnoise2((x/freq)+seed,(y/freq)+seed,octaves)*3),0,random.randint(0,100),0,0,0,0,0,0] for x in range(0,C.boarder,1)] for y in range(0,C.boarder,1)]
+    C.tilemap = [[[int(noise.pnoise2((x/C.freq)+C.seed,(y/C.freq)+C.seed,C.octaves)*100+50),0,random.randint(0,200),0,0,0,0,0,0] for x in range(0,C.boarder,1)] for y in range(0,C.boarder,1)]
 
 def tilemap_loarder():
 
@@ -35,30 +30,35 @@ def tilemap_loarder():
 
             # === 0 tile_land ===
 
-                if tile_info[0]<= -0.30:
+                print(tile_info[0])
+
+                if -100 <=tile_info[0]<= 37:
                     tile_info[0] = 21
             
-                if -0.30<=tile_info[0]<= -0.25:
+                if 38 <=tile_info[0]<= 40:
                     tile_info[0] = 11
                     
-                if -0.25<=tile_info[0]<=0.60:
+                if 41 <=tile_info[0]<= 70:
                     tile_info[0] = 6
                     
-                if 0.60<=tile_info[0]<=1.05:
-                    tile_info[0] = 1
+                if 71 <=tile_info[0]<= 72:
+                    tile_info[0] = 1 
                     
-                if 1.05<=tile_info[0]<=2.00:
+                if 73 <=tile_info[0]<= 110:
                     tile_info[0] = 16
 
             # === 1 tile_preview ===
 
             # === 2 tile_building ===
 
-                if 0<=tile_info[2]<=70:
+                if 0<=tile_info[2]<=30:
                     tile_info[2] = 0
 
-                if 71<=tile_info[2]<=100 and tile_info[0] == 6:
+                if 31<=tile_info[2]<=100 and tile_info[0] == 6:
                     tile_info[2] = 105
+
+                if 101<=tile_info[2]<=200 and tile_info[0] == 16:
+                    tile_info[2] = 155
 
             # === 3 tile_time ===
 
@@ -158,8 +158,11 @@ def tilemap_loarder():
                     C.game_main_surface.blit(G.t5,((tilemap_y*(C.tile_size/2)-tilemap_x*(C.tile_size/2))+C.move_x,(tilemap_y*(C.tile_size/4)+tilemap_x*(C.tile_size/4))+C.move_y))
                     tile_info[3] += C.time_speed
 
-                if tile_info[2] == 105:
+                if tile_info[2] == 105 and tile_info[0] == 6:
                     C.game_main_surface.blit(G.t105,((tilemap_y*(C.tile_size/2)-tilemap_x*(C.tile_size/2))+C.move_x,(tilemap_y*(C.tile_size/4)+tilemap_x*(C.tile_size/4))-32+C.move_y))
+
+                if tile_info[2] == 155 and tile_info[0] == 16:
+                    C.game_main_surface.blit(G.t155,((tilemap_y*(C.tile_size/2)-tilemap_x*(C.tile_size/2))+C.move_x,(tilemap_y*(C.tile_size/4)+tilemap_x*(C.tile_size/4))-32+C.move_y))
 
             # === 1 tile_preview top ===
 

@@ -98,9 +98,17 @@ reward = False
 
 time_speed = 100
 
-# === Page ===
+# ================================================= Page ================================================= 
 
 menu_main = True
 menu_stop = False
 menu_setting = False
+menu_createmap = False
 game_main = False
+
+# ================================================= Perlin Noise ================================================= 
+
+octaves = 2
+freq = 12
+
+seed = 0
