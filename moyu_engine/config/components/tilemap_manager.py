@@ -30,7 +30,7 @@ def tilemap_loarder():
 
             # === 0 tile_land ===
 
-                print(tile_info[0])
+                #print(tile_info[0])
 
                 if -100 <=tile_info[0]<= 37:
                     tile_info[0] = 21
