@@ -17,11 +17,11 @@ def tilebutton_clicker_event_MOUSEBUTTONDOWN():
             if tile_info[5] + 8*C.surface_level <= C.mouse_down_pos_x <= tile_info[5] + C.tile_size*C.surface_level - 8*C.surface_level \
                 and tile_info[6] + 8*C.surface_level <= C.mouse_down_pos_y <= tile_info[6] + C.tile_size*C.surface_level - 8*C.surface_level:
 
-                if pygame.Rect.collidepoint(C.bar_button01_rect,(C.mouse_down_pos_x,C.mouse_down_pos_y))or\
-                   pygame.Rect.collidepoint(C.bar_button02_rect,(C.mouse_down_pos_x,C.mouse_down_pos_y))or\
-                   pygame.Rect.collidepoint(C.bar_button03_rect,(C.mouse_down_pos_x,C.mouse_down_pos_y))or\
-                   pygame.Rect.collidepoint(C.bar_button04_rect,(C.mouse_down_pos_x,C.mouse_down_pos_y))or\
-                   pygame.Rect.collidepoint(C.bar_button05_rect,(C.mouse_down_pos_x,C.mouse_down_pos_y)):
+                if pygame.Rect.collidepoint(C.GAMEbar_button01_RECT,(C.mouse_down_pos_x,C.mouse_down_pos_y))or\
+                   pygame.Rect.collidepoint(C.GAMEbar_button02_RECT,(C.mouse_down_pos_x,C.mouse_down_pos_y))or\
+                   pygame.Rect.collidepoint(C.GAMEbar_button03_RECT,(C.mouse_down_pos_x,C.mouse_down_pos_y))or\
+                   pygame.Rect.collidepoint(C.GAMEbar_button04_RECT,(C.mouse_down_pos_x,C.mouse_down_pos_y))or\
+                   pygame.Rect.collidepoint(C.GAMEbar_button05_RECT,(C.mouse_down_pos_x,C.mouse_down_pos_y)):
                     pass
 
                 else:

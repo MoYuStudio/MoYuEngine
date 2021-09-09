@@ -59,6 +59,13 @@ home_buttonFin = pygame.transform.scale(home_button, (64,64))
 button = pygame.image.load('moyu_engine/assets/graphics/gui/button.png').convert_alpha()
 buttonFin = pygame.transform.scale(button, (64*3,16*3))
 
+button001_unclick = pygame.image.load('moyu_engine/assets/graphics/gui/button001_unclick.png').convert_alpha()
+button001_unclickFin = pygame.transform.scale(button001_unclick, (64*3,16*3))
+button001_beclick = pygame.image.load('moyu_engine/assets/graphics/gui/button001_beclick.png').convert_alpha()
+button001_beclickFin = pygame.transform.scale(button001_beclick, (64*3,16*3))
+button001_clicked = pygame.image.load('moyu_engine/assets/graphics/gui/button001_clicked.png').convert_alpha()
+button001_clickedFin = pygame.transform.scale(button001_clicked, (64*3,16*3))
+
 button001 = pygame.image.load('moyu_engine/assets/graphics/gui/button001.png').convert_alpha()
 button001Fin = pygame.transform.scale(button001, (64,64))
 button001mini = pygame.image.load('moyu_engine/assets/graphics/gui/button001.png').convert_alpha()

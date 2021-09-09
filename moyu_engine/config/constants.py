@@ -1,9 +1,16 @@
 
 import pygame
 
+# ================================================= Window =================================================
+
+WINDOW_SIZE = [1280,720]
+
+SCREEN = pygame.display.set_mode(WINDOW_SIZE)
+SCREEN_TITLE = pygame.display.set_caption('Tinyland 弹丸之地')
+
 boarder = 64
-#tile_level = 1
-tile_size = 64 #*tile_level
+tile_size = 64
+
 move_x,move_y = 450,5
 move_speed = 10
 
@@ -22,10 +29,6 @@ move_right = False
 zoom_in = False
 zoom_out = False
 
-window_size = [1280,720]
-screen = pygame.display.set_mode(window_size)
-screen_title = pygame.display.set_caption('Tinyland 弹丸之地')
-
 clock = pygame.time.Clock()
 
 tilemap = []
@@ -35,25 +38,25 @@ tile_choose_info = [0,0,0]
 
 # ================================================= Surface =================================================
 
-game_main_surface_level = 60
+GAMEmain_surface_level = 60
 # 320 180 n = 20        16*n  9*n    1280 720 n = 80
-game_main_surface_size = [16*game_main_surface_level,9*game_main_surface_level]
-game_main_surface = pygame.Surface(game_main_surface_size)
+GAMEmain_surface_size = [16*GAMEmain_surface_level,9*GAMEmain_surface_level]
+GAMEmain_surface = pygame.Surface(GAMEmain_surface_size)
 
-surface_level = (1280/(16*game_main_surface_level))
+surface_level = (1280/(16*GAMEmain_surface_level))
 
 
-game_main_gui_surface_level = 80
+GAMEmain_gui_surface_level = 80
 # 320 180 n = 20        16*n  9*n    1280 720 n = 80
-game_main_gui_surface_size = [16*game_main_gui_surface_level,9*game_main_gui_surface_level]
-game_main_gui_surface = pygame.Surface(game_main_gui_surface_size)
+GAMEmain_gui_surface_size = [16*GAMEmain_gui_surface_level,9*GAMEmain_gui_surface_level]
+GAMEmain_gui_surface = pygame.Surface(GAMEmain_gui_surface_size)
 
-#surface_level = (1280/(16*game_main_gui_surface_level))
+#surface_level = (1280/(16*GAMEmain_gui_surface_level))
 
-menu_main_surface_level = 80
+MENUmain_surface_level = 80
 # 320 180 n = 20        16*n  9*n    1280 720 n = 80
-menu_main_surface_size = [16*menu_main_surface_level,9*menu_main_surface_level]
-menu_main_surface = pygame.Surface(menu_main_surface_size)
+MENUmain_surface_size = [16*MENUmain_surface_level,9*MENUmain_surface_level]
+MENUmain_surface = pygame.Surface(MENUmain_surface_size)
 
 
 # ================================================= Scrollbar =================================================
@@ -78,19 +81,19 @@ tileland_graphics = []
 
 # === Rect ===
 
-homebutton_rect = pygame.Rect((window_size[0]-64 - 10,10,64,64),width=0)
+homebutton_RECT = pygame.Rect((WINDOW_SIZE[0]-64 - 10,10,64,64),width=0)
 
-bar_button01_rect = pygame.Rect((10*1 + 64*0,window_size[1] - (10*1 + 64*1),64,64),width=0)
-bar_button02_rect = pygame.Rect((10*2 + 64*1,window_size[1] - (10*1 + 64*1),64,64),width=0)
-bar_button03_rect = pygame.Rect((10*3 + 64*2,window_size[1] - (10*1 + 64*1),64,64),width=0)
-bar_button04_rect = pygame.Rect((10*4 + 64*3,window_size[1] - (10*1 + 64*1),64,64),width=0)
-bar_button05_rect = pygame.Rect((10*5 + 64*4,window_size[1] - (10*1 + 64*1),64,64),width=0)
+GAMEbar_button01_RECT = pygame.Rect((10*1 + 64*0,WINDOW_SIZE[1] - (10*1 + 64*1),64,64),width=0)
+GAMEbar_button02_RECT = pygame.Rect((10*2 + 64*1,WINDOW_SIZE[1] - (10*1 + 64*1),64,64),width=0)
+GAMEbar_button03_RECT = pygame.Rect((10*3 + 64*2,WINDOW_SIZE[1] - (10*1 + 64*1),64,64),width=0)
+GAMEbar_button04_RECT = pygame.Rect((10*4 + 64*3,WINDOW_SIZE[1] - (10*1 + 64*1),64,64),width=0)
+GAMEbar_button05_RECT = pygame.Rect((10*5 + 64*4,WINDOW_SIZE[1] - (10*1 + 64*1),64,64),width=0)
 
-menu_main_button01_rect = pygame.Rect((window_size[0]-64*3*1 - 20, window_size[1]-16*3*5 - 10*5,64*3,16*3),width=0)
-menu_main_button02_rect = pygame.Rect((window_size[0]-64*3*1 - 20, window_size[1]-16*3*4 - 10*4,64*3,16*3),width=0)
-menu_main_button03_rect = pygame.Rect((window_size[0]-64*3*1 - 20, window_size[1]-16*3*3 - 10*3,64*3,16*3),width=0)
-menu_main_button04_rect = pygame.Rect((window_size[0]-64*3*1 - 20, window_size[1]-16*3*2 - 10*2,64*3,16*3),width=0)
-menu_main_button05_rect = pygame.Rect((window_size[0]-64*3*1 - 20, window_size[1]-16*3*1 - 10*1,64*3,16*3),width=0)
+MENUmain_button01_RECT = pygame.Rect((WINDOW_SIZE[0]-64*3*1 - 20, WINDOW_SIZE[1]-16*3*5 - 10*5,64*3,16*3),width=0)
+MENUmain_button02_RECT = pygame.Rect((WINDOW_SIZE[0]-64*3*1 - 20, WINDOW_SIZE[1]-16*3*4 - 10*4,64*3,16*3),width=0)
+MENUmain_button03_RECT = pygame.Rect((WINDOW_SIZE[0]-64*3*1 - 20, WINDOW_SIZE[1]-16*3*3 - 10*3,64*3,16*3),width=0)
+MENUmain_button04_RECT = pygame.Rect((WINDOW_SIZE[0]-64*3*1 - 20, WINDOW_SIZE[1]-16*3*2 - 10*2,64*3,16*3),width=0)
+MENUmain_button05_RECT = pygame.Rect((WINDOW_SIZE[0]-64*3*1 - 20, WINDOW_SIZE[1]-16*3*1 - 10*1,64*3,16*3),width=0)
 
 pretile_type = 0
 tile_type = 0
@@ -101,11 +104,11 @@ time_speed = 100
 
 # ================================================= Page ================================================= 
 
-menu_main = True
-menu_stop = False
-menu_setting = False
-menu_createmap = False
-game_main = False
+MENUmain = True
+MENUstop = False
+MENUsetting = False
+MENUcreatemap = False
+GAMEmain = False
 
 # ================================================= Perlin Noise ================================================= 
 
@@ -114,9 +117,11 @@ freq = 12
 
 seed = 0
 
+# ================================================= fade_black ================================================= 
+
 fade_black = False
 alpha = 255
 window_switch = False
 
-button_StartGame = False
+buttonStartGame  = False
 button_ContinueGame = False

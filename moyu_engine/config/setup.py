@@ -9,11 +9,11 @@ import moyu_engine.config.sound as S
 
 import moyu_engine.config.components.tilemap_manager
 
-import moyu_engine.config.surface.menu_main_surface
-import moyu_engine.config.event.menu_main_event
+import moyu_engine.config.surface.MENUmain_surface
+import moyu_engine.config.event.MENUmain_event
 
-import moyu_engine.config.surface.game_main_surface
-import moyu_engine.config.event.game_main_event
+import moyu_engine.config.surface.GAMEmain_surface
+import moyu_engine.config.event.GAMEmain_event
 
 def run():
     init()
@@ -24,13 +24,13 @@ def init():
     pygame.init()
     pygame.mixer.init()
 
-    C.screen = pygame.display.set_mode(C.window_size)
-    C.screen_title = pygame.display.set_caption('Tinyland 弹丸之地')
+    C.SCREEN = pygame.display.set_mode(C.WINDOW_SIZE)
+    C.SCREEN_TITLE = pygame.display.set_caption('Tinyland 弹丸之地')
     pygame.display.set_icon(G.tl16)
     C.clock = pygame.time.Clock()
     pygame.display.flip()
 
-    return C.screen,C.screen_title,C.clock
+    return C.SCREEN,C.SCREEN_TITLE,C.clock
 
 def gameloop():
 
@@ -41,17 +41,17 @@ def gameloop():
 
     while True: # 需要一个检测游戏是否运行的布尔值 使用for来优化
 
-        if C.menu_main == True:
+        if C.MENUmain == True:
 
-            moyu_engine.config.surface.menu_main_surface.update()
+            moyu_engine.config.surface.MENUmain_surface.update()
 
-            moyu_engine.config.event.menu_main_event.event()
+            moyu_engine.config.event.MENUmain_event.event()
 
-        if C.game_main == True:
+        if C.GAMEmain == True:
 
-            moyu_engine.config.surface.game_main_surface.update()
+            moyu_engine.config.surface.GAMEmain_surface.update()
 
-            moyu_engine.config.event.game_main_event.event()
+            moyu_engine.config.event.GAMEmain_event.event()
 
         pygame.display.update()
         C.clock.tick(60)
