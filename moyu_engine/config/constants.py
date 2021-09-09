@@ -55,6 +55,7 @@ menu_main_surface_level = 80
 menu_main_surface_size = [16*menu_main_surface_level,9*menu_main_surface_level]
 menu_main_surface = pygame.Surface(menu_main_surface_size)
 
+
 # ================================================= Scrollbar =================================================
 
 scrollbar_line_color = [255, 255, 255]
@@ -114,3 +115,8 @@ freq = 12
 seed = 0
 
 fade_black = False
+alpha = 255
+window_switch = False
+
+button_StartGame = False
+button_ContinueGame = False

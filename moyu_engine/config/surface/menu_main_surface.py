@@ -8,17 +8,25 @@ import moyu_engine.config.font as F
 
 def update():
 
+    fade = pygame.Surface((C.window_size))
+    fade.fill((0,0,0))
+
+    C.screen.blit(fade, (0,0))
+
     menu_graphics()
 
     menu_main_surfaceFin = pygame.transform.scale(C.menu_main_surface,C.window_size)
+
+    #menu_main_surfaceFin.set_alpha(100)
     
     C.screen.blit(menu_main_surfaceFin, (0, 0))
 
 def menu_graphics():
+
     C.menu_main_surface_size = [16*C.menu_main_surface_level,9*C.menu_main_surface_level]
     C.menu_main_surface = pygame.Surface(C.menu_main_surface_size)
 
-    C.menu_main_surface.fill((255,255,255))
+    fade_black()
 
     C.menu_main_surface.blit(G.menu_backgroundFin, (0,0))
 
@@ -41,4 +49,22 @@ def menu_graphics():
     C.menu_main_surface.blit(G.buttonFin, (C.window_size[0]-64*3*1 - 20, C.window_size[1]-16*3*1 - 10*1))
     startbutton_text = F.font1.render('关于', True, (255, 255, 255))
     C.menu_main_surface.blit(startbutton_text,(C.window_size[0]-64*2.5*1, C.window_size[1]-16*2.87*1 - 10*1))
+
+def fade_black():
+
+    if C.fade_black == True:
+        if C.alpha >= -100 :
+            C.alpha -= 10
+            C.menu_main_surface.set_alpha(C.alpha)
+        if 0 >= C.alpha >= -100:
+            C.fade_black = False
+            C.alpha = 255
+            C.window_switch = True
+
+            if C.window_switch == True and C.button_startgame == True:
+                C.menu_main = False
+                C.game_main = True
+
+                C.window_switch = False
+                C.button_startgame = False
 
