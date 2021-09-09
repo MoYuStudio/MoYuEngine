@@ -7,13 +7,12 @@ import moyu_engine.config.graphics as G
 import moyu_engine.config.font as F
 
 def update():
+
     menu_graphics()
 
     menu_main_surfaceFin = pygame.transform.scale(C.menu_main_surface,C.window_size)
     
     C.screen.blit(menu_main_surfaceFin, (0, 0))
-
-    pygame.display.update()
 
 def menu_graphics():
     C.menu_main_surface_size = [16*C.menu_main_surface_level,9*C.menu_main_surface_level]
@@ -42,3 +41,4 @@ def menu_graphics():
     C.menu_main_surface.blit(G.buttonFin, (C.window_size[0]-64*3*1 - 20, C.window_size[1]-16*3*1 - 10*1))
     startbutton_text = F.font1.render('关于', True, (255, 255, 255))
     C.menu_main_surface.blit(startbutton_text,(C.window_size[0]-64*2.5*1, C.window_size[1]-16*2.87*1 - 10*1))
+

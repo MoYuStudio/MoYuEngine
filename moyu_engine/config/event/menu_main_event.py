@@ -26,7 +26,7 @@ def event():
                 S.button_sound.play()
 
                 moyu_engine.config.components.tilemap_manager.tilemap_builder()
-                
+
                 C.menu_main = False
                 C.game_main = True
 

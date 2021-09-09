@@ -53,6 +53,7 @@ def gameloop():
 
             moyu_engine.config.event.game_main_event.event()
 
+        pygame.display.update()
         C.clock.tick(60)
 
 run()

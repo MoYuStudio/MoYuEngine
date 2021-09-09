@@ -17,4 +17,4 @@ os.path.join(os.path.dirname(sys.argv[0]))
 
 import moyu_engine.config.setup
 
-moyu_engine.config.setup.run()
+moyu_engine.config.setup.run() 

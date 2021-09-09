@@ -25,8 +25,6 @@ def update():
     moyu_engine.config.components.window_move.move_Fn()
     moyu_engine.config.components.window_zoom.zoom_Fn()
 
-    pygame.display.update()
-
 def tilemap_graphics():
 
     C.game_main_surface_size = [16*C.game_main_surface_level,9*C.game_main_surface_level]

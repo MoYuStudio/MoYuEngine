@@ -112,3 +112,5 @@ octaves = 2
 freq = 12
 
 seed = 0
+
+fade_black = False
