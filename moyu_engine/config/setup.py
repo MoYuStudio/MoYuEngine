@@ -27,10 +27,10 @@ def init():
     C.SCREEN = pygame.display.set_mode(C.WINDOW_SIZE)
     C.SCREEN_TITLE = pygame.display.set_caption('Tinyland 弹丸之地')
     pygame.display.set_icon(G.tl16)
-    C.clock = pygame.time.Clock()
+    C.CLOCK = pygame.time.Clock()
     pygame.display.flip()
 
-    return C.SCREEN,C.SCREEN_TITLE,C.clock
+    return C.SCREEN,C.SCREEN_TITLE,C.CLOCK
 
 def gameloop():
 
@@ -54,6 +54,6 @@ def gameloop():
             moyu_engine.config.event.GAMEmain_event.event()
 
         pygame.display.update()
-        C.clock.tick(60)
+        C.CLOCK.tick(60)
 
 run()

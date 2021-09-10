@@ -22,8 +22,8 @@ def update():
 
     #components.scrollbar.scrollbar_h_surface(C.SCREEN)
 
-    moyu_engine.config.components.window_move.move_Fn()
-    moyu_engine.config.components.window_zoom.zoom_Fn()
+    moyu_engine.config.components.window_move.MOVE_Fn()
+    moyu_engine.config.components.window_zoom.ZOOM_Fn()
 
 def tilemap_graphics():
 
@@ -31,7 +31,7 @@ def tilemap_graphics():
     C.GAMEmain_surface = pygame.Surface(C.GAMEmain_surface_size)
 
     C.GAMEmain_surface.fill((0,0,0))
-    C.GAMEmain_surface.blit(G.backgroundFin, ((-(C.move_x/3))-1280,(-(C.move_y/3))-720))
+    C.GAMEmain_surface.blit(G.backgroundFin, ((-(C.MOVE[0]/3))-1280,(-(C.MOVE[1]/3))-720))
 
     moyu_engine.config.components.tilemap_manager.tilemap_loarder()
 

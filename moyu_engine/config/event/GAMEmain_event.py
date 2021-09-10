@@ -80,22 +80,22 @@ def event():
         if event.type == pygame.KEYDOWN:
 
             if event.key == K_UP or event.key == K_w:
-                C.move_up = True
+                C.MOVE_UP = True
                 
             if event.key == K_DOWN or event.key == K_s:
-                C.move_down = True
+                C.MOVE_DOWN = True
 
             if event.key == K_LEFT or event.key == K_a:
-                C.move_left = True
+                C.MOVE_LEFT = True
 
             if event.key == K_RIGHT or event.key == K_d:
-                C.move_right = True
+                C.MOVE_RIGHT = True
 
             if event.key == K_q:
-                C.zoom_in = True
+                C.ZOOM_IN = True
 
             if event.key == K_e:
-                C.zoom_out = True
+                C.ZOOM_OUT = True
 
             if event.key == K_b:
                 C.build = True
@@ -109,8 +109,8 @@ def event():
 
             if event.key == K_z:
                 C.GAMEmain_surface_level = 60
-                C.move_speed = 5
-                C.move_x,C.move_y = 450,5
+                C.MOVE_SPEED = 10
+                C.MOVE = [450,5]
 
             if event.key == K_x:
                 moyu_engine.config.components.tilemap_manager.tilemap_builder()
@@ -124,22 +124,22 @@ def event():
         if event.type == pygame.KEYUP:
 
             if event.key == K_UP or event.key == K_w:
-                C.move_up = False
+                C.MOVE_UP = False
 
             if event.key == K_DOWN or event.key == K_s:
-                C.move_down = False
+                C.MOVE_DOWN = False
 
             if event.key == K_LEFT or event.key == K_a:
-                C.move_left = False
+                C.MOVE_LEFT = False
 
             if event.key == K_RIGHT or event.key == K_d:
-                C.move_right = False
+                C.MOVE_RIGHT = False
 
             if event.key == K_q:
-                C.zoom_in = False
+                C.ZOOM_IN = False
 
             if event.key == K_e:
-                C.zoom_out = False
+                C.ZOOM_OUT = False
 
             if event.key == K_b:
                 C.build = False

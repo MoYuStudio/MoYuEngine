@@ -8,36 +8,55 @@ WINDOW_SIZE = [1280,720]
 SCREEN = pygame.display.set_mode(WINDOW_SIZE)
 SCREEN_TITLE = pygame.display.set_caption('Tinyland 弹丸之地')
 
+# Window Page ================================================= 
+
+MENUmain = True
+MENUstop = False
+MENUsetting = False
+MENUcreatemap = False
+GAMEmain = False
+
+# ================================================= MOVE =================================================
+
+MOVE = [450,5]
+MOVE_SPEED = 10
+
+MOVE_UP = False
+MOVE_DOWN = False
+MOVE_LEFT = False
+MOVE_RIGHT = False
+
+# ================================================= ZOOM =================================================
+
+ZOOM_IN = False
+ZOOM_OUT = False
+
+# ================================================= CLOCK =================================================
+
+CLOCK = pygame.time.Clock()
+
+# ================================================= TILE =================================================
+
 boarder = 64
 tile_size = 64
 
-move_x,move_y = 450,5
-move_speed = 10
+tile_choose = False
+tile_choose_info = [0,0,0]
 
 tile_choose_info = [0,0,0,0,0,0]
+
+tilemap = []
+
+money = 100
 
 #mouse_x,mouse_y = (boarder/2*(tile_size/2)-boarder/2*(tile_size/2)),(boarder/2*(tile_size/4)+boarder/2*(tile_size/4))
 
 mouse_pos_x,mouse_pos_y = 0,0
 mouse_down_pos_x,mouse_down_pos_y = 0,0 
 
-move_up = False
-move_down = False
-move_left = False
-move_right = False
-
-zoom_in = False
-zoom_out = False
-
-clock = pygame.time.Clock()
-
-tilemap = []
-
-tile_choose = False
-tile_choose_info = [0,0,0]
-
 # ================================================= Surface =================================================
 
+# GAME main surface =================================================
 GAMEmain_surface_level = 60
 # 320 180 n = 20        16*n  9*n    1280 720 n = 80
 GAMEmain_surface_size = [16*GAMEmain_surface_level,9*GAMEmain_surface_level]
@@ -45,7 +64,7 @@ GAMEmain_surface = pygame.Surface(GAMEmain_surface_size)
 
 surface_level = (1280/(16*GAMEmain_surface_level))
 
-
+# GAME main gui surface =================================================
 GAMEmain_gui_surface_level = 80
 # 320 180 n = 20        16*n  9*n    1280 720 n = 80
 GAMEmain_gui_surface_size = [16*GAMEmain_gui_surface_level,9*GAMEmain_gui_surface_level]
@@ -53,11 +72,11 @@ GAMEmain_gui_surface = pygame.Surface(GAMEmain_gui_surface_size)
 
 #surface_level = (1280/(16*GAMEmain_gui_surface_level))
 
+# MENU main surface =================================================
 MENUmain_surface_level = 80
 # 320 180 n = 20        16*n  9*n    1280 720 n = 80
 MENUmain_surface_size = [16*MENUmain_surface_level,9*MENUmain_surface_level]
 MENUmain_surface = pygame.Surface(MENUmain_surface_size)
-
 
 # ================================================= Scrollbar =================================================
 
@@ -72,14 +91,12 @@ scrollbar_button_size = [13, 20]
 scrollbar_moveable = False
 scrollbar_move = 0
 
-money = 100
-
 # ================================================= Graphics =================================================
 
 tileland_graphics_path = locals()
 tileland_graphics = []
 
-# === Rect ===
+# ================================================= Rect =================================================
 
 homebutton_RECT = pygame.Rect((WINDOW_SIZE[0]-64 - 10,10,64,64),width=0)
 
@@ -102,13 +119,6 @@ reward = False
 
 time_speed = 100
 
-# ================================================= Page ================================================= 
-
-MENUmain = True
-MENUstop = False
-MENUsetting = False
-MENUcreatemap = False
-GAMEmain = False
 
 # ================================================= Perlin Noise ================================================= 
 
