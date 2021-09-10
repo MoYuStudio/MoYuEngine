@@ -1,0 +1,125 @@
+Date : 2021-09-10 10:25:45
+Directory : /Users/wilsonvinson/Documents/GitHub/SUGT06
+Total : 78 files,  18000 codes, 265 comments, 4053 blanks, all 22318 lines
+
+Languages
++----------+------------+------------+------------+------------+------------+
+| language | files      | code       | comment    | blank      | total      |
++----------+------------+------------+------------+------------+------------+
+| HTML     |          1 |     15,899 |          0 |      2,951 |     18,850 |
+| Python   |         72 |      1,798 |        265 |      1,011 |      3,074 |
+| Markdown |          5 |        303 |          0 |         91 |        394 |
++----------+------------+------------+------------+------------+------------+
+
+Directories
++---------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                          | files      | code       | comment    | blank      | total      |
++---------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                             |         78 |     18,000 |        265 |      4,053 |     22,318 |
+| .github                                                                                                       |          2 |         45 |          0 |         15 |         60 |
+| .github/ISSUE_TEMPLATE                                                                                        |          2 |         45 |          0 |         15 |         60 |
+| Tinyland MacOS                                                                                                |         21 |        543 |         69 |        310 |        922 |
+| Tinyland MacOS/moyu_engine                                                                                    |         21 |        543 |         69 |        310 |        922 |
+| Tinyland MacOS/moyu_engine/config                                                                             |         21 |        543 |         69 |        310 |        922 |
+| Tinyland MacOS/moyu_engine/config/components                                                                  |          8 |        221 |         43 |        127 |        391 |
+| Tinyland MacOS/moyu_engine/config/event                                                                       |          4 |        114 |          0 |         55 |        169 |
+| Tinyland MacOS/moyu_engine/config/surface                                                                     |          4 |         73 |         10 |         39 |        122 |
+| Tinyland WinOS                                                                                                |         21 |        543 |         69 |        310 |        922 |
+| Tinyland WinOS/moyu_engine                                                                                    |         21 |        543 |         69 |        310 |        922 |
+| Tinyland WinOS/moyu_engine/config                                                                             |         21 |        543 |         69 |        310 |        922 |
+| Tinyland WinOS/moyu_engine/config/components                                                                  |          8 |        221 |         43 |        127 |        391 |
+| Tinyland WinOS/moyu_engine/config/event                                                                       |          4 |        114 |          0 |         55 |        169 |
+| Tinyland WinOS/moyu_engine/config/surface                                                                     |          4 |         73 |         10 |         39 |        122 |
+| build                                                                                                         |          1 |     15,899 |          0 |      2,951 |     18,850 |
+| build/Tinyland                                                                                                |          1 |     15,899 |          0 |      2,951 |     18,850 |
+| moyu_engine                                                                                                   |         29 |        699 |        127 |        384 |      1,210 |
+| moyu_engine/config                                                                                            |         29 |        699 |        127 |        384 |      1,210 |
+| moyu_engine/config/components                                                                                 |         12 |        301 |         96 |        160 |        557 |
+| moyu_engine/config/event                                                                                      |          6 |        136 |          0 |         69 |        205 |
+| moyu_engine/config/surface                                                                                    |          6 |        102 |         11 |         53 |        166 |
++---------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++---------------------------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| filename                                                                                                      | language | code       | comment    | blank      | total      |
++---------------------------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| /Users/wilsonvinson/Documents/GitHub/SUGT06/.github/ISSUE_TEMPLATE/bug_report.md                              | Markdown |         30 |          0 |          9 |         39 |
+| /Users/wilsonvinson/Documents/GitHub/SUGT06/.github/ISSUE_TEMPLATE/feature_request.md                         | Markdown |         15 |          0 |          6 |         21 |
+| /Users/wilsonvinson/Documents/GitHub/SUGT06/CODE_OF_CONDUCT.md                                                | Markdown |         93 |          0 |         36 |        129 |
+| /Users/wilsonvinson/Documents/GitHub/SUGT06/CONTRIBUTING.md                                                   | Markdown |          1 |          0 |          1 |          2 |
+| /Users/wilsonvinson/Documents/GitHub/SUGT06/README.md                                                         | Markdown |        164 |          0 |         39 |        203 |
+| /Users/wilsonvinson/Documents/GitHub/SUGT06/Tinyland MacOS/moyu_engine/config/components/animation_machine.py | Python   |          4 |         20 |          5 |         29 |
+| /Users/wilsonvinson/Documents/GitHub/SUGT06/Tinyland MacOS/moyu_engine/config/components/button.py            | Python   |         20 |          1 |          9 |         30 |
+| /Users/wilsonvinson/Documents/GitHub/SUGT06/Tinyland MacOS/moyu_engine/config/components/graphics_loarder.py  | Python   |         11 |          0 |          3 |         14 |
+| /Users/wilsonvinson/Documents/GitHub/SUGT06/Tinyland MacOS/moyu_engine/config/components/scrollbar.py         | Python   |         23 |          2 |         18 |         43 |
+| /Users/wilsonvinson/Documents/GitHub/SUGT06/Tinyland MacOS/moyu_engine/config/components/tilemap_button.py    | Python   |         33 |          0 |         19 |         52 |
+| /Users/wilsonvinson/Documents/GitHub/SUGT06/Tinyland MacOS/moyu_engine/config/components/tilemap_manager.py   | Python   |        102 |         20 |         69 |        191 |
+| /Users/wilsonvinson/Documents/GitHub/SUGT06/Tinyland MacOS/moyu_engine/config/components/window_move.py       | Python   |         11 |          0 |          2 |         13 |
+| /Users/wilsonvinson/Documents/GitHub/SUGT06/Tinyland MacOS/moyu_engine/config/components/window_zoom.py       | Python   |         17 |          0 |          2 |         19 |
+| /Users/wilsonvinson/Documents/GitHub/SUGT06/Tinyland MacOS/moyu_engine/config/constants.py                    | Python   |         57 |         11 |         34 |        102 |
+| /Users/wilsonvinson/Documents/GitHub/SUGT06/Tinyland MacOS/moyu_engine/config/event/game_main_event.py        | Python   |         96 |          0 |         45 |        141 |
+| /Users/wilsonvinson/Documents/GitHub/SUGT06/Tinyland MacOS/moyu_engine/config/event/menu_main_event.py        | Python   |         18 |          0 |          8 |         26 |
+| /Users/wilsonvinson/Documents/GitHub/SUGT06/Tinyland MacOS/moyu_engine/config/event/menu_setting_event.py     | Python   |          0 |          0 |          1 |          1 |
+| /Users/wilsonvinson/Documents/GitHub/SUGT06/Tinyland MacOS/moyu_engine/config/event/menu_stop_event.py        | Python   |          0 |          0 |          1 |          1 |
+| /Users/wilsonvinson/Documents/GitHub/SUGT06/Tinyland MacOS/moyu_engine/config/font.py                         | Python   |          4 |          0 |          4 |          8 |
+| /Users/wilsonvinson/Documents/GitHub/SUGT06/Tinyland MacOS/moyu_engine/config/graphics.py                     | Python   |         35 |          5 |         26 |         66 |
+| /Users/wilsonvinson/Documents/GitHub/SUGT06/Tinyland MacOS/moyu_engine/config/setup.py                        | Python   |         36 |          0 |         22 |         58 |
+| /Users/wilsonvinson/Documents/GitHub/SUGT06/Tinyland MacOS/moyu_engine/config/sound.py                        | Python   |          3 |          0 |          3 |          6 |
+| /Users/wilsonvinson/Documents/GitHub/SUGT06/Tinyland MacOS/moyu_engine/config/surface/game_main_surface.py    | Python   |         57 |         10 |         26 |         93 |
+| /Users/wilsonvinson/Documents/GitHub/SUGT06/Tinyland MacOS/moyu_engine/config/surface/menu_main_surface.py    | Python   |         16 |          0 |         11 |         27 |
+| /Users/wilsonvinson/Documents/GitHub/SUGT06/Tinyland MacOS/moyu_engine/config/surface/menu_setting_surface.py | Python   |          0 |          0 |          1 |          1 |
+| /Users/wilsonvinson/Documents/GitHub/SUGT06/Tinyland MacOS/moyu_engine/config/surface/menu_stop_surface.py    | Python   |          0 |          0 |          1 |          1 |
+| /Users/wilsonvinson/Documents/GitHub/SUGT06/Tinyland WinOS/moyu_engine/config/components/animation_machine.py | Python   |          4 |         20 |          5 |         29 |
+| /Users/wilsonvinson/Documents/GitHub/SUGT06/Tinyland WinOS/moyu_engine/config/components/button.py            | Python   |         20 |          1 |          9 |         30 |
+| /Users/wilsonvinson/Documents/GitHub/SUGT06/Tinyland WinOS/moyu_engine/config/components/graphics_loarder.py  | Python   |         11 |          0 |          3 |         14 |
+| /Users/wilsonvinson/Documents/GitHub/SUGT06/Tinyland WinOS/moyu_engine/config/components/scrollbar.py         | Python   |         23 |          2 |         18 |         43 |
+| /Users/wilsonvinson/Documents/GitHub/SUGT06/Tinyland WinOS/moyu_engine/config/components/tilemap_button.py    | Python   |         33 |          0 |         19 |         52 |
+| /Users/wilsonvinson/Documents/GitHub/SUGT06/Tinyland WinOS/moyu_engine/config/components/tilemap_manager.py   | Python   |        102 |         20 |         69 |        191 |
+| /Users/wilsonvinson/Documents/GitHub/SUGT06/Tinyland WinOS/moyu_engine/config/components/window_move.py       | Python   |         11 |          0 |          2 |         13 |
+| /Users/wilsonvinson/Documents/GitHub/SUGT06/Tinyland WinOS/moyu_engine/config/components/window_zoom.py       | Python   |         17 |          0 |          2 |         19 |
+| /Users/wilsonvinson/Documents/GitHub/SUGT06/Tinyland WinOS/moyu_engine/config/constants.py                    | Python   |         57 |         11 |         34 |        102 |
+| /Users/wilsonvinson/Documents/GitHub/SUGT06/Tinyland WinOS/moyu_engine/config/event/game_main_event.py        | Python   |         96 |          0 |         45 |        141 |
+| /Users/wilsonvinson/Documents/GitHub/SUGT06/Tinyland WinOS/moyu_engine/config/event/menu_main_event.py        | Python   |         18 |          0 |          8 |         26 |
+| /Users/wilsonvinson/Documents/GitHub/SUGT06/Tinyland WinOS/moyu_engine/config/event/menu_setting_event.py     | Python   |          0 |          0 |          1 |          1 |
+| /Users/wilsonvinson/Documents/GitHub/SUGT06/Tinyland WinOS/moyu_engine/config/event/menu_stop_event.py        | Python   |          0 |          0 |          1 |          1 |
+| /Users/wilsonvinson/Documents/GitHub/SUGT06/Tinyland WinOS/moyu_engine/config/font.py                         | Python   |          4 |          0 |          4 |          8 |
+| /Users/wilsonvinson/Documents/GitHub/SUGT06/Tinyland WinOS/moyu_engine/config/graphics.py                     | Python   |         35 |          5 |         26 |         66 |
+| /Users/wilsonvinson/Documents/GitHub/SUGT06/Tinyland WinOS/moyu_engine/config/setup.py                        | Python   |         36 |          0 |         22 |         58 |
+| /Users/wilsonvinson/Documents/GitHub/SUGT06/Tinyland WinOS/moyu_engine/config/sound.py                        | Python   |          3 |          0 |          3 |          6 |
+| /Users/wilsonvinson/Documents/GitHub/SUGT06/Tinyland WinOS/moyu_engine/config/surface/game_main_surface.py    | Python   |         57 |         10 |         26 |         93 |
+| /Users/wilsonvinson/Documents/GitHub/SUGT06/Tinyland WinOS/moyu_engine/config/surface/menu_main_surface.py    | Python   |         16 |          0 |         11 |         27 |
+| /Users/wilsonvinson/Documents/GitHub/SUGT06/Tinyland WinOS/moyu_engine/config/surface/menu_setting_surface.py | Python   |          0 |          0 |          1 |          1 |
+| /Users/wilsonvinson/Documents/GitHub/SUGT06/Tinyland WinOS/moyu_engine/config/surface/menu_stop_surface.py    | Python   |          0 |          0 |          1 |          1 |
+| /Users/wilsonvinson/Documents/GitHub/SUGT06/build/Tinyland/xref-Tinyland.html                                 | HTML     |     15,899 |          0 |      2,951 |     18,850 |
+| /Users/wilsonvinson/Documents/GitHub/SUGT06/init.py                                                           | Python   |         13 |          0 |          7 |         20 |
+| /Users/wilsonvinson/Documents/GitHub/SUGT06/moyu_engine/config/components/animation_machine.py                | Python   |          4 |         20 |          5 |         29 |
+| /Users/wilsonvinson/Documents/GitHub/SUGT06/moyu_engine/config/components/black_field.py                      | Python   |          9 |          0 |          4 |         13 |
+| /Users/wilsonvinson/Documents/GitHub/SUGT06/moyu_engine/config/components/button.py                           | Python   |         20 |          1 |          9 |         30 |
+| /Users/wilsonvinson/Documents/GitHub/SUGT06/moyu_engine/config/components/graphics_loarder.py                 | Python   |         11 |          0 |          3 |         14 |
+| /Users/wilsonvinson/Documents/GitHub/SUGT06/moyu_engine/config/components/read_data.py                        | Python   |          7 |         24 |          9 |         40 |
+| /Users/wilsonvinson/Documents/GitHub/SUGT06/moyu_engine/config/components/save_data.py                        | Python   |          7 |         27 |          8 |         42 |
+| /Users/wilsonvinson/Documents/GitHub/SUGT06/moyu_engine/config/components/scrollbar.py                        | Python   |         23 |          2 |         18 |         43 |
+| /Users/wilsonvinson/Documents/GitHub/SUGT06/moyu_engine/config/components/text_inputbox.py                    | Python   |         51 |          0 |          8 |         59 |
+| /Users/wilsonvinson/Documents/GitHub/SUGT06/moyu_engine/config/components/tilemap_button.py                   | Python   |         33 |          0 |         19 |         52 |
+| /Users/wilsonvinson/Documents/GitHub/SUGT06/moyu_engine/config/components/tilemap_manager.py                  | Python   |        108 |         22 |         73 |        203 |
+| /Users/wilsonvinson/Documents/GitHub/SUGT06/moyu_engine/config/components/window_move.py                      | Python   |         11 |          0 |          2 |         13 |
+| /Users/wilsonvinson/Documents/GitHub/SUGT06/moyu_engine/config/components/window_zoom.py                      | Python   |         17 |          0 |          2 |         19 |
+| /Users/wilsonvinson/Documents/GitHub/SUGT06/moyu_engine/config/constants.py                                   | Python   |         71 |         13 |         43 |        127 |
+| /Users/wilsonvinson/Documents/GitHub/SUGT06/moyu_engine/config/event/#menu_about_event.py                     | Python   |          0 |          0 |          1 |          1 |
+| /Users/wilsonvinson/Documents/GitHub/SUGT06/moyu_engine/config/event/#menu_createmap_event.py                 | Python   |          0 |          0 |          1 |          1 |
+| /Users/wilsonvinson/Documents/GitHub/SUGT06/moyu_engine/config/event/#menu_setting_event.py                   | Python   |          0 |          0 |          1 |          1 |
+| /Users/wilsonvinson/Documents/GitHub/SUGT06/moyu_engine/config/event/#menu_stop_event.py                      | Python   |          0 |          0 |          1 |          1 |
+| /Users/wilsonvinson/Documents/GitHub/SUGT06/moyu_engine/config/event/GAMEmain_event.py                        | Python   |        102 |          0 |         47 |        149 |
+| /Users/wilsonvinson/Documents/GitHub/SUGT06/moyu_engine/config/event/MENUmain_event.py                        | Python   |         34 |          0 |         18 |         52 |
+| /Users/wilsonvinson/Documents/GitHub/SUGT06/moyu_engine/config/font.py                                        | Python   |          4 |          0 |          4 |          8 |
+| /Users/wilsonvinson/Documents/GitHub/SUGT06/moyu_engine/config/graphics.py                                    | Python   |         47 |          5 |         30 |         82 |
+| /Users/wilsonvinson/Documents/GitHub/SUGT06/moyu_engine/config/setup.py                                       | Python   |         35 |          2 |         22 |         59 |
+| /Users/wilsonvinson/Documents/GitHub/SUGT06/moyu_engine/config/sound.py                                       | Python   |          3 |          0 |          3 |          6 |
+| /Users/wilsonvinson/Documents/GitHub/SUGT06/moyu_engine/config/surface/#menu_about_surface.py                 | Python   |          0 |          0 |          1 |          1 |
+| /Users/wilsonvinson/Documents/GitHub/SUGT06/moyu_engine/config/surface/#menu_createmap_surface.py             | Python   |          0 |          0 |          1 |          1 |
+| /Users/wilsonvinson/Documents/GitHub/SUGT06/moyu_engine/config/surface/#menu_setting_surface.py               | Python   |          0 |          0 |          1 |          1 |
+| /Users/wilsonvinson/Documents/GitHub/SUGT06/moyu_engine/config/surface/#menu_stop_surface.py                  | Python   |          0 |          0 |          1 |          1 |
+| /Users/wilsonvinson/Documents/GitHub/SUGT06/moyu_engine/config/surface/GAMEmain_surface.py                    | Python   |         56 |         10 |         25 |         91 |
+| /Users/wilsonvinson/Documents/GitHub/SUGT06/moyu_engine/config/surface/MENUmain_surface.py                    | Python   |         46 |          1 |         24 |         71 |
+| Total                                                                                                         |          |     18,000 |        265 |      4,053 |     22,318 |
++---------------------------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
