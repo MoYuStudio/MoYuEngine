@@ -7,11 +7,6 @@ import moyu_engine.config.graphics as G
 import moyu_engine.config.font as F
 
 import moyu_engine.config.components.tilemap_manager
-import moyu_engine.config.components.window_move
-import moyu_engine.config.components.window_zoom
-
-#FIXME 金币等 需要一个背景来刷新
-#FIXME Tilemap 移动bug
 
 def blit(): 
 
