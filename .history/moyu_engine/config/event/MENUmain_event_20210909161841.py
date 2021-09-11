@@ -27,8 +27,8 @@ def event():
 
                 moyu_engine.config.components.tilemap_manager.tilemap_builder()
 
-                C.MENUmain = False
-                C.GAMEmain = True
+                C.fade_black = True
+                C.buttonStartGame = True
 
             if pygame.Rect.collidepoint(C.MENUmain_button02_RECT,event.pos):
                 S.button_sound.play()

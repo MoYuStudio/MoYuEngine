@@ -10,6 +10,8 @@ import moyu_engine.config.components.tilemap_manager
 
 def blit(): 
 
+    C.surface_level = (1280/(16*C.GAMEmain_surface_level))
+
     background()
     info()
     gui()
@@ -92,7 +94,7 @@ blit_surface_size       = C.WINDOW_SIZE
 blit_surface            = pygame.Surface((blit_surface_size)).convert_alpha()
 background_surface_size = C.WINDOW_SIZE
 background_surface      = pygame.Surface((background_surface_size)).convert_alpha()
-info_surface_size       = C.WINDOW_SIZE
+info_surface_size       = [16*C.GAMEmain_surface_level,9*C.GAMEmain_surface_level]
 info_surface            = pygame.Surface((info_surface_size)).convert_alpha()
 gui_surface_size        = C.WINDOW_SIZE
 gui_surface             = pygame.Surface((gui_surface_size)).convert_alpha()

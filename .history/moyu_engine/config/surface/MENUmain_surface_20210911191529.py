@@ -16,12 +16,6 @@ def blit():
     popup()
     transition()
 
-    background_surfaceFin = pygame.transform.scale(background_surface, C.WINDOW_SIZE)
-    info_surfaceFin       = pygame.transform.scale(info_surface, C.WINDOW_SIZE)
-    gui_surfaceFin        = pygame.transform.scale(gui_surface, C.WINDOW_SIZE)
-    popup_surfaceFin      = pygame.transform.scale(popup_surface, C.WINDOW_SIZE)
-    transition_surfaceFin = pygame.transform.scale(transition_surface, C.WINDOW_SIZE)
-
     C.SCREEN.blit(background_surfaceFin, (0, 0))
     C.SCREEN.blit(info_surfaceFin, (0,0))
     C.SCREEN.blit(gui_surfaceFin, (0, 0))
@@ -64,12 +58,18 @@ def transition():
     pass
 
 background_surface_size = C.WINDOW_SIZE
-background_surface      = pygame.Surface(background_surface_size).convert_alpha()
+background_surface      = pygame.Surface(background_surface_size)
 info_surface_size       = C.WINDOW_SIZE
-info_surface            = pygame.Surface(info_surface_size).convert_alpha()
+info_surface            = pygame.Surface(info_surface_size)
 gui_surface_size        = C.WINDOW_SIZE
-gui_surface             = pygame.Surface(gui_surface_size).convert_alpha()
+gui_surface             = pygame.Surface(gui_surface_size)
 popup_surface_size      = C.WINDOW_SIZE
-popup_surface           = pygame.Surface(popup_surface_size).convert_alpha()
+popup_surface           = pygame.Surface(popup_surface_size)
 transition_surface_size = C.WINDOW_SIZE
-transition_surface      = pygame.Surface(transition_surface_size).convert_alpha()
+transition_surface      = pygame.Surface(transition_surface_size)
+
+background_surfaceFin = pygame.transform.scale(background_surface, C.WINDOW_SIZE)
+info_surfaceFin = pygame.transform.scale(info_surface, C.WINDOW_SIZE)
+gui_surfaceFin = pygame.transform.scale(gui_surface, C.WINDOW_SIZE)
+popup_surfaceFin = pygame.transform.scale(popup_surface, C.WINDOW_SIZE)
+transition_surfaceFin = pygame.transform.scale(transition_surface, C.WINDOW_SIZE)

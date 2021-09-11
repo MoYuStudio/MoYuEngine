@@ -8,25 +8,35 @@ import moyu_engine.config.font as F
 
 import moyu_engine.config.components.tilemap_manager
 
-def blit(): 
+def blit(self): 
 
     background()
+
     info()
+
     gui()
+
     popup()
+
     transition()
 
-    background_surfaceFin = pygame.transform.scale(background_surface, C.WINDOW_SIZE)
-    info_surfaceFin       = pygame.transform.scale(info_surface, C.WINDOW_SIZE)
-    gui_surfaceFin        = pygame.transform.scale(gui_surface, C.WINDOW_SIZE)
-    popup_surfaceFin      = pygame.transform.scale(popup_surface, C.WINDOW_SIZE)
-    transition_surfaceFin = pygame.transform.scale(transition_surface, C.WINDOW_SIZE)
+    surface_transform()
 
-    C.SCREEN.blit(background_surfaceFin, (0, 0))
-    C.SCREEN.blit(info_surfaceFin, (0,0))
-    C.SCREEN.blit(gui_surfaceFin, (0, 0))
-    C.SCREEN.blit(popup_surfaceFin, (0, 0))
-    C.SCREEN.blit(transition_surfaceFin, (0, 0))
+    blit_surface.blit(self.background_surfaceFin, (0, 0))
+    blit_surface.blit(self.info_surfaceFin, (0,0))
+    blit_surface.blit(self.gui_surfaceFin, (0, 0))
+    blit_surface.blit(self.popup_surfaceFin, (0, 0))
+    blit_surface.blit(self.transition_surfaceFin, (0, 0))
+
+    C.SCREEN.blit(self.blit_surfaceFin, (0, 0))
+
+def surface_transform(self):
+    self.blit_surfaceFin = pygame.transform.scale(blit_surface, C.WINDOW_SIZE)
+    self.background_surfaceFin = pygame.transform.scale(blit_surface, C.WINDOW_SIZE)
+    self.info_surfaceFin = pygame.transform.scale(blit_surface, C.WINDOW_SIZE)
+    self.gui_surfaceFin = pygame.transform.scale(blit_surface, C.WINDOW_SIZE)
+    self.popup_surfaceFin = pygame.transform.scale(blit_surface, C.WINDOW_SIZE)
+    self.transition_surfaceFin = pygame.transform.scale(blit_surface, C.WINDOW_SIZE)
 
 def background(): 
 
@@ -89,14 +99,14 @@ def transition():
     pass
 
 blit_surface_size       = C.WINDOW_SIZE
-blit_surface            = pygame.Surface((blit_surface_size)).convert_alpha()
+blit_surface            = pygame.Surface(blit_surface_size)
 background_surface_size = C.WINDOW_SIZE
-background_surface      = pygame.Surface((background_surface_size)).convert_alpha()
+background_surface      = pygame.Surface(background_surface_size)
 info_surface_size       = C.WINDOW_SIZE
-info_surface            = pygame.Surface((info_surface_size)).convert_alpha()
+info_surface            = pygame.Surface(info_surface_size)
 gui_surface_size        = C.WINDOW_SIZE
-gui_surface             = pygame.Surface((gui_surface_size)).convert_alpha()
+gui_surface             = pygame.Surface(gui_surface_size)
 popup_surface_size      = C.WINDOW_SIZE
-popup_surface           = pygame.Surface((popup_surface_size)).convert_alpha()
+popup_surface           = pygame.Surface(popup_surface_size)
 transition_surface_size = C.WINDOW_SIZE
-transition_surface      = pygame.Surface((transition_surface_size)).convert_alpha()
+transition_surface      = pygame.Surface(transition_surface_size)
