@@ -78,6 +78,10 @@ MENUmain_surface_level = 80
 MENUmain_surface_size = [16*MENUmain_surface_level,9*MENUmain_surface_level]
 MENUmain_surface = pygame.Surface(MENUmain_surface_size)
 
+# fade_black surface =================================================
+fade_black_surface_size = WINDOW_SIZE
+fade_black_surface = pygame.Surface(fade_black_surface_size)
+
 # ================================================= Scrollbar =================================================
 
 scrollbar_line_color = [255, 255, 255]
@@ -130,7 +134,7 @@ seed = 0
 # ================================================= fade_black ================================================= 
 
 fade_black = False
-alpha = 255
+fade_black_alpha = 0
 window_switch = False
 
 buttonStartGame  = False

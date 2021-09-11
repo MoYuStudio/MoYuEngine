@@ -43,7 +43,7 @@ def gameloop():
 
         if C.MENUmain == True:
 
-            moyu_engine.config.surface.MENUmain_surface.update()
+            moyu_engine.config.surface.MENUmain_surface.blit()
 
             moyu_engine.config.event.MENUmain_event.event()
 
