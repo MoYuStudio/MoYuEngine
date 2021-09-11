@@ -8,7 +8,7 @@ import moyu_engine.config.font as F
 
 import moyu_engine.config.components.fade_black
 
-def blit(): 
+def blit():
 
     background()
     info_surface.blit(background_surface, (0, 0))
@@ -24,14 +24,14 @@ def blit():
 
     C.SCREEN.blit(blit_surface, (0, 0))
 
-def background(): 
+def background():
 
     background_surface.blit(G.menu_backgroundFin, (0,0))
 
-def info(): 
+def info():
     pass
 
-def gui(): 
+def gui():
 
     gui_surface.blit(G.button001_unclickFin, (C.WINDOW_SIZE[0]-64*3*1 - 20, C.WINDOW_SIZE[1]-16*3*5 - 10*5))
     startbutton_text = F.font1.render('新游戏', True, (255, 255, 255))
@@ -53,21 +53,26 @@ def gui():
     startbutton_text = F.font1.render('关于', True, (255, 255, 255))
     gui_surface.blit(startbutton_text,(C.WINDOW_SIZE[0]-64*2.5*1, C.WINDOW_SIZE[1]-16*2.87*1 - 10*1))
 
-def popup(): 
+def popup():
     pass
 
-def transition(): 
+def transition():
     pass
 
-blit_surface_size       = C.WINDOW_SIZE
-blit_surface            = pygame.Surface(blit_surface_size)
+blit_surface_size = C.WINDOW_SIZE
+blit_surface = pygame.Surface(blit_surface_size)
+
 background_surface_size = C.WINDOW_SIZE
-background_surface      = pygame.Surface(background_surface_size)
-info_surface_size       = C.WINDOW_SIZE
-info_surface            = pygame.Surface(info_surface_size)
-gui_surface_size        = C.WINDOW_SIZE
-gui_surface             = pygame.Surface(gui_surface_size)
-popup_surface_size      = C.WINDOW_SIZE
-popup_surface           = pygame.Surface(popup_surface_size)
+background_surface = pygame.Surface(background_surface_size)
+
+info_surface_size = C.WINDOW_SIZE
+info_surface = pygame.Surface(info_surface_size)
+
+gui_surface_size = C.WINDOW_SIZE
+gui_surface = pygame.Surface(gui_surface_size)
+
+popup_surface_size = C.WINDOW_SIZE
+popup_surface = pygame.Surface(popup_surface_size)
+
 transition_surface_size = C.WINDOW_SIZE
-transition_surface      = pygame.Surface(transition_surface_size)
+transition_surface = pygame.Surface(transition_surface_size)

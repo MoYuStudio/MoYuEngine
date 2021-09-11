@@ -15,16 +15,16 @@ import moyu_engine.config.event.MENUmain_event
 import moyu_engine.config.surface.GAMEmain_surface
 import moyu_engine.config.event.GAMEmain_event
 
-def run(): 
+def run():
     init()
     gameloop()
 
-def init(): 
+def init():
 
     pygame.init()
     pygame.mixer.init()
 
-    C.SCREEN       = pygame.display.set_mode(C.WINDOW_SIZE)
+    C.SCREEN = pygame.display.set_mode(C.WINDOW_SIZE)
     C.SCREEN_TITLE = pygame.display.set_caption('Tinyland 弹丸之地')
     pygame.display.set_icon(G.tl16)
     C.CLOCK = pygame.time.Clock()
@@ -32,7 +32,7 @@ def init():
 
     return C.SCREEN,C.SCREEN_TITLE,C.CLOCK
 
-def gameloop(): 
+def gameloop():
 
     moyu_engine.config.components.tilemap_manager.tilemap_builder()
 

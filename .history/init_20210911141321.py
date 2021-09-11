@@ -2,7 +2,7 @@
 import os
 import sys
 
-def __init__(): 
+def __init__():
     project_path = os.getcwd()
     print(project_path)
     os.chdir(project_path)

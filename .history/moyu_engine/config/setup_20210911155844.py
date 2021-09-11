@@ -41,13 +41,13 @@ def gameloop():
 
     while True: #TODO 需要一个检测游戏是否运行的布尔值 使用for来优化
 
-        if C.MENUmain == True:
+        if C.MENUmain = = True:
 
             moyu_engine.config.surface.MENUmain_surface.blit()
 
             moyu_engine.config.event.MENUmain_event.event()
 
-        if C.GAMEmain == True:
+        if C.GAMEmain = = True:
 
             moyu_engine.config.surface.GAMEmain_surface.update()
 

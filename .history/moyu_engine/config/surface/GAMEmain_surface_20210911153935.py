@@ -12,7 +12,7 @@ import moyu_engine.config.components.window_move
 import moyu_engine.config.components.window_zoom
 import moyu_engine.config.components.scrollbar
 
-#FIXME 清洗代码
+#FIXME
 
 def update():
 
