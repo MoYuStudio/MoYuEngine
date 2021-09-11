@@ -17,6 +17,7 @@ def blit():
     popup()
     transition_surface.blit(popup_surface, (0, 0))
     transition()
+    
     blit_surface.blit(transition_surface, (0, 0))
 
     C.SCREEN.blit(blit_surface, (0, 0))
