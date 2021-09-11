@@ -64,6 +64,9 @@ MoYu Engine 文件检索
 >>>`setup.py` （运行Pyhton文件）<br/>
 >>>`sound.py` （声音Pyhton文件）<br/>
 
+### 项目组 QQ群
+            837240160
+
 ### 项目组 资源中心
             https://shimo.im/sheets/h9QPG6HQCgGgQQHx/uj0ib/
 
