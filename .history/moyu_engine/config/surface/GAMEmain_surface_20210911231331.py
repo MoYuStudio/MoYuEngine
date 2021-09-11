@@ -38,13 +38,11 @@ def background():
 
     background_surface.blit(G.backgroundFin, ((-(C.MOVE[0]/3))-1280,(-(C.MOVE[1]/3))-720))
 
-def info():
-    info_surface.fill((0,0,0,0))
+def info(): 
 
     moyu_engine.config.components.tilemap_manager.tilemap_loarder(info_surface)
 
-def gui():
-    gui_surface.fill((0,0,0,0))
+def gui(): 
 
     gui_surface.blit(G.button001Fin, (10,10*1 + 64*0))
     if C.pretile_type == 1:
@@ -85,11 +83,11 @@ def gui():
     money_text = F.font1.render(str(C.money), True, (255, 255, 255))
     gui_surface.blit(money_text,(C.WINDOW_SIZE[0]-64*2 - 20 - 50, 10+16))
 
-def popup():
-    popup_surface.fill((0,0,0,0))
+def popup(): 
+    pass
 
-def transition():
-    transition_surface.fill((0,0,0,0))
+def transition(): 
+    pass
 
 blit_surface_size       = C.WINDOW_SIZE
 blit_surface            = pygame.Surface((blit_surface_size)).convert_alpha()
