@@ -43,7 +43,6 @@ def info():
 
     info_surface_size = [16*C.tilemap_surface_level,9*C.tilemap_surface_level]
     info_surface      = pygame.Surface((info_surface_size)).convert_alpha()
-    C.surface_level = (1280/(16*C.tilemap_surface_level))
 
     info_surface.fill((0,0,0,0))
 
