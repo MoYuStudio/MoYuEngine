@@ -36,7 +36,6 @@ def background():
     background_surface.blit(G.backgroundFin, ((-(C.MOVE[0]/3))-1280,(-(C.MOVE[1]/3))-720))
 
 def info():
-    global info_surface_size,info_surface
 
     moyu_engine.config.components.window_move.MOVE_Fn()
     moyu_engine.config.components.window_zoom.ZOOM_Fn()
@@ -48,7 +47,7 @@ def info():
 
     moyu_engine.config.components.tilemap_manager.tilemap_loarder(info_surface,C.MOVE[0],C.MOVE[1])
 
-    return info_surface_size,info_surface
+    return info_surface_size
 
 def gui():
     gui_surface.fill((0,0,0,0))
