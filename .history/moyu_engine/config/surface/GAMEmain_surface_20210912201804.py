@@ -27,7 +27,7 @@ def blit():
     transition_surfaceFin = pygame.transform.scale(transition_surface, C.WINDOW_SIZE)
 
     C.SCREEN.blit(background_surfaceFin, (0, 0))
-    C.SCREEN.blit(info_surfaceFin, (0, 0))
+    C.SCREEN.blit(info_surfaceFin, (0,0))
     C.SCREEN.blit(gui_surfaceFin, (0, 0))
     C.SCREEN.blit(popup_surfaceFin, (0, 0))
     C.SCREEN.blit(transition_surfaceFin, (0, 0))

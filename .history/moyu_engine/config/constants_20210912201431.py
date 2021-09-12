@@ -72,7 +72,7 @@ GAMEmain_surface_level = 60
 GAMEmain_surface_size = [16*GAMEmain_surface_level,9*GAMEmain_surface_level]
 GAMEmain_surface      = pygame.Surface(GAMEmain_surface_size)
 
-#surface_level = (1280/(16*GAMEmain_surface_level))
+surface_level = (1280/(16*GAMEmain_surface_level))
 
 # GAME main gui surface =============================================== =  = 
 

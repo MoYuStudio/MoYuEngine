@@ -18,8 +18,6 @@ def tilemap_builder():
 
 def tilemap_loarder(tilemap_surface,move_x,move_y):
 
-    tilemap_surface.fill((0,0,0,0))
-
     tilemap_n = len(C.tilemap)
     tilemap_m = len(C.tilemap[0])
 
@@ -68,11 +66,11 @@ def tilemap_loarder(tilemap_surface,move_x,move_y):
 
             # === 5 tile_pos_x ===
 
-                tile_info[5] = (tilemap_y*(C.tile_size/2)-tilemap_x*(C.tile_size/2))+move_x
+                tile_info[5] = (tilemap_y*(C.tile_size/2)-tilemap_x*(C.tile_size/2))+C.MOVE[0]
 
             # === 6 tile_pos_y ===
 
-                tile_info[6] = (tilemap_y*(C.tile_size/4)+tilemap_x*(C.tile_size/4))+move_y
+                tile_info[6] = (tilemap_y*(C.tile_size/4)+tilemap_x*(C.tile_size/4))+C.MOVE[1]
 
             # === 7 tile_dvcode ===
 
@@ -85,19 +83,19 @@ def tilemap_loarder(tilemap_surface,move_x,move_y):
             # === 0 tile_land ===
 
                 if tile_info[0] == 1:
-                    tilemap_surface.blit(G.tl1,((tilemap_y*(C.tile_size/2)-tilemap_x*(C.tile_size/2))+move_x,(tilemap_y*(C.tile_size/4)+tilemap_x*(C.tile_size/4))+move_y))
+                    tilemap_surface.blit(G.tl1,((tilemap_y*(C.tile_size/2)-tilemap_x*(C.tile_size/2))+C.MOVE[0],(tilemap_y*(C.tile_size/4)+tilemap_x*(C.tile_size/4))+C.MOVE[1]))
 
                 if tile_info[0] == 6:
-                    tilemap_surface.blit(G.tl6,((tilemap_y*(C.tile_size/2)-tilemap_x*(C.tile_size/2))+move_x,(tilemap_y*(C.tile_size/4)+tilemap_x*(C.tile_size/4))+move_y))
+                    tilemap_surface.blit(G.tl6,((tilemap_y*(C.tile_size/2)-tilemap_x*(C.tile_size/2))+C.MOVE[0],(tilemap_y*(C.tile_size/4)+tilemap_x*(C.tile_size/4))+C.MOVE[1]))
 
                 if tile_info[0] == 11:
-                    tilemap_surface.blit(G.tl11,((tilemap_y*(C.tile_size/2)-tilemap_x*(C.tile_size/2))+move_x,(tilemap_y*(C.tile_size/4)+tilemap_x*(C.tile_size/4))+move_y))
+                    tilemap_surface.blit(G.tl11,((tilemap_y*(C.tile_size/2)-tilemap_x*(C.tile_size/2))+C.MOVE[0],(tilemap_y*(C.tile_size/4)+tilemap_x*(C.tile_size/4))+C.MOVE[1]))
 
                 if tile_info[0] == 16:
-                    tilemap_surface.blit(G.tl16,((tilemap_y*(C.tile_size/2)-tilemap_x*(C.tile_size/2))+move_x,(tilemap_y*(C.tile_size/4)+tilemap_x*(C.tile_size/4))+move_y))
+                    tilemap_surface.blit(G.tl16,((tilemap_y*(C.tile_size/2)-tilemap_x*(C.tile_size/2))+C.MOVE[0],(tilemap_y*(C.tile_size/4)+tilemap_x*(C.tile_size/4))+C.MOVE[1]))
 
                 if tile_info[0] == 21:
-                    tilemap_surface.blit(G.tl21,((tilemap_y*(C.tile_size/2)-tilemap_x*(C.tile_size/2))+move_x,(tilemap_y*(C.tile_size/4)+tilemap_x*(C.tile_size/4))+move_y))
+                    tilemap_surface.blit(G.tl21,((tilemap_y*(C.tile_size/2)-tilemap_x*(C.tile_size/2))+C.MOVE[0],(tilemap_y*(C.tile_size/4)+tilemap_x*(C.tile_size/4))+C.MOVE[1]))
 
             # === 1 tile_preview ===
 
@@ -105,18 +103,18 @@ def tilemap_loarder(tilemap_surface,move_x,move_y):
                     pass
 
                 if tile_info[1] == 1:
-                    tilemap_surface.blit(G.pretile_choose,((tilemap_y*(C.tile_size/2)-tilemap_x*(C.tile_size/2))+move_x,(tilemap_y*(C.tile_size/4)+tilemap_x*(C.tile_size/4))+move_y - 1))
-                    tilemap_surface.blit(G.pretile_green,((tilemap_y*(C.tile_size/2)-tilemap_x*(C.tile_size/2))+move_x,(tilemap_y*(C.tile_size/4)+tilemap_x*(C.tile_size/4))+move_y - 1))
+                    tilemap_surface.blit(G.pretile_choose,((tilemap_y*(C.tile_size/2)-tilemap_x*(C.tile_size/2))+C.MOVE[0],(tilemap_y*(C.tile_size/4)+tilemap_x*(C.tile_size/4))+C.MOVE[1] - 1))
+                    tilemap_surface.blit(G.pretile_green,((tilemap_y*(C.tile_size/2)-tilemap_x*(C.tile_size/2))+C.MOVE[0],(tilemap_y*(C.tile_size/4)+tilemap_x*(C.tile_size/4))+C.MOVE[1] - 1))
                     if C.build == True:
                         tile_info[2] = C.tile_type
                         C.build = False
 
                 if tile_info[1] == 2:
-                    tilemap_surface.blit(G.pretile_choose,((tilemap_y*(C.tile_size/2)-tilemap_x*(C.tile_size/2))+move_x,(tilemap_y*(C.tile_size/4)+tilemap_x*(C.tile_size/4))+move_y - 1))
-                    tilemap_surface.blit(G.pretile_red,((tilemap_y*(C.tile_size/2)-tilemap_x*(C.tile_size/2))+move_x,(tilemap_y*(C.tile_size/4)+tilemap_x*(C.tile_size/4))+move_y - 1))
+                    tilemap_surface.blit(G.pretile_choose,((tilemap_y*(C.tile_size/2)-tilemap_x*(C.tile_size/2))+C.MOVE[0],(tilemap_y*(C.tile_size/4)+tilemap_x*(C.tile_size/4))+C.MOVE[1] - 1))
+                    tilemap_surface.blit(G.pretile_red,((tilemap_y*(C.tile_size/2)-tilemap_x*(C.tile_size/2))+C.MOVE[0],(tilemap_y*(C.tile_size/4)+tilemap_x*(C.tile_size/4))+C.MOVE[1] - 1))
 
                 if tile_info[1] == 3:
-                    tilemap_surface.blit(G.pretile_choose,((tilemap_y*(C.tile_size/2)-tilemap_x*(C.tile_size/2))+move_x,(tilemap_y*(C.tile_size/4)+tilemap_x*(C.tile_size/4))+move_y - 1))
+                    tilemap_surface.blit(G.pretile_choose,((tilemap_y*(C.tile_size/2)-tilemap_x*(C.tile_size/2))+C.MOVE[0],(tilemap_y*(C.tile_size/4)+tilemap_x*(C.tile_size/4))+C.MOVE[1] - 1))
                     if C.reward == True:
                         if tile_info[2] == 5:
                             tile_info[1] = 0
@@ -128,7 +126,7 @@ def tilemap_loarder(tilemap_surface,move_x,move_y):
                 def tile_preview_top():
 
                     if tile_info[1] == 3:
-                        tilemap_surface.blit(G.pretile_reward,((tilemap_y*(C.tile_size/2)-tilemap_x*(C.tile_size/2))+move_x,(tilemap_y*(C.tile_size/4)+tilemap_x*(C.tile_size/4))+move_y - 6))
+                        tilemap_surface.blit(G.pretile_reward,((tilemap_y*(C.tile_size/2)-tilemap_x*(C.tile_size/2))+C.MOVE[0],(tilemap_y*(C.tile_size/4)+tilemap_x*(C.tile_size/4))+C.MOVE[1] - 6))
                    
             # === 2 tile_building ===
 
@@ -136,35 +134,35 @@ def tilemap_loarder(tilemap_surface,move_x,move_y):
                     pass
 
                 if tile_info[2] == 1:
-                    tilemap_surface.blit(G.t1,((tilemap_y*(C.tile_size/2)-tilemap_x*(C.tile_size/2))+move_x,(tilemap_y*(C.tile_size/4)+tilemap_x*(C.tile_size/4))+move_y))
+                    tilemap_surface.blit(G.t1,((tilemap_y*(C.tile_size/2)-tilemap_x*(C.tile_size/2))+C.MOVE[0],(tilemap_y*(C.tile_size/4)+tilemap_x*(C.tile_size/4))+C.MOVE[1]))
 
                 if tile_info[2] == 2:
-                    tilemap_surface.blit(G.t2,((tilemap_y*(C.tile_size/2)-tilemap_x*(C.tile_size/2))+move_x,(tilemap_y*(C.tile_size/4)+tilemap_x*(C.tile_size/4))+move_y))
+                    tilemap_surface.blit(G.t2,((tilemap_y*(C.tile_size/2)-tilemap_x*(C.tile_size/2))+C.MOVE[0],(tilemap_y*(C.tile_size/4)+tilemap_x*(C.tile_size/4))+C.MOVE[1]))
                     tile_info[3] += C.time_speed
                     if tile_info[3] >= 4000:
                         tile_info[2] = 3
 
                 if tile_info[2] == 3:
-                    tilemap_surface.blit(G.t3,((tilemap_y*(C.tile_size/2)-tilemap_x*(C.tile_size/2))+move_x,(tilemap_y*(C.tile_size/4)+tilemap_x*(C.tile_size/4))+move_y))
+                    tilemap_surface.blit(G.t3,((tilemap_y*(C.tile_size/2)-tilemap_x*(C.tile_size/2))+C.MOVE[0],(tilemap_y*(C.tile_size/4)+tilemap_x*(C.tile_size/4))+C.MOVE[1]))
                     tile_info[3] += C.time_speed
                     if tile_info[3] >= 8000:
                         tile_info[2] = 4
 
                 if tile_info[2] == 4:
-                    tilemap_surface.blit(G.t4,((tilemap_y*(C.tile_size/2)-tilemap_x*(C.tile_size/2))+move_x,(tilemap_y*(C.tile_size/4)+tilemap_x*(C.tile_size/4))+move_y))
+                    tilemap_surface.blit(G.t4,((tilemap_y*(C.tile_size/2)-tilemap_x*(C.tile_size/2))+C.MOVE[0],(tilemap_y*(C.tile_size/4)+tilemap_x*(C.tile_size/4))+C.MOVE[1]))
                     tile_info[3] += C.time_speed
                     if tile_info[3] >= 12000:
                         tile_info[2] = 5
 
                 if tile_info[2] == 5:
-                    tilemap_surface.blit(G.t5,((tilemap_y*(C.tile_size/2)-tilemap_x*(C.tile_size/2))+move_x,(tilemap_y*(C.tile_size/4)+tilemap_x*(C.tile_size/4))+move_y))
+                    tilemap_surface.blit(G.t5,((tilemap_y*(C.tile_size/2)-tilemap_x*(C.tile_size/2))+C.MOVE[0],(tilemap_y*(C.tile_size/4)+tilemap_x*(C.tile_size/4))+C.MOVE[1]))
                     tile_info[3] += C.time_speed
 
                 if tile_info[2] == 105 and tile_info[0] == 6:
-                    tilemap_surface.blit(G.t105,((tilemap_y*(C.tile_size/2)-tilemap_x*(C.tile_size/2))+move_x,(tilemap_y*(C.tile_size/4)+tilemap_x*(C.tile_size/4))-32+move_y))
+                    tilemap_surface.blit(G.t105,((tilemap_y*(C.tile_size/2)-tilemap_x*(C.tile_size/2))+C.MOVE[0],(tilemap_y*(C.tile_size/4)+tilemap_x*(C.tile_size/4))-32+C.MOVE[1]))
 
                 if tile_info[2] == 155 and tile_info[0] == 16:
-                    tilemap_surface.blit(G.t155,((tilemap_y*(C.tile_size/2)-tilemap_x*(C.tile_size/2))+move_x,(tilemap_y*(C.tile_size/4)+tilemap_x*(C.tile_size/4))-32+move_y))
+                    tilemap_surface.blit(G.t155,((tilemap_y*(C.tile_size/2)-tilemap_x*(C.tile_size/2))+C.MOVE[0],(tilemap_y*(C.tile_size/4)+tilemap_x*(C.tile_size/4))-32+C.MOVE[1]))
 
             # === 1 tile_preview top ===
 
@@ -193,11 +191,11 @@ def tilemap_loarder(tilemap_surface,move_x,move_y):
 
                 # 16*tilemap_surface_level,9*tilemap_surface_level
 
-                tile_info[5] = ((tilemap_y*(C.tile_size/2)-tilemap_x*(C.tile_size/2))+move_x)*C.surface_level
+                tile_info[5] = ((tilemap_y*(C.tile_size/2)-tilemap_x*(C.tile_size/2))+C.MOVE[0])*C.surface_level
 
             # === 6 tile_pos_y ===
 
-                tile_info[6] = ((tilemap_y*(C.tile_size/4)+tilemap_x*(C.tile_size/4))+move_y)*C.surface_level
+                tile_info[6] = ((tilemap_y*(C.tile_size/4)+tilemap_x*(C.tile_size/4))+C.MOVE[1])*C.surface_level
 
             # === 7 tile_dvcode ===
 

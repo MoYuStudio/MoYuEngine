@@ -59,7 +59,7 @@ mouse_down_pos_x,mouse_down_pos_y = 0,          0
 tilemap_surface_level = 60
 
 tilemap_surface_size = [16*tilemap_surface_level,9*tilemap_surface_level]
-tilemap_surface     = pygame.Surface(tilemap_surface_size).convert_alpha()
+tilemap_surface     = pygame.Surface(tilemap_surface_size)
 
 surface_level = (1280/(16*tilemap_surface_level))
 
@@ -72,7 +72,7 @@ GAMEmain_surface_level = 60
 GAMEmain_surface_size = [16*GAMEmain_surface_level,9*GAMEmain_surface_level]
 GAMEmain_surface      = pygame.Surface(GAMEmain_surface_size)
 
-#surface_level = (1280/(16*GAMEmain_surface_level))
+surface_level = (1280/(16*GAMEmain_surface_level))
 
 # GAME main gui surface =============================================== =  = 
 

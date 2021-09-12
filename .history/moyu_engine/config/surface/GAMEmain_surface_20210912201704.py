@@ -14,20 +14,20 @@ import moyu_engine.config.components.window_zoom
 
 def blit(): 
 
-    background()
-    info()
-    gui()
-    popup()
-    transition()
-
     background_surfaceFin = pygame.transform.scale(background_surface, C.WINDOW_SIZE)
     info_surfaceFin       = pygame.transform.scale(info_surface, C.WINDOW_SIZE)
     gui_surfaceFin        = pygame.transform.scale(gui_surface, C.WINDOW_SIZE)
     popup_surfaceFin      = pygame.transform.scale(popup_surface, C.WINDOW_SIZE)
     transition_surfaceFin = pygame.transform.scale(transition_surface, C.WINDOW_SIZE)
 
+    background()
+    info()
+    gui()
+    popup()
+    transition()
+
     C.SCREEN.blit(background_surfaceFin, (0, 0))
-    C.SCREEN.blit(info_surfaceFin, (0, 0))
+    C.SCREEN.blit(info_surfaceFin, (0,0))
     C.SCREEN.blit(gui_surfaceFin, (0, 0))
     C.SCREEN.blit(popup_surfaceFin, (0, 0))
     C.SCREEN.blit(transition_surfaceFin, (0, 0))

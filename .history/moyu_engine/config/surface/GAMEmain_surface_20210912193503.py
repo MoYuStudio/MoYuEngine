@@ -10,9 +10,13 @@ import moyu_engine.config.components.tilemap_manager
 import moyu_engine.config.components.window_move
 import moyu_engine.config.components.window_zoom
 
+#FIXME 金币等 需要一个背景来刷新
 #FIXME Tilemap 移动bug
 
 def blit(): 
+
+    info_surface_size       = C.WINDOW_SIZE
+    info_surface            = pygame.Surface((info_surface_size)).convert_alpha()
 
     background()
     info()
@@ -27,7 +31,7 @@ def blit():
     transition_surfaceFin = pygame.transform.scale(transition_surface, C.WINDOW_SIZE)
 
     C.SCREEN.blit(background_surfaceFin, (0, 0))
-    C.SCREEN.blit(info_surfaceFin, (0, 0))
+    C.SCREEN.blit(info_surfaceFin, (0,0))
     C.SCREEN.blit(gui_surfaceFin, (0, 0))
     C.SCREEN.blit(popup_surfaceFin, (0, 0))
     C.SCREEN.blit(transition_surfaceFin, (0, 0))
@@ -38,10 +42,9 @@ def background():
     background_surface.blit(G.backgroundFin, ((-(C.MOVE[0]/3))-1280,(-(C.MOVE[1]/3))-720))
 
 def info():
-    
     info_surface.fill((0,0,0,0))
-    
-    moyu_engine.config.components.tilemap_manager.tilemap_loarder(info_surface,C.MOVE[0],C.MOVE[1])
+
+    moyu_engine.config.components.tilemap_manager.tilemap_loarder(info_surface)
 
 def gui():
     gui_surface.fill((0,0,0,0))

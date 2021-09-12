@@ -18,8 +18,6 @@ def tilemap_builder():
 
 def tilemap_loarder(tilemap_surface,move_x,move_y):
 
-    tilemap_surface.fill((0,0,0,0))
-
     tilemap_n = len(C.tilemap)
     tilemap_m = len(C.tilemap[0])
 

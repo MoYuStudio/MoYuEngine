@@ -27,7 +27,7 @@ def blit():
     transition_surfaceFin = pygame.transform.scale(transition_surface, C.WINDOW_SIZE)
 
     C.SCREEN.blit(background_surfaceFin, (0, 0))
-    C.SCREEN.blit(info_surfaceFin, (0, 0))
+    C.SCREEN.blit(info_surfaceFin, (0,0))
     C.SCREEN.blit(gui_surfaceFin, (0, 0))
     C.SCREEN.blit(popup_surfaceFin, (0, 0))
     C.SCREEN.blit(transition_surfaceFin, (0, 0))
@@ -38,10 +38,14 @@ def background():
     background_surface.blit(G.backgroundFin, ((-(C.MOVE[0]/3))-1280,(-(C.MOVE[1]/3))-720))
 
 def info():
-    
     info_surface.fill((0,0,0,0))
-    
-    moyu_engine.config.components.tilemap_manager.tilemap_loarder(info_surface,C.MOVE[0],C.MOVE[1])
+    player_w = 25
+    player_location = [100+C.MOVE[0],100+C.MOVE[1]]
+    player_rect = pygame.Rect((player_location[0],player_location[1],player_w,player_w),width=0)
+
+    pygame.draw.rect(info_surface,(255,255,255),player_rect)
+
+    moyu_engine.config.components.tilemap_manager.tilemap_loarder(info_surface)
 
 def gui():
     gui_surface.fill((0,0,0,0))
