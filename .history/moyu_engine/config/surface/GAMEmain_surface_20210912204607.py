@@ -44,7 +44,6 @@ def info():
     moyu_engine.config.components.window_zoom.ZOOM_Fn()
 
     info_surface_size       = [16*C.tilemap_surface_level,9*C.tilemap_surface_level]
-    C.surface_level = (1280/(16*C.tilemap_surface_level))
 
     info_surface.fill((0,0,0,0))
 

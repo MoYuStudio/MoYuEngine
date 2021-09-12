@@ -38,13 +38,10 @@ def background():
     background_surface.blit(G.backgroundFin, ((-(C.MOVE[0]/3))-1280,(-(C.MOVE[1]/3))-720))
 
 def info():
-    global info_surface
-
     moyu_engine.config.components.window_move.MOVE_Fn()
     moyu_engine.config.components.window_zoom.ZOOM_Fn()
 
     info_surface_size       = [16*C.tilemap_surface_level,9*C.tilemap_surface_level]
-    C.surface_level = (1280/(16*C.tilemap_surface_level))
 
     info_surface.fill((0,0,0,0))
 
