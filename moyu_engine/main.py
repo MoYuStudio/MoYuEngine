@@ -2,11 +2,12 @@
 import pygame
 from pygame.locals import *
 
+import sys
+sys.path.append('moyu_engine/config')
+
 import config.system.setting as S
 
-import config.surface.background
-
-import config.event.event
+import config
 
 def run(): 
     init()
