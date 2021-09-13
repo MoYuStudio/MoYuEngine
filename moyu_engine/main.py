@@ -25,8 +25,6 @@ def init():
     
     pygame.display.flip()
 
-    return S.SCREEN
-
 def gameloop(): 
 
     while True:
@@ -36,6 +34,7 @@ def gameloop():
         config.event.event.event()
 
         pygame.display.update()
+
         CLOCK = pygame.time.Clock()
         CLOCK.tick(S.WINDOW_FPS)
 
