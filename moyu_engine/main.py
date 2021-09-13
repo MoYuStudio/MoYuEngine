@@ -18,7 +18,7 @@ def init():
     pygame.init()
     pygame.mixer.init()
 
-    S.SCREEN = pygame.display.set_mode(S.WINDOW_SIZE)
+    S.SCREEN     = pygame.display.set_mode(S.WINDOW_SIZE)
     SCREEN_TITLE = pygame.display.set_caption('Tinyland 弹丸之地')
 
     #pygame.display.set_icon(G.tl16)
@@ -27,9 +27,14 @@ def init():
 
 def gameloop(): 
 
-    while True:
+    while True: 
 
         config.surface.background.blit()
+        config.surface.map.blit()
+        config.surface.info.blit()
+        config.surface.gui.blit()
+        config.surface.popup.blit()
+        config.surface.transition.blit()
 
         config.event.event.event()
 
