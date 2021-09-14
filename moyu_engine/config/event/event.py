@@ -4,12 +4,7 @@ import sys
 import pygame
 from pygame.locals import *
 
-# def event():
-#     for event in pygame.event.get():
-#         if event.type == QUIT:
-#             pygame.quit()
-#             sys.exit()
-
+import config.system.setting as S
 
 class MainEvent:
     def __init__(self, initial_stack=[]):
@@ -17,13 +12,19 @@ class MainEvent:
     
     def distribute(self):
         for evt in pygame.event.get():
+
             if evt.type == QUIT:
                 pygame.quit()
                 sys.exit()
             # distribute event here (from top to bottom)
+
+            if evt.type == pygame.MOUSEMOTION:
+                S.MOUSE_POS = evt.pos
+
             for surf in self.surf_stack[::-1]:
                 res = surf.accept(evt)
                 if not res:
+
                     # distribution abort
                     break
 

@@ -1,16 +1,20 @@
 
 import pygame
+import pygame.locals as pglocals
 
 import config
 
 import system.setting as S
 import system.assets as A
 
-map_surface_size       = S.WINDOW_SIZE
-map_surface            = pygame.Surface(map_surface_size).convert_alpha()
+class MapSurface:
+    def __init__(self,alpha_color=(0,0,0,0)):
+        self.surface_size = S.WINDOW_SIZE
+        self.surface = pygame.Surface(S.WINDOW_SIZE,flags=pglocals.SRCALPHA).convert_alpha()
+        self.surface.fill(alpha_color)
+    
+    def update(self,interval):
+        return self.surface
 
-def blit():
-
-    map_surface.fill((0,0,0,0))
-
-    S.SCREEN.blit(map_surface, (0, 0))
+    def accept(self,evt):
+        return False

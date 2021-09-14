@@ -22,3 +22,5 @@ button001_preclick    = pygame.image.load('moyu_engine/assets/graphics/gui/butto
 button001_preclickFin = pygame.transform.scale(button001_preclick, (64*3,16*3))
 button001_clicked     = pygame.image.load('moyu_engine/assets/graphics/gui/button001_clicked.png').convert_alpha()
 button001_clickedFin  = pygame.transform.scale(button001_clicked, (64*3,16*3))
+
+button_sound = pygame.mixer.Sound('moyu_engine/assets/sound/click5.ogg')

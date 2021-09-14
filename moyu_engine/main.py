@@ -1,23 +1,30 @@
 
-# from moyu_engine.config.surface import background
-import pygame
-from pygame.locals import *
-
 import sys
 sys.path.append('moyu_engine/config')
 
-# import config.surface.background
-# import config.event.event
+import pygame
+from pygame.locals import *
 
 import config.system.setting as S
+
 from config.event import MainEvent
-from config.surface import BackgroundSurface
+from config.surface import *
 
 class MainGame:
     def __init__(self):
+        pygame.init()
+        pygame.mixer.init()
+
         self.screen = pygame.display.set_mode(S.WINDOW_SIZE)
+
         background = BackgroundSurface()
-        self.event = MainEvent(initial_stack=[background])
+        map = MapSurface()
+        info = InfoSurface()
+        gui = GuiSurface()
+        popup = PopupSurface()
+        transition = TransitionSurface()
+
+        self.event = MainEvent(initial_stack=[background,map,info,gui,popup,transition])
 
         pygame.display.set_caption('Tinyland 弹丸之地')
         #pygame.display.set_icon(G.tl16)
