@@ -9,6 +9,7 @@ sys.path.append('moyu_engine/config')
 # import config.surface.background
 # import config.event.event
 
+import config.system.setting as S
 from config.event import MainEvent
 from config.surface import BackgroundSurface
 
