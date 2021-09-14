@@ -2,7 +2,13 @@
 import pygame
 import pygame.locals as pglocals
 
-import config.system.setting as S
+import config
+
+import system.setting as S
+import system.assets as A
+
+background_surface_size = S.WINDOW_SIZE
+background_surface      = pygame.Surface(background_surface_size).convert_alpha()
 
 # def blit():
 #     S.SCREEN.fill((255,0,0,255))

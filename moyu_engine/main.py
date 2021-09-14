@@ -3,7 +3,8 @@
 import pygame
 from pygame.locals import *
 
-import config.system.setting as S
+import sys
+sys.path.append('moyu_engine/config')
 
 # import config.surface.background
 # import config.event.event
