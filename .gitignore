@@ -1,6 +1,8 @@
 
 #export PYTHONDONTWRITEBYTECODE=False
 
+moyu_engine/__pycache__
+
 moyu_engine/config/__pycache__
 
 moyu_engine/config/event/__pycache__
