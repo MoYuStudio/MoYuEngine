@@ -65,6 +65,8 @@ class GuiSurface:
             S.button_sound.play()
             return False
 
+'''
+
 def blit():
     suface()
 
@@ -124,3 +126,4 @@ def event():
 
     if pygame.Rect.collidepoint(button05_RECT,S.MOUSE_POS):
         S.button_sound.play()
+'''

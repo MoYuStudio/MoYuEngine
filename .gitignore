@@ -1,6 +1,8 @@
 
-#export PYTHONDONTWRITEBYTECODE=False
+### export PYTHONDONTWRITEBYTECODE=False
 
+# MacOS
 */.DS_Store
 
+# Python
 *.pyc
