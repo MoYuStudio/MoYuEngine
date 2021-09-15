@@ -18,13 +18,13 @@ class MainGame:
         self.screen = pygame.display.set_mode(S.WINDOW_SIZE)
 
         background = BackgroundSurface()
-        map = MapSurface()
-        info = InfoSurface()
+        # map = MapSurface()
+        # info = InfoSurface()
         gui = GuiSurface()
-        popup = PopupSurface()
-        transition = TransitionSurface()
+        # popup = PopupSurface()
+        # transition = TransitionSurface()
 
-        self.event = MainEvent(initial_stack=[background,map,info,gui,popup,transition])
+        self.event = MainEvent(initial_stack=[background,gui])
 
         pygame.display.set_caption('Tinyland 弹丸之地')
         #pygame.display.set_icon(G.tl16)

@@ -18,13 +18,12 @@ class MainEvent:
                 sys.exit()
             # distribute event here (from top to bottom)
 
-            if evt.type == pygame.MOUSEMOTION:
-                S.MOUSE_POS = evt.pos
+            # if evt.type == pygame.MOUSEMOTION:
+            #     S.MOUSE_POS = evt.pos
 
             for surf in self.surf_stack[::-1]:
                 res = surf.accept(evt)
-                if not res:
-
+                if res:
                     # distribution abort
                     break
 

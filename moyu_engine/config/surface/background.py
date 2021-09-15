@@ -12,9 +12,10 @@ class BackgroundSurface:
         self.surface_size = S.WINDOW_SIZE
         self.surface = pygame.Surface(S.WINDOW_SIZE,flags=pglocals.SRCALPHA).convert_alpha()
         self.surface.fill(alpha_color)
+        self.surface.blit(A.menu_backgroundFin, (0,0))
     
     def update(self,interval):
-        self.surface.blit(A.menu_backgroundFin, (0,0))
+        # self.surface.blit(A.menu_backgroundFin, (0,0))
         return self.surface
 
     def accept(self,evt):
