@@ -93,19 +93,19 @@ class TileMap_Manager:
                 # === 0 tile_land ===
 
                     if tile_info[0] == 1:
-                        tilemap_surface.blit(G.tl1,((tilemap_y*(self.tile_size/2)-tilemap_x*(self.tile_size/2))+move_x,(tilemap_y*(self.tile_size/4)+tilemap_x*(self.tile_size/4))+move_y))
+                        tilemap_surface.blit(A.tl1,((tilemap_y*(self.tile_size/2)-tilemap_x*(self.tile_size/2))+move_x,(tilemap_y*(self.tile_size/4)+tilemap_x*(self.tile_size/4))+move_y))
 
                     if tile_info[0] == 6:
-                        tilemap_surface.blit(G.tl6,((tilemap_y*(self.tile_size/2)-tilemap_x*(self.tile_size/2))+move_x,(tilemap_y*(self.tile_size/4)+tilemap_x*(self.tile_size/4))+move_y))
+                        tilemap_surface.blit(A.tl6,((tilemap_y*(self.tile_size/2)-tilemap_x*(self.tile_size/2))+move_x,(tilemap_y*(self.tile_size/4)+tilemap_x*(self.tile_size/4))+move_y))
 
                     if tile_info[0] == 11:
-                        tilemap_surface.blit(G.tl11,((tilemap_y*(self.tile_size/2)-tilemap_x*(self.tile_size/2))+move_x,(tilemap_y*(self.tile_size/4)+tilemap_x*(self.tile_size/4))+move_y))
+                        tilemap_surface.blit(A.tl11,((tilemap_y*(self.tile_size/2)-tilemap_x*(self.tile_size/2))+move_x,(tilemap_y*(self.tile_size/4)+tilemap_x*(self.tile_size/4))+move_y))
 
                     if tile_info[0] == 16:
-                        tilemap_surface.blit(G.tl16,((tilemap_y*(self.tile_size/2)-tilemap_x*(self.tile_size/2))+move_x,(tilemap_y*(self.tile_size/4)+tilemap_x*(self.tile_size/4))+move_y))
+                        tilemap_surface.blit(A.tl16,((tilemap_y*(self.tile_size/2)-tilemap_x*(self.tile_size/2))+move_x,(tilemap_y*(self.tile_size/4)+tilemap_x*(self.tile_size/4))+move_y))
 
                     if tile_info[0] == 21:
-                        tilemap_surface.blit(G.tl21,((tilemap_y*(self.tile_size/2)-tilemap_x*(self.tile_size/2))+move_x,(tilemap_y*(self.tile_size/4)+tilemap_x*(self.tile_size/4))+move_y))
+                        tilemap_surface.blit(A.tl21,((tilemap_y*(self.tile_size/2)-tilemap_x*(self.tile_size/2))+move_x,(tilemap_y*(self.tile_size/4)+tilemap_x*(self.tile_size/4))+move_y))
 
                 # === 1 tile_preview ===
 
@@ -113,30 +113,30 @@ class TileMap_Manager:
                         pass
 
                     if tile_info[1] == 1:
-                        tilemap_surface.blit(G.pretile_choose,((tilemap_y*(self.tile_size/2)-tilemap_x*(self.tile_size/2))+move_x,(tilemap_y*(self.tile_size/4)+tilemap_x*(self.tile_size/4))+move_y - 1))
-                        tilemap_surface.blit(G.pretile_green,((tilemap_y*(self.tile_size/2)-tilemap_x*(self.tile_size/2))+move_x,(tilemap_y*(self.tile_size/4)+tilemap_x*(self.tile_size/4))+move_y - 1))
+                        tilemap_surface.blit(A.pretile_choose,((tilemap_y*(self.tile_size/2)-tilemap_x*(self.tile_size/2))+move_x,(tilemap_y*(self.tile_size/4)+tilemap_x*(self.tile_size/4))+move_y - 1))
+                        tilemap_surface.blit(A.pretile_green,((tilemap_y*(self.tile_size/2)-tilemap_x*(self.tile_size/2))+move_x,(tilemap_y*(self.tile_size/4)+tilemap_x*(self.tile_size/4))+move_y - 1))
                         if S.build == True:
                             tile_info[2] = S.tile_type
                             S.build = False
 
                     if tile_info[1] == 2:
-                        tilemap_surface.blit(G.pretile_choose,((tilemap_y*(self.tile_size/2)-tilemap_x*(self.tile_size/2))+move_x,(tilemap_y*(self.tile_size/4)+tilemap_x*(self.tile_size/4))+move_y - 1))
-                        tilemap_surface.blit(G.pretile_red,((tilemap_y*(self.tile_size/2)-tilemap_x*(self.tile_size/2))+move_x,(tilemap_y*(self.tile_size/4)+tilemap_x*(self.tile_size/4))+move_y - 1))
+                        tilemap_surface.blit(A.pretile_choose,((tilemap_y*(self.tile_size/2)-tilemap_x*(self.tile_size/2))+move_x,(tilemap_y*(self.tile_size/4)+tilemap_x*(self.tile_size/4))+move_y - 1))
+                        tilemap_surface.blit(A.pretile_red,((tilemap_y*(self.tile_size/2)-tilemap_x*(self.tile_size/2))+move_x,(tilemap_y*(self.tile_size/4)+tilemap_x*(self.tile_size/4))+move_y - 1))
 
                     if tile_info[1] == 3:
-                        tilemap_surface.blit(G.pretile_choose,((tilemap_y*(self.tile_size/2)-tilemap_x*(self.tile_size/2))+move_x,(tilemap_y*(self.tile_size/4)+tilemap_x*(self.tile_size/4))+move_y - 1))
-                        if S.reward == True:
+                        tilemap_surface.blit(A.pretile_choose,((tilemap_y*(self.tile_size/2)-tilemap_x*(self.tile_size/2))+move_x,(tilemap_y*(self.tile_size/4)+tilemap_x*(self.tile_size/4))+move_y - 1))
+                        if S.REWARD == True:
                             if tile_info[2] == 5:
                                 tile_info[1] = 0
                                 tile_info[2] = 1
                                 tile_info[3] = 0
                                 S.MONEY += 80
-                            S.reward = False
+                            S.REWARD = False
 
                     def tile_preview_top():
 
                         if tile_info[1] == 3:
-                            tilemap_surface.blit(G.pretile_reward,((tilemap_y*(self.tile_size/2)-tilemap_x*(self.tile_size/2))+move_x,(tilemap_y*(self.tile_size/4)+tilemap_x*(self.tile_size/4))+move_y - 6))
+                            tilemap_surface.blit(A.pretile_reward,((tilemap_y*(self.tile_size/2)-tilemap_x*(self.tile_size/2))+move_x,(tilemap_y*(self.tile_size/4)+tilemap_x*(self.tile_size/4))+move_y - 6))
                     
                 # === 2 tile_building ===
 
@@ -144,35 +144,35 @@ class TileMap_Manager:
                         pass
 
                     if tile_info[2] == 1:
-                        tilemap_surface.blit(G.t1,((tilemap_y*(self.tile_size/2)-tilemap_x*(self.tile_size/2))+move_x,(tilemap_y*(self.tile_size/4)+tilemap_x*(self.tile_size/4))+move_y))
+                        tilemap_surface.blit(A.t1,((tilemap_y*(self.tile_size/2)-tilemap_x*(self.tile_size/2))+move_x,(tilemap_y*(self.tile_size/4)+tilemap_x*(self.tile_size/4))+move_y))
 
                     if tile_info[2] == 2:
-                        tilemap_surface.blit(G.t2,((tilemap_y*(self.tile_size/2)-tilemap_x*(self.tile_size/2))+move_x,(tilemap_y*(self.tile_size/4)+tilemap_x*(self.tile_size/4))+move_y))
-                        tile_info[3] += S.time_speed
+                        tilemap_surface.blit(A.t2,((tilemap_y*(self.tile_size/2)-tilemap_x*(self.tile_size/2))+move_x,(tilemap_y*(self.tile_size/4)+tilemap_x*(self.tile_size/4))+move_y))
+                        tile_info[3] += S.TIME_SPEED
                         if tile_info[3] >= 4000:
                             tile_info[2] = 3
 
                     if tile_info[2] == 3:
-                        tilemap_surface.blit(G.t3,((tilemap_y*(self.tile_size/2)-tilemap_x*(self.tile_size/2))+move_x,(tilemap_y*(self.tile_size/4)+tilemap_x*(self.tile_size/4))+move_y))
-                        tile_info[3] += S.time_speed
+                        tilemap_surface.blit(A.t3,((tilemap_y*(self.tile_size/2)-tilemap_x*(self.tile_size/2))+move_x,(tilemap_y*(self.tile_size/4)+tilemap_x*(self.tile_size/4))+move_y))
+                        tile_info[3] += S.TIME_SPEED
                         if tile_info[3] >= 8000:
                             tile_info[2] = 4
 
                     if tile_info[2] == 4:
-                        tilemap_surface.blit(G.t4,((tilemap_y*(self.tile_size/2)-tilemap_x*(self.tile_size/2))+move_x,(tilemap_y*(self.tile_size/4)+tilemap_x*(self.tile_size/4))+move_y))
-                        tile_info[3] += S.time_speed
+                        tilemap_surface.blit(A.t4,((tilemap_y*(self.tile_size/2)-tilemap_x*(self.tile_size/2))+move_x,(tilemap_y*(self.tile_size/4)+tilemap_x*(self.tile_size/4))+move_y))
+                        tile_info[3] += S.TIME_SPEED
                         if tile_info[3] >= 12000:
                             tile_info[2] = 5
 
                     if tile_info[2] == 5:
-                        tilemap_surface.blit(G.t5,((tilemap_y*(self.tile_size/2)-tilemap_x*(self.tile_size/2))+move_x,(tilemap_y*(self.tile_size/4)+tilemap_x*(self.tile_size/4))+move_y))
-                        tile_info[3] += S.time_speed
+                        tilemap_surface.blit(A.t5,((tilemap_y*(self.tile_size/2)-tilemap_x*(self.tile_size/2))+move_x,(tilemap_y*(self.tile_size/4)+tilemap_x*(self.tile_size/4))+move_y))
+                        tile_info[3] += S.TIME_SPEED
 
                     if tile_info[2] == 105 and tile_info[0] == 6:
-                        tilemap_surface.blit(G.t105,((tilemap_y*(self.tile_size/2)-tilemap_x*(self.tile_size/2))+move_x,(tilemap_y*(self.tile_size/4)+tilemap_x*(self.tile_size/4))-32+move_y))
+                        tilemap_surface.blit(A.t105,((tilemap_y*(self.tile_size/2)-tilemap_x*(self.tile_size/2))+move_x,(tilemap_y*(self.tile_size/4)+tilemap_x*(self.tile_size/4))-32+move_y))
 
                     if tile_info[2] == 155 and tile_info[0] == 16:
-                        tilemap_surface.blit(G.t155,((tilemap_y*(self.tile_size/2)-tilemap_x*(self.tile_size/2))+move_x,(tilemap_y*(self.tile_size/4)+tilemap_x*(self.tile_size/4))-32+move_y))
+                        tilemap_surface.blit(A.t155,((tilemap_y*(self.tile_size/2)-tilemap_x*(self.tile_size/2))+move_x,(tilemap_y*(self.tile_size/4)+tilemap_x*(self.tile_size/4))-32+move_y))
 
                 # === 1 tile_preview top ===
 
@@ -209,4 +209,44 @@ class TileMap_Manager:
 
                 # === 7 tile_dvcode ===
 
+'''
+    def tilebutton_clicker_event_MOUSEBUTTONDOWN():
 
+        tilemap_n = len(S.TILEMAP)
+        tilemap_m = len(S.TILEMAP[0])
+
+        for tilemap_x in range(tilemap_n):
+            for tilemap_y in range(tilemap_m):
+
+                tile_info = S.TILEMAP[tilemap_x][tilemap_y]
+    
+                if tile_info[5] + 8*C.surface_level <= C.mouse_down_pos_x <= tile_info[5] + C.tile_size*C.surface_level - 8*C.surface_level \
+                    and tile_info[6] + 8*C.surface_level <= C.mouse_down_pos_y <= tile_info[6] + C.tile_size*C.surface_level - 8*C.surface_level:
+
+                    else:
+                        if C.tile_choose == True:
+
+                            (S.TILEMAP[C.tile_choose_info[0]][C.tile_choose_info[1]])[1] = 0
+                            C.tile_choose = False
+                            
+                        if tile_info[4] == 1:
+
+                            (S.TILEMAP[tilemap_x][tilemap_y])[1] = 1
+
+                        if tile_info[4] == 0:
+
+                            (S.TILEMAP[tilemap_x][tilemap_y])[1] = 2
+
+                        if tile_info[3] >= 12000:
+
+                            (S.TILEMAP[tilemap_x][tilemap_y])[1] = 3
+
+                        C.tile_choose_info = [tilemap_x,tilemap_y,((S.TILEMAP[tilemap_x][tilemap_y])[4])]
+
+                        C.tile_choose = True
+
+                        if tile_info[2] == 0:
+                            pass
+                        else:
+                            C.pretile_type = tile_info[2]
+'''
