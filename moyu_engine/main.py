@@ -17,15 +17,8 @@ class MainGame      :
         pygame.mixer.init()
 
         self.screen = pygame.display.set_mode(S.WINDOW_SIZE)
-
-        background = BackgroundSurface()
-        map        = MapSurface()
-        info       = InfoSurface()
-        gui        = GuiSurface()
-        popup      = PopupSurface()
-        transition = TransitionSurface()
-
-        self.event = MainEvent(initial_stack = [background,gui])
+        self.surfManager = SurfaceManager()
+        self.event = MainEvent(self.surfManager)
 
         pygame.display.set_caption('Tinyland 弹丸之地')
         pygame.display.set_icon(A.tl6)
