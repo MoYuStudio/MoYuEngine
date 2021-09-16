@@ -11,7 +11,7 @@ import config.system.assets as A
 from config.event import MainEvent
 from config.surface import *
 
-class MainGame      : 
+class MainGame: 
     def __init__(self): 
         pygame.init()
         pygame.mixer.init()
