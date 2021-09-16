@@ -18,16 +18,13 @@ class MainEvent:
                 sys.exit()
             # distribute event here (from top to bottom)
 
-            # if evt.type == pygame.MOUSEMOTION:
-            #     S.MOUSE_POS = evt.pos
-
             for surf in self.surf_stack[::-1]:
                 res = surf.accept(evt)
                 if res:
                     # distribution abort
                     break
 
-    def update_all(self,interval,screen): 
+    def update_all(self, interval, screen): 
         # update all surface
         for surf in self.surf_stack:
             s = surf.update(interval)
