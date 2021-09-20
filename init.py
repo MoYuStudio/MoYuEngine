@@ -1,5 +1,5 @@
 
-import moyu_engine.main
-from . import config
+import moyu_engine.config.main
 
-moyu_engine.main.MainGame()
+main_game = moyu_engine.config.main.MainGame()
+main_game.gameloop()
