@@ -1,0 +1,14 @@
+
+MoYu命名法
+
+MoYu命名法 是由 WilsonVinson 集 驼峰式命名法（小驼峰法），帕斯卡命名法（大驼峰法），下划线命名法 等 命名法 的 功能 设计而成 具有 【不易重复性】【易识别性】的 一种 命名法
+
+WINDOW_SIZE = 
+全大写 - 用于基础’常量‘（常量or泛常量（泛指基数变量（在游戏运行中需要重启才可修改的一些变量or一些正常运行时无需改变的变量）））
+
+SURFACE_size = 
+
+MENUmain_buttonStartGame_RECTsize =
+MENUmain 命名空间 - 全大写+全小写 主要变量多以main为后缀 后缀为该空间下的 子类名
+buttonStartGame 类名 + 变量名/函数名 此处 基于 驼峰法
+RECTsize 属性名 + 属性变量名/属性函数名

@@ -1,0 +1,8 @@
+
+MacOS pyinstaller:
+pyinstaller -i icon.png -n Tinyland -w -F init.py
+/
+pyinstaller -i icon.png -n Tinyland -F init.py
+
+WinOS pyinstaller:
+pyinstaller -i icon.ico -n Tinyland -w -F init.py
