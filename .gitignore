@@ -4,6 +4,18 @@
 # MacOS
 */.DS_Store
 
+# VSCodeCounter
+
+.VSCodeCounter
+
+# History
+
+.history
+
+# GitHub
+
+.github
+
 # Python
 *.pyc
 *.cpython-38.pyc
