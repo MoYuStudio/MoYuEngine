@@ -2,6 +2,7 @@
 ### export PYTHONDONTWRITEBYTECODE=False
 
 # MacOS
+.DS_Store
 */.DS_Store
 
 # VSCodeCounter
