@@ -30,8 +30,6 @@ def init():
     C.CLOCK = pygame.time.Clock()
     pygame.display.flip()
 
-    return C.SCREEN,C.SCREEN_TITLE,C.CLOCK
-
 def gameloop(): 
 
     moyu_engine.config.components.tilemap_manager.tilemap_builder()
