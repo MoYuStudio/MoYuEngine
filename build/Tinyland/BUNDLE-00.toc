@@ -1,3 +1,0 @@
-([('Tinyland',
-   '/Users/wilsonvinson/Documents/GitHub/SUGT06/dist/Tinyland',
-   'EXECUTABLE')],)
