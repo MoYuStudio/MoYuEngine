@@ -17,7 +17,7 @@ class WindowsSystem():
     gui_surface_size        = window_size
     popup_surface_size      = window_size
     transition_surface_size = window_size
-    
+
     # @ classmethod
     # @ staticmethod
     # def __init__(self):
@@ -41,7 +41,7 @@ class WindowsSystem():
 
     def background(self,background_surface):
         self.background_surface = background_surface
-        #self.background_surface.fill((0,0,0,0))
+        self.background_surface.fill((0,0,0,0))
 
     def info(self): 
         self.info_surface.fill((0,0,0,0))
@@ -55,7 +55,7 @@ class WindowsSystem():
     def transition(self): 
         self.transition_surface.fill((0,0,0,0))
 
-    def window_blit(self):
+    def window_blit(self,background_surface):
         
         self.background(background_surface = self.background_surface)
         self.info()
