@@ -39,9 +39,9 @@ class WindowsSystem():
         self.popup_surface      = pygame.Surface(self.popup_surface_size).convert_alpha()
         self.transition_surface = pygame.Surface(self.transition_surface_size).convert_alpha()
 
-    def background(self,background_surface_add): 
-        self.background_surface.fill((0,0,0,0))
-        self.background_surface.blit(background_surface_add, (0, 0))
+    def background(self,background_surface):
+        self.background_surface = background_surface
+        #self.background_surface.fill((0,0,0,0))
 
     def info(self): 
         self.info_surface.fill((0,0,0,0))
@@ -57,7 +57,7 @@ class WindowsSystem():
 
     def window_blit(self):
         
-        self.background()
+        self.background(background_surface = self.background_surface)
         self.info()
         self.gui()
         self.popup()
