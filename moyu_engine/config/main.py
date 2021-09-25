@@ -21,17 +21,17 @@ class MainSystem:
         pygame.mixer.init()
         pygame.display.flip()
 
+        assets = system.AssetsSystem()
+        assets.tileland()
+
     def gameloop(self):
 
         while True:
             C.screen.fill((0,255,0))
 
-            assets = system.AssetsSystem()
-            assets.tileland()
+            C.screen.blit(C.assets['tileland'][1], (0, 0))
 
-            C.screen.blit(C.assets_tileland[0], (0, 0))
-
-            #print(C.assets_tileland)
+            # print(C.assets_tileland)
 
             system.WindowsSystem.menu_main_surface()
             
