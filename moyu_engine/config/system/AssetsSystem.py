@@ -8,7 +8,7 @@ import data.constants as C
 
 class AssetsSystem:
 
-    pygame.display.set_mode(C.window_size,pygame.RESIZABLE)
+    pygame.display.set_mode(C.window['size'],pygame.RESIZABLE)
 
     def tileland(self):
         for num in range(4):

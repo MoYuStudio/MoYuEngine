@@ -27,6 +27,6 @@ moyu_engine/__pycache__
 
 moyu_engine/config/__pycache__
 
-moyu_engine/config/surface/__pycache__
-moyu_engine/config/event/__pycache__
+moyu_engine/config/data/__pycache__
 moyu_engine/config/system/__pycache__
+moyu_engine/config/components/__pycache__
