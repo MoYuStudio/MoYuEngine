@@ -8,6 +8,27 @@ window =\
     'size' : [1280,720],
     'fps'  : 60,
     'title': 'Tinyland 弹丸之地',
+
+    # move
+    'move':[0,0],
+    'move_speed':10,
+    'move_switch':
+    {
+        'up'   : False,
+        'down' : False,
+        'left' : False,
+        'right': False,
+    },
+    'zoom_switch':
+    {
+        'in' : False,
+        'out': False,
+    },
+
+    # window ppt
+    'ppt_switch' : 0
+    
+
 }
 
 tilemap =\
@@ -37,7 +58,11 @@ assets =\
 {
     'tileland'    : [],
     'tilebuilding': [],
-    'gui'         : [],
+    'gui'         : 
+    {
+        'button': [],
+        'input' : [],
+    },
 }
 
 screen = pygame.display.set_mode(window['size'],pygame.RESIZABLE)

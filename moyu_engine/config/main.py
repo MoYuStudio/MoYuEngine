@@ -22,7 +22,7 @@ class MainSystem:
         pygame.display.flip()
 
         assets = system.AssetsSystem()
-        assets.tileland()
+        assets()
 
     def gameloop(self):
 
