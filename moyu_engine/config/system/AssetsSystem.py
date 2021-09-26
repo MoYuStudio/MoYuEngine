@@ -10,7 +10,8 @@ class AssetsSystem:
 
     pygame.display.set_mode(C.window['size'],pygame.RESIZABLE)
 
-    def __init__(self):
+    @ staticmethod
+    def input_all():
         AssetsSystem.tileland()
         AssetsSystem.gui_button()
         AssetsSystem.input_button()
