@@ -12,17 +12,17 @@ class AssetsSystem:
 
     @ staticmethod
     def input_all():
-        AssetsSystem.tileland()
+        AssetsSystem.tile_tileland()
         AssetsSystem.gui_button()
         AssetsSystem.input_button()
 
     @ staticmethod
-    def tileland():
+    def tile_tileland():
         
-        tileland_path = 'moyu_engine/assets/graphics/tileland'
-        tileland_filenum = len(os.listdir(tileland_path))-1
-        for num in range(tileland_filenum):
-            C.assets['tileland'].append(pygame.image.load(os.path.join(tileland_path, f'tl{num}.png')).convert_alpha())
+        tile_tileland_path = 'moyu_engine/assets/graphics/tile/tileland'
+        tile_tileland_filenum = len(os.listdir(tile_tileland_path))-1
+        for num in range(tile_tileland_filenum):
+            C.assets['tile']['tileland'].append(pygame.image.load(os.path.join(tile_tileland_path, f'tl{num}.png')).convert_alpha())
 
     @ staticmethod
     def gui_button():

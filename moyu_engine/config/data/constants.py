@@ -56,9 +56,12 @@ tilemap =\
 
 assets =\
 {
-    'tileland'    : [],
-    'tilebuilding': [],
-    'gui'         : 
+    'tile':
+    {
+        'tileland'    : [],
+        'tilebuilding': [],
+    },
+    'gui':
     {
         'button': [],
         'input' : [],

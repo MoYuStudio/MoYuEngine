@@ -26,11 +26,7 @@ class MainSystem:
     def gameloop(self):
 
         while True:
-            C.screen.fill((0,255,0))
-
-            C.screen.blit(C.assets['tileland'][1], (0, 0))
-
-            # print(C.assets_tileland)
+            C.screen.fill((255,55,55,0))
 
             system.WindowsSystem.menu_main_surface()
             
