@@ -10,7 +10,8 @@ class AssetsSystem:
 
     pygame.display.set_mode(C.window['size'],pygame.RESIZABLE)
 
-    def tileland(self):
+    @ staticmethod
+    def tileland():
         
         tileland_path = 'moyu_engine/assets/graphics/tileland'
         tileland_filenum = len(os.listdir(tileland_path))-1

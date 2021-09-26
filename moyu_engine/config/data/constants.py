@@ -35,7 +35,9 @@ tilemap =\
 
 assets =\
 {
-    'tileland': [],
+    'tileland'    : [],
+    'tilebuilding': [],
+    'gui'         : [],
 }
 
 screen = pygame.display.set_mode(window['size'],pygame.RESIZABLE)
