@@ -66,6 +66,7 @@ assets =\
         'button': [],
         'input' : [],
     },
+    'background': []
 }
 
 screen = pygame.display.set_mode(window['size'],pygame.RESIZABLE)
