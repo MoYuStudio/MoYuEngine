@@ -12,12 +12,24 @@ class AssetsSystem:
 
     @ staticmethod
     def input_all():
-        AssetsSystem.font_en()
-        AssetsSystem.font_zh()
+        AssetsSystem.font()
+        #AssetsSystem.font_zh()
         AssetsSystem.tile_tileland()
         AssetsSystem.gui_button()
         AssetsSystem.input_button()
         AssetsSystem.background()
+
+    @ staticmethod
+    def font():
+        folder_list = ['en','zh']
+        folder_path = 'moyu_engine/assets/font'
+        folder_num = len(os.listdir(folder_path))
+        for the_file_num in range(0,folder_num,1):
+            file_num = len(os.listdir(folder_path+'/'+folder_list[the_file_num]))
+            for num in range(0,file_num,1):
+                print(file_num)
+                C.assets['font'][folder_list[the_file_num]].append(pygame.font.Font(os.path.join(folder_path+'/'+folder_list[the_file_num],folder_list[the_file_num]+f'{num}.ttf'),25))
+
 
     @ staticmethod
     def font_en():
@@ -41,7 +53,7 @@ class AssetsSystem:
         path = 'moyu_engine/assets/graphics/tile/tileland'
         filenum = len(os.listdir(path))-1
         for num in range(0,filenum,1):
-            C.assets['tile']['tileland'].append(pygame.image.load(os.path.join(path, f'tl{num}.png')).convert_alpha())
+            C.assets['tile']['tileland'].append(pygame.image.load(os.path.join(path, f'tileland{num}.png')).convert_alpha())
     
     @ staticmethod
     def gui_button():
