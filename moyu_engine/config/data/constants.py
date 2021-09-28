@@ -56,6 +56,11 @@ tilemap =\
 
 assets =\
 {
+    'font':
+    {
+        'en':[],
+        'zh':[],
+    },
     'tile':
     {
         'tileland'    : [],

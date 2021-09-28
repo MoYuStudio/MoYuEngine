@@ -12,10 +12,28 @@ class AssetsSystem:
 
     @ staticmethod
     def input_all():
+        AssetsSystem.font_en()
+        AssetsSystem.font_zh()
         AssetsSystem.tile_tileland()
         AssetsSystem.gui_button()
         AssetsSystem.input_button()
         AssetsSystem.background()
+
+    @ staticmethod
+    def font_en():
+        
+        path = 'moyu_engine/assets/font/en'
+        filenum = len(os.listdir(path))
+        for num in range(0,filenum,1):
+            C.assets['font']['en'].append(pygame.font.Font(os.path.join(path, f'en{num}.ttf'),25))
+
+    @ staticmethod
+    def font_zh():
+        
+        path = 'moyu_engine/assets/font/zh'
+        filenum = len(os.listdir(path))-1
+        for num in range(0,filenum,1):
+            C.assets['font']['zh'].append(pygame.font.Font(os.path.join(path, f'zh{num}.ttf'),25))
 
     @ staticmethod
     def tile_tileland():
