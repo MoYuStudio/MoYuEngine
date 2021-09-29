@@ -22,7 +22,7 @@ class MainSystem:
         pygame.mixer.init()
         pygame.display.flip()
 
-        system.AssetsSystem.input_all()
+        system.AssetsSystem.loader()
 
     def gameloop(self):
 

@@ -5,11 +5,84 @@ import pygame
 from pygame.locals import *
 
 from operator import itemgetter 
-#import data.constants as C
+import data.constants as C
 
-# class AssetsSystem:
+class AssetsSystem:
 
-#     pygame.display.set_mode(C.window['size'],pygame.RESIZABLE)
+    pygame.display.set_mode(C.window['size'],pygame.RESIZABLE)
+
+    @ staticmethod
+    def loader():
+        def cleaner(path):
+            if path.endswith('.DS_Store'):  # Mac OS
+                os.remove(path)
+            if path.endswith('.ini'):       # Windows
+                os.remove(path)
+            if path.endswith('.db'):        # Windows
+                os.remove(path)
+            else: 
+                pass
+
+        for root,dirs,files in os.walk('moyu_engine/assets'): 
+            for file in files: 
+                cleaner(os.path.join(root,file))
+            for dir in dirs:
+                C.assets[dir] = []
+                path = root+'/'+dir+'/'
+                file_num = len(os.listdir(path))
+                tmp = os.listdir(path)
+                for file_name in tmp:
+                    file_num -= 1
+                    if file_name.endswith('.ttf'):
+                        C.assets[dir].append(pygame.font.Font(os.path.join(path,file_name),25))
+                        
+                    if file_name.endswith('.png'):
+                        C.assets[dir].append(pygame.image.load(os.path.join(path,dir+f'{file_num}.png')))#.convert_alpha()
+
+if __name__ == "__main__":
+
+    pygame.init()
+    pygame.mixer.init()
+
+    assets = {}
+
+    def loader():
+        def cleaner(path):
+            if path.endswith('.DS_Store'):  # Mac OS
+                os.remove(path)
+            if path.endswith('.ini'):       # Windows
+                os.remove(path)
+            if path.endswith('.db'):        # Windows
+                os.remove(path)
+            else: 
+                pass
+
+        for root,dirs,files in os.walk('moyu_engine/assets'): 
+            for file in files: 
+                cleaner(os.path.join(root,file))
+            for dir in dirs:
+                assets[dir] = []
+                path = root+'/'+dir+'/'
+                tmp = os.listdir(path)
+                file_num = len(os.listdir(path))
+                # for num in range(len(os.listdir(path))):
+                for file_name in tmp: 
+                    file_num -= 1
+                    if file_name.endswith('.ttf'):
+                        # assets[dir].append(pygame.font.Font(os.path.join(path,file_name),25))
+                        # print(dir)
+                        # print(file_name)
+                        pass
+                        
+                    if file_name.endswith('.png'):
+                        # for num in range(len(os.listdir(path))):
+                        print(dir+f'{file_num}.png')
+                        # assets[dir].append(pygame.image.load(os.path.join(path,dir+f'{num}.png')))#.convert_alpha()
+                        # print(dir)
+                        
+
+    loader()
+    print(assets)
 
 #     @ staticmethod
 #     def input_all():
@@ -144,7 +217,7 @@ from operator import itemgetter
     #         C.assets['background'].append(pygame.image.load(os.path.join(path, f'background{num}.png')).convert_alpha())
 
 
-if __name__ == "__main__":
+
 
     # assets = AssetsSystem()
     # assets.tileland()
@@ -213,42 +286,14 @@ if __name__ == "__main__":
     #     for file in files: 
     #         cleaner(os.path.join(root,file))
 
-    assets = {}
 
-    pygame.init()
-    pygame.display.init()
-    pygame.mixer.init()
-
-    def cleaner(path):
-        if path.endswith('.DS_Store'):  # Mac OS
-            os.remove(path)
-        if path.endswith('.ini'):       # Windows
-            os.remove(path)
-        if path.endswith('.db'):        # Windows
-            os.remove(path)
-        else: 
-            pass
-
-    for root,dirs,files in os.walk('moyu_engine/assets'): 
-        for file in files: 
-            cleaner(os.path.join(root,file))
-        for dir in dirs:
-            assets[dir] = []
-            path = root+'/'+dir+'/'
-            tmp = os.listdir(path)
-            for f in tmp: 
-                if f.endswith('.ttf'):
-                    assets[dir].append(pygame.font.Font(os.path.join(path,f),25))
-                    
-                if f.endswith('.png'):
-                    assets[dir].append(pygame.image.load(os.path.join(path,f)))#.convert_alpha()
 
             
             # filenum = len(os.listdir(path))
             # for num in range(0,filenum,1):
             #     assets[dir].append(dir+str(num))
 
-    print(assets)
+    #print(assets)
 
             # print(dir)
             #print(root+'/'+dir)

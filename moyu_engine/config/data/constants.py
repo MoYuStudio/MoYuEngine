@@ -54,28 +54,28 @@ tilemap =\
     'time_speed': 100,
 }
 
-assets =\
-{
-    'font':
-    {
-        'en':[],
-        'zh':[],
-    },
-    'graphics':{
-        'tile':
-        {
-            'tileland'    : [],
-            'tilebuilding': [],
-        },
-        'gui':
-        {
-            'button': [],
-            'input' : [],
-        },
-        'background': []
-    },
+assets = {}
+# {
+#     'font':
+#     {
+#         'en':[],
+#         'zh':[],
+#     },
+#     'graphics':{
+#         'tile':
+#         {
+#             'tileland'    : [],
+#             'tilebuilding': [],
+#         },
+#         'gui':
+#         {
+#             'button': [],
+#             'input' : [],
+#         },
+#         'background': []
+#     },
     
-}
+# }
 
 screen = pygame.display.set_mode(window['size'],pygame.RESIZABLE)
 
