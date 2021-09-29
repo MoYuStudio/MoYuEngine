@@ -61,17 +61,20 @@ assets =\
         'en':[],
         'zh':[],
     },
-    'tile':
-    {
-        'tileland'    : [],
-        'tilebuilding': [],
+    'graphics':{
+        'tile':
+        {
+            'tileland'    : [],
+            'tilebuilding': [],
+        },
+        'gui':
+        {
+            'button': [],
+            'input' : [],
+        },
+        'background': []
     },
-    'gui':
-    {
-        'button': [],
-        'input' : [],
-    },
-    'background': []
+    
 }
 
 screen = pygame.display.set_mode(window['size'],pygame.RESIZABLE)
