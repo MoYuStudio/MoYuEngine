@@ -21,8 +21,8 @@ class MainSystem:
         pygame.display.init()
         pygame.mixer.init()
         pygame.display.flip()
-
-        system.AssetsSystem.loader()
+        system.ThreadSystem.thread1(system.AssetsSystem.loader())
+        
 
     def gameloop(self):
 
