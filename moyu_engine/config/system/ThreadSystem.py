@@ -1,5 +1,6 @@
 
 import threading
+import multiprocessing
 
 class ThreadSystem:
 
@@ -9,9 +10,17 @@ class ThreadSystem:
         )
         thread.start()
         thread.join()
+
+    def thread2(thread_def="1"):
+        thread = multiprocessing.Process(
+            target = print(thread_def)
+        )
+        thread.start()
+        thread.join()
         
 if __name__ == "__main__":
-
-    ThreadSystem.thread1()
+    while True:
+        ThreadSystem.thread2()
+        ThreadSystem.thread2()
 
 
