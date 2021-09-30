@@ -32,7 +32,6 @@ window =\
         'game_main_page' : False,
     }
     
-
 }
 
 tilemap =\

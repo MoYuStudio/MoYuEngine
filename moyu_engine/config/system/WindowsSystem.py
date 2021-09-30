@@ -24,11 +24,11 @@ class WindowsSystem:
 
         button_text =\
         (
-            C.assets['zh'][-1].render('新游戏', True, (255, 255, 255)),
-            C.assets['zh'][-1].render('继续', True, (255, 255, 255)),
-            C.assets['zh'][-1].render('设置', True, (255, 255, 255)),
-            C.assets['zh'][-1].render('退出', True, (255, 255, 255)),
-            C.assets['zh'][-1].render('关于', True, (255, 255, 255)),
+            C.assets['zh'][-2].render('新游戏', True, (255, 255, 255)),
+            C.assets['zh'][-2].render('继续', True, (255, 255, 255)),
+            C.assets['zh'][-2].render('设置', True, (255, 255, 255)),
+            C.assets['zh'][-2].render('退出', True, (255, 255, 255)),
+            C.assets['zh'][-2].render('关于', True, (255, 255, 255)),
         )
 
         for num in range(0,5,1):
@@ -97,7 +97,7 @@ class WindowsSystem:
         gui_surface             = pygame.Surface(C.window['size']).convert_alpha()
 
         background_surface.fill((255,55,55,0))
-        background_surface.blit(C.assets['background'][-2],C.window['move'])
+        background_surface.blit(C.assets['background'][-2],(-C.window['move'][0],-C.window['move'][1]))
 
         info_surface.fill((255,55,55,0))
         system.TilemapSystem.tilemap_loarder(info_surface,C.window['move'][0],C.window['move'][1])

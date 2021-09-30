@@ -33,7 +33,7 @@ class AssetsSystem:
                 for file_name in tmp:
                     file_num -= 1
                     if file_name.endswith('.ttf'):
-                        C.assets[dir].append(pygame.font.Font(os.path.join(path,file_name),25))
+                        C.assets[dir].append(pygame.font.Font(os.path.join(path,dir+f'{file_num}.ttf'),25))
                         
                     if file_name.endswith('.png'):
                         C.assets[dir].append(pygame.image.load(os.path.join(path,dir+f'{file_num}.png')))#.convert_alpha()
