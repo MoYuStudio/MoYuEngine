@@ -10,9 +10,6 @@ class ThreadSystem:
         thread.start()
         thread.join()
         
-
-
-
 if __name__ == "__main__":
 
     ThreadSystem.thread1()
