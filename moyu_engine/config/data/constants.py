@@ -60,5 +60,12 @@ tilemap =\
 
 assets = {}
 
+gui =\
+{
+    'button_preclick' : False,
+    'button_num': 0,
+}
+
+
 screen = pygame.display.set_mode(window['size'],pygame.RESIZABLE)
 

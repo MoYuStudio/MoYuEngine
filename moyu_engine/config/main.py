@@ -29,7 +29,13 @@ class MainSystem:
         while True:
             C.screen.fill((255,55,55,0))
 
-            system.WindowsSystem.menu_main_surface()
+            if C.window['page_switch']['menu_main_page'] == True:
+
+                system.WindowsSystem.menu_main_surface()
+
+            if C.window['page_switch']['game_main_page'] == True:
+
+                system.WindowsSystem.game_main_surface()
             
             pygame.display.update()
             self.clock.tick(C.window['fps'])
