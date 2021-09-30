@@ -26,7 +26,10 @@ class MainSystem:
 
     def gameloop(self):
 
+        system.TilemapSystem.tilemap_builder()
+
         while True:
+            system.MoveSystem.move()
             C.screen.fill((255,55,55,0))
 
             if C.window['page_switch']['menu_main_page'] == True:

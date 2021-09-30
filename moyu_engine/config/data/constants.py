@@ -39,7 +39,7 @@ tilemap =\
 {
     # tilemap
     'tilemap': [],
-    'boarder': 64,
+    'boarder': 16,
     'seed'   : 0,
     'octaves': 2,
     'freq'   : 12,
@@ -55,7 +55,7 @@ tilemap =\
     'tile_choose_info': [0,0,0,0,0,0],
     
     # tile time
-    'time_speed': 100,
+    'time_speed': 1000,
 }
 
 assets = {}

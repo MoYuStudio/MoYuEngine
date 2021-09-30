@@ -97,15 +97,17 @@ class WindowsSystem:
         gui_surface             = pygame.Surface(C.window['size']).convert_alpha()
 
         background_surface.fill((255,55,55,0))
-        background_surface.blit(C.assets['background'][-2], (0,0))
+        background_surface.blit(C.assets['background'][-2],C.window['move'])
 
         info_surface.fill((255,55,55,0))
+        system.TilemapSystem.tilemap_loarder(info_surface,C.window['move'][0],C.window['move'][1])
 
         gui_surface.fill((255,55,55,0))
 
         game_main_surface = pygame.Surface(C.window['size']).convert_alpha()
 
         game_main_surface.blit(background_surface, (0, 0))
+        game_main_surface.blit(info_surface, (0, 0))
         game_main_surface.blit(gui_surface, (0, 0))
         
         C.screen.blit(game_main_surface, (0, 0))
@@ -118,3 +120,73 @@ class WindowsSystem:
             if event.type == VIDEORESIZE:
                 C.window['size'] = event.dict['size']
                 print(C.window['size'])
+
+            if event.type == pygame.KEYDOWN:
+
+                if event.key == K_UP or event.key == K_w:
+                    C.window['move_switch']['up']   = True
+                    
+                if event.key == K_DOWN or event.key == K_s:
+                    C.window['move_switch']['down'] = True
+
+                if event.key == K_LEFT or event.key == K_a:
+                    C.window['move_switch']['left'] = True
+
+                if event.key == K_RIGHT or event.key == K_d:
+                    C.window['move_switch']['right'] = True
+
+                # if event.key == K_q:
+                #     C.ZOOM_IN   = True
+
+                # if event.key == K_e:
+                #     C.ZOOM_OUT  = True
+
+                # if event.key == K_b:
+                #     C.build        = True
+                # if C.tile_type == 1:
+                #     C.money       -= 30
+                # if C.tile_type == 2:
+                #     C.money       -= 5
+
+                # if event.key == K_r:
+                #     C.reward    = True
+
+                # if event.key == K_z:
+                #     C.GAMEmain_surface_level = 60
+                #     C.MOVE_SPEED             = 10
+                #     C.MOVE                   = [450,5]
+
+                # if event.key == K_x:
+                #     moyu_engine.config.components.tilemap_manager.tilemap_builder()
+
+                # if event.key == K_m:
+                #     moyu_engine.config.components.save_data.save_tilemap()
+                
+                # if event.key == K_n:
+                #     moyu_engine.config.components.read_data.read_tilemap()
+
+            if event.type == pygame.KEYUP:
+
+                if event.key == K_UP or event.key == K_w:
+                    C.window['move_switch']['up']   = False
+
+                if event.key == K_DOWN or event.key == K_s:
+                    C.window['move_switch']['down'] = False
+
+                if event.key == K_LEFT or event.key == K_a:
+                    C.window['move_switch']['left'] = False
+
+                if event.key == K_RIGHT or event.key == K_d:
+                    C.window['move_switch']['right'] = False
+
+                # if event.key == K_q:
+                #     C.ZOOM_IN   = False
+
+                # if event.key == K_e:
+                #     C.ZOOM_OUT  = False
+
+                # if event.key == K_b:
+                #     C.build     = False
+
+                # if event.key == K_r:
+                #     C.reward    = False
