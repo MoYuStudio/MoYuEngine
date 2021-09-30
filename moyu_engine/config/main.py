@@ -31,15 +31,6 @@ class MainSystem:
 
             system.WindowsSystem.menu_main_surface()
             
-            for event in pygame.event.get():
-                if event.type == QUIT:
-                    pygame.quit()
-                    sys.exit()
-
-                if event.type == VIDEORESIZE:
-                    C.window['size'] = event.dict['size']
-                    print(C.window['size'])
-
             pygame.display.update()
             self.clock.tick(C.window['fps'])
 

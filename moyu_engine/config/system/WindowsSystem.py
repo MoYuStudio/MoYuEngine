@@ -12,8 +12,10 @@ class WindowsSystem:
     @ staticmethod
     def menu_main_surface():
 
-        background_surface      = pygame.Surface(C.window['size']).convert_alpha()
-        gui_surface             = pygame.Surface(C.window['size']).convert_alpha()
+        button_rect = []
+
+        background_surface = pygame.Surface(C.window['size']).convert_alpha()
+        gui_surface        = pygame.Surface(C.window['size']).convert_alpha()
 
         background_surface.fill((255,55,55,0))
         background_surface.blit(C.assets['background'][-1], (0,0))
@@ -31,7 +33,8 @@ class WindowsSystem:
 
         for num in range(0,5,1):
             #print(num)
-            gui_surface.blit(C.assets['button'][-1], (C.window['size'][0]-64*3*1 - 20, C.window['size'][1]-16*3*(num+1) - 10*(num+1)))
+            button_rect.append(pygame.Rect((C.window['size'][0]-64*3*1 - 20, C.window['size'][1]-16*3*(num+1) - 10*(num+1),64*3,16*3),width=0))
+            gui_surface.blit(C.assets['button'][-1], button_rect[num])
             gui_surface.blit(button_text[4-num],(C.window['size'][0]-64*2.5*1, C.window['size'][1]-16*2.87*(num+1) - 10*(num+1)))
 
         menu_main_surface = pygame.Surface(C.window['size']).convert_alpha()
@@ -40,6 +43,36 @@ class WindowsSystem:
         menu_main_surface.blit(gui_surface, (0, 0))
         
         C.screen.blit(menu_main_surface, (0, 0))
+
+        for event in pygame.event.get():
+            if event.type == QUIT:
+                pygame.quit()
+                sys.exit()
+
+            if event.type == VIDEORESIZE:
+                C.window['size'] = event.dict['size']
+                print(C.window['size'])
+
+            if event.type == pygame.MOUSEMOTION:
+                mouse_pos = event.pos
+                for num in range(0,5,1):
+                    if pygame.Rect.collidepoint(button_rect[num],event.pos): 
+                        print('1')
+                        
+            if event.type == pygame.MOUSEBUTTONDOWN:
+                mouse_pos = event.pos
+                if pygame.Rect.collidepoint(button_rect[4],event.pos): 
+                    print('新游戏')
+                if pygame.Rect.collidepoint(button_rect[3],event.pos): 
+                    print('继续')
+                if pygame.Rect.collidepoint(button_rect[2],event.pos): 
+                    print('设置')
+                if pygame.Rect.collidepoint(button_rect[1],event.pos): 
+                    print('退出')
+                if pygame.Rect.collidepoint(button_rect[0],event.pos): 
+                    print('关于')
+            
+
 
     @ staticmethod
     def game_main_surface():

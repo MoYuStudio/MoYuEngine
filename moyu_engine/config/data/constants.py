@@ -26,7 +26,11 @@ window =\
     },
 
     # window ppt
-    'ppt_switch' : 0
+    'page_switch' :
+    {
+        'menu_main_page' : True,
+        'game_main_page' : False,
+    }
     
 
 }
@@ -55,27 +59,6 @@ tilemap =\
 }
 
 assets = {}
-# {
-#     'font':
-#     {
-#         'en':[],
-#         'zh':[],
-#     },
-#     'graphics':{
-#         'tile':
-#         {
-#             'tileland'    : [],
-#             'tilebuilding': [],
-#         },
-#         'gui':
-#         {
-#             'button': [],
-#             'input' : [],
-#         },
-#         'background': []
-#     },
-    
-# }
 
 screen = pygame.display.set_mode(window['size'],pygame.RESIZABLE)
 
