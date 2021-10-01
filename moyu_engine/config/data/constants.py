@@ -8,6 +8,7 @@ window =\
     'size' : [1280,720],
     'fps'  : 60,
     'title': 'Tinyland 弹丸之地',
+    'surface_level': 1,
 
     # move
     'move':[0,0],

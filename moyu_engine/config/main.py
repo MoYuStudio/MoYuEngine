@@ -21,7 +21,8 @@ class MainSystem:
         pygame.display.init()
         pygame.mixer.init()
         pygame.display.flip()
-        system.ThreadSystem.thread1(system.AssetsSystem.loader())
+
+        system.ThreadSystem.thread0(system.AssetsSystem.loader())
         
 
     def gameloop(self):
@@ -29,7 +30,10 @@ class MainSystem:
         system.TilemapSystem.tilemap_builder()
 
         while True:
-            system.MoveSystem.move()
+
+            system.ThreadSystem.thread1(system.MoveSystem.move())
+            system.ThreadSystem.thread1(system.MoveSystem.zoom())
+
             C.screen.fill((255,55,55,0))
 
             if C.window['page_switch']['menu_main_page'] == True:

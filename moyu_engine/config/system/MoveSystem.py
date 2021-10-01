@@ -17,16 +17,16 @@ class MoveSystem:
     @ staticmethod
     def zoom():
         if C.window['zoom_switch']['in'] == True:
-            if C.tilemap_surface_level == 10:
-                C.tilemap_surface_level = 10
+            if C.window['surface_level'] <= 0.5:
+                C.window['surface_level'] = 0.5
             else:
-                C.tilemap_surface_level -= 1
-                C.MOVE[1] -= 4.25
-                C.MOVE[0] -= 7.9
+                C.window['surface_level'] -= 0.025
+                C.window['move'][1] -= 4.25
+                C.window['move'][0] -= 7.9
         if C.window['zoom_switch']['out'] == True:
-            if C.tilemap_surface_level == 200:
-                C.tilemap_surface_level = 200
+            if C.window['surface_level'] >= 1:
+                C.window['surface_level'] = 1
             else:
-                C.tilemap_surface_level += 1
-                C.MOVE[1] += 4.25
-                C.MOVE[0] += 7.9
+                C.window['surface_level'] += 0.025
+                C.window['move'][1] += 4.25
+                C.window['move'][0] += 7.9

@@ -93,7 +93,7 @@ class WindowsSystem:
     def game_main_surface():
 
         background_surface      = pygame.Surface(C.window['size']).convert_alpha()
-        info_surface             = pygame.Surface(C.window['size']).convert_alpha()
+        info_surface             = pygame.Surface((int(C.window['size'][0]*C.window['surface_level']),int(C.window['size'][1]*C.window['surface_level']))).convert_alpha()
         gui_surface             = pygame.Surface(C.window['size']).convert_alpha()
 
         background_surface.fill((255,55,55,0))
@@ -104,10 +104,12 @@ class WindowsSystem:
 
         gui_surface.fill((255,55,55,0))
 
+        info_surfaceFin = pygame.transform.scale(info_surface,(C.window['size']))
+
         game_main_surface = pygame.Surface(C.window['size']).convert_alpha()
 
         game_main_surface.blit(background_surface, (0, 0))
-        game_main_surface.blit(info_surface, (0, 0))
+        game_main_surface.blit(info_surfaceFin, (0, 0))
         game_main_surface.blit(gui_surface, (0, 0))
         
         C.screen.blit(game_main_surface, (0, 0))
@@ -135,11 +137,11 @@ class WindowsSystem:
                 if event.key == K_RIGHT or event.key == K_d:
                     C.window['move_switch']['right'] = True
 
-                # if event.key == K_q:
-                #     C.ZOOM_IN   = True
+                if event.key == K_q:
+                    C.window['zoom_switch']['in']   = True
 
-                # if event.key == K_e:
-                #     C.ZOOM_OUT  = True
+                if event.key == K_e:
+                    C.window['zoom_switch']['out']  = True
 
                 # if event.key == K_b:
                 #     C.build        = True
@@ -179,11 +181,11 @@ class WindowsSystem:
                 if event.key == K_RIGHT or event.key == K_d:
                     C.window['move_switch']['right'] = False
 
-                # if event.key == K_q:
-                #     C.ZOOM_IN   = False
+                if event.key == K_q:
+                    C.window['zoom_switch']['in']   = False
 
-                # if event.key == K_e:
-                #     C.ZOOM_OUT  = False
+                if event.key == K_e:
+                    C.window['zoom_switch']['out'] = False
 
                 # if event.key == K_b:
                 #     C.build     = False
