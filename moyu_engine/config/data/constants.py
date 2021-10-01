@@ -5,9 +5,9 @@ from pygame.locals import *
 window =\
 {
     # window
-    'size' : [1280,720],
-    'fps'  : 60,
-    'title': 'Tinyland 弹丸之地',
+    'size'         : [1280,720],
+    'fps'          : 60,
+    'title'        : 'Tinyland 弹丸之地',
     'surface_level': 1,
 
     # move
@@ -62,10 +62,14 @@ assets = {}
 
 gui =\
 {
-    'button_preclick' : False,
-    'button_num': 0,
+    'button_preclick': False,
+    'button_num'     : 0,
 }
 
+transition =\
+{
+    'fade_black' : False,
+}
 
 screen = pygame.display.set_mode(window['size'],pygame.RESIZABLE)
 

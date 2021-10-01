@@ -17,8 +17,8 @@ class MoveSystem:
     @ staticmethod
     def zoom():
         if C.window['zoom_switch']['in'] == True:
-            if C.window['surface_level'] <= 0.5:
-                C.window['surface_level'] = 0.5
+            if C.window['surface_level'] <= 0.25:
+                C.window['surface_level'] = 0.25
             else:
                 C.window['surface_level'] -= 0.025
                 C.window['move'][1] -= 4.25
