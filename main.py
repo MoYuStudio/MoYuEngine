@@ -1,4 +1,7 @@
 
+import random
+import noise
+
 import config.data.constant as C
 
 from panda3d.core import loadPrcFileData
@@ -14,19 +17,25 @@ class MainLoop(ShowBase):
 
         # self.disableMouse()
 
-        self.scene1 = self.loader.loadModel("assets/graphics/tile/tileland/block1.obj")
-        self.scene1.reparentTo(self.render)
-        self.scene1.setScale(64, 64, 64)
-        self.scene1.setPos(7, 0, 0)#6
+        board = 8
+        
+        tilemap = [[random.randint(0,1) for x in range(0,board,1)] for y in range(0,board,1)]
 
-        self.scene1.reparentTo(self.render)
-        self.scene1.setScale(64, 64, 64)
-        self.scene1.setPos(14, 7, 0)#6
+        print(tilemap)
 
-        self.scene2 = self.loader.loadModel("assets/graphics/tile/tileland/block1.obj")
-        self.scene2.reparentTo(self.render)
-        self.scene2.setScale(64, 64, 64)
-        self.scene2.setPos(0, 0, 0)
+        tilemap_render = {}
+        for i in range(0,board,1):
+            tilemap_render[i] = {}
+            for j in range(0,board,1):
+
+                if tilemap[i][j] == 0:
+                    tilemap_render[i][j] = self.loader.loadModel('assets/graphics/tile/tileland/tileland1.ply')
+                if tilemap[i][j] == 1:
+                    tilemap_render[i][j] = self.loader.loadModel('assets/graphics/tile/tileland/tileland4.ply')
+
+                tilemap_render[i][j].setScale(64, 64, 64)
+                tilemap_render[i][j].setPos(8*6.4*j, 8*6.4*i, 0)
+                tilemap_render[i][j].reparentTo(self.render)
 
 mainloop = MainLoop()
 mainloop.run()
