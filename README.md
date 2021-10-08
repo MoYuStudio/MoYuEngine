@@ -72,6 +72,10 @@ MoYu Engine 文件检索
 
 更新日志
 -------
+##### 10/08/2021 更新日志
+            GOOD NEWS : 3D IS COMMING !!!
+            框架API由 Pygame 更改为 Panda 3D
+            
 ##### 09/29/2021 更新日志
             WindowsSystem 视窗系统 更新
             
