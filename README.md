@@ -2,7 +2,7 @@
 Tinyland 弹丸之地 <br/><br/>
 =======================
 
-![](https://github.com/MoYuStudio/SUGT06/raw//assets/graphics/readme/snap2021-10-08-17-41-47.png)<br/><br/>
+![](https://github.com/MoYuStudio/SUGT06/raw/moyu_engine/assets/graphics/readme/snap2021-10-08-17-41-47.png)<br/><br/>
 
 # Game News 游戏新闻
 
