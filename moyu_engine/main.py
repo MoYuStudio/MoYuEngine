@@ -19,7 +19,7 @@ class MainLoop(ShowBase):
         # self.useDrive()
         # self.useTrackball()
 
-        boarder = 32
+        boarder = 64
 
         seed = 0
         octaves = 2
@@ -67,11 +67,18 @@ class MainLoop(ShowBase):
 
                 # === 1 tile_building ===
 
-                    if 0<=tile_info[1]<=60:
+                    if 0<=tile_info[1]<=40:
                         tile_info[1] = 0
 
-                    if 61<=tile_info[1]<=100 and tile_info[0] == 1:
+                    if 41<=tile_info[1]<=80 and tile_info[0] == 1:
                         tile_info[1] = 1
+
+                    if 81<=tile_info[1]<=90 and tile_info[0] == 1:
+                        tile_info[1] = 2
+                    
+                    if 91<=tile_info[1]<=100 and tile_info[0] == 1:
+                        tile_info[1] = 3
+
 
                     tile_info[5] = 1
 
@@ -89,16 +96,28 @@ class MainLoop(ShowBase):
                     if tile_info[0] == 4:
                         tilemap_tileland_render[tilemap_x][tilemap_y] = self.loader.loadModel('assets/graphics/tile/tileland/tileland4.ply')
 
-                    tilemap_tileland_render[tilemap_x][tilemap_y].setScale(64, 64, 64)
-                    tilemap_tileland_render[tilemap_x][tilemap_y].setPos(8*6.4*tilemap_y, 8*6.4*tilemap_x, 0)
+                    #tilemap_tileland_render[tilemap_x][tilemap_y].setScale(64, 64, 64)
+                    tilemap_tileland_render[tilemap_x][tilemap_y].setPos(0.8*tilemap_y, 0.8*tilemap_x, 0)
                     tilemap_tileland_render[tilemap_x][tilemap_y].reparentTo(self.render)
 
                     if tile_info[1] == 1:
                         tilemap_tilebuilding_render[tilemap_x][tilemap_y] = self.loader.loadModel('assets/graphics/tile/tilebuilding/tilebuilding1.ply')
-
-                        tilemap_tilebuilding_render[tilemap_x][tilemap_y].setScale(64, 64, 64)
-                        tilemap_tilebuilding_render[tilemap_x][tilemap_y].setPos(8*6.4*tilemap_y, 8*6.4*tilemap_x, 8*6.4)
+                        #tilemap_tilebuilding_render[tilemap_x][tilemap_y].setScale(64, 64, 64)
+                        tilemap_tilebuilding_render[tilemap_x][tilemap_y].setPos(0.8*tilemap_y, 0.8*tilemap_x, 0.8)
                         tilemap_tilebuilding_render[tilemap_x][tilemap_y].reparentTo(self.render)
+
+                    if tile_info[1] == 2:
+                        tilemap_tilebuilding_render[tilemap_x][tilemap_y] = self.loader.loadModel('assets/graphics/tile/tilebuilding/tilebuilding2.ply')
+                        #tilemap_tilebuilding_render[tilemap_x][tilemap_y].setScale(64, 64, 64)
+                        tilemap_tilebuilding_render[tilemap_x][tilemap_y].setPos(0.8*tilemap_y, 0.8*tilemap_x, 0.8)
+                        tilemap_tilebuilding_render[tilemap_x][tilemap_y].reparentTo(self.render)
+
+                    # if tile_info[1] == 3:
+                    #     tilemap_tilebuilding_render[tilemap_x][tilemap_y] = self.loader.loadModel('assets/graphics/tile/tilebuilding/tilebuilding2.ply')
+                    #     #tilemap_tilebuilding_render[tilemap_x][tilemap_y].setScale(64, 64, 64*4)
+                    #     tilemap_tilebuilding_render[tilemap_x][tilemap_y].setPos(0.8*tilemap_y, 0.8*tilemap_x, 0.8*3)
+                    #     tilemap_tilebuilding_render[tilemap_x][tilemap_y].reparentTo(self.render)
+                        
 
 mainloop = MainLoop()
 mainloop.run()
