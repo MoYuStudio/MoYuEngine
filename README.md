@@ -2,11 +2,7 @@
 Tinyland 弹丸之地 <br/><br/>
 =======================
 
-![](https://github.com/MoYuStudio/SUGT06/raw/main/moyu_engine/assets/graphics/tileland/tl0.png)
-![](https://github.com/MoYuStudio/SUGT06/raw/main/moyu_engine/assets/graphics/tileland/tl1.png)
-![](https://github.com/MoYuStudio/SUGT06/raw/main/moyu_engine/assets/graphics/tileland/tl2.png)
-![](https://github.com/MoYuStudio/SUGT06/raw/main/moyu_engine/assets/graphics/tileland/tl3.png)
-![](https://github.com/MoYuStudio/SUGT06/raw/main/moyu_engine/assets/graphics/tileland/tl4.png)<br/><br/>
+![](https://github.com/MoYuStudio/SUGT06/raw//assets/graphics/readme/snap2021-10-08-17-41-47.png)<br/><br/>
 
 # Game News 游戏新闻
 
@@ -232,8 +228,4 @@ MoYu Engine 文件检索
 
 <br/>
 
-![](https://github.com/MoYuStudio/SUGT06/raw/main/moyu_engine/assets/graphics/tileland/tl1.png)
-![](https://github.com/MoYuStudio/SUGT06/raw/main/moyu_engine/assets/graphics/tileland/tl6.png)
-![](https://github.com/MoYuStudio/SUGT06/raw/main/moyu_engine/assets/graphics/tileland/tl11.png)
-![](https://github.com/MoYuStudio/SUGT06/raw/main/moyu_engine/assets/graphics/tileland/tl16.png)
 ![](https://github.com/MoYuStudio/SUGT06/raw/main/moyu_engine/assets/graphics/tileland/tl21.png)<br/><br/><br/>
