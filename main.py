@@ -7,7 +7,7 @@ loadPrcFileData('',C.config)
 
 from direct.showbase.ShowBase import ShowBase
 
-class MyApp(ShowBase):
+class MainLoop(ShowBase):
  
     def __init__(self):
         ShowBase.__init__(self)
@@ -28,5 +28,5 @@ class MyApp(ShowBase):
         self.scene2.setScale(64, 64, 64)
         self.scene2.setPos(0, 0, 0)
 
-app = MyApp()
-app.run()
+mainloop = MainLoop()
+mainloop.run()
