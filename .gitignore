@@ -6,15 +6,12 @@
 */.DS_Store
 
 # VSCodeCounter
-
 .VSCodeCounter
 
 # History
-
 .history
 
 # GitHub
-
 .github
 
 # Python
@@ -23,10 +20,8 @@
 *.cpython-39.pyc
 */__pycache__
 
-moyu_engine/__pycache__
-
-moyu_engine/config/__pycache__
-
-moyu_engine/config/data/__pycache__
-moyu_engine/config/system/__pycache__
-moyu_engine/config/components/__pycache__
+__pycache__
+config/__pycache__
+config/data/__pycache__
+config/system/__pycache__
+config/components/__pycache__
