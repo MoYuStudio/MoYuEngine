@@ -10,20 +10,10 @@ Tinyland 弹丸之地 <br/><br/>
 
 # Game News 游戏新闻
 
-### Game Testers News 游戏测试新闻
+### Game Testers News 游戏新闻
 
-            游戏功能性开发已经进入尾声！准备进入内容堆料！
-            
-            预计 10月底 至 11月初 进行初版功能性测试 版本0.0.1
-           
-            2月初 开始 游戏性测试（数值调教）
-
-### Game Developers News 游戏开发新闻
-
-            现阶段主要需要开发的模块有（大家可以按需选取研究）：
-            
-            1.动画机（由@[开发] 永恒 负责，预计9月底需要解决方案或代码）
-            2.Steam热更新（由@[策划&开发组长] 辰冰 负责，预计12月底需要解决方案或代码）
+            GOOD NEWS : 3D IS COMMING !!!
+            好消息 游戏更新 3D 辣 !!!
 
 # Game Introduction 游戏简介
             《 Tinyland 弹丸之地 》是一款建筑类沙盒游戏，讲述了一片漂浮在宇宙之中的破碎之地。
@@ -72,6 +62,10 @@ MoYu Engine 文件检索
 
 更新日志
 -------
+##### 10/08/2021 更新日志
+            GOOD NEWS : 3D IS COMMING !!!
+            框架API由 Pygame 更改为 Panda 3D
+            
 ##### 09/29/2021 更新日志
             WindowsSystem 视窗系统 更新
             
