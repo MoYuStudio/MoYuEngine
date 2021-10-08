@@ -6,3 +6,4 @@ fullscreen False
 show-frame-rate-meter True
 show-scene-graph-analyzer-meter 1
 '''
+
