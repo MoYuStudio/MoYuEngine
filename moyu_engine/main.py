@@ -20,8 +20,8 @@ class MainLoop(ShowBase):
         # self.useDrive()
         # self.useTrackball()
 
-        world_boarder = 64
-        world_hight = 16
+        world_boarder = 26
+        world_hight = 8
 
         seed = 0
         # octaves = 2
@@ -40,19 +40,16 @@ class MainLoop(ShowBase):
         # 0 tile   1 time   2 buildable   3 Dv Code
         tilemap = [[[[0,0,0,0]for z in range(0,world_hight,1)] for x in range(0,world_boarder,1)] for y in range(0,world_boarder,1)]
 
-        print(tilemap_hight)
-
         tilemap_block = numpy.zeros((world_boarder, world_boarder, world_hight), dtype = numpy.int)
 
         for x in range(0,world_boarder,1):
                 for y in range(0,world_boarder,1):
                         for z in range(0,world_hight,1):
-                                if tilemap_hight[x][y] >= 0:
-                                        tilemap_block[x, y, z] = 1
-                                        tilemap_hight[x][y] -= 1
+                            if tilemap_hight[x][y] > 0:
+                                    tilemap_block[x, y, z] = 1
+                                    tilemap_hight[x][y] -= 1
 
         render_map = {}
-
         for x in range(0,world_boarder,1):
             render_map[x] = {}
             for y in range(0,world_boarder,1):
@@ -60,6 +57,10 @@ class MainLoop(ShowBase):
                 for z in range(0,world_hight,1):
                     if tilemap_block[x, y, z] == 1:
                         render_map[x][y][z] = self.loader.loadModel('assets/graphics/tile/tileland/tileland1.ply')
+                        render_map[x][y][z].setPos(0.8*x, 0.8*y, 0.8*z)
+                        render_map[x][y][z].reparentTo(self.render)
+                    if tilemap_block[x, y, z] == 4:
+                        render_map[x][y][z] = self.loader.loadModel('assets/graphics/tile/tileland/tileland4.ply')
                         render_map[x][y][z].setPos(0.8*x, 0.8*y, 0.8*z)
                         render_map[x][y][z].reparentTo(self.render)
                     
