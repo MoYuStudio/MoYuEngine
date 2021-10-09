@@ -1,31 +1,27 @@
-import direct.directbase.DirectStart
-from direct.gui.OnscreenText import OnscreenText
-from direct.gui.DirectGui import *
 
-from panda3d.core import TextNode
+import numpy
+import noise
 
-# Add some text
-bk_text = "This is my Demo"
-textObject = OnscreenText(text=bk_text, pos=(0.95,-0.95), scale=0.07,
-                          fg=(1, 0.5, 0.5, 1), align=TextNode.ACenter,
-                          mayChange=1)
+world_boarder = 16
+world_hight = 5
 
-# Callback function to set  text
-def setText():
-        bk_text = "Button Clicked"
-        textObject.setText(bk_text)
+seed = 0
+# octaves = 2
+# freq = 12
 
-# Add button
-b = DirectButton(text=("OK", "click!", "rolling over", "disabled"),
-                 scale=.05, command=setText)
+octaves = 10
+freq = 12
 
-# Run the tutorial
-from direct.showbase.ShowBase import ShowBase
+tilemap_hight = [[int(noise.snoise2((x/freq)+seed,(y/freq)+seed,octaves)*10+5) for x in range(0,world_boarder,1)] for y in range(0,world_boarder,1)]
 
-class MainLoop(ShowBase):
- 
-    def __init__(self):
-        ShowBase.__init__(self)
+tilemap_block = numpy.zeros((world_boarder, world_boarder, world_hight), dtype = numpy.int)
 
-mainloop = MainLoop()
-mainloop.run()
+for x in range(0,world_boarder,1):
+        for y in range(0,world_boarder,1):
+                for z in range(0,world_hight,1):
+                        if tilemap_hight[x][y] >= 0:
+                                tilemap_block[x, y, z] = 1
+                                tilemap_hight[x][y] -= 1
+
+print(tilemap_hight)
+print(tilemap_block)
