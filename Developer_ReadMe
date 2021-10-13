@@ -1,0 +1,8 @@
+
+Python 3.8.10
+
+Unix/MacOS/Linux
+pip3 install -r requirements.txt
+
+Windows
+pip install -r requirements.txt

@@ -3,6 +3,8 @@ import random
 import noise
 import numpy
 
+import panda3d
+
 import config.data.constant as C
 
 from panda3d.core import loadPrcFileData
@@ -10,6 +12,8 @@ from panda3d.core import loadPrcFileData
 loadPrcFileData('',C.config)
 
 from direct.showbase.ShowBase import ShowBase
+
+from panda3d.core import PointLight,DirectionalLight,AmbientLight
 
 class MainLoop(ShowBase):
  
@@ -20,7 +24,7 @@ class MainLoop(ShowBase):
         # self.useDrive()
         # self.useTrackball()
 
-        world_boarder = 26
+        world_boarder = 32
         world_hight = 8
 
         seed = 0
@@ -56,14 +60,45 @@ class MainLoop(ShowBase):
                 render_map[x][y] = {}
                 for z in range(0,world_hight,1):
                     if tilemap_block[x, y, z] == 1:
-                        render_map[x][y][z] = self.loader.loadModel('assets/graphics/tile/tileland/tileland1.ply')
+                        render_map[x][y][z] = self.loader.loadModel('assets/graphics/tile/tileland/tileland1.glb')
                         render_map[x][y][z].setPos(0.8*x, 0.8*y, 0.8*z)
                         render_map[x][y][z].reparentTo(self.render)
-                    if tilemap_block[x, y, z] == 4:
-                        render_map[x][y][z] = self.loader.loadModel('assets/graphics/tile/tileland/tileland4.ply')
-                        render_map[x][y][z].setPos(0.8*x, 0.8*y, 0.8*z)
-                        render_map[x][y][z].reparentTo(self.render)
-                    
+                    # if tilemap_block[x, y, z] == 4:
+                    #     render_map[x][y][z] = self.loader.loadModel('assets/graphics/tile/tileland/tileland4.ply')
+                    #     render_map[x][y][z].setPos(0.8*x, 0.8*y, 0.8*z)
+                    #     render_map[x][y][z].reparentTo(self.render)
+
+        self.cam.setPos(5,-50,10)
+
+        
+
+        # plight = PointLight('plight')
+        # plight.setColor((255,0,0,255))
+        
+        # self.plnp = self.render.attachNewNode(plight)
+        # self.render.setLight(self.plnp)
+
+        # plight = PointLight('plight')
+        # plight.setColor((0.2, 0.2, 0.2, 1))
+        # plnp = self.render.attachNewNode(plight)
+        # plnp.setPos(5, 10, 0)
+        # self.render.setLight(plnp)
+
+        dlight = DirectionalLight('dlight')
+        dlight.setColor((255,255,255,255))
+        dlnp = self.render.attachNewNode(dlight)
+        dlnp.setHpr(0, -60, 10)
+        self.render.setLight(dlnp)
+
+        
+
+        alight = AmbientLight('alight')
+        alight.setColor((0.2,0.2,0.2,1))
+        alnp = self.render.attachNewNode(alight)
+        self.render.setLight(alnp)
+    
+        # dlight = DirectionalLight('my dlight')
+        # dlnp = render.attachNewNode(dlight)
                         
 
 
