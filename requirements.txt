@@ -1,4 +1,5 @@
 
+numpy==1.21.2
 noise==1.2.2
 Panda3D==1.10.9
 panda3d-blend2bam==0.19
