@@ -8,6 +8,7 @@ import panda3d
 import config.data.constant as C
 
 from panda3d.core import loadPrcFileData
+from panda3d.core import Fog
 
 loadPrcFileData('',C.config)
 
@@ -23,6 +24,17 @@ class MainLoop(ShowBase):
         # self.disableMouse()
         # self.useDrive()
         # self.useTrackball()
+
+        self.skyBackgroundColor = (0.4, 0.7, 1.0)
+        self.seaBackgroundColor = (0.16, 0.72, 0.87)
+        self.setBackgroundColor(*self.skyBackgroundColor)
+
+        self.linfog = Fog("A linear-mode Fog node")
+        self.linfog.setColor(0.16, 0.72, 0.87)
+        self.linfog.setLinearRange(0,18)
+        self.linfog.setLinearFallback(45,6,18)
+        self.camera.attachNewNode(self.linfog)
+        render.setFog(self.linfog)
 
         world_boarder = 32
         world_hight = 8
