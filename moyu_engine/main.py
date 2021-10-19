@@ -2,7 +2,6 @@
 import random
 import noise
 import numpy
-
 import panda3d
 
 import config.data.constant as C
