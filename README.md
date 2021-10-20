@@ -6,11 +6,8 @@ Tinyland 弹丸之地 <br/><br/>
 
 # Game News 游戏新闻
 
-### Game Testers News 游戏新闻
-
-            GOOD NEWS : 3D IS COMMING !!!
-            好消息 游戏更新 3D 辣 !!!
-
+            For some reason back to the Pygame
+            
 # Game Introduction 游戏简介
             《 Tinyland 弹丸之地 》是一款建筑类沙盒游戏，讲述了一片漂浮在宇宙之中的破碎之地。
             玩家在游戏中扮演一名领导者，带领人民在有限的空间内发展属于自己的帝国
@@ -56,8 +53,11 @@ MoYu Engine 文件检索
 ### 项目组 资源中心
             https://shimo.im/sheets/h9QPG6HQCgGgQQHx/uj0ib/
 
-更新日志
+Update Log 更新日志
 -------
+##### 10/20/2021 Update Log
+            For some reason back to the Pygame
+            
 ##### 10/08/2021 更新日志
             GOOD NEWS : 3D IS COMMING !!!
             框架API由 Pygame 更改为 Panda 3D
