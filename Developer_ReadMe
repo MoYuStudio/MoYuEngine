@@ -1,8 +1,19 @@
 
-Python 3.8.10
+################################################################
+#                    MoYu Studio © 2021                        #
+################################################################
+#                         Tinyland                             #
+#                     SUGT06 a19 Bata                          #
+################################################################
 
-Unix/MacOS/Linux
-pip3 install -r requirements.txt
+Python Vison :
 
-Windows
-pip install -r requirements.txt
+    Python 3.8.10
+
+Pypl install :
+
+    Unix/MacOS/Linux
+    pip3 install -r requirements
+
+    Windows
+    pip install -r requirements
