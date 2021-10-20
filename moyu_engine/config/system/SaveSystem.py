@@ -1,7 +1,7 @@
 
 import pickle
 
-import data.constant as C
+import data.constants as C
 
 class SavaSystem:
     

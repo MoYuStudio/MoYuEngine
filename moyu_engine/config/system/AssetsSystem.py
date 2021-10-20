@@ -1,10 +1,14 @@
 
 import os
 import sys
+import pygame
+from pygame.locals import *
 
-import data.constant as C
+import data.constants as C
 
 class AssetsSystem:
+
+    pygame.display.set_mode(C.window['size'],pygame.RESIZABLE)
 
     @ staticmethod
     def loader(folder_path = 'moyu_engine/assets'):
@@ -28,11 +32,11 @@ class AssetsSystem:
                 tmp = os.listdir(path)
                 for file_name in tmp:
                     file_num -= 1
-                    # if file_name.endswith('.ttf'):
-                        # C.assets[dir].append(pygame.font.Font(os.path.join(path,dir+f'{file_num}.ttf'),25))
+                    if file_name.endswith('.ttf'):
+                        C.assets[dir].append(pygame.font.Font(os.path.join(path,dir+f'{file_num}.ttf'),25))
                         
-                    # if file_name.endswith('.png'):
-                        # C.assets[dir].append(pygame.image.load(os.path.join(path,dir+f'{file_num}.png')))#.convert_alpha()
+                    if file_name.endswith('.png'):
+                        C.assets[dir].append(pygame.image.load(os.path.join(path,dir+f'{file_num}.png')))#.convert_alpha()
 
 if __name__ == "__main__":
 
