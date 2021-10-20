@@ -6,6 +6,7 @@ window =\
 {
     # window
     'size'         : [1280,720],
+    'set_size'     : [320,180],
     'size_level'   : 0.5,
     'fps'          : 60,
     'title'        : 'Tinyland 弹丸之地',

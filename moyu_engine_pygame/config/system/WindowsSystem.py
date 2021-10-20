@@ -98,7 +98,7 @@ class WindowsSystem:
     def game_main_surface():
 
         background_surface      = pygame.Surface(C.window['size']).convert_alpha()
-        info_surface             = pygame.Surface((int(C.window['size'][0]*C.window['surface_level']),int(C.window['size'][1]*C.window['surface_level']))).convert_alpha()
+        info_surface             = pygame.Surface((int(C.window['set_size'][0]/C.window['surface_level']),int(C.window['set_size'][1]/C.window['surface_level']))).convert_alpha()
         gui_surface             = pygame.Surface(C.window['size']).convert_alpha()
 
         background_surface.fill((255,55,55,0))
