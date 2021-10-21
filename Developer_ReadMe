@@ -16,6 +16,7 @@ Pypl install :
     pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 
     pip install -i https://pypi.tuna.tsinghua.edu.cn/simple some-package
+    pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple some-package
 
     Unix/MacOS/Linux
     pip3 install -r requirements
