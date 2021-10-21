@@ -1,3 +1,4 @@
 
+pyglet == 2.0.dev9
 arcade == 2.6.3
 noise == 1.2.2
