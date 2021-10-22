@@ -1,18 +1,14 @@
 
 window =\
 {
-    # window
-    # 'size'         : [1280,720],
-    # 'size_level'   : 0.5,
-    # 'fps'          : 60,
-    # 'title'        : 'Tinyland 弹丸之地',
-
+    # window setting
+    
     'width': 800, 
     'height': 600, 
     'title': 'Tinyland 弹丸之地', 
     'fullscreen': False, 
     'resizable': True, 
-    'update_rate': 60, 
+    'update_rate': 1/60, 
     'antialiasing': True, 
     'gl_version': [3, 3], 
     'screen': None, 
