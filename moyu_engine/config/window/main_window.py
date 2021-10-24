@@ -25,7 +25,7 @@ class MainWindow(arcade.View):
         self.player_list = arcade.SpriteList()
         self.wall_list = arcade.SpriteList(use_spatial_hash=True)
 
-        image_source = 'moyu_engine/assets/graphics/gui/input/input22.png'
+        image_source = C.assets['input'][-(22)-1]
 
         self.player_sprite = arcade.Sprite(image_source, 3)
 

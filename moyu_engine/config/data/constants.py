@@ -43,3 +43,5 @@ tilemap =\
     # tile time
     'time_speed': 1000,
 }
+
+assets = {}
