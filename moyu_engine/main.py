@@ -10,29 +10,22 @@
 #                           Pyglet                             #
 ################################################################
 
+import sys
 import pyglet
+# from pyglet.image.codecs.png import PNGImageDecoder
 
-import config.data.constants as C
+# import config.data.constants as C
 
 window = pyglet.window.Window()
-
-label = pyglet.text.Label('Hello, world',
-                          font_name='Times New Roman',
-                          font_size=36,
-                          x=window.width//2, y=window.height//2,
-                          anchor_x='center', anchor_y='center')
-
-image1 = pyglet.image.load('moyu_engine/assets/graphics/tile/tileland/tileland1.png')
-
-image2 = pyglet.resource.image('moyu_engine/assets/graphics/tile/tileland/tileland1.png')
-
-sprite = pyglet.sprite.Sprite(img=image1)
+# , decoder=PNGImageDecoder()
+image = pyglet.image.load('moyu_engine/assets/graphics/tile/tileland/tileland1.png')
+sprite = pyglet.sprite.Sprite(image, 10, 10)
 
 @window.event
 def on_draw():
     window.clear()
-    label.draw()
-    image2.blit(0, 0)
+    sprite.draw()
+    
 
 pyglet.app.run()
 
