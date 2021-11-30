@@ -48,4 +48,24 @@
 >>>>>ev.quit()
 >>>>>```
 >>> ### `save` save 保存模块<br/>
->>>>
+>>>
+>>>> #### `Save`<br/>
+>>>>>```
+>>>>>最小系统
+>>>>>save = c.save.Save()
+>>>>>接口
+>>>>>save = c.save.Save(path='moyu_engine/save/',slot_name='save',write_data={})
+>>>>>
+>>>>>path 保存路径 = str 字符串
+>>>>>slot_name 存档名 = str 字符串
+>>>>>write_data 需要保存的数据 = 字典
+>>>>>```
+>>>> #### `Save.write`
+>>>>>```
+>>>>>save.write()
+>>>>>```
+>>>> #### `Save.read`
+>>>>>```
+>>>>>save.read()
+>>>>>save.read_data 读出存档的数据
+>>>>>```
