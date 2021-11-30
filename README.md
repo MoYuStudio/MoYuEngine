@@ -26,27 +26,6 @@ Tinyland 弹丸之地 <br/><br/>
             收获：R
             保存：M
 
-MoYu Engine 文件检索
--------------------
->`moyu_engine` 摸鱼引擎目录（所有的游戏文件的目录)<br/>
->>
->>`assets` 资源目录（所有的 = 资源性质文件 = *贴图文件&字体文件&音乐文件 等 的目录）<br/>
->>>`font` 字体资源目录<br/>
->>>`graphics` 图像资源目录<br/>
->>>`sound` 声音资源目录<br/>
->>
->>`config` 配置目录（所有的 = 游戏运行文件 = *代码文件&存档文件&运行产生文件 等 的目录）<br/>
->>>`components` 模块目录<br/>
->>>`data` 存档目录<br/>
->>>`event` 事件目录<br/>
->>>`states` 状态机目录<br/>
->>>`surface` 窗口目录<br/>
->>>`constants.py` （变量Pyhton文件）<br/>
->>>`font.py` （字体Pyhton文件）<br/>
->>>`graphics.py` （图形Pyhton文件）<br/>
->>>`setup.py` （运行Pyhton文件）<br/>
->>>`sound.py` （声音Pyhton文件）<br/>
-
 ### 项目组 QQ群
             837240160
 
@@ -55,6 +34,13 @@ MoYu Engine 文件检索
 
 Update Log 更新日志
 -------
+##### 11/30/2021 Update Log
+            MoYu Engine Documentation 摸鱼引擎官方文档 上线
+            MoYu Engine 摸鱼引擎 新增 window 模块
+            MoYu Engine 摸鱼引擎 新增 event 模块
+            MoYu Engine 摸鱼引擎 新增 surface 模块
+            MoYu Engine 摸鱼引擎 新增 save 模块
+
 ##### 10/20/2021 Update Log
             For some reason back to the Pygame
             

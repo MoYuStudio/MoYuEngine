@@ -2,8 +2,13 @@
 import pygame
 from pygame.locals import *
 
+pygame.init()
+pygame.display.init()
+pygame.mixer.init()
+
+icon1 = pygame.image.load('moyu_engine/assets/graphics/tileland1.png')#.convert_alpha()
+
 class Window:
-    icon1 = pygame.image.load('moyu_engine/assets/graphics/tileland1.png').convert_alpha()
     def __init__(self,icon=icon1,title='MoYu Engine',size=[320,180],resizable=True):
         self.icon = icon
         self.title = title
