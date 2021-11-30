@@ -16,12 +16,14 @@ class Window:
         self.resizable = resizable
     def set(self):
         if self.resizable == True:
-            screen = pygame.display.set_mode(self.size,pygame.RESIZABLE)
+            self.screen = pygame.display.set_mode(self.size,pygame.RESIZABLE)
         if self.resizable == False:
-            screen = pygame.display.set_mode(self.size)
+            self.screen = pygame.display.set_mode(self.size)
         screen_title = pygame.display.set_caption(self.title)
         icon = pygame.display.set_icon(self.icon)
         clock = pygame.time.Clock()
+
+        return self.screen
 
 if __name__=="__main__":
     window = Window()

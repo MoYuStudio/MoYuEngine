@@ -2,7 +2,7 @@
 import pickle
 
 class Save:
-    def __init__(self,path='moyu_engine/save/',slot_name='save',write_data={}):
+    def __init__(self,path='moyu_engine/data/',slot_name='save',write_data={}):
         self.path = path
         self.slot_name = slot_name
         self.write_data = write_data
@@ -15,4 +15,5 @@ class Save:
         f=open(self.path+self.slot_name,'rb')
         self.read_data = pickle.load(f)
         f.close()
+        
         return self.read_data
