@@ -19,11 +19,12 @@
 >>> ### `window` window 窗口模块<br/>
 >>>
 >>>> #### `Window`<br/>
->>>>>
->>>>>    最小系统
->>>>>    win = c.window.Window()
->>>>>    接口
->>>>>    win = c.window.Window(icon=icon1,title='MoYu Engine',size=[320,180],resizable=True)
+>>>>>'''
+最小系统
+win = c.window.Window()
+接口
+win = c.window.Window(icon=icon1,title='MoYu Engine',size=[320,180],resizable=True)
+'''
 >>>>>
 >>>> #### `Window.set`
 >>>>>
