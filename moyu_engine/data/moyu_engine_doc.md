@@ -16,53 +16,27 @@
 >
 >> ## `components` 模块 === 积木块<br/>
 >>
->>> ### `window` window 窗口模块<br/>
->>>
->>>> #### `Window`<br/>
->>>> #### `Window.set`
->>>
->>> ### `surface` surface 图层模块<br/>
->>>>
->>> ### `event` event 事件(点击/触摸/交互)模块<br/>
->>>
->>>> #### `Event`<br/>
->>>> #### `Event.quit`
->>>
->>> ### `save` save 保存模块<br/>
->>>
->>>> #### `Save`<br/>
->>>> #### `Save.write`
->>>>>```
->>>>>save.write()
->>>>>```
->>>> #### `Save.read`
->>>>>```
->>>>>save.read()
->>>>>save.read_data 读出存档的数据
->>>>>```
+>>> ### `window` 窗口模块<br/>
+>>> ### `surface` 图层模块<br/>
+>>> ### `page` 页模块<br/>
+>>> ### `event` 事件(点击/触摸/交互)模块<br/>
+>>> ### `tilemap` 瓷砖地图模块<br/>
+>>> ### `assets` 资源模块<br/>
+>>> ### `save` 保存模块<br/>
+>>
 >> ## `system` 系统 === 积木堆<br/>
+>>
+>>> ### `gui_system` gui交互界面系统<br/>
+>>> ### `map_system` 地图系统<br/>
+>>
 
->>>>>最小系统
->>>>>win = c.window.Window()
->>>>>接口
->>>>>win = c.window.Window(icon=icon1,title='MoYu Engine',size=[320,180],resizable=True)
->>>>>
->>>>>icon 窗口图标 = pygame bit 比特图
->>>>>title 窗口标题 = str 字符串
->>>>>size 窗口尺寸 = [宽，高] 数组
->>>>>resizable 窗口尺寸可否改变 = True/False 布尔值
->>>>>```
->>>>>```
->>>>>最小系统
->>>>>ev = c.event.Event()
->>>>>```
->>>>>```
->>>>>最小系统
->>>>>save = c.save.Save()
->>>>>接口
->>>>>save = c.save.Save(path='moyu_engine/save/',slot_name='save',write_data={})
->>>>>
->>>>>path 保存路径 = str 字符串
->>>>>slot_name 存档名 = str 字符串
->>>>>write_data 需要保存的数据 = 字典
->>>>>```
+
+### `components` 模块 === 积木块<br/>
+
+    `components` 模块是对于SDL2(计算机图形接口)以及Pygame(Python对于SDL2接口的绑定) 与 `moyu_engine` 摸鱼引擎功能的绑定
+    
+    其中 `window` 窗口模块 是游戏的最小系统(即弹出一个默认的窗口)
+    开发者 可以通过 `模块的接口` 与 `模块沟通` 以达到 `客制化`
+
+    接口使用举例(其中`xxx`是开发者创建的`实例`(`实例`即 这个积木块的复制品，在引擎中的积木块为样品，开发者每当要使用即复制一块))
+     `xxx.window_data['title'] = 'test'`
