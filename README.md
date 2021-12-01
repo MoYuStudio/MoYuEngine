@@ -1,6 +1,4 @@
 
-![](https://github.com/MoYuStudio/MoYuEngine/raw/main/moyu_engine/assets/graphics/logo_black.png)
-
 ### MoYu Engine
 # 摸鱼引擎
 
