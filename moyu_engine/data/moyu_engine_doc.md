@@ -16,7 +16,7 @@
 > `moyu_engine` 摸鱼引擎<br/>
 >
 >> `components` 模块<br/>
->>
+>>[锚点](#anchor)
 >>> `window` 窗口模块<br/>
 >>> `surface` 图层模块<br/>
 >>> `page` 页模块<br/>
@@ -34,7 +34,7 @@
 ## API
 
 ### `components` 模块 === 积木块<br/>
-
+<span id = "anchor">锚点</span>
     `components` 模块是对于SDL2(计算机图形接口)以及Pygame(Python对于SDL2接口的绑定) 与 `moyu_engine` 摸鱼引擎功能的绑定
 
     其中 `window` 窗口模块 是游戏的最小系统(即弹出一个默认的窗口)
