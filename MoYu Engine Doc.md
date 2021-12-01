@@ -14,12 +14,34 @@
 
 > # `moyu_engine` 摸鱼引擎<br/>
 >
->> ## `components` 模块<br/>
+>> ## `components` 模块 === 积木块<br/>
 >>
 >>> ### `window` window 窗口模块<br/>
 >>>
 >>>> #### `Window`<br/>
+>>>> #### `Window.set`
+>>>
+>>> ### `surface` surface 图层模块<br/>
+>>>>
+>>> ### `event` event 事件(点击/触摸/交互)模块<br/>
+>>>
+>>>> #### `Event`<br/>
+>>>> #### `Event.quit`
+>>>
+>>> ### `save` save 保存模块<br/>
+>>>
+>>>> #### `Save`<br/>
+>>>> #### `Save.write`
 >>>>>```
+>>>>>save.write()
+>>>>>```
+>>>> #### `Save.read`
+>>>>>```
+>>>>>save.read()
+>>>>>save.read_data 读出存档的数据
+>>>>>```
+>> ## `system` 系统 === 积木堆<br/>
+
 >>>>>最小系统
 >>>>>win = c.window.Window()
 >>>>>接口
@@ -30,26 +52,10 @@
 >>>>>size 窗口尺寸 = [宽，高] 数组
 >>>>>resizable 窗口尺寸可否改变 = True/False 布尔值
 >>>>>```
->>>> #### `Window.set`
->>>>>```
->>>>>win.set()
->>>>>```
->>> ### `surface` surface 图层模块<br/>
->>>>
->>> ### `event` event 事件(点击/触摸/交互)模块<br/>
->>>
->>>> #### `Event`<br/>
 >>>>>```
 >>>>>最小系统
 >>>>>ev = c.event.Event()
 >>>>>```
->>>> #### `Event.quit`
->>>>>```
->>>>>ev.quit()
->>>>>```
->>> ### `save` save 保存模块<br/>
->>>
->>>> #### `Save`<br/>
 >>>>>```
 >>>>>最小系统
 >>>>>save = c.save.Save()
@@ -59,13 +65,4 @@
 >>>>>path 保存路径 = str 字符串
 >>>>>slot_name 存档名 = str 字符串
 >>>>>write_data 需要保存的数据 = 字典
->>>>>```
->>>> #### `Save.write`
->>>>>```
->>>>>save.write()
->>>>>```
->>>> #### `Save.read`
->>>>>```
->>>>>save.read()
->>>>>save.read_data 读出存档的数据
 >>>>>```
