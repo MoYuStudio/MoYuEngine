@@ -13,10 +13,10 @@ Pypl install :
     pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple some-package
 
     Unix/MacOS/Linux
-    pip3 install -r moyu_engine/moyu_engine_package
+    pip3 install -r moyu_engine/data/moyu_engine_package
 
     Windows
-    pip install -r moyu_engine/moyu_engine_package
+    pip install -r moyu_engine/data/moyu_engine_package
 
 
 Tinyland弹丸之地 是一款 基于Python开发 试验性游戏项目 建筑类沙盒游戏
