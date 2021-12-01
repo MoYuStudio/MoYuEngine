@@ -41,3 +41,28 @@ Tinyland弹丸之地 是一款 基于Python开发 试验性游戏项目 建筑�
 >>>`graphics.py` （图形Pyhton文件）<br/>
 >>>`setup.py` （运行Pyhton文件）<br/>
 >>>`sound.py` （声音Pyhton文件）<br/>
+
+>>>>>最小系统
+>>>>>win = c.window.Window()
+>>>>>接口
+>>>>>win = c.window.Window(icon=icon1,title='MoYu Engine',size=[320,180],resizable=True)
+>>>>>
+>>>>>icon 窗口图标 = pygame bit 比特图
+>>>>>title 窗口标题 = str 字符串
+>>>>>size 窗口尺寸 = [宽，高] 数组
+>>>>>resizable 窗口尺寸可否改变 = True/False 布尔值
+>>>>>```
+>>>>>```
+>>>>>最小系统
+>>>>>ev = c.event.Event()
+>>>>>```
+>>>>>```
+>>>>>最小系统
+>>>>>save = c.save.Save()
+>>>>>接口
+>>>>>save = c.save.Save(path='moyu_engine/save/',slot_name='save',write_data={})
+>>>>>
+>>>>>path 保存路径 = str 字符串
+>>>>>slot_name 存档名 = str 字符串
+>>>>>write_data 需要保存的数据 = 字典
+>>>>>```
