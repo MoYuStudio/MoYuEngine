@@ -18,4 +18,4 @@
 
 ### MoYu Engine Documentation
 # 摸鱼引擎官方文档
-这是一个链接 [官方文档](https://github.com/MoYuStudio/MoYuEngine/blob/main/moyu_engine_doc.md)
+[Official Documentation 官方文档](https://github.com/MoYuStudio/MoYuEngine/blob/main/moyu_engine/data/moyu_engine_doc.md)
