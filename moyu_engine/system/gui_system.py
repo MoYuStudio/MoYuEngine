@@ -10,10 +10,10 @@ class GuiSystem():
         # self.surface = c.surface.Surface()
         self.event = c.event.Event()
 
-        self.gui_system_set = {
-                                'window_set':self.window.window_set,
-                                # 'surface_set':self.surface.surface_set,
-                                # 'event_set':self.event.event_set,
+        self.gui_system_data = {
+                                'window_data':self.window.window_data,
+                                # 'surface_data':self.surface.surface_data,
+                                # 'event_data':self.event.event_data,
                                 }
 
     def set(self):
