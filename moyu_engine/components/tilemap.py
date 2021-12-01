@@ -4,6 +4,8 @@ import noise
 
 class Tilemap:
     def __init__(self,tilemap_data={
+                                        'tile_id':{},
+                                        'hight':[],
                                         'tilemap':[],
                                         'boarder':64,
                                         'tile_size':64,

@@ -6,6 +6,8 @@ pygame.init()
 pygame.display.init()
 pygame.mixer.init()
 
+screen = pygame.display.set_mode([320,180])
+
 class Surface:
     def __init__(self,surface_data = {
                                         'blit_window':'',
