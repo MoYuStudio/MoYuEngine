@@ -55,14 +55,14 @@
         `'test'` 是 ['title'] 这个接口 要更改的设置 该设置的数据类型可以在文档对应的地方找到
         
 
-### <span id = 'window'>`window` 窗口模块
+### <span id = 'window'>`window`</span> 窗口模块
 
     'icon':icon1
     'title':'MoYu Engine'
     'size':[320,180]
     'resizable':True
 
-### <span id = 'surface'>`surface` 图层模块<br/>
+### <span id = 'surface'>`surface`</span> 图层模块
 
     'blit_window':'',
     'blit_surface':'',
@@ -74,13 +74,13 @@
     'transition_size':[1920,1080],
     'window_size':[1920,1080],
 
-### <span id = 'page'>`page` 书页模块<br/>
+### <span id = 'page'>`page`</span> 书页模块
 
     'page':'page_data',
 
-### <span id = 'event'>`event` 事件(点击/触摸/交互)模块<br/>
+### <span id = 'event'>`event`</span> 事件(点击/触摸/交互)模块
 
-### <span id = 'tilemap'>`tilemap` 瓷砖地图模块<br/>
+### <span id = 'tilemap'>`tilemap`</span> 瓷砖地图模块
 
     'tilemap':[],
     'boarder':64,
@@ -90,20 +90,20 @@
     'freq':12,
     'seed':0,
 
-### <span id = 'assets'>`assets` 资源模块<br/>
+### <span id = 'assets'>`assets`</span> 资源模块
 
     path = 'moyu_engine/assets'
 
-### <span id = 'save'>`save` 保存模块<br/>
+### <span id = 'save'>`save`</span> 保存模块
 
     path='moyu_engine/data/',
     slot_name='save',
     write_data={}
 
-### <span id = 'system'>`system` 系统 === 积木堆<br/>
+### <span id = 'system'>`system`</span> 系统 === 积木堆
 
     `system` 系统 是 `components` 模块 的 功能化打包
 
-### <span id = 'gui_system'>`gui_system` gui交互界面系统<br/>
+### <span id = 'gui_system'>`gui_system`</span> gui交互界面系统
 
-### <span id = 'map_system'>`map_system` 地图系统<br/>
+### <span id = 'map_system'>`map_system`</span> 地图系统
