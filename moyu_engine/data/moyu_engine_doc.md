@@ -19,23 +19,23 @@
 >
 >> [`components`](#components) 模块<br/>
 >>
->>> `window` 窗口模块<br/>
->>> `surface` 图层模块<br/>
->>> `page` 页模块<br/>
->>> `event` 事件(点击/触摸/交互)模块<br/>
->>> `tilemap` 瓷砖地图模块<br/>
->>> `assets` 资源模块<br/>
->>> `save` 保存模块<br/>
+>>> `window`(#window) 窗口模块<br/>
+>>> `surface`(#surface) 图层模块<br/>
+>>> `page`(#page) 书页模块<br/>
+>>> `event`(#event) 事件(点击/触摸/交互)模块<br/>
+>>> `tilemap`(#tilemap) 瓷砖地图模块<br/>
+>>> `assets`(#assets) 资源模块<br/>
+>>> `save`(#save) 保存模块<br/>
 >>
->> `system` 系统<br/>
+>> `system`(#system) 系统<br/>
 >>
->>> `gui_system` gui交互界面系统<br/>
->>> `map_system` 地图系统<br/>
+>>> `gui_system`(#gui_system) gui交互界面系统<br/>
+>>> `map_system`(#map_system) 地图系统<br/>
 >>
 
 ## API
 
-### <span id = 'components'>`components`</span> 模块 === 积木块<br/>
+### <span id = 'components'>`components`</span> 模块 === 积木块
 
     `components` 模块 是对于SDL2(计算机图形接口)以及Pygame(Python对于SDL2接口的绑定) 与 `moyu_engine` 摸鱼引擎功能的绑定
 
@@ -53,5 +53,57 @@
         `['title']` 是 window 这个积木的接口 一般没有特别说明即有默认设置 如果不需要修改则无需使用接口
 
         `'test'` 是 ['title'] 这个接口 要更改的设置 该设置的数据类型可以在文档对应的地方找到
+        
 
-### <span id = 'components1'>`components`</span> 模块 === 积木块<br/>
+### <span id = 'window'>`window` 窗口模块
+
+    'icon':icon1
+    'title':'MoYu Engine'
+    'size':[320,180]
+    'resizable':True
+
+### <span id = 'surface'>`surface` 图层模块<br/>
+
+    'blit_window':'',
+    'blit_surface':'',
+    'surface_size':[1920,1080],
+    'background_size':[1920,1080],
+    'info_size':[1920,1080],
+    'gui_size':[1920,1080],
+    'popup_size':[1920,1080],
+    'transition_size':[1920,1080],
+    'window_size':[1920,1080],
+
+### <span id = 'page'>`page` 书页模块<br/>
+
+    'page':'page_data',
+
+### <span id = 'event'>`event` 事件(点击/触摸/交互)模块<br/>
+
+### <span id = 'tilemap'>`tilemap` 瓷砖地图模块<br/>
+
+    'tilemap':[],
+    'boarder':64,
+    'tile_size':64,
+    'time_speed':100,
+    'octaves':2,
+    'freq':12,
+    'seed':0,
+
+### <span id = 'assets'>`assets` 资源模块<br/>
+
+    path = 'moyu_engine/assets'
+
+### <span id = 'save'>`save` 保存模块<br/>
+
+    path='moyu_engine/data/',
+    slot_name='save',
+    write_data={}
+
+### <span id = 'system'>`system` 系统 === 积木堆<br/>
+
+    `system` 系统 是 `components` 模块 的 功能化打包
+
+### <span id = 'gui_system'>`gui_system` gui交互界面系统<br/>
+
+### <span id = 'map_system'>`map_system` 地图系统<br/>
