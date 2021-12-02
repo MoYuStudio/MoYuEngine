@@ -1,7 +1,4 @@
 
-import sys 
-sys.path.append('moyu_engine') 
-
 import xlrd
 
 class Tile:
@@ -14,7 +11,7 @@ class Tile:
         self.tile_data = tile_data
 
     def read(self):
-        book = xlrd.open_workbook('data/tile.xlsx')
+        book = xlrd.open_workbook('moyu_engine\data\tile.xlsx')
 
         sheet = book.sheet_by_name('tileland')
 
