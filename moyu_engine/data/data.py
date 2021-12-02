@@ -1,20 +1,20 @@
 
-import sqlite3
+import xlrd
+import xlwt
 
-conn = sqlite3.connect('moyu_engine\data\tile.db')
+class Data:
+    def __init__(self):
+        pass
 
-print("Opened database successfully")
+    def xlsx(self):
+        xlsx = xlrd.open_workbook(r'C:\Users\WilsonVinson\Documents\GitHub\SUGT06\moyu_engine\data\tile.xlsx')
+        sheets = xlsx.sheets()
+        print(sheets)
+        sheet = xlsx.sheet_by_name('land')
 
-c = conn.cursor()
-c.execute('''CREATE TABLE COMPANY
-       (ID INT PRIMARY KEY     NOT NULL,
-       NAME           TEXT    NOT NULL,
-       AGE            INT     NOT NULL,
-       ADDRESS        CHAR(50),
-       SALARY         REAL);''')
-print("Table created successfully")
-conn.commit()
-conn.close()
+        cell_info = sheet.cell(rowx=1, colx=1)
+        print(cell_info)
 
 if __name__ == "__main__":
-    pass
+    data = Data()
+    data.xlsx()
