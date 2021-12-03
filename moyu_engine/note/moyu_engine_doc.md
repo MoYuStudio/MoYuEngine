@@ -7,10 +7,10 @@
     Pyhton
 
     Unix/MacOS/Linux
-        pip3 install -r moyu_engine/moyu_engine_package
+        pip3 install -r moyu_engine/data/moyu_engine_package
 
     Windows
-        pip install -r moyu_engine/moyu_engine_package
+        pip install -r moyu_engine/data/moyu_engine_package
 
 
 ## API引索
@@ -19,18 +19,19 @@
 >
 >> [`components`](#components) 模块<br/>
 >>
->>> [`window`](#window) 窗口模块<br/>
->>> [`surface`](#surface) 图层模块<br/>
->>> [`page`](#page) 书页模块<br/>
->>> [`event`](#event) 事件(点击/触摸/交互)模块<br/>
->>> [`tilemap`](#tilemap) 瓷砖地图模块<br/>
->>> [`assets`](#assets) 资源模块<br/>
->>> [`save`](#save) 保存模块<br/>
+>>> [`window`](#window) 窗口<br/>
+>>> [`surface`](#surface) 图层<br/>
+>>> [`page`](#page) 页面<br/>
+>>> [`event`](#event) 事件(点击/触摸/交互)<br/>
+>>> [`tilemap`](#tilemap) 瓷砖地图<br/>
+>>> [`assets`](#assets) 资源<br/>
+>>> [`data`](#data) 数据<br/>
+>>> [`save`](#save) 保存<br/>
 >>
 >> [`system`](#system) 系统<br/>
 >>
->>> [`gui_system`](#gui_system) gui交互界面系统<br/>
->>> [`map_system`](#map_system) 地图系统<br/>
+>>> [`gui_system`](#gui_system) gui交互界面<br/>
+>>> [`map_system`](#map_system) 地图<br/>
 >>
 
 ## API
@@ -55,14 +56,14 @@
         `'test'` 是 ['title'] 这个接口 要更改的设置 该设置的数据类型可以在文档对应的地方找到
         
 
-### <span id = 'window'>`window`</span> 窗口模块
+### <span id = 'window'>`window`</span> 窗口
 
     'icon':icon1
     'title':'MoYu Engine'
     'size':[320,180]
     'resizable':True
 
-### <span id = 'surface'>`surface`</span> 图层模块
+### <span id = 'surface'>`surface`</span> 图层
 
     'blit_window':'',
     'blit_surface':'',
@@ -74,13 +75,13 @@
     'transition_size':[1920,1080],
     'window_size':[1920,1080],
 
-### <span id = 'page'>`page`</span> 书页模块
+### <span id = 'page'>`page`</span> 页面
 
     'page':'page_data',
 
-### <span id = 'event'>`event`</span> 事件(点击/触摸/交互)模块
+### <span id = 'event'>`event`</span> 事件(点击/触摸/交互)
 
-### <span id = 'tilemap'>`tilemap`</span> 瓷砖地图模块
+### <span id = 'tilemap'>`tilemap`</span> 瓷砖地图
 
     'tilemap':[],
     'boarder':64,
@@ -90,11 +91,16 @@
     'freq':12,
     'seed':0,
 
-### <span id = 'assets'>`assets`</span> 资源模块
+### <span id = 'assets'>`assets`</span> 资源
 
     path = 'moyu_engine/assets'
 
-### <span id = 'save'>`save`</span> 保存模块
+### <span id = 'data'>`data`</span> 数据
+
+    'xlsx_path' : r'C:\Users\WilsonVinson\Documents\GitHub\SUGT06\moyu_engine\data\tile.xlsx',
+    'nrows_or_ncols' : 'ncols',
+
+### <span id = 'save'>`save`</span> 保存
 
     path='moyu_engine/data/',
     slot_name='save',
@@ -104,6 +110,6 @@
 
     `system` 系统 是 `components` 模块 的 功能化打包
 
-### <span id = 'gui_system'>`gui_system`</span> gui交互界面系统
+### <span id = 'gui_system'>`gui_system`</span> gui交互界面
 
-### <span id = 'map_system'>`map_system`</span> 地图系统
+### <span id = 'map_system'>`map_system`</span> 地图
