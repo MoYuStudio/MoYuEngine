@@ -14,7 +14,8 @@ gui.surface.background_surface.fill((255,55,55,255))
 gui.surface.background_surface.blit(icon1,(100,100))
 
 data = moyu_engine.components.data.Data()
-data.xlsx(xlsx_path = r'C:\Users\WilsonVinson\Documents\GitHub\SUGT06\tinyland\data\tile.xlsx')
+data.data_data['xlsx_path'] = r'C:\Users\WilsonVinson\Documents\GitHub\SUGT06\tinyland\data\tile.xlsx'
+data.xlsx()
 print(data.data[0])
 
 gui.set()
