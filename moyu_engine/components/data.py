@@ -4,7 +4,8 @@ import xlwt
 
 class Data:
     def __init__(self,data_data = {
-                                    'xlsx_path' : r'C:\Users\WilsonVinson\Documents\GitHub\SUGT06\moyu_engine\data\tile.xlsx',
+                                    # xlsx
+                                    'xlsx_path':r'C:\Users\WilsonVinson\Documents\GitHub\SUGT06\moyu_engine\data\tile.xlsx',
                                     'nrows_or_ncols' : 'ncols',
                                 },data = {}):
         self.data_data = data_data

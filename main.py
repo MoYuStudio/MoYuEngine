@@ -5,7 +5,8 @@ import pygame
 
 gui = moyu_engine.system.gui_system.GuiSystem()
 gui.gui_system_data['window_data']['title'] = 'Tinyland'
-surface = pygame.Surface([1280,720]).convert_alpha()
+gui.gui_system_data['window_data']['size'] = [1920,1080]
+surface = pygame.Surface([1920,1080]).convert_alpha()
 gui.gui_system_data['surface_data']['blit_surface'] = surface
 
 icon1 = pygame.image.load('moyu_engine/assets/graphics/logo/tileland1.png')#.convert_alpha()
