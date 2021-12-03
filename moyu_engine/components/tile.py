@@ -2,13 +2,13 @@
 import xlrd
 
 class Tile:
-    def __init__(self,tile_data={
+    def __init__(self,config={
                                     'id':0,
                                     'name':'tile_name',
                                     'assets':None,
                                     'effect':None,
                                 }):
-        self.tile_data = tile_data
+        self.config = config
 
     def read(self):
         book = xlrd.open_workbook('moyu_engine\data\tile.xlsx')

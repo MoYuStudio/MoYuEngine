@@ -45,11 +45,11 @@
 
     接口使用举例
 
-        `xxx.window_data['title'] = 'test'`
+        `xxx.config['title'] = 'test'`
 
         `xxx`是开发者创建的`实例`(`实例`即 这个积木块的复制品，在引擎中的积木块为样品，开发者每当要使用即复制一块)
 
-        `window_data` 是 window 这个积木的数据 格式始终为 `积木名_data`
+        `config` 是 window 这个积木的数据 格式始终为 `config`
 
         `['title']` 是 window 这个积木的接口 一般没有特别说明即有默认设置 如果不需要修改则无需使用接口
 
@@ -102,9 +102,9 @@
 
 ### <span id = 'save'>`save`</span> 保存
 
-    path='moyu_engine/data/',
-    slot_name='save',
-    write_data={}
+    'path':'moyu_engine/data/',
+    'slot_name':'save',
+    'write_data':{},
 
 ### <span id = 'system'>`system`</span> 系统 === 积木堆
 

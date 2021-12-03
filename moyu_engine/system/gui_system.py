@@ -10,19 +10,19 @@ class GuiSystem():
         self.surface = c.surface.Surface()
         self.event = c.event.Event()
 
-        self.gui_system_data = {
-                                'window_data':self.window.window_data,
-                                'surface_data':self.surface.surface_data,
-                                # 'event_data':self.event.event_data,
-                                }
+        self.config = {
+                        'window':self.window.config,
+                        'surface':self.surface.config,
+                        'event':self.event.config,
+                        }
 
     def set(self):
         self.window.set()
-        self.surface.surface_data['blit_window'] = self.window.screen
+        self.surface.config['blit_window'] = self.window.screen
         
         while True:
             self.surface.blit()
-            self.event.quit()
+            self.event.set()
 
 if __name__=="__main__":
     gui = GuiSystem()
