@@ -29,4 +29,4 @@ gui.set()
 
 # 摸鱼引擎官方文档
 
-[Official Documentation 官方文档](https://github.com/MoYuStudio/MoYuEngine/blob/main/moyu_engine/data/moyu_engine_doc.md)
+[Official Documentation 官方文档](https://github.com/MoYuStudio/MoYuEngine/blob/main/moyu_engine/note/moyu_engine_doc.md)
