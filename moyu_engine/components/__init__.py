@@ -5,4 +5,5 @@ from .page import *
 from .event import *
 from .tilemap import *
 from .assets import *
+from .data import *
 from .save import *

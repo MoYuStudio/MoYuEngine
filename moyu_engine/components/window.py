@@ -6,7 +6,7 @@ pygame.init()
 pygame.display.init()
 pygame.mixer.init()
 
-icon1 = pygame.image.load('moyu_engine/assets/graphics/tileland1.png')#.convert_alpha()
+icon1 = pygame.image.load('moyu_engine/assets/graphics/logo/tileland1.png')#.convert_alpha()
 
 class Window:
     def __init__(self,window_data = {
