@@ -23,6 +23,7 @@
 >>> [`surface`](#surface) 图层<br/>
 >>> [`page`](#page) 页面<br/>
 >>> [`event`](#event) 事件(点击/触摸/交互)<br/>
+>>> [`tile`](#tile) 瓷砖<br/>
 >>> [`tilemap`](#tilemap) 瓷砖地图<br/>
 >>> [`assets`](#assets) 资源<br/>
 >>> [`data`](#data) 数据<br/>
@@ -80,6 +81,12 @@
     'page':'page_data',
 
 ### <span id = 'event'>`event`</span> 事件(点击/触摸/交互)
+
+    'move':[0,0],
+    'zoom':0,
+    'move_speed':10,
+
+### <span id = 'tile'>`tile`</span> 瓷砖
 
 ### <span id = 'tilemap'>`tilemap`</span> 瓷砖地图
 

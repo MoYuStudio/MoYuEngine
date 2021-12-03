@@ -8,6 +8,17 @@ class Event:
                                     'move':[0,0],
                                     'zoom':0,
                                     'move_speed':10,
+
+                                    'move_switch':{
+                                                    'up':False,
+                                                    'down':False,
+                                                    'left':False,
+                                                    'right':False,
+                                    },
+                                    'zoom_switch':{
+                                                    'in':False,
+                                                    'out':False,
+                                    },
                                 }):
         self.config = config
 
@@ -19,47 +30,61 @@ class Event:
 
             if self.event.type == pygame.KEYDOWN:
                 self.move_keydown()
+                
             if self.event.type == pygame.KEYUP:
                 self.move_keyup()
 
-    def move_keydown(self):
-        if self.event.key == K_UP or self.event.key == K_w:
-            self.config['move'][1] += self.config['move_speed']
-            
-        if self.event.key == K_DOWN or self.event.key == K_s:
-            self.config['move'][1] -= self.config['move_speed']
+    def blit(self):
+        self.move()
+        self.zoom()
 
-        if self.event.key == K_LEFT or self.event.key == K_a:
+    def move(self):
+        if self.config['move_switch']['up'] == True:
+            self.config['move'][1] -= self.config['move_speed']
+        if self.config['move_switch']['down'] == True:
+            self.config['move'][1] += self.config['move_speed']
+        if self.config['move_switch']['left'] == True:
+            self.config['move'][0] -= self.config['move_speed']
+        if self.config['move_switch']['right'] == True:
             self.config['move'][0] += self.config['move_speed']
 
+    def move_keydown(self):
+        if self.event.key == K_UP or self.event.key == K_w:
+            self.config['move_switch']['up']   = True
+            
+        if self.event.key == K_DOWN or self.event.key == K_s:
+            self.config['move_switch']['down'] = True
+
+        if self.event.key == K_LEFT or self.event.key == K_a:
+            self.config['move_switch']['left'] = True
+
         if self.event.key == K_RIGHT or self.event.key == K_d:
-            self.config['move'][0] -= self.config['move_speed']
+            self.config['move_switch']['right'] = True
 
         return self.config
 
     def move_keyup(self):
         if self.event.key == K_UP or self.event.key == K_w:
-            pass
+            self.config['move_switch']['up']   = False
 
         if self.event.key == K_DOWN or self.event.key == K_s:
-            pass
+            self.config['move_switch']['down'] = False
 
         if self.event.key == K_LEFT or self.event.key == K_a:
-            pass
+            self.config['move_switch']['left'] = False
 
         if self.event.key == K_RIGHT or self.event.key == K_d:
-            pass
+            self.config['move_switch']['right'] = False
 
-    def zoom_keydown(self):
-        if self.event.key == K_q:
+    def zoom(self):
+        if self.config['zoom_switch']['in'] == True:
             if self.config['surface_level'] <= 0.25:
                 self.config['surface_level'] = 0.25
             else:
                 self.config['surface_level'] -= 0.025
                 self.config['move'][1] -= 4.25
                 self.config['move'][0] -= 7.9
-
-        if self.event.key == K_e:
+        if self.config['zoom_switch']['out'] == True:
             if self.config['surface_level'] >= 1:
                 self.config['surface_level'] = 1
             else:
@@ -67,12 +92,19 @@ class Event:
                 self.config['move'][1] += 4.25
                 self.config['move'][0] += 7.9
 
-    def zoom_keyup(self):
+    def zoom_keydown(self):
         if self.event.key == K_q:
-            pass
+            self.config['zoom_switch']['in']   = True
 
         if self.event.key == K_e:
-            pass
-        
+            self.config['zoom_switch']['out']  = True
+
+    def zoom_keyup(self):
+        if self.event.key == K_q:
+            self.config['zoom_switch']['in']   = False
+
+        if self.event.key == K_e:
+            self.config['zoom_switch']['out'] = False
+
 if __name__ == "__main__":
     pass

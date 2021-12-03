@@ -16,12 +16,14 @@ class GuiSystem():
                         'event':self.event.config,
                         }
 
-    def set(self):
-        self.window.set()
-        self.surface.config['blit_window'] = self.window.screen
+    def set(self,blit):
         
         while True:
+            blit()
+            self.window.set()
+            self.surface.config['blit_window'] = self.window.screen
             self.surface.blit()
+            self.event.blit()
             self.event.set()
 
 if __name__=="__main__":
