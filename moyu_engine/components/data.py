@@ -1,26 +1,28 @@
 
+import os
 import xlrd
 import xlwt
 
 class Data:
     def __init__(self,config = {
                                     # xlsx
-                                    'xlsx_path':r'C:\Users\WilsonVinson\Documents\GitHub\SUGT06\moyu_engine\data\tile.xlsx',
+                                    'xlsx_path':'tinyland\\data\\tile.xlsx',
                                     'nrows_or_ncols':'ncols',
                                 }):
         self.config = config
-        self.data = []
+        self.data = {}
+
+        self.os_path = os.path.abspath(os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
 
     def xlsx(self):
 
-        xlsx_data = xlrd.open_workbook(self.config['xlsx_path'])
+        xlsx_data = xlrd.open_workbook(self.os_path +'\\'+ self.config['xlsx_path'])
         sheets_name = xlsx_data.sheet_names()
+        self.sheet = sheets_name
 
-        self.sheet = []
-
-        for sheet_name in sheets_name:
-            sheet_data = xlsx_data.sheet_by_name(sheet_name)
-            self.sheet.append(sheet_data)
+        for sheet_num in range(len(sheets_name)):
+            self.data[sheets_name[sheet_num]] = []
+            sheet_data = xlsx_data.sheet_by_name(sheets_name[sheet_num])
 
             sheet_nrows = sheet_data.nrows  #行
             sheet_ncols = sheet_data.ncols  #列
@@ -37,10 +39,13 @@ class Data:
                     for ncols_num in range(sheet_ncols):
                         data_dict[self.title[ncols_num]] = sheet_data.cell_value(rowx=nrows_num+1, colx=ncols_num)
 
-                    self.data.append(data_dict)
+                    self.data[sheets_name[sheet_num]].append(data_dict)
 
         return self.data,self.sheet,self.title
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     data = Data()
-    data.xlsx()
+    data_dict,sheet,title = data.xlsx()
+    print(data_dict)
+    #print(sheet)
+    #print(title)

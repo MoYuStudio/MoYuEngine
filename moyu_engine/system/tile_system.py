@@ -17,12 +17,12 @@ class TileSystem:
                         }
 
     def set(self):
-        self.config['data']['xlsx_path'] = r'C:\\Users\\Wilso\\Documents\\GitHub\\SUGT06\\tinyland\\data\\tile.xlsx'
+        self.config['data']['xlsx_path'] = 'tinyland\\data\\tile.xlsx'
         self.data.xlsx()
         print(self.data.data)
         self.config['assets']['sheet_dictionary'] = self.data.sheet
         self.config['assets']['data_dictionary'] = self.data.data
-        self.config['assets']['path'] = r'C:\\Users\\Wilso\\Documents\\GitHub\\SUGT06\\tinyland\\assets\\graphics\\tile'
+        self.config['assets']['path'] = 'tinyland\\assets\\graphics\\tile'
         self.assets.set()
         print(self.config['assets']['data_dictionary'])
 
