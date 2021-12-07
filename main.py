@@ -6,6 +6,7 @@ import pygame
 gui = moyu_engine.system.gui_system.GuiSystem()
 gui.config['window']['title'] = 'Tinyland'
 gui.config['window']['size'] = [1280,720]
+
 surface = pygame.Surface([1280,720]).convert_alpha()
 gui.config['surface']['blit_surface'] = surface
 
