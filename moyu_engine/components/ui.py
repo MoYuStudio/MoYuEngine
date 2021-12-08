@@ -16,12 +16,14 @@ class UI:
         
     def button(self):
         self.button_ruct = pygame.Rect((self.config['window_x'],self.config['window_y'],self.config['button_width'],self.config['button_hight']),width=0)
-    def blit(self):
+    def button_blit(self):
         if self.config['ui_event_preview'] == True:
             pygame.draw.rect(self.config['blit_window'],(255,55,55,30),self.button_ruct,1)
-            self.config['blit_window'].blit(self.config['button_image'],self.button_ruct)
         if self.config['ui_event_preview'] == False:
-            self.config['blit_window'].blit(self.config['button_image'],self.button_ruct)
+            pass
+
+        self.config['blit_window'].blit(self.config['button_image'],self.button_ruct)
+
         # button
         pygame.Rect.collidepoint(self.button_ruct,self.config['event.pos'])
 
