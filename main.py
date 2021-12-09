@@ -5,21 +5,21 @@ import pygame
 
 gui = moyu_engine.system.gui_system.GuiSystem()
 gui.config['window']['title'] = 'Tinyland'
-gui.config['window']['size'] = [1280,720]
+gui.config['window']['size'] = [320*3,180*3]
 
 icon1 = pygame.image.load('moyu_engine/assets/graphics/logo/tileland1.png')#.convert_alpha()
 
 ui1 = moyu_engine.components.ui.Ui()
 ui1.config['blit_window'] = gui.surface.gui_surface
 ui1.config['ui_event_preview'] = True
-ui1.config['button_image'] = pygame.image.load('tinyland\\assets\\graphics\\gui\\input\\input18.png')
+ui1.config['button_image'] = pygame.image.load('tinyland/assets/graphics/gui/input/input18.png')
 ui1.config['display_pos'] = [100,100]
 ui1.config['button_area'] = [100,30]
 
 ui2 = moyu_engine.components.ui.Ui()
 ui2.config['blit_window'] = gui.surface.gui_surface
 ui2.config['ui_event_preview'] = True
-ui2.config['button_image'] = pygame.image.load('tinyland\\assets\\graphics\\gui\\input\\input19.png')
+ui2.config['button_image'] = pygame.image.load('tinyland/assets/graphics/gui/input/input19.png')
 ui2.config['display_pos'] = [500,500]
 ui2.config['button_area'] = [300,100]
 

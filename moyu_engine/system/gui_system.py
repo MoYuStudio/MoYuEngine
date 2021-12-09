@@ -33,13 +33,14 @@ class GuiSystem():
     def blit(self,suface_blit,event_blit):
         
         while True:
-
-            suface_blit()
+            
             self.window.set()
             self.surface.config['blit_window'] = self.window.screen
+
             self.surface.blit()
             self.event.blit()
-            
+
+            suface_blit()
             self.event.set()
             event_blit()
 
