@@ -44,6 +44,9 @@ def event_blit():
     ui1.config['click_pos'] = gui.config['event']['mouse_click_pos']
     ui1.config['motion_pos'] = gui.config['event']['mouse_motion_pos']
 
+    ui2.config['click_pos'] = gui.config['event']['mouse_click_pos']
+    ui2.config['motion_pos'] = gui.config['event']['mouse_motion_pos']
+
 ui1.button_set()
 ui2.button_set()
 gui.set()
