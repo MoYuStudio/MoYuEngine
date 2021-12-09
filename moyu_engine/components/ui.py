@@ -2,20 +2,20 @@
 import pygame
 
 class Ui:
-    def __init__(self,config={
-                                'blit_window':'',
-                                'button_image':'',
+    def __init__(self):
+        self.config = {
+                            'blit_window':'',
+                            'button_image':'',
 
-                                'ui_event_preview':False,
+                            'ui_event_preview':False,
 
-                                'motion_pos':[-1,-1],
-                                'click_pos':[-1,-1],
+                            'motion_pos':[-1,-1],
+                            'click_pos':[-1,-1],
 
-                                'display_pos':[0,0],
-                                'button_area':[64,64],
+                            'display_pos':[0,0],
+                            'button_area':[64,64],
 
-                            }):
-        self.config = config
+                        }
         
     def button_set(self):
         self.button_ruct = pygame.Rect((self.config['display_pos'][0],self.config['display_pos'][1],self.config['button_area'][0],self.config['button_area'][1]),width=0)

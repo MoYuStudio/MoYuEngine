@@ -4,12 +4,12 @@ import xlrd
 import xlwt
 
 class Data:
-    def __init__(self,config = {
-                                    # xlsx
-                                    'xlsx_path':'moyu_engine\\data\\config.xlsx',
-                                    'nrows_or_ncols':'nrows',
-                                }):
-        self.config = config
+    def __init__(self):
+        self.config =  {
+                            # xlsx
+                            'xlsx_path':'moyu_engine\\data\\config.xlsx',
+                            'nrows_or_ncols':'nrows',
+                        }
         self.data = {}
 
         self.os_path = os.path.abspath(os.path.dirname(os.path.dirname(os.path.dirname(__file__))))

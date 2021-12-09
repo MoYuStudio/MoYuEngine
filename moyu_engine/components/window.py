@@ -9,13 +9,13 @@ pygame.mixer.init()
 icon1 = pygame.image.load('moyu_engine/assets/graphics/logo/tileland1.png')#.convert_alpha()
 
 class Window:
-    def __init__(self,config = {
-                                        'icon':icon1,
-                                        'title':'MoYu Engine',
-                                        'size':[320,180],
-                                        'resizable':True,
-                                    }):
-        self.config = config
+    def __init__(self):
+        self.config = {
+                            'icon':icon1,
+                            'title':'MoYu Engine',
+                            'size':[320,180],
+                            'resizable':True,
+                        }
 
     def set(self):
         if self.config['resizable'] == True:

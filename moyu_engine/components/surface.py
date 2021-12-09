@@ -9,18 +9,18 @@ pygame.mixer.init()
 screen = pygame.display.set_mode([320,180])
 
 class Surface:
-    def __init__(self,config = {
-                                        'blit_window':'',
-                                        'blit_surface':'',
-                                        'surface_size':[1920,1080],
-                                        'background_size':[1920,1080],
-                                        'info_size':[1920,1080],
-                                        'gui_size':[1920,1080],
-                                        'popup_size':[1920,1080],
-                                        'transition_size':[1920,1080],
-                                        'window_size':[1920,1080],
-                                    }):
-        self.config = config
+    def __init__(self):
+        self.config = {
+                            'blit_window':'',
+                            'blit_surface':'',
+                            'surface_size':[1920,1080],
+                            'background_size':[1920,1080],
+                            'info_size':[1920,1080],
+                            'gui_size':[1920,1080],
+                            'popup_size':[1920,1080],
+                            'transition_size':[1920,1080],
+                            'window_size':[1920,1080],
+                        }
 
         self.background_surface = pygame.Surface(self.config['background_size']).convert_alpha()
         self.background_surface.fill((255,55,55,0))

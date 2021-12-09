@@ -4,13 +4,13 @@ import pygame
 from pygame.locals import *
 
 class Assets:
-    def __init__(self,config={
-                                'file_type':'png',
-                                'path':'tinyland/assets/graphics/tile',
-                                'sheet_dictionary':[],
-                                'data_dictionary':{},
-                            }):
-        self.config = config
+    def __init__(self):
+        self.config = {
+                            'file_type':'png',
+                            'path':'tinyland/assets/graphics/tile',
+                            'sheet_dictionary':[],
+                            'data_dictionary':{},
+                        }
         self.assets_dictionary = {}
 
         self.os_path = os.path.abspath(os.path.dirname(os.path.dirname(os.path.dirname(__file__))))

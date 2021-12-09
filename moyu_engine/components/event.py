@@ -4,25 +4,25 @@ import pygame
 from pygame.locals import *
 
 class Event:
-    def __init__(self,config={
-                                'mouse_motion_pos':[-1,-1],
-                                'mouse_click_pos':[-1,-1],
-                                'move':[0,0],
-                                'zoom':0,
-                                'move_speed':10,
+    def __init__(self):
+        self.config = {
+                            'mouse_motion_pos':[-1,-1],
+                            'mouse_click_pos':[-1,-1],
+                            'move':[0,0],
+                            'zoom':0,
+                            'move_speed':10,
 
-                                'move_switch':{
-                                                'up':False,
-                                                'down':False,
-                                                'left':False,
-                                                'right':False,
-                                },
-                                'zoom_switch':{
-                                                'in':False,
-                                                'out':False,
-                                },
-                            }):
-        self.config = config
+                            'move_switch':{
+                                            'up':False,
+                                            'down':False,
+                                            'left':False,
+                                            'right':False,
+                            },
+                            'zoom_switch':{
+                                            'in':False,
+                                            'out':False,
+                            },
+                        }
 
     def set(self):
         for self.event in pygame.event.get():

@@ -3,18 +3,18 @@ import random
 import noise
 
 class Tilemap:
-    def __init__(self,config={
-                                        'tile_id':{},
-                                        'hight':[],
-                                        'tilemap':[],
-                                        'boarder':64,
-                                        'tile_size':64,
-                                        'time_speed':100,
-                                        'octaves':2,
-                                        'freq':12,
-                                        'seed':0,
-                                    }):
-        self.config = config
+    def __init__(self):
+        self.config = {
+                            'tile_id':{},
+                            'hight':[],
+                            'tilemap':[],
+                            'boarder':64,
+                            'tile_size':64,
+                            'time_speed':100,
+                            'octaves':2,
+                            'freq':12,
+                            'seed':0,
+                        }
 
     def set(self):
         self.config['seed'] = random.randint(100000, 999999)
