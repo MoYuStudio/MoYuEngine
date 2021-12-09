@@ -5,18 +5,23 @@ class Ui:
     def __init__(self,config={
                                 'blit_window':'',
                                 'button_image':'',
+
                                 'ui_event_preview':False,
+
                                 'motion_pos':[-1,-1],
                                 'click_pos':[-1,-1],
+
                                 'display_pos':[0,0],
-                                'button_width':64,
-                                'button_hight':64,
+                                'button_area':[64,64],
+
                             }):
         self.config = config
         
-    def button(self):
-        self.button_ruct = pygame.Rect((self.config['display_pos'][0],self.config['display_pos'][1],self.config['button_width'],self.config['button_hight']),width=0)
+    def button_set(self):
+        self.button_ruct = pygame.Rect((self.config['display_pos'][0],self.config['display_pos'][1],self.config['button_area'][0],self.config['button_area'][1]),width=0)
+
     def button_blit(self):
+
         if self.config['ui_event_preview'] == True:
             pygame.draw.rect(self.config['blit_window'],(255,55,55,50),self.button_ruct,3)
         if self.config['ui_event_preview'] == False:

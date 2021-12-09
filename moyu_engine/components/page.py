@@ -1,12 +1,13 @@
 
 class Page():
     def __init__(self,config={
-                                    'page':'page_data',
-                                }):
+                                'page_switch':{},
+                                'page':{},
+                            }):
         self.config = config
 
     def set(self,page):
-        return self.config.get(page,'/=/ Page Erro /=/ Out Of Range')
+        return self.config['page_switch'].get(page,'/=/ Page Erro /=/ Out Of Range')
 
 if __name__=="__main__":
     page = Page()
