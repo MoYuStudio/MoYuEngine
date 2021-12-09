@@ -5,34 +5,48 @@ from pygame.locals import *
 
 class Event:
     def __init__(self,config={
-                                    'move':[0,0],
-                                    'zoom':0,
-                                    'move_speed':10,
+                                'mouse_motion_pos':[-1,-1],
+                                'mouse_click_pos':[-1,-1],
+                                'move':[0,0],
+                                'zoom':0,
+                                'move_speed':10,
 
-                                    'move_switch':{
-                                                    'up':False,
-                                                    'down':False,
-                                                    'left':False,
-                                                    'right':False,
-                                    },
-                                    'zoom_switch':{
-                                                    'in':False,
-                                                    'out':False,
-                                    },
-                                }):
+                                'move_switch':{
+                                                'up':False,
+                                                'down':False,
+                                                'left':False,
+                                                'right':False,
+                                },
+                                'zoom_switch':{
+                                                'in':False,
+                                                'out':False,
+                                },
+                            }):
         self.config = config
 
     def set(self):
         for self.event in pygame.event.get():
+            
             if self.event.type == QUIT:
                 pygame.quit()
                 sys.exit()
+
+            if self.event.type == pygame.MOUSEMOTION:
+                self.config['mouse_motion_pos'] = self.event.pos
+
+            if self.event.type == pygame.MOUSEBUTTONDOWN:
+                self.config['mouse_click_pos'] = self.event.pos
+
+            if self.event.type == pygame.MOUSEBUTTONUP:
+                self.config['mouse_click_pos'] = [-1,-1]
 
             if self.event.type == pygame.KEYDOWN:
                 self.move_keydown()
                 
             if self.event.type == pygame.KEYUP:
                 self.move_keyup()
+
+        return self.config
 
     def blit(self):
         self.move()

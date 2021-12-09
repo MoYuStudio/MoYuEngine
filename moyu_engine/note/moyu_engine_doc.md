@@ -22,6 +22,7 @@
 >>> [`window`](#window) 窗口<br/>
 >>> [`surface`](#surface) 图层<br/>
 >>> [`page`](#page) 页面<br/>
+>>> [`ui`](#ui) ui<br/>
 >>> [`event`](#event) 事件(点击/触摸/交互)<br/>
 >>> [`tile`](#tile) 瓷砖<br/>
 >>> [`tilemap`](#tilemap) 瓷砖地图<br/>
@@ -79,6 +80,17 @@
 ### <span id = 'page'>`page`</span> 页面
 
     'page':'page_data',
+
+### <span id = 'ui'>`ui`</span> ui
+
+    'blit_window':'',
+    'button_image':'',
+    'ui_event_preview':False,
+    'motion_pos':[-1,-1],
+    'click_pos':[-1,-1],
+    'display_pos':[0,0],
+    'button_width':64,
+    'button_hight':64,
 
 ### <span id = 'event'>`event`</span> 事件(点击/触摸/交互)
 
