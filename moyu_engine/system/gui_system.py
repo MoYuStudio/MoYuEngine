@@ -47,3 +47,4 @@ class GuiSystem():
 if __name__=="__main__":
     gui = GuiSystem()
     gui.set()
+    gui.blit()
