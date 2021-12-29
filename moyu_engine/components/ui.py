@@ -4,6 +4,7 @@ import pygame
 class Ui:
     def __init__(self):
         self.config = {
+                            # button
                             'blit_window':'',
                             'button_image':'',
 
