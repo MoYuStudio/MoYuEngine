@@ -22,6 +22,9 @@ class Surface:
                             'window_size':[1920,1080],
                         }
 
+        self.config['blit_surface'] = pygame.Surface(self.config['window_size']).convert_alpha()
+        self.config['blit_surface'].fill((255,55,55,0))
+
         self.background_surface = pygame.Surface(self.config['background_size']).convert_alpha()
         self.background_surface.fill((255,55,55,0))
         self.info_surface = pygame.Surface(self.config['info_size']).convert_alpha()

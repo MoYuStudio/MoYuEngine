@@ -7,7 +7,7 @@ class Data:
     def __init__(self):
         self.config =  {
                             # xlsx
-                            'xlsx_path':'moyu_engine\\data\\config.xlsx',
+                            'xlsx_path':'moyu_engine/data/config.xlsx',
                             'nrows_or_ncols':'nrows',
                         }
         self.data = {}
@@ -16,7 +16,7 @@ class Data:
 
     def xlsx(self):
 
-        xlsx_data = xlrd.open_workbook(self.os_path +'\\'+ self.config['xlsx_path'])
+        xlsx_data = xlrd.open_workbook(self.os_path +'/'+ self.config['xlsx_path'])
         sheets_name = xlsx_data.sheet_names()
         self.sheet = sheets_name
 

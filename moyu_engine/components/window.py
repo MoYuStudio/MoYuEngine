@@ -14,6 +14,8 @@ class Window:
                             'icon':icon1,
                             'title':'MoYu Engine',
                             'size':[320,180],
+                            'fps':60,
+                            'clock':'',
                             'resizable':True,
                         }
 
@@ -24,7 +26,9 @@ class Window:
             self.screen = pygame.display.set_mode(self.config['size'])
         screen_title = pygame.display.set_caption(self.config['title'])
         icon = pygame.display.set_icon(self.config['icon'])
-        clock = pygame.time.Clock()
+        self.config['clock'] = pygame.time.Clock()
+
+        pygame.display.flip()
 
         return self.screen
 

@@ -23,6 +23,8 @@ class GuiSystem():
 
     def set(self):
 
+        self.window.set()
+
         self.config['page']['page_switch']['main_mean_page'] = False
         self.config['page']['page']['main_mean_page'] = pygame.Surface(self.config['window']['size']).convert_alpha()
         self.config['page']['page_switch']['main_game_page'] = False
@@ -34,7 +36,6 @@ class GuiSystem():
         
         while True:
             
-            self.window.set()
             self.surface.config['blit_window'] = self.window.screen
 
             self.surface.blit()
@@ -43,6 +44,8 @@ class GuiSystem():
             suface_blit()
             self.event.set()
             event_blit()
+
+            self.config['window']['clock'].tick(self.config['window']['fps'])
 
 if __name__=="__main__":
     gui = GuiSystem()
