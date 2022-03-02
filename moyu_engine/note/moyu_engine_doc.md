@@ -54,7 +54,6 @@
 >>
 >>> [`window`](#APIwindow) 窗口<br/>
 >>> [`surface`](#APIsurface) 图层<br/>
->>> [`page`](#APIpage) 页面<br/>
 >>
 >
 
@@ -64,25 +63,36 @@
 
 ### <span id = 'components'>`components`</span> 组件 与 <span id = 'config'>`APIconfig`</span> 配置
 
-    `组件` 是引擎逻辑的核心，你可以把每一个组件想象成一块块积木，游戏就是由一块块积木组成！
+    组件 是引擎逻辑的核心，你可以把每一个组件想象成一块块积木，游戏就是由一块块积木组成！
 
-    `配置` 是每块积木的信息，比如积木的颜色/大小/形状，同一种积木正因其不同的信息拥有不同的玩法！
+    配置 是每块积木的信息，比如积木的颜色/大小/形状，同一种积木正因其不同的信息拥有不同的玩法！
 
 #### <span id = 'APIwindow'>`window`</span> 窗口
 
     功能： 创建一个窗口 (在玩家的电脑上弹出(创建)一个窗)
 
-    `icon` 图标 = pygame.image.load('moyu_engine/assets/graphics/logo/tileland1.png')
+    icon = pygame.image.load('moyu_engine/assets/graphics/logo/tileland1.png')
+    图标
 
-    `title` 标题 = 'MoYu Engine'
+    title = 'MoYu Engine'
+    标题
 
-    `run` 是否运行 = True
+    run = True
+    是否运行
 
-    `size` 尺寸 = [320,180]
+    size = [320,180]
+    尺寸
 
-    `fps`  = 60
-    
-    `clock` = None
+    fps = 60
 
-    `resizable` 图标尺寸是否可更改 = True
+    clock = None
+
+    resizable = True
+    图标尺寸是否可更改
+
+#### <span id = 'APIsurface'>`surface`</span> 图层
+
+    size = [1920,1080]
+
+    transform_window = True
         

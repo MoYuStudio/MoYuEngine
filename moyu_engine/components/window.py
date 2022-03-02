@@ -11,8 +11,9 @@ pygame.display.init()
 pygame.mixer.init()
 
 class Window:
-    
+
     def __init__(self):
+
         self.run = C.run
         self.icon = C.icon
         self.title = C.title
@@ -21,6 +22,10 @@ class Window:
         self.clock = C.clock
 
     def set(self):
+
+        pygame.init()
+        pygame.display.init()
+        pygame.mixer.init()
 
         if C.resizable == False:
             self.screen = pygame.display.set_mode(self.size)
@@ -37,10 +42,19 @@ class Window:
 
             self.blit()
 
+            pygame.display.update()
+
             for self.event in pygame.event.get():
-                
+
                 if self.event.type == QUIT:
                     self.run = False
 
+                # self.event()
+
+        return self.screen
+
     def blit(self):
+        pass
+
+    def event(self):
         pass
