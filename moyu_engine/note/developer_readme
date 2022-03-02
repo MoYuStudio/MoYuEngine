@@ -2,7 +2,6 @@
 Python Vison :
 
     Python 3.8.10
-    Python 3.10.0
 
 Pypl install :
 
@@ -13,56 +12,11 @@ Pypl install :
     pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple some-package
 
     Unix/MacOS/Linux
-    pip3 install -r moyu_engine/data/moyu_engine_package
+    pip3 install -r moyu\note\moyu_engine_package
+
+    pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple -r moyu_engine\note\moyu_engine_package
 
     Windows
-    pip install -r moyu_engine/data/moyu_engine_package
+    pip install -r moyu\note\moyu_engine_package
 
-
-Tinyland弹丸之地 是一款 基于Python开发 试验性游戏项目 建筑类沙盒游戏
-
-# MoYu Engine 文件检索
--------------------
->`moyu_engine` 摸鱼引擎目录（所有的游戏文件的目录)<br/>
->>
->>`assets` 资源目录（所有的 = 资源性质文件 = *贴图文件&字体文件&音乐文件 等 的目录）<br/>
->>>`font` 字体资源目录<br/>
->>>`graphics` 图像资源目录<br/>
->>>`sound` 声音资源目录<br/>
->>
->>`config` 配置目录（所有的 = 游戏运行文件 = *代码文件&存档文件&运行产生文件 等 的目录）<br/>
->>>`components` 模块目录<br/>
->>>`data` 存档目录<br/>
->>>`event` 事件目录<br/>
->>>`states` 状态机目录<br/>
->>>`surface` 窗口目录<br/>
->>>`constants.py` （变量Pyhton文件）<br/>
->>>`font.py` （字体Pyhton文件）<br/>
->>>`graphics.py` （图形Pyhton文件）<br/>
->>>`setup.py` （运行Pyhton文件）<br/>
->>>`sound.py` （声音Pyhton文件）<br/>
-
->>>>>最小系统
->>>>>win = c.window.Window()
->>>>>接口
->>>>>win = c.window.Window(icon=icon1,title='MoYu Engine',size=[320,180],resizable=True)
->>>>>
->>>>>icon 窗口图标 = pygame bit 比特图
->>>>>title 窗口标题 = str 字符串
->>>>>size 窗口尺寸 = [宽，高] 数组
->>>>>resizable 窗口尺寸可否改变 = True/False 布尔值
->>>>>```
->>>>>```
->>>>>最小系统
->>>>>ev = c.event.Event()
->>>>>```
->>>>>```
->>>>>最小系统
->>>>>save = c.save.Save()
->>>>>接口
->>>>>save = c.save.Save(path='moyu_engine/save/',slot_name='save',write_data={})
->>>>>
->>>>>path 保存路径 = str 字符串
->>>>>slot_name 存档名 = str 字符串
->>>>>write_data 需要保存的数据 = 字典
->>>>>```
+    pip install -i https://pypi.tuna.tsinghua.edu.cn/simple -r moyu_engine\note\moyu_engine_package

@@ -1,3 +1,4 @@
+
 ### MoYu Engine
 
 # 摸鱼引擎
@@ -9,10 +10,13 @@
 ##### 最简单的2D图像引擎代码库 创建一个弹窗仅需三行代码
 
 ```
+
 import moyu_engine
 
-gui = moyu_engine.system.gui_system.GuiSystem()
-gui.set()
+window = moyu_engine.components.window.Window()
+
+window.set()
+
 ```
 
 ## 积木和PPT

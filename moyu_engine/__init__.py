@@ -1,3 +1,3 @@
 
 from .components import *
-from .system import *
+from .config import *
