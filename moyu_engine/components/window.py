@@ -1,6 +1,4 @@
 
-# os.sep
-
 import moyu_engine.config.window as C
 
 import pygame
