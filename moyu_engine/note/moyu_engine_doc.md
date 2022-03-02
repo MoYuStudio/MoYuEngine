@@ -54,6 +54,7 @@
 >>
 >>> [`window`](#APIwindow) 窗口<br/>
 >>> [`surface`](#APIsurface) 图层<br/>
+>>> [`page`](#APIpage) 页面<br/>
 >>
 >
 
@@ -95,4 +96,6 @@
     size = [1920,1080]
 
     transform_window = True
+
+#### <span id = 'APIpage'>`page`</span> 页面
         
