@@ -3,7 +3,7 @@
 # 摸鱼引擎官方文档
 
 ## 目录
-[`初次使用`](#FirstTimeUse)
+### [初次使用](#FirstTimeUse)
 
 ## <span id = 'FirstTimeUse'>初次使用</span>
 
