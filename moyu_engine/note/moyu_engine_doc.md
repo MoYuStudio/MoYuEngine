@@ -54,7 +54,8 @@
 >>
 >>> [`window`](#APIwindow) 窗口<br/>
 >>> [`surface`](#APIsurface) 图层<br/>
->>> [`page`](#APIpage) 页面<br/>
+>>> [`event`](#APIevent) 输入<br/>
+>>> [`data`](#APIdata) 数据<br/>
 >>
 >> [`config`](#APIconfig) 配置<br/>
 >>
@@ -97,14 +98,34 @@
 
 #### <span id = 'APIsurface'>`surface`</span> 图层
 
+    功能： 
+    
     size = [1920,1080]
 
     transform_window = True
 
-#### <span id = 'APIpage'>`page`</span> 页面
-        
+#### <span id = 'APIevent'>`event`</span> 输入
 
+    功能： 
+
+    self.move_pos = [0,0]
+    self.zoom_level = 0
+    self.move_speed = 0.1
+
+    self.move_up = False
+    self.move_down = False
+    self.move_left = False
+    self.move_right = False
+    self.zoom_in = False
+    self.zoom_out = False
+
+#### <span id = 'APIdata'>`data`</span> 数据
+
+    功能： 
+        
 ### <span id = 'APIconfig'>`config`</span> 配置
+
+    配置 是每块积木的信息，比如积木的颜色/大小/形状，同一种积木正因其不同的信息拥有不同的玩法！
 
 #### <span id = 'APIglobalconfig'>`global_config`</span> 全局配置
 

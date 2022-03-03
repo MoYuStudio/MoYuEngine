@@ -1,6 +1,10 @@
 
 import moyu_engine
 
+G = moyu_engine.config.global_config
+# 改变窗口的大小 (推荐更改全局变量)
+G.window_size = [320*2,180*2]
+
 window = moyu_engine.window.Window()
 # 生产出一个图层
 surface = moyu_engine.surface.Surface()
