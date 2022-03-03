@@ -104,7 +104,7 @@
 #### <span id = 'APIpage'>`page`</span> 页面
         
 
-### <span id = 'config'>`APIconfig`</span> 配置
+### <span id = 'APIconfig'>`config`</span> 配置
 
 #### <span id = 'APIglobalconfig'>`global_config`</span> 全局配置
 
