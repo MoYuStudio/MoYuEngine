@@ -1,3 +1,2 @@
 
-from .surface import *
-from .window import *
+from .global_config import *
