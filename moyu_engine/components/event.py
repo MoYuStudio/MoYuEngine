@@ -1,21 +1,19 @@
 
-import moyu_engine.config.event as C
-
 import pygame
 
 class Event:
 
     def __init__(self):
         
-        self.move_pos = C.move_pos
-        self.zoom_level = C.zoom_level
-        self.move_speed = C.move_speed
-        self.move_up = C.move_up
-        self.move_down = C.move_down
-        self.move_left = C.move_left
-        self.move_right = C.move_right
-        self.zoom_in = C.zoom_in
-        self.zoom_out = C.zoom_out
+        self.move_pos = [0,0]
+        self.zoom_level = 0
+        self.move_speed = 10
+        self.move_up = False
+        self.move_down = False
+        self.move_left = False
+        self.move_right = False
+        self.zoom_in = False
+        self.zoom_out = False
 
     def move(self):
         if self.move_up == True:

@@ -1,6 +1,5 @@
 
-import moyu_engine.config.surface as C
-import moyu_engine.config.window as window
+import moyu_engine.config.global_config as G
 
 import pygame
 from pygame.locals import *
@@ -15,10 +14,10 @@ class Surface:
 
     def __init__(self):
 
-        self.size = C.size
-        self.transform_window = C.transform_window
+        self.size = [1920,1080]
+        self.transform_window = True
 
-        self.window_size = window.size
+        self.window_size = G.window_size
 
         self.surface = pygame.Surface(self.size).convert_alpha()
         self.surface.fill((255,55,55,0))

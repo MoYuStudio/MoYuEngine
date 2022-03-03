@@ -50,11 +50,15 @@
 >
 >> [`assets`](#APIassets) 资源<br/>
 >>
->> [`components`](#APIcomponents) 组件 与 [`config`](#APIconfig) 配置<br/>
+>> [`components`](#APIcomponents) 组件<br/>
 >>
 >>> [`window`](#APIwindow) 窗口<br/>
 >>> [`surface`](#APIsurface) 图层<br/>
 >>> [`page`](#APIpage) 页面<br/>
+>>
+>> [`config`](#APIconfig) 配置<br/>
+>>
+>>> [`global_config`](#APIglobalconfig) 全局配置<br/>
 >>
 >
 
@@ -62,7 +66,7 @@
 
     这一部分是引擎自带的资源，如果你对我们的引擎没有充分了解之前请勿修改以防造成严重错误！
 
-### <span id = 'components'>`components`</span> 组件 与 <span id = 'config'>`APIconfig`</span> 配置
+### <span id = 'components'>`components`</span> 组件
 
     组件 是引擎逻辑的核心，你可以把每一个组件想象成一块块积木，游戏就是由一块块积木组成！
 
@@ -81,7 +85,7 @@
     run = True
     是否运行
 
-    size = [320,180]
+    size = G.window_size
     尺寸
 
     fps = 60
@@ -99,3 +103,11 @@
 
 #### <span id = 'APIpage'>`page`</span> 页面
         
+
+### <span id = 'config'>`APIconfig`</span> 配置
+
+#### <span id = 'APIglobalconfig'>`global_config`</span> 全局配置
+
+    window_size = [320,180]
+    窗口尺寸
+

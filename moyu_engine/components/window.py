@@ -1,5 +1,5 @@
 
-import moyu_engine.config.window as C
+import moyu_engine.config.global_config as G
 
 import pygame
 from pygame.locals import *
@@ -12,12 +12,16 @@ class Window:
 
     def __init__(self):
 
-        self.run = C.run
-        self.icon = C.icon
-        self.title = C.title
-        self.size = C.size
-        self.fps = C.fps
-        self.clock = C.clock
+        
+        self.icon = pygame.image.load('moyu_engine/assets/graphics/logo/tileland1.png')
+        self.title = 'MoYu Engine'
+
+        self.run = True
+        self.size = G.window_size
+        self.fps = 60
+        self.clock = None
+
+        self.resizable = True
 
     def set(self):
 
@@ -25,9 +29,9 @@ class Window:
         pygame.display.init()
         pygame.mixer.init()
 
-        if C.resizable == False:
+        if self.resizable == False:
             self.screen = pygame.display.set_mode(self.size)
-        if C.resizable == True:
+        if self.resizable == True:
             self.screen = pygame.display.set_mode(self.size,pygame.RESIZABLE)
 
         self.screen_title = pygame.display.set_caption(self.title)
