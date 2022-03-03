@@ -46,14 +46,14 @@ class Window:
 
             pygame.display.update()
 
-            for self.event in pygame.event.get():
+            for self.key_event in pygame.event.get():
 
-                if self.event.type == QUIT:
+                if self.key_event.type == QUIT:
                     self.run = False
 
-                # self.event()
+                self.event()
 
-        return self.screen
+        return self.screen,self.key_event
 
     def blit(self):
         pass

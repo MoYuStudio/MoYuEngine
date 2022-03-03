@@ -1,5 +1,6 @@
 
 pygame == 2.1.2
+pygame_gui == 0.6.4
 
 noise == 1.2.2
 
