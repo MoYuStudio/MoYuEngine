@@ -18,7 +18,7 @@ class Window:
 
         self.run = True
         self.size = G.window_size
-        self.fps = 60
+        self.fps = 60*60
         self.clock = None
 
         self.resizable = True
@@ -53,6 +53,8 @@ class Window:
 
                 self.event()
 
+            self.clock.tick(self.fps)
+
         return self.screen,self.key_event
 
     def blit(self):
@@ -60,3 +62,6 @@ class Window:
 
     def event(self):
         pass
+
+if __name__ == '__main__':
+    pass

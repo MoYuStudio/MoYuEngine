@@ -5,18 +5,16 @@ import moyu_engine
 import pygame
 player = pygame.image.load('moyu_engine/assets/graphics/logo/tileland1.png')
 
-G = moyu_engine.config.global_config
+G = moyu_engine.global_config
 G.window_size = [320*2,180*2]
 
-window = moyu_engine.window.Window()
-surface = moyu_engine.surface.Surface()
-event = moyu_engine.event.Event()
+window = moyu_engine.Window()
+surface = moyu_engine.Surface()
+event = moyu_engine.Event()
 
 window.title = 'MY FIRST GAME 我的第一个游戏'
 
 def BackgroundPage():
-
-    print(event.move_pos)
 
     surface.surface.fill((154,255,154))
     surface.surface.blit(player,(event.move_pos))
@@ -27,6 +25,10 @@ def BackgroundPage():
 def PlayerEvent():
 
     event.move_key(window.key_event)
+
+    if window.key_event.type == pygame.KEYDOWN:
+        if window.key_event.type == pygame.K_0:
+            print('0')
 
 window.blit = BackgroundPage
 window.event = PlayerEvent

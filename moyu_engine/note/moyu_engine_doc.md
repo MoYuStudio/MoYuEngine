@@ -35,7 +35,7 @@
 
     import moyu_engine
 
-    window = moyu_engine.window.Window()
+    window = moyu_engine.Window()
 
     window.set()
 
@@ -99,7 +99,7 @@
 #### <span id = 'APIsurface'>`surface`</span> 图层
 
     功能： 
-    
+
     size = [1920,1080]
 
     transform_window = True

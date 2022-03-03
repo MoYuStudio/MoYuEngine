@@ -13,7 +13,7 @@
 
 import moyu_engine
 
-window = moyu_engine.window.Window()
+window = moyu_engine.Window()
 
 window.set()
 
