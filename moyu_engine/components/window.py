@@ -12,7 +12,6 @@ class Window:
 
     def __init__(self):
 
-        
         self.icon = pygame.image.load('moyu_engine/assets/graphics/logo/tileland1.png')
         self.title = 'MoYu Engine'
 
@@ -46,16 +45,16 @@ class Window:
 
             pygame.display.update()
 
-            for self.key_event in pygame.event.get():
+            for self.input_event in pygame.event.get():
 
-                if self.key_event.type == QUIT:
+                if self.input_event.type == QUIT:
                     self.run = False
 
                 self.event()
 
             self.clock.tick(self.fps)
 
-        return self.screen,self.key_event
+        return self.screen,self.input_event
 
     def blit(self):
         pass
