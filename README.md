@@ -5,9 +5,9 @@
 
 ![](https://github.com/MoYuStudio/MoYuEngine/raw/main/moyu_engine/assets/graphics/tileland1.png)
 
-## 最简单的2D图像引擎
+## 最简单的图像引擎
 
-##### 最简单的2D图像引擎代码库 创建一个弹窗仅需三行代码
+##### 最简单的图像引擎代码库 创建一个弹窗仅需三行代码
 
 ```
 
