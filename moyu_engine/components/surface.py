@@ -35,3 +35,5 @@ class Surface:
 
         pygame.display.update()
         
+if __name__ == '__main__':
+    pass

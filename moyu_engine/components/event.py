@@ -25,6 +25,15 @@ class Event:
     def input(self,input_event):
         self.input_event = input_event
 
+        if self.input_event.type == pygame.MOUSEMOTION:
+            G.mouse_motion_pos = self.input_event.pos
+
+        if self.input_event.type == pygame.MOUSEBUTTONDOWN:
+            G.mouse_click_pos = self.input_event.pos
+
+        if self.input_event.type == pygame.MOUSEBUTTONUP:
+            G.mouse_click_pos = [-1,-1]
+
         if self.input_event.type == pygame.KEYDOWN:
 
             self.keydown()
@@ -75,8 +84,6 @@ class Event:
                 if self.zoom_switch == True:
                     self.zoom_out = False
 
-
-
     def blit(self):
 
         if self.move_switch == True:
@@ -110,3 +117,5 @@ class Event:
     def keyup(self):
         pass
 
+if __name__ == '__main__':
+    pass

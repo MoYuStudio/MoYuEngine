@@ -1,6 +1,7 @@
 
 import moyu_engine.config.global_config as G
 
+import sys
 import pygame
 from pygame.locals import *
 
@@ -49,6 +50,8 @@ class Window:
 
                 if self.input_event.type == QUIT:
                     self.run = False
+                    pygame.quit()
+                    sys.exit()
 
                 self.event()
 
