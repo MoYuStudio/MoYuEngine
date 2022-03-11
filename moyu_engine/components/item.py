@@ -8,6 +8,7 @@ class Item:
     def __init__(self):
 
         self.type = 'item'
+        self.type = 'item'
 
         self.default_image = pygame.image.load('moyu_engine/assets/graphics/logo/tileland1.png')
         self.preclick_image = None
