@@ -17,6 +17,7 @@ play = moyu_engine.Item()
 
 window.title = 'MY FIRST GAME 我的第一个游戏'
 
+play.collision_type = 'player'
 item.pos = [100,100]
 
 event.move_switch = True
@@ -31,6 +32,7 @@ def BackgroundPage():
 
     surface.blit(window.screen)
     event.blit()
+    print(G.item_collision)
 
 def PlayerEvent():
     event.input(window.input_event)
