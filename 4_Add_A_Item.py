@@ -24,8 +24,9 @@ def BackgroundPage():
 
     surface.surface.fill((154,255,154))
     surface.surface.blit(player,(event.move_pos))
+    item.blit(surface.surface)
+
     surface.blit(window.screen)
-    item.blit(window.screen)
     event.blit()
 
 def PlayerEvent():
