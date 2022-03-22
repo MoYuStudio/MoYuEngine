@@ -25,14 +25,14 @@ event.move_switch = True
 def BackgroundPage():
 
     surface.surface.fill((154,255,154))
-    #surface.surface.blit(player,(event.move_pos))
+    # surface.surface.blit(player,(event.move_pos))
     play.pos = (event.move_pos)
     play.blit(surface.surface)
     item.blit(surface.surface)
 
     surface.blit(window.screen)
     event.blit()
-    print(G.item_collision)
+    # print(G.item_collision)
 
 def PlayerEvent():
     event.input(window.input_event)

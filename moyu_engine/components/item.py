@@ -59,11 +59,11 @@ class Item:
         if self.collision_mod == True:
             for collision_with_ones in self.collision_with:
                 for item_name in G.item_collision[collision_with_ones]:
-                    print(item_name)
-                    if pygame.Rect.collidepoint(self.ruct,(G.item_collision[collision_with_ones][item_name]['pos'][0],G.item_collision[collision_with_ones][item_name]['pos'][1])) == True or \
-                        pygame.Rect.collidepoint(self.ruct,(G.item_collision[collision_with_ones][item_name]['pos'][0]+G.item_collision[collision_with_ones][item_name]['area'][0],G.item_collision[collision_with_ones][item_name]['pos'][1])) == True or \
-                        pygame.Rect.collidepoint(self.ruct,(G.item_collision[collision_with_ones][item_name]['pos'][0],G.item_collision[collision_with_ones][item_name]['pos'][1]+G.item_collision[collision_with_ones][item_name]['area'][1])) == True or \
-                        pygame.Rect.collidepoint(self.ruct,(G.item_collision[collision_with_ones][item_name]['pos'][0]+G.item_collision[collision_with_ones][item_name]['area'][0],G.item_collision[collision_with_ones][item_name]['pos'][1]+G.item_collision[collision_with_ones][item_name]['area'][1])) == True :
+                    collision_item = G.item_collision[collision_with_ones][item_name]
+                    if pygame.Rect.collidepoint(self.ruct,(collision_item['pos'][0],collision_item['pos'][1])) == True or \
+                        pygame.Rect.collidepoint(self.ruct,(collision_item['pos'][0]+collision_item['area'][0],collision_item['pos'][1])) == True or \
+                        pygame.Rect.collidepoint(self.ruct,(collision_item['pos'][0],collision_item['pos'][1]+collision_item['area'][1])) == True or \
+                        pygame.Rect.collidepoint(self.ruct,(collision_item['pos'][0]+collision_item['area'][0],collision_item['pos'][1]+collision_item['area'][1])) == True :
 
                         self.collision_preview_width_color = (185,55,255,30)
 
