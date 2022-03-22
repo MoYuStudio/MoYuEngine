@@ -23,6 +23,7 @@ class Item:
         self.collision_with = []
         self.collision_preview = True
         self.collision_preview_width = 3
+        self.collision_preview_width_color = (155,255,55,30)
 
     def blit(self,blit_surface):
         self.blit_surface = blit_surface
@@ -32,14 +33,18 @@ class Item:
         self.blit_surface.blit(self.default_image,self.ruct)
 
         if self.collision_preview == True:
-            pygame.draw.rect(self.blit_surface,(255,55,55,50),self.ruct,self.collision_preview_width)
+            pygame.draw.rect(self.blit_surface,self.collision_preview_width_color,self.ruct,self.collision_preview_width)
         if self.collision_preview == False:
             pass
 
-        if pygame.Rect.collidepoint(self.ruct,G.mouse_click_pos) == True:
-            print('click')
+        if pygame.Rect.collidepoint(self.ruct,G.mouse_click_pos) == False and pygame.Rect.collidepoint(self.ruct,G.mouse_motion_pos) ==False:
+            self.collision_preview_width_color = (155,255,55,30)
         if pygame.Rect.collidepoint(self.ruct,G.mouse_motion_pos) == True:
+            self.collision_preview_width_color = (255,215,55,30)
             print('motion')
+        if pygame.Rect.collidepoint(self.ruct,G.mouse_click_pos) == True:
+            self.collision_preview_width_color = (255,55,55,30)
+            print('click')
 
     def event():
         pass
