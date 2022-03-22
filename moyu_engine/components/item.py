@@ -7,7 +7,7 @@ from pygame.locals import *
 class Item:
     def __init__(self):
 
-        self.type = 'item'
+        self.name = 'item'
         self.type = 'item'
 
         self.default_image = pygame.image.load('moyu_engine/assets/graphics/logo/tileland1.png')
@@ -46,7 +46,10 @@ class Item:
             self.collision_preview_width_color = (255,55,55,30)
             print('click')
 
-    def event():
+    def event(self):
+        pass
+
+    def collision(self):
         pass
 
 if __name__ == '__main__':

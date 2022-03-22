@@ -13,6 +13,7 @@ window = moyu_engine.Window()
 surface = moyu_engine.Surface()
 event = moyu_engine.Event()
 item = moyu_engine.Item()
+play = moyu_engine.Item()
 
 window.title = 'MY FIRST GAME 我的第一个游戏'
 
@@ -23,7 +24,9 @@ event.move_switch = True
 def BackgroundPage():
 
     surface.surface.fill((154,255,154))
-    surface.surface.blit(player,(event.move_pos))
+    #surface.surface.blit(player,(event.move_pos))
+    play.pos = (event.move_pos)
+    play.blit(surface.surface)
     item.blit(surface.surface)
 
     surface.blit(window.screen)
