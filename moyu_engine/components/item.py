@@ -68,6 +68,5 @@ class Item:
                         self.collision_preview_width_color = (185,55,255,30)
 
 
-
 if __name__ == '__main__':
     pass
