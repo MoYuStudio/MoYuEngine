@@ -8,7 +8,7 @@ class Event:
 
     def __init__(self):
         
-        self.move_pos = [0,0]
+        # G.movement = [0,0]
         self.zoom_level = 0
         self.move_speed = 0.1
 
@@ -88,13 +88,13 @@ class Event:
 
         if self.move_switch == True:
             if self.move_up == True:
-                self.move_pos[1] -= self.move_speed
+                G.movement[1] -= self.move_speed
             if self.move_down == True:
-                self.move_pos[1] += self.move_speed
+                G.movement[1] += self.move_speed
             if self.move_left == True:
-                self.move_pos[0] -= self.move_speed
+                G.movement[0] -= self.move_speed
             if self.move_right == True:
-                self.move_pos[0] += self.move_speed
+                G.movement[0] += self.move_speed
 
         if self.zoom_switch == True:
             if self.zoom_in == True:
@@ -102,15 +102,15 @@ class Event:
                     self.zoom_level = 0.25
                 else:
                     self.zoom_level -= 0.025
-                    self.move_pos[1] -= 4.25
-                    self.move_pos[0] -= 7.9
+                    G.movement[1] -= 4.25
+                    G.movement[0] -= 7.9
             if self.zoom_out == True:
                 if self.zoom_level >= 1:
                     self.zoom_level = 1
                 else:
                     self.zoom_level += 0.025
-                    self.move_pos[1] += 4.25
-                    self.move_pos[0] += 7.9
+                    G.movement[1] += 4.25
+                    G.movement[0] += 7.9
 
     def keydown(self):
         pass

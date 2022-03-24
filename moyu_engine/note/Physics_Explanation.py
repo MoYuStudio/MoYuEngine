@@ -10,7 +10,7 @@ screen = pygame.display.set_mode((500,500),0,32)
  
 player = pygame.Rect(100,100,40,80)
  
-tiles = [pygame.Rect(200,350,50,50),pygame.Rect(260,320,50,50)]
+tiles = [pygame.Rect(200,350,50,50),pygame.Rect(260,320,50,50),pygame.Rect(30,100,50,50)]
  
 def collision_test(rect,tiles):
     collisions = []
