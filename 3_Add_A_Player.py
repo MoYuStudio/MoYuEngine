@@ -20,7 +20,7 @@ event.move_switch = True
 def BackgroundPage():
 
     surface.surface.fill((154,255,154))
-    surface.surface.blit(player,(event.move_pos))
+    surface.surface.blit(player,(G.movement))
     surface.blit(window.screen)
     event.blit()
 
