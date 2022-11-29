@@ -1,0 +1,22 @@
+
+Python Vison :
+
+    Python 3.11.0
+
+Pypl install :
+
+    pip install pip -U
+    pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+
+    pip install -i https://pypi.tuna.tsinghua.edu.cn/simple some-package
+    pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple some-package
+
+    Unix/MacOS/Linux
+    pip3 install -r moyu_engine/data/note/moyu_engine_package
+
+    pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple -r moyu_engine/data/note/moyu_engine_package
+
+    Windows
+    pip install -r moyu_engine/data/note/moyu_engine_package
+
+    pip install -i https://pypi.tuna.tsinghua.edu.cn/simple -r moyu_engine/data/note/moyu_engine_package
