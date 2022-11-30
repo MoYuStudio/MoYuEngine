@@ -3,18 +3,19 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-欢迎使用 MoYuEngine 摸鱼引擎 官方文档
+欢迎使用 MoYuEngine 摸鱼引擎
 =======================================
 
 .. toctree::
    :maxdepth: 3
-   :caption: Contents:
+   :caption: 引索:
 
-   doc/index
+   01简介/index
+   02初次使用/index
 
-Indices and tables
-==================
+..Indices and tables
+..==================
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+..* :ref:`genindex`
+..* :ref:`modindex`
+..* :ref:`search`
