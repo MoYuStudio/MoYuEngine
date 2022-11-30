@@ -2,7 +2,7 @@
 ### MoYu Engine
 
 # 摸鱼引擎
-[![Documentation Status](https://readthedocs.org/projects/moyu-engine/badge/?version=latest)](https://moyu-engine.readthedocs.io/en/latest/?badge=latest)
+[![Documentation Status](https://readthedocs.org/projects/moyu-engine/badge/?version=latest)](https://moyu-engine.readthedocs.io/zh_CN/latest/?badge=latest)
 
 ## 最简单的图像引擎
 
@@ -39,4 +39,5 @@ window.set()
 
 # 摸鱼引擎官方文档
 
-[Official Documentation 官方文档](https://github.com/MoYuStudio/MoYuEngine/blob/main/moyu_engine/data/doc/build/html/index.html)
+[![Documentation Status](https://readthedocs.org/projects/moyu-engine/badge/?version=latest)](https://moyu-engine.readthedocs.io/zh_CN/latest/?badge=latest)
+[Official Documentation 官方文档](https://moyu-engine.readthedocs.io/zh_CN/latest/?badge=latest)

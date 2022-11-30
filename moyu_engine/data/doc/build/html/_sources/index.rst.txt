@@ -8,14 +8,7 @@
 
 .. toctree::
    :maxdepth: 3
-   :caption: 引索:
+   :caption: 目录:
 
-   01简介/index
+   01关于
    02初次使用/index
-
-..Indices and tables
-..==================
-
-..* :ref:`genindex`
-..* :ref:`modindex`
-..* :ref:`search`
