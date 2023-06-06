@@ -24,7 +24,7 @@ def load_tile_textures():
     tile_images = []
     tile_textures = []
     
-    for i in range(1025):
+    for i in range(256):
         try:
             filename = f'moyu_engine/assets/block/{i}.png'
             image = pyray.load_image(filename)
