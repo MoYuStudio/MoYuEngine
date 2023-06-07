@@ -10,7 +10,7 @@ WINDOW_HEIGHT = 1080
 TILE_WIDTH = 16
 TILE_HEIGHT = 16
 
-TILE_MAP_SIZE = 128
+TILE_MAP_SIZE = 64
 
 VIEW_SPEED = 0.06*TILE_MAP_SIZE
 
@@ -65,6 +65,27 @@ def main():
     zoom_level = 1.0
     
     noise_map = generate_noise_map(TILE_MAP_SIZE, TILE_MAP_SIZE)
+    
+    # Define your view boundaries
+    view_left = 0
+    view_right = WINDOW_WIDTH
+    view_top = 0
+    view_bottom = WINDOW_HEIGHT
+
+    # Perform frustum culling test
+    def is_tile_visible(tile_x, tile_y):
+        tile_left = (tile_x * TILE_WIDTH) - view_x
+        tile_right = ((tile_x + 1) * TILE_WIDTH) - view_x
+        tile_top = (tile_y * TILE_HEIGHT) - view_y
+        tile_bottom = ((tile_y + 1) * TILE_HEIGHT) - view_y
+        
+        if (
+            tile_right < view_left or tile_left > view_right or
+            tile_bottom < view_top or tile_top > view_bottom
+        ):
+            return False
+        
+        return True
 
     while not pyray.window_should_close():
 
@@ -97,42 +118,43 @@ def main():
         
         for x in range(0, TILE_MAP_SIZE):
             for y in range(0, TILE_MAP_SIZE):
-                
-                tile_x = (x - y) * TILE_WIDTH // 2 * zoom_level + view_x
-                tile_y = (x + y) * TILE_HEIGHT // 4 * zoom_level + view_y
+                if is_tile_visible(x, y):
+                    
+                    tile_x = (x - y) * TILE_WIDTH // 2 * zoom_level + view_x
+                    tile_y = (x + y) * TILE_HEIGHT // 4 * zoom_level + view_y
 
-                noise_value = noise_map[x][y]
-                
-                if -1000 <= noise_value <= 30:
-                    tile_index = 5
-                elif 31 <= noise_value <= 40:
-                    tile_index = 3
-                elif 41 <= noise_value <= 70:
-                    tile_index = 1
-                elif 71 <= noise_value <= 80:
-                    tile_index = 2
-                elif 81 <= noise_value <= 1000:
-                    tile_index = 4
-                else:
-                    tile_index = 0 
-                
-                if tile_index >= 0 and tile_index < len(tile_textures):
-                    tile_image = tile_images[tile_index]
-                    tile_texture = tile_textures[tile_index]
+                    noise_value = noise_map[x][y]
+                    
+                    if -1000 <= noise_value <= 30:
+                        tile_index = 5
+                    elif 31 <= noise_value <= 40:
+                        tile_index = 3
+                    elif 41 <= noise_value <= 70:
+                        tile_index = 1
+                    elif 71 <= noise_value <= 80:
+                        tile_index = 2
+                    elif 81 <= noise_value <= 1000:
+                        tile_index = 4
+                    else:
+                        tile_index = 0 
+                    
+                    if tile_index >= 0 and tile_index < len(tile_textures):
+                        tile_image = tile_images[tile_index]
+                        tile_texture = tile_textures[tile_index]
 
-                    if tile_image and tile_texture:
-                        source_rect = pyray.Rectangle(0, 0, tile_image.width, tile_image.height)
+                        if tile_image and tile_texture:
+                            source_rect = pyray.Rectangle(0, 0, tile_image.width, tile_image.height)
+                            dest_rect = pyray.Rectangle(tile_x, tile_y, TILE_WIDTH * zoom_level, TILE_HEIGHT * zoom_level)
+                            rotation = 0.0
+
+                            pyray.draw_texture_pro(tile_texture, source_rect, dest_rect, pyray.Vector2(0, 0), rotation, pyray.RAYWHITE)
+
+                    if x == mouse_tile_x and y == mouse_tile_y:
+                        source_rect = pyray.Rectangle(0, 0, tile_images[255].width, tile_images[255].height)
                         dest_rect = pyray.Rectangle(tile_x, tile_y, TILE_WIDTH * zoom_level, TILE_HEIGHT * zoom_level)
                         rotation = 0.0
 
-                        pyray.draw_texture_pro(tile_texture, source_rect, dest_rect, pyray.Vector2(0, 0), rotation, pyray.RAYWHITE)
-
-                if x == mouse_tile_x and y == mouse_tile_y:
-                    source_rect = pyray.Rectangle(0, 0, tile_images[255].width, tile_images[255].height)
-                    dest_rect = pyray.Rectangle(tile_x, tile_y, TILE_WIDTH * zoom_level, TILE_HEIGHT * zoom_level)
-                    rotation = 0.0
-
-                    pyray.draw_texture_pro(tile_textures[255], source_rect, dest_rect, pyray.Vector2(0, 0), rotation, pyray.RAYWHITE)
+                        pyray.draw_texture_pro(tile_textures[255], source_rect, dest_rect, pyray.Vector2(0, 0), rotation, pyray.RAYWHITE)
 
         fps = pyray.get_fps()
         pyray.draw_text(f"FPS: {fps}", 10, 10, 20, pyray.DARKGRAY)
