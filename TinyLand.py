@@ -4,9 +4,9 @@
 import sys
 sys.dont_write_bytecode = True
 
-import pyray
-
 import moyu_engine
+
+import pyray
 
 class Game:
     def __init__(self):
@@ -30,6 +30,7 @@ class Game:
         self.textures_loader = moyu_engine.TexturesLoader(folder_path = 'moyu_engine/assets/block', file_type = 'png', file_num = 256)
         
         self.window = moyu_engine.Window(title = 'MoYuEngine', width = self.window_width, height = self.window_height)
+        self.window.fps_display = True
 
         self.noise_map = moyu_engine.NoiseMap(size = 32)
         self.noise_map = self.noise_map.berlin_noise()
@@ -123,7 +124,6 @@ class Game:
     def window_clean(self):
         
         self.textures_loader.unload()
-        
         
     def run(self):
 
