@@ -7,7 +7,7 @@ sys.dont_write_bytecode = True
 import pyray
 
 class TexturesLoader:
-    def __init__(self, folder_path = 'moyu_engine/assets/block/', file_type = 'png', file_num = 256):
+    def __init__(self, folder_path = 'moyu_engine/assets/block', file_type = 'png', file_num = 256):
         self.folder_path = folder_path
         self.file_type = file_type
         self.file_num = file_num
@@ -19,7 +19,7 @@ class TexturesLoader:
         
         for file_id in range(self.file_num):
             try:
-                filename = self.folder_path + str(file_id) + '.' + self.file_type
+                filename = self.folder_path + '/' + str(file_id) + '.' + self.file_type
                 image = pyray.load_image(filename)
                 texture = pyray.load_texture_from_image(image)
                 self.images.append(image)

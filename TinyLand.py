@@ -4,94 +4,88 @@
 import sys
 sys.dont_write_bytecode = True
 
-import random
-
 import pyray
-import noise
 
 import moyu_engine
 
-WINDOW_WIDTH = 1920
-WINDOW_HEIGHT = 1080
+class Game:
+    def __init__(self):
+        self.window_width = 1920
+        self.window_height = 1080
 
-RENDER_WIDTH = 640
-RENDER_HEIGHT = 360
+        self.render_width = 360
+        self.render_height = 180
 
-TILE_WIDTH = 16
-TILE_HEIGHT = 16
+        self.tile_width = 16
+        self.tile_height = 16
 
-TILE_MAP_SIZE = 32
+        self.tile_map_size = 32
 
-VIEW_SPEED = 0.06 * TILE_MAP_SIZE
+        self.view_speed = 0.06 * self.tile_map_size
 
-ZOOM_SPEED = 0.006
-MIN_ZOOM = 3
-MAX_ZOOM = 9
+        self.zoom_speed = 0.006
+        self.min_zoom = 3
+        self.max_zoom = 9
 
-ANIMATION_FRAME_INTERVAL = 0.2
+        self.textures_loader = moyu_engine.TexturesLoader(folder_path = 'moyu_engine/assets/block', file_type = 'png', file_num = 256)
+        
+        self.window = moyu_engine.Window(title = 'MoYuEngine', width = self.window_width, height = self.window_height)
 
-textures_loader = moyu_engine.TexturesLoader(folder_path = 'moyu_engine/assets/block/', file_type = 'png', file_num = 256)
+        self.noise_map = moyu_engine.NoiseMap(size = 32)
+        self.noise_map = self.noise_map.berlin_noise()
 
-noise_map = moyu_engine.NoiseMap(size = 32)
-noise_map = noise_map.berlin_noise()
-
-def main():
-    pyray.init_window(WINDOW_WIDTH, WINDOW_HEIGHT, 'MoYuEngine')
+    def window_load(self):
     
-    tile_images, tile_textures = textures_loader.load()
-    
-    pyray.set_window_icon(tile_images[1])
-    
-    zoom_level = 3.0
+        self.tile_images, self.tile_textures = self.textures_loader.load()
+        
+        self.zoom_level = 3.0
 
-    tile_map_width = TILE_MAP_SIZE * TILE_WIDTH
-    tile_map_height = TILE_MAP_SIZE * TILE_HEIGHT
+        self.tile_map_width = self.tile_map_size * self.tile_width
+        self.tile_map_height = self.tile_map_size * self.tile_height
 
-    view_x = (WINDOW_WIDTH - tile_map_width) // 2
-    view_y = (WINDOW_HEIGHT - tile_map_height) // 2
-
-    while not pyray.window_should_close():
-
-        if pyray.is_key_pressed(pyray.KEY_SPACE):
-            print('space')
-
+        self.view_x = (self.window_width - self.tile_map_width) // 2
+        self.view_y = (self.window_height - self.tile_map_height) // 2
+        
+    def window_input(self):
+        
         if pyray.is_key_down(pyray.KEY_W):
-            view_y += VIEW_SPEED
+            self.view_y += self.view_speed
         if pyray.is_key_down(pyray.KEY_S):
-            view_y -= VIEW_SPEED
+            self.view_y -= self.view_speed
         if pyray.is_key_down(pyray.KEY_A):
-            view_x += VIEW_SPEED
+            self.view_x += self.view_speed
         if pyray.is_key_down(pyray.KEY_D):
-            view_x -= VIEW_SPEED
+            self.view_x -= self.view_speed
         if pyray.is_key_down(pyray.KEY_Q):
-            zoom_level -= ZOOM_SPEED
-            if zoom_level < MIN_ZOOM:
-                zoom_level = MIN_ZOOM
+            self.zoom_level -= self.zoom_speed
+            if self.zoom_level < self.min_zoom:
+                self.zoom_level = self.min_zoom
         if pyray.is_key_down(pyray.KEY_E):
-            zoom_level += ZOOM_SPEED
-            if zoom_level > MAX_ZOOM:
-                zoom_level = MAX_ZOOM
-            
-        mouse_pos = pyray.get_mouse_position()
-        mouse_tile_x = (mouse_pos.x - view_x) // TILE_WIDTH
-        mouse_tile_y = (mouse_pos.y - view_y) // TILE_HEIGHT
-
-        pyray.begin_drawing()
-        pyray.clear_background(pyray.RAYWHITE)
+            self.zoom_level += self.zoom_speed
+            if self.zoom_level > self.max_zoom:
+                self.zoom_level = self.max_zoom
+                
+    def window_logic(self):
+        
+        self.mouse_pos = pyray.get_mouse_position()
+        self.mouse_tile_x = (self.mouse_pos.x - self.view_x) // self.tile_width
+        self.mouse_tile_y = (self.mouse_pos.y - self.view_y) // self.tile_height
+        
+    def window_render(self):
         
         pyray.begin_mode_2d(pyray.Camera2D(
-            pyray.Vector2(view_x, view_y),
-            pyray.Vector2(RENDER_WIDTH / 2, RENDER_HEIGHT / 2),  # Center the camera on the render texture
+            pyray.Vector2(self.view_x, self.view_y),
+            pyray.Vector2(self.render_width / 2, self.render_height / 2),
             0.0,
-            zoom_level
+            self.zoom_level
         ))
 
-        for x in range(0, TILE_MAP_SIZE):
-            for y in range(0, TILE_MAP_SIZE):
-                tile_x = (x - y) * TILE_WIDTH // 2
-                tile_y = (x + y) * TILE_HEIGHT // 4
+        for x in range(0, self.tile_map_size):
+            for y in range(0, self.tile_map_size):
+                self.tile_x = (x - y) * self.tile_width // 2
+                self.tile_y = (x + y) * self.tile_height // 4
 
-                noise_value = noise_map[x][y]
+                noise_value = self.noise_map[x][y]
                 
                 if -1000 <= noise_value <= 30:
                     tile_index = 5
@@ -106,34 +100,44 @@ def main():
                 else:
                     tile_index = 0 
                 
-                if tile_index >= 0 and tile_index < len(tile_textures):
-                    tile_image = tile_images[tile_index]
-                    tile_texture = tile_textures[tile_index]
+                if tile_index >= 0 and tile_index < len(self.tile_textures):
+                    tile_image = self.tile_images[tile_index]
+                    tile_texture = self.tile_textures[tile_index]
 
                     if tile_image and tile_texture:
                         source_rect = pyray.Rectangle(0, 0, tile_image.width, tile_image.height)
-                        dest_rect = pyray.Rectangle(tile_x, tile_y, TILE_WIDTH, TILE_HEIGHT)
+                        dest_rect = pyray.Rectangle(self.tile_x, self.tile_y, self.tile_width, self.tile_height)
                         rotation = 0.0
 
                         pyray.draw_texture_pro(tile_texture, source_rect, dest_rect, pyray.Vector2(0, 0), rotation, pyray.RAYWHITE)
 
-                if x == mouse_tile_x and y == mouse_tile_y:
-                    source_rect = pyray.Rectangle(0, 0, tile_images[255].width, tile_images[255].height)
-                    dest_rect = pyray.Rectangle(tile_x, tile_y, TILE_WIDTH, TILE_HEIGHT)
+                if x == self.mouse_tile_x and y == self.mouse_tile_y:
+                    source_rect = pyray.Rectangle(0, 0, self.tile_images[255].width, self.tile_images[255].height)
+                    dest_rect = pyray.Rectangle(self.tile_x, self.tile_y, self.tile_width, self.tile_height)
                     rotation = 0.0
 
-                    pyray.draw_texture_pro(tile_textures[255], source_rect, dest_rect, pyray.Vector2(0, 0), rotation, pyray.RAYWHITE)
+                    pyray.draw_texture_pro(self.tile_textures[255], source_rect, dest_rect, pyray.Vector2(0, 0), rotation, pyray.RAYWHITE)
 
         pyray.end_mode_2d()
+        
+    def window_clean(self):
+        
+        self.textures_loader.unload()
+        
+        
+    def run(self):
 
-        fps = pyray.get_fps()
-        pyray.draw_text(f"FPS: {fps}", 10, 10, 20, pyray.GREEN)
+        self.window.load = self.window_load
+        
+        self.window.input = self.window_input
 
-        pyray.end_drawing()
-
-    textures_loader.unload()
-
-    pyray.close_window()
+        self.window.logic = self.window_logic
+            
+        self.window.render = self.window_render
+        
+        self.window.set()
 
 if __name__ == '__main__':
-    main()
+    game = Game()
+    
+    game.run()

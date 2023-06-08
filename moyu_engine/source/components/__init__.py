@@ -4,6 +4,8 @@
 import sys
 sys.dont_write_bytecode = True
 
-from .window import Window
 from .textures_loader import TexturesLoader
+
+from .window import Window
+
 from .noise_map import NoiseMap
