@@ -10,8 +10,8 @@ import pyray
 
 class Game:
     def __init__(self):
-        self.window_width = 1920
-        self.window_height = 1080
+        self.window_width = 1280
+        self.window_height = 720
 
         self.render_width = 360
         self.render_height = 180
